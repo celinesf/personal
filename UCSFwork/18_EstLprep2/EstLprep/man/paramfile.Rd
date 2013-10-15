@@ -1,0 +1,370 @@
+\name{paramfile}
+\alias{paramfile}
+\docType{data}
+
+\title{
+  Example file of the IM or I2M model parameter values and information
+  required for data simulation or parameter estimation. 
+}
+\usage{
+data(paramfile)
+}
+\description{
+  The file \code{\link{paramfile}} contains example of:
+  \itemize{
+    \item The values describing the prior distributions for IM or I2M parameters
+    sampled from a grid.
+    \item The values of fixed IM or I2M parameter.
+    \item The values of other information required to run
+    \code{\link{simulate_data}} and \code{\link{input_EstL}}.
+  }
+}
+
+\format{
+  The file \code{\link{paramfile}} contains example of:
+  \itemize{
+    \item The values describing the prior distributions for IM or I2M parameters
+    sampled from a grid.
+    \item The values of fixed IM or I2M parameter.
+    \item The values of other information required to run
+    \code{\link{simulate_data}} and \code{\link{input_EstL}}.
+  }
+  See \code{\link{listparam}} for the list of possible keywords used in
+  \code{\link{paramfile}}.\cr 
+  Comments start with \code{"#"}. The keywords need to start a line. The keywords and the values are
+  separated by space or tabulations. \cr
+  \describe{
+    \item{\strong{1. IM / I2M MODEL PARAMETERS}}{
+      Any of the demographic parameters listed below can be either fixed
+      (i.e., only one value specified after the keyword) or sampled from a
+      grid of values specified with three values, two floating numbers and an
+      integer as follows: \cr 
+      "\emph{\code{param_keyword }}\eqn{\Theta_l}\code{
+      }\eqn{\Theta_u}\code{ }\eqn{\Theta_n}". 
+      \describe{
+        \item{\eqn{\Theta_l} and \eqn{\Theta_u}}{The lower and upper limit on
+          the prior distribution range,
+          respectively. \eqn{0\le}\eqn{\Theta_l}\eqn{\le}\eqn{\Theta_u}.   } 
+        \item{\eqn{\Theta_n}}{ The number of values considered along the
+          prior distribution 
+          range.  \eqn{\Theta_n>0}.}
+      }%end describe
+      If only one value is specified the
+      parameter is considered fixed to this value.\cr
+      The IM-like model is specified with the eleven following keywords:
+      \describe{
+        \item{\strong{a. REQUIRED PARAMETERS}}{
+          \describe{
+            \item{\emph{\code{theta_1}}}{
+              "\emph{\code{theta_1}} \eqn{\theta_1}" or
+              "\emph{\code{theta_1}} \eqn{\theta_1l} \eqn{\theta_1u}
+              \eqn{\theta_1n}"  
+              specify the generational population mutation
+              rate per bp for the default population (required). \cr 
+              NOTE: If \eqn{\theta_1l=0}, \eqn{\theta_1n}  values will be
+              sampled \eqn{\in} \eqn{[\theta_1u/\theta_1n,\theta_1u]}.  
+            }% end theta 
+            \item{\emph{\code{M_present}}}{
+              "\emph{\code{M_present}} \eqn{M_p}" or 
+              "\emph{\code{M_present}} \eqn{M_pl}\code{
+              }\eqn{M_pu} \eqn{M_pn}"\cr 
+              specify the number of migrants exchanged
+              each generation by the TWO populations at present. \cr 
+              By default there is no gene flow. \cr
+              \eqn{M_p} is ignored unless there is population structure (as
+              specified with \eqn{n_1>0} and \eqn{n_2>0} for any of the
+              genomic region 
+              considered in the file \code{\link{regfile}}). \cr
+              \itemize{
+                \item \eqn{M_p} is the symmetrical rate of gene flow between
+                two population in an island model (i.e., \eqn{0<t<\inf}) when:\cr
+                \itemize{
+                  \item A population structure is specified with \eqn{n_1>0}
+                  and \eqn{n_2>0} for the genomic region considered in the file
+                  \code{\link{regfile}}. 
+                  \item \eqn{T_s=0} (i.e., specified with the keyword
+                  \emph{\code{T_split}} or unspecified).
+                }
+                \item \eqn{M_p} is the constant symmetrical rate of gene flow
+                since the split until present (i.e., \eqn{0<t<T_s}) if there is a
+                population split (as specified with the keyword
+                \emph{\code{T_split}}).\cr 
+                \item \eqn{M_p} is the constant symmetrical rate of gene flow
+                since the time of gene flow rate change until present (i.e.,
+                \eqn{0<t<T_c}) if a time at which the gene flow rate changed is
+                specified with:\cr
+                \itemize{
+                  \item \eqn{0<T_c<T_s} (as specified with the keywords
+                  \emph{\code{T_split}} and  \emph{\code{T_change}}). \cr 
+                  \item \eqn{M_c \not=M_p} (as specified with the keyword
+                  \emph{\code{M_change}}). \cr  
+                }
+              }% end Mp defs
+            }% end M_p
+          }% end descibed req arg
+        }
+        \item{\strong{b. OPTIONAL DEMOGRAPHIC PARAMETERS}}{
+          All the parameters listed below are optional and can be either
+          fixed or sampled from a grid of values.
+          \describe{
+            \item{\emph{\code{theta_2}}}{
+              "\emph{\code{theta_2}} \eqn{\theta_2}" or
+              "\emph{\code{theta_2}} \eqn{\theta_2l} \eqn{\theta_2u}
+              \eqn{\theta_2n}"\cr 
+              specify the generational population mutation rate 
+              per bp for population 2. \cr 
+              \eqn{\theta_2} is ignored unless there is population structure
+              (as specified with \eqn{n_1>0} and \eqn{n_2>0} for any of
+              the genomic region 
+              considered in the file \code{\link{regfile}}). \cr
+              NOTE: If \eqn{\theta_2l=0}, \eqn{\theta_2n} values will be
+              sampled \eqn{\in [\theta_2u/\theta_2n,\theta_2u]}.\cr  
+              If \eqn{\theta_2} is not specified, \eqn{\theta_2=\theta_1}.
+            }% end theta2 
+            \item{\emph{\code{theta_A}}}{
+              "\emph{\code{theta_A}} \eqn{\theta_A}" or
+              "\emph{\code{theta_A}} \eqn{\theta_Al} \eqn{\theta_Au}
+              \eqn{\theta_An}"\cr 
+              specify the ancestral population mutation rate per bp per
+              generation. \cr  
+              \eqn{\theta_A} is ignored unless there is a population split (as
+              specified with the keyword \emph{\code{T_split}}). 
+              NOTE: If \eqn{\theta_Al=0}, \eqn{\theta_An} values will be
+              sampled   \eqn{\in [\theta_Au/\theta_An,\theta_Au]}.\cr 
+              If \eqn{\theta_A} is not specified, \eqn{\theta_A=\theta_1}.
+            }% end thetaA
+            \item{\emph{\code{T_split}}}{
+              "\emph{\code{T_split}} \eqn{T_s}" or 
+              "\emph{\code{T_split}} \eqn{T_sl} \eqn{T_su} \eqn{T_sn}"\cr
+              specify the split time in unit of \eqn{4N_1}
+              generations between the TWO populations. \cr 
+              By default \eqn{T_s=0} to specify a model without population split. \cr
+              \eqn{T_s} is ignored unless there is population structure (as
+              specified with \eqn{n_1>0} and \eqn{n_2>0} for any of the
+              genomic region considered in the file \code{\link{regfile}}).  
+            }% end T_split
+            \item{\emph{\code{T_change}}}{
+              "\emph{\code{T_change}} \eqn{\epsilon}" or 
+              "\emph{\code{T_change}} \eqn{\epsilon_l} \eqn{\epsilon_u}
+              \eqn{\epsilon_n}"\cr 
+              specify the ratio \eqn{\epsilon=T_c/T_s}.\cr 
+              By default there is no change of gene flow rate since the
+              split. \cr 
+              \eqn{\epsilon} is ignored unless \cr
+              \itemize{
+                \item  There is population structure (as
+                specified with \eqn{n_1>0} and \eqn{n_2>0} for any of
+                the genomic region 
+                considered in the file \code{\link{regfile}})
+                \item \eqn{0<T_c<T_s} as specified with
+                the keyword \emph{\code{T_split}}.)
+                \item \eqn{M_c \not=M_p} (as specified with keywords
+                \emph{\code{M_present}} and \emph{\code{M_change}}). 
+              }
+              NOTE: If \eqn{\epsilon_u=1}, \eqn{\epsilon_n} values will be
+              sampled \eqn{\in
+                [\epsilon_l,1-(1-\epsilon_l)/\epsilon_n,]}. 
+            }% end T_change
+            \item{\emph{\code{M_change}}}{
+              "\emph{\code{M_change}} \eqn{M_c}" or 
+              "\emph{\code{M_change}} \eqn{M_cl} \eqn{M_cu} \eqn{M_cn}"\cr
+              specify the number of migrants exchanged
+              each generation by the TWO populations since the split until the time
+              of gene flow rate change (i.e., \eqn{T_c<t<T_s}). \cr 
+              By default there is no change of gene flow rate since the
+              split. \cr 
+              \eqn{M_c} is ignored unless:
+              \itemize{
+                \item  \eqn{0<T_c<T_s} (as
+                specified with the keywords \code{T_split} and \code{T_change}). \cr 
+                \item \eqn{M_c \not=M_p}.
+              }
+            }% end M_c
+          }% en descibe optional demographic parameters
+        }% end item optio demo
+      }% end item IM
+    }% end describe IM model
+    \item{\strong{3. OPTIONAL NUISANCE PARAMETER }}{
+      \describe{
+        \item{\emph{\code{rho}}}{
+          Use this keyword to specify the parameter on the intra-region
+          recombination rate.\cr
+          By default there is no recombination. \cr
+          \emph{\code{rho}} is used as follows:
+          \describe{
+            \item{"\emph{\code{rho}} \eqn{\rho}"}{   
+              Specifies that the genomic average population
+              intra-region recombination rate per bp per generation
+              is fixed to the  value \eqn{\rho=4N_1*c}. \cr 
+              In this case, the region-specific population
+              recombination rates are obtained with and fixed to
+              \eqn{\rho*w(Z-1)} (\eqn{w=\beta} is specified in
+              \code{\link{regfile}}). 
+            }
+            \item{"\emph{\code{rho}} \code{1}"}{  
+              Specifies that an estimate of the region-specific population
+              recombination rate per bp, \eqn{\rho_o}, is KNOWN from
+              linkage disequilibrium analysis and specified with 
+              \eqn{w=\beta\rho_o} for each recombining region (in the
+              file \code{\link{regfile}}).\cr 
+              In this case, the region-specific population
+              recombination rates are obtained with and fixed to 
+              \eqn{w*(Z-1)}.
+            }
+            \item{"\emph{\code{rho}} \code{2} \eqn{\mu}"}{ 
+              Specifies that an estimate of the region-specific
+              recombination rate per bp, \eqn{c_o}, is KNOWN from pedigree
+              analysis and specified with  \eqn{w=\betac_o}
+              for each recombining region (in the file \code{\link{regfile}}).\cr
+              This also specifies \eqn{\mu}, an independent estimate
+              of the genomic generational mutation rate per bp.\cr  
+              In this case,the region-specific population
+              recombination rates are obtained with
+              \eqn{w(Z-1)\theta_1/\mu}
+              and so vary for different values
+              or \eqn{\theta_1}.
+            }
+            \item{"\emph{\code{rho}}  \code{-1}  \eqn{\lambda}"}{ 
+              Specifies that the intra-region recombination rate is
+              UNKNOWN and the ratio of recombination over mutation
+              rate for a genomic region \eqn{r}, \eqn{\alpha=c_r/\mu}, is drawn
+              from an exponential distribution with mean
+              \eqn{1/}\eqn{\lambda}. \cr  
+              In this case, the region-specific population
+              recombination rates are obtained with 
+              \eqn{w\alpha(Z-1)\theta_1} 
+              and so vary both for different values
+              or \eqn{\theta_1} and for different draws from the distribution.
+            }
+            \item{"\emph{\code{rho}}  \code{-2}  \eqn{\nu}  \eqn{\sigma}" }{
+              Specifies that the intra-region recombination rate is
+              UNKNOWN and the ratio of recombination over mutation
+              rate for a genomic region \eqn{r}, \eqn{\alpha=c_r/\mu}, is drawn
+              from an normal distribution with mean
+              \eqn{\nu} and standard deviation \eqn{\sigma}. \cr
+              In this case,the region-specific population
+              recombination rates are obtained with 
+              \eqn{w\alpha(Z-1)\theta_1} and so vary both
+              for different values 
+              or \eqn{\theta_1} and for different draws from the distribution. 
+            }    
+          }% end of describe rho
+        }% end item rho
+      } % end describe rho
+    }% end item nuisance
+    
+    \item{\strong{2. OPTIONAL OTHER PARAMETERS}}{
+      \describe{
+        \item{\emph{\code{nregions}}}{
+          "\emph{\code{nregions}} \eqn{R}" specifies
+          the number of independent genomic regions considered. \cr
+          By default, \eqn{R=1}. 
+        }
+        \item{\emph{\code{type}}}{
+          "\emph{\code{type}} \eqn{a} \eqn{b} \eqn{l} \eqn{u}"
+          specifies:
+          \itemize{
+            \item \eqn{a=}0 or 1 
+            for haplotype and genotype data, respectively. \cr
+            \item  \eqn{b=}1 or 2
+            for phased and unphased data, respectively. \cr
+            \item   \eqn{l} and \eqn{u}
+            the mininum and maximum distance between
+            pairs of SNPs used to calculate measures of LD and
+            recombination, respectively.
+          }
+        }
+        By default the valuea are set to "0 1 5 10".
+      }% end type
+    }% end item other
+    \item{\strong{3. OPTIONAL PARAMETERS SPECIFIC TO FUNCTION
+        INPUT_ESTL}}{
+      \describe{
+        \item{\emph{\code{stats}}}{
+          "\emph{\code{stat }}S_1 S_2 ..." 
+          specifies the list of statistics used to estimate the
+          composit-likelihood of a set of 
+          parameters given the data. \cr
+          By default the list is set to 
+          "S_1 S_2 S_sl S_sh S_f F_st D_1 D_2 D_star1 D_star2".  \cr
+          See the full list of summary statistics keywords in
+          \code{\link{liststats}} and their definition in \code{\link{stats_pop}}.
+        }
+        \item{\emph{\code{howmany}}}{
+          "\emph{\code{howmany }}\eqn{H}" specifies
+          \eqn{H}, the number of data sets to simulate per set of parameters
+          (i.e., per grid point) to estimate the likelihood of the data given
+          the set of model parameters.\cr 
+          By default, \eqn{H=1000}.
+        }% end howmany
+        \item{\emph{\code{parallel}}}{
+          "\emph{\code{parallel }}\eqn{J}"  specifies
+          \eqn{J}, the number of jobs to run in parallel to perform the
+          estimation of the posterior distribution of the parameters of the
+          extension of the isolation-with-migration model.\cr 
+          By default, \eqn{J=1}, i.e., no parallelization. 
+        }% end parallel
+      }% end dec
+    }% end item stepc
+  }% end descibe
+}% end arg
+
+\note{
+  ATTENTION: It is the user's responsibility to mind the following
+  restrictions:
+  \itemize{
+    \item It is required that either the parameter value
+    (i.e. \eqn{\theta_1>0}) or the prior distribution for \eqn{\theta_1}
+    (see above for the restrictions) be specified with the keyword
+    \emph{\code{theta_1}}. \cr 
+    \item It is required that \eqn{\theta_i>0} for any
+    \eqn{i} \eqn{\in} \eqn{{1,2,A}} when these parameters are fixed (as specified
+    with the keywords \emph{\code{theta_i}}). \cr
+    \item It is required that \eqn{M_p>0} 
+    or \eqn{0\le}\eqn{M_pl}\eqn{\le}\eqn{M_pu} and \eqn{M_pn>0} be
+    specified in case of an island model. \cr  
+    \item It is required that
+    \eqn{0}\eqn{\le}\eqn{T_c}\eqn{\le}\eqn{T_s} when specified and fixed
+    with the keywords \emph{\code{T_split}} and \emph{\code{T_change}}.\cr
+    \item It is required that \eqn{R>0} when specified
+    with the keyword \emph{\code{nregions}}. \cr
+    \item It is required that \eqn{H>0} when specified
+    with the keyword \emph{\code{howmany}}. \cr 
+    \item It is required that \eqn{J>0} when specified
+    with the keyword \emph{\code{parallel}}. \cr
+  }
+}
+
+\author{
+  Celine Becquet - \email{celine.becquet@gmail.com}.
+}
+
+\references{
+  See \code{References} section in \code{\link{EstLprep-package}}.
+}
+
+\seealso{
+  Files in the format of \code{\link{paramfile}} are used as input for
+  the functions \code{\link{simulate_data}} and \code{\link{input_EstL}}.\cr 
+  The function \code{\link{check_param}} checks the format of the
+  files like \code{\link{paramfile}} .\cr
+\code{\link{liststats}}, \code{\link{listparam}}, \code{\link{msout}}
+  and \code{\link{regfile}} are other data and file examples used by the functions
+  \code{\link{simulate_data}} and/or
+  \code{\link{input_EstL}}.\cr 
+  Lists of definitions of the symbols and parameters mentioned in
+  this file are found in \code{\link{EstLprep-package}}.
+}
+
+\examples{
+### Create the data file.
+data(paramfile) # download the data
+
+## Write the file "est"of information on the parameters in the local directory.
+write.table(file="est", x=paramfile, row.name=FALSE, col.names=FALSE, quote=FALSE)
+
+# Clean up the directory.
+unlink("est")
+}
+
+\keyword{datasets}

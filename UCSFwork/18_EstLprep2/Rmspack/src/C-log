@@ -1,0 +1,114 @@
+==9395== Memcheck, a memory error detector
+==9395== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==9395== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==9395== Command: ./stats_popC -a maf -h 2 -f 0 10
+==9395== Parent PID: 6143
+==9395== 
+--9395-- 
+--9395-- Valgrind options:
+--9395--    --tool=memcheck
+--9395--    --leak-check=yes
+--9395--    --log-file=C-log
+--9395--    -v
+--9395--    --trace-children=yes
+--9395--    --track-fds=yes
+--9395--    --read-var-info=yes
+--9395--    --track-origins=yes
+--9395--    --leak-check=full
+--9395--    --show-reachable=yes
+--9395-- Contents of /proc/version:
+--9395--   can't open /proc/version
+--9395-- Arch and hwcaps: X86, x86-sse1-sse2
+--9395-- Page sizes: currently 4096, max supported 4096
+--9395-- Valgrind library directory: /usr/local/lib/valgrind
+--9395-- ./stats_popC (0x1000)
+--9395--    reading syms   from primary file (37 123)
+--9395--    dSYM= ./stats_popC.dSYM/Contents/Resources/DWARF/stats_popC
+--9395--    reading dwarf3 from dsyms file
+--9395-- /usr/lib/dyld (0x8fe00000)
+--9395--    reading syms   from primary file (17 982)
+--9395-- Reading suppressions file: /usr/local/lib/valgrind/default.supp
+--9395-- REDIR: 0x8fe21e00 (strlen) redirected to 0xf00c479c (???)
+--9395-- REDIR: 0x8fe22000 (strcpy) redirected to 0xf00c47ef (???)
+--9395-- REDIR: 0x8fe22177 (strcat) redirected to 0xf00c47ad (???)
+--9395-- REDIR: 0x8fe220c0 (strcmp) redirected to 0xf00c47cf (???)
+--9395-- /usr/local/lib/valgrind/vgpreload_core-x86-darwin.so (0xa000)
+--9395--    reading syms   from primary file (3 584)
+--9395--    dSYM= /usr/local/lib/valgrind/vgpreload_core-x86-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_core-x86-darwin.so
+--9395--    reading dwarf3 from dsyms file
+--9395-- /usr/local/lib/valgrind/vgpreload_memcheck-x86-darwin.so (0x14000)
+--9395--    reading syms   from primary file (111 1045)
+--9395--    dSYM= /usr/local/lib/valgrind/vgpreload_memcheck-x86-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_memcheck-x86-darwin.so
+--9395--    reading dwarf3 from dsyms file
+==9395== WARNING: new redirection conflicts with existing -- ignoring it
+--9395--     new: 0x8fe21ee0 (strlcat             ) R-> 0x000189c0 strlcat
+==9395== WARNING: new redirection conflicts with existing -- ignoring it
+--9395--     new: 0x8fe22000 (strcpy              ) R-> 0x00018c10 strcpy
+--9395-- REDIR: 0x8fe22340 (memset) redirected to 0x17fd0 (memset)
+--9395-- /usr/lib/libSystem.B.dylib (0x1f6000)
+--9395--    reading syms   from primary file (4037 3508)
+--9395-- /usr/lib/libgcc_s.1.dylib (0x27000)
+--9395--    reading syms   from primary file (85 0)
+--9395-- /usr/lib/system/libmathCommon.A.dylib (0x34000)
+--9395--    reading syms   from primary file (32 33)
+--9395-- REDIR: 0x8fe21ce3 (strrchr) redirected to 0x179e0 (strrchr)
+--9395-- REDIR: 0x8fe21e50 (strlcpy) redirected to 0x190a0 (strlcpy)
+--9395-- REDIR: 0x1f73b8 (memset) redirected to 0x17f70 (memset)
+--9395-- REDIR: 0x1fd2e0 (memcpy) redirected to 0x191b0 (memcpy)
+--9395-- REDIR: 0x1ff7e4 (calloc) redirected to 0x17016 (calloc)
+--9395-- REDIR: 0x1f8015 (malloc) redirected to 0x15386 (malloc)
+--9395-- REDIR: 0x200110 (strncmp) redirected to 0x17ba0 (strncmp)
+--9395-- REDIR: 0x22f414 (memchr) redirected to 0x17cf0 (memchr)
+--9395-- REDIR: 0x221830 (strcpy) redirected to 0x18b50 (strcpy)
+--9395-- REDIR: 0x1fff00 (strlen) redirected to 0x17b80 (strlen)
+--9395-- REDIR: 0x1fd303 (free) redirected to 0x1672f (free)
+--9395-- REDIR: 0x8fe22494 (memmove) redirected to 0x180c0 (memmove)
+==9395== 
+==9395== FILE DESCRIPTORS: 3 open at exit.
+==9395== Open file descriptor 3: /Users/celine/0_data/0Work_2010/Dropbox/12_LDfilt/Rmspack/src/C-log
+==9395==    <inherited from parent>
+==9395== 
+==9395== Open file descriptor 2: /dev/ttys000
+==9395==    <inherited from parent>
+==9395== 
+==9395== Open file descriptor 1: /dev/ttys000
+==9395==    <inherited from parent>
+==9395== 
+==9395== 
+==9395== HEAP SUMMARY:
+==9395==     in use at exit: 4,460 bytes in 9 blocks
+==9395==   total heap usage: 2,503 allocs, 2,494 frees, 71,928 bytes allocated
+==9395== 
+==9395== Searching for pointers to 9 not-freed blocks
+==9395== Checked 1,120,240 bytes
+==9395== 
+==9395== 64 bytes in 1 blocks are still reachable in loss record 2 of 4
+==9395==    at 0x15406: malloc (vg_replace_malloc.c:195)
+==9395==    by 0x1FCD76: localeconv_l (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x1F8334: __vfprintf (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x22CE66: vfprintf_l (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x251FBA: printf (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x1CE1: main (stats_popC.c:74)
+==9395== 
+==9395== 4,096 bytes in 1 blocks are still reachable in loss record 4 of 4
+==9395==    at 0x15406: malloc (vg_replace_malloc.c:195)
+==9395==    by 0x22D033: __smakebuf (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x22CF0C: __swsetup (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x1F835E: __vfprintf (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x22CE66: vfprintf_l (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x251FBA: printf (in /usr/lib/libSystem.B.dylib)
+==9395==    by 0x1CE1: main (stats_popC.c:74)
+==9395== 
+==9395== LEAK SUMMARY:
+==9395==    definitely lost: 0 bytes in 0 blocks
+==9395==    indirectly lost: 0 bytes in 0 blocks
+==9395==      possibly lost: 0 bytes in 0 blocks
+==9395==    still reachable: 4,160 bytes in 2 blocks
+==9395==         suppressed: 300 bytes in 7 blocks
+==9395== 
+==9395== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--9395-- 
+--9395-- used_suppression:      1 darwin-still-reachable-1
+--9395-- used_suppression:      1 darwin-still-reachable-2
+==9395== 
+==9395== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

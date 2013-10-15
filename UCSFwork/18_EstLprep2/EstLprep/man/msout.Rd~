@@ -1,0 +1,28 @@
+\name{msout}
+\alias{msout}
+\docType{data}
+\title{
+  Example of a file with ms-like output
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(msout)}
+\format{
+  A data frame with 14 observations on the following variable.
+  \describe{
+    \item{\code{V1}}{a factor with levels \code{} \code{./msR 8 1 -t 1 -r 0.1 9999 -I 2 4 4 10 -ej 0.5 1 2 -eN 0.5 2 -eM 0.45 0} \code{//} \code{0001000} \code{1100011} \code{1100111} \code{1110111} \code{36278 2676 4272} \code{positions: 1804 3048 5340 5502 5673 6855 9316} \code{segsites: 7}}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+
+\references{
+  See \code{References} section in \code{\link{EstLprep-package}}.
+}
+\examples{
+data(msout)
+## maybe str(msout) ; plot(msout) ...
+}
+\keyword{datasets}

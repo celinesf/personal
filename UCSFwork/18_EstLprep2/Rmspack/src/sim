@@ -1,0 +1,13 @@
+
+theta_1 .0001			
+M_present 10			# M_p=4N_1*m_p fixed to 10.
+
+theta_2 .0002			# theta_2 fixed to .0002 
+
+theta_A .00015		# theta_A fixed to .00015 
+
+T_split 0 2 10			# 10 values investigated in the interval [0,2]
+
+rho	.0005			# rho=4N_1*c fixed to .0005.
+
+nregions 4			# R=4 regions considered.

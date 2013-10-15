@@ -1,0 +1,14 @@
+theta_1	.0004 .0025 11
+theta_2	.0004 .0025 11
+theta_A	.001 .003 11
+M_present 0 3 11
+T_split	.15 .7 11 
+T_change 0 1 11
+M_change 0 3 11
+rho	.0004	
+nregions 10
+type 1 2 5 15		
+stats S_1	S_2	S_sl	S_sh S_f	F_st	D_1	D_2	D_star1	D_star2 Snn r_square1  r_square2 Rm_1 Rm_2
+
+
+

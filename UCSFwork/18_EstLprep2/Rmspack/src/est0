@@ -1,0 +1,9 @@
+theta_1	.001  1
+M_present 5 
+T_split	0 .5 1
+rho	.001	
+nregions	1		
+type 0 1 0 10
+stats S_1	S_2	S_sl	S_sh	F_st	D_1	D_2	D_star1	D_star2 D_prime1 D_prime2 Snn r_square1 r_square2  nH_1 nH_2 Rm_1 Rm_2
+
+

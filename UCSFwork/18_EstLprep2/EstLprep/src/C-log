@@ -1,0 +1,390 @@
+==3615== Memcheck, a memory error detector
+==3615== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==3615== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==3615== Command: ./estlikC 0.001 -R 4 -G 100 -pf est-reg-0 -r est-reg-S1
+==3615== Parent PID: 571
+==3615== 
+--3615-- 
+--3615-- Valgrind options:
+--3615--    --tool=memcheck
+--3615--    --leak-check=yes
+--3615--    --log-file=C-log
+--3615--    -v
+--3615--    --trace-children=yes
+--3615--    --track-fds=yes
+--3615--    --read-var-info=yes
+--3615--    --track-origins=yes
+--3615--    --leak-check=full
+--3615--    --show-reachable=yes
+--3615-- Contents of /proc/version:
+--3615--   can't open /proc/version
+--3615-- Arch and hwcaps: X86, x86-sse1-sse2
+--3615-- Page sizes: currently 4096, max supported 4096
+--3615-- Valgrind library directory: /usr/local/lib/valgrind
+--3615-- ./estlikC (0x1000)
+--3615--    reading syms   from primary file (110 440)
+--3615--    dSYM= ./estlikC.dSYM/Contents/Resources/DWARF/estlikC
+--3615--    reading dwarf3 from dsyms file
+--3615-- warning: addVar: unknown size (tp1)
+--3615-- /usr/lib/dyld (0x8fe00000)
+--3615--    reading syms   from primary file (17 982)
+--3615-- Reading suppressions file: /usr/local/lib/valgrind/default.supp
+--3615-- REDIR: 0x8fe21e00 (strlen) redirected to 0xf00c479c (???)
+--3615-- REDIR: 0x8fe22000 (strcpy) redirected to 0xf00c47ef (???)
+--3615-- REDIR: 0x8fe22177 (strcat) redirected to 0xf00c47ad (???)
+--3615-- REDIR: 0x8fe220c0 (strcmp) redirected to 0xf00c47cf (???)
+--3615-- /usr/local/lib/valgrind/vgpreload_core-x86-darwin.so (0x18000)
+--3615--    reading syms   from primary file (3 584)
+--3615--    dSYM= /usr/local/lib/valgrind/vgpreload_core-x86-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_core-x86-darwin.so
+--3615--    reading dwarf3 from dsyms file
+--3615-- /usr/local/lib/valgrind/vgpreload_memcheck-x86-darwin.so (0x22000)
+--3615--    reading syms   from primary file (111 1045)
+--3615--    dSYM= /usr/local/lib/valgrind/vgpreload_memcheck-x86-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_memcheck-x86-darwin.so
+--3615--    reading dwarf3 from dsyms file
+==3615== WARNING: new redirection conflicts with existing -- ignoring it
+--3615--     new: 0x8fe21ee0 (strlcat             ) R-> 0x000269c0 strlcat
+==3615== WARNING: new redirection conflicts with existing -- ignoring it
+--3615--     new: 0x8fe22000 (strcpy              ) R-> 0x00026c10 strcpy
+--3615-- REDIR: 0x8fe22340 (memset) redirected to 0x25fd0 (memset)
+--3615-- /usr/lib/libSystem.B.dylib (0x1f6000)
+--3615--    reading syms   from primary file (4037 3508)
+--3615-- /usr/lib/libgcc_s.1.dylib (0x35000)
+--3615--    reading syms   from primary file (85 0)
+--3615-- /usr/lib/system/libmathCommon.A.dylib (0x42000)
+--3615--    reading syms   from primary file (32 33)
+--3615-- REDIR: 0x8fe21ce3 (strrchr) redirected to 0x259e0 (strrchr)
+--3615-- REDIR: 0x8fe21e50 (strlcpy) redirected to 0x270a0 (strlcpy)
+--3615-- REDIR: 0x1f73b8 (memset) redirected to 0x25f70 (memset)
+--3615-- REDIR: 0x1fd2e0 (memcpy) redirected to 0x271b0 (memcpy)
+--3615-- REDIR: 0x1ff7e4 (calloc) redirected to 0x25016 (calloc)
+--3615-- REDIR: 0x1f8015 (malloc) redirected to 0x23386 (malloc)
+--3615-- REDIR: 0x200110 (strncmp) redirected to 0x25ba0 (strncmp)
+--3615-- REDIR: 0x1fff00 (strlen) redirected to 0x25b80 (strlen)
+--3615-- REDIR: 0x22f414 (memchr) redirected to 0x25cf0 (memchr)
+--3615-- REDIR: 0x221830 (strcpy) redirected to 0x26b50 (strcpy)
+--3615-- REDIR: 0x1fd303 (free) redirected to 0x2472f (free)
+--3615-- REDIR: 0x201870 (realloc) redirected to 0x251ba (realloc)
+==3615== 
+==3615== Process terminating with default action of signal 2 (SIGINT)
+==3615==    at 0x22BFE5: strcasecmp_l (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x22BF7D: strcasecmp (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x63D4: getprobdata (estlikC.c:1438)
+==3615==    by 0x84EB: main (estlikC.c:148)
+==3615== 
+==3615== FILE DESCRIPTORS: 6 open at exit.
+==3615== Open file descriptor 5: est-reg-S1
+==3615==    at 0x1F7C52: open$NOCANCEL$UNIX2003 (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x810C: main (estlikC.c:56)
+==3615== 
+==3615== Open file descriptor 4: est-reg-0
+==3615==    at 0x1F7C52: open$NOCANCEL$UNIX2003 (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x80E0: main (estlikC.c:53)
+==3615== 
+==3615== Open file descriptor 3: /Users/celine/0_data/0Work_2010/Dropbox/estlikC20_LDcacl/C-log
+==3615==    <inherited from parent>
+==3615== 
+==3615== Open file descriptor 2: /dev/ttys000
+==3615==    <inherited from parent>
+==3615== 
+==3615== Open file descriptor 1: /dev/ttys000
+==3615==    <inherited from parent>
+==3615== 
+==3615== Open file descriptor 0: /dev/ttys000
+==3615==    <inherited from parent>
+==3615== 
+==3615== 
+==3615== HEAP SUMMARY:
+==3615==     in use at exit: 22,795 bytes in 157 blocks
+==3615==   total heap usage: 1,155 allocs, 998 frees, 302,348 bytes allocated
+==3615== 
+==3615== Searching for pointers to 157 not-freed blocks
+==3615== Checked 1,129,672 bytes
+==3615== 
+==3615== 8 bytes in 1 blocks are still reachable in loss record 1 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3524: getpars (estlikC.c:291)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 12 bytes in 1 blocks are still reachable in loss record 2 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x34D4: getpars (estlikC.c:285)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 12 bytes in 1 blocks are still reachable in loss record 3 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x35AF: getpars (estlikC.c:300)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 16 bytes in 1 blocks are still reachable in loss record 4 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3551: getpars (estlikC.c:293)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 16 bytes in 1 blocks are still reachable in loss record 5 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x35E4: getpars (estlikC.c:303)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 16 bytes in 1 blocks are still reachable in loss record 6 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3628: getpars (estlikC.c:306)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 16 bytes in 1 blocks are still reachable in loss record 7 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3687: getpars (estlikC.c:312)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 16 bytes in 1 blocks are still reachable in loss record 8 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x76C3: read_ireg (estlikC.c:592)
+==3615==    by 0x814D: main (estlikC.c:63)
+==3615== 
+==3615== 16 bytes in 1 blocks are still reachable in loss record 9 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x76F1: read_ireg (estlikC.c:594)
+==3615==    by 0x814D: main (estlikC.c:63)
+==3615== 
+==3615== 16 bytes in 1 blocks are still reachable in loss record 10 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x771F: read_ireg (estlikC.c:596)
+==3615==    by 0x814D: main (estlikC.c:63)
+==3615== 
+==3615== 24 bytes in 1 blocks are still reachable in loss record 11 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x23CA: init_cov (estlikC.c:1105)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 24 bytes in 1 blocks are still reachable in loss record 12 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x23FE: init_cov (estlikC.c:1107)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 24 bytes in 1 blocks are still reachable in loss record 13 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x2432: init_cov (estlikC.c:1109)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 24 bytes in 1 blocks are still reachable in loss record 14 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x2466: init_cov (estlikC.c:1111)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 24 bytes in 1 blocks are still reachable in loss record 15 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x249A: init_cov (estlikC.c:1113)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 32 bytes in 1 blocks are still reachable in loss record 16 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x32FB: getpars (estlikC.c:253)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 32 bytes in 1 blocks are still reachable in loss record 17 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3733: getpars (estlikC.c:324)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 32 bytes in 1 blocks are still reachable in loss record 18 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0xCA67: cmatrix (statsfun.c:1043)
+==3615==    by 0x8211: main (estlikC.c:85)
+==3615== 
+==3615== 32 bytes in 4 blocks are still reachable in loss record 19 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x781E: read_ireg (estlikC.c:604)
+==3615==    by 0x814D: main (estlikC.c:63)
+==3615== 
+==3615== 36 bytes in 1 blocks are still reachable in loss record 20 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3FA8: getparv (estlikC.c:524)
+==3615==    by 0x82BE: main (estlikC.c:100)
+==3615== 
+==3615== 36 bytes in 1 blocks are still reachable in loss record 21 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x4040: getparv (estlikC.c:543)
+==3615==    by 0x82BE: main (estlikC.c:100)
+==3615== 
+==3615== 40 bytes in 1 blocks are still reachable in loss record 22 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x37AB: getpars (estlikC.c:330)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 40 bytes in 1 blocks are still reachable in loss record 23 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x81A3: main (estlikC.c:73)
+==3615== 
+==3615== 56 bytes in 1 blocks are still reachable in loss record 24 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x817A: main (estlikC.c:71)
+==3615== 
+==3615== 64 bytes in 1 blocks are still reachable in loss record 26 of 53
+==3615==    at 0x23406: malloc (vg_replace_malloc.c:195)
+==3615==    by 0x1FCD76: localeconv_l (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x1F8334: __vfprintf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x22CE66: vfprintf_l (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x251FBA: printf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x8054: main (estlikC.c:43)
+==3615== 
+==3615== 80 bytes in 1 blocks are still reachable in loss record 27 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x37D7: getpars (estlikC.c:332)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 80 bytes in 1 blocks are still reachable in loss record 28 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x822A: main (estlikC.c:86)
+==3615== 
+==3615== 88 bytes in 8 blocks are still reachable in loss record 29 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0xCAA8: cmatrix (statsfun.c:1046)
+==3615==    by 0x8211: main (estlikC.c:85)
+==3615== 
+==3615== 96 bytes in 6 blocks are still reachable in loss record 30 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x25D4: init_cov (estlikC.c:1125)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 100 bytes in 1 blocks are still reachable in loss record 31 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3809: getpars (estlikC.c:334)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 100 bytes in 1 blocks are still reachable in loss record 32 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3838: getpars (estlikC.c:336)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 100 bytes in 1 blocks are still reachable in loss record 33 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3867: getpars (estlikC.c:338)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 100 bytes in 1 blocks are still reachable in loss record 34 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3896: getpars (estlikC.c:340)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 128 bytes in 1 blocks are still reachable in loss record 35 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x6212: getprobdata (estlikC.c:1413)
+==3615==    by 0x84EB: main (estlikC.c:148)
+==3615== 
+==3615== 144 bytes in 6 blocks are still reachable in loss record 36 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x259F: init_cov (estlikC.c:1123)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 236 bytes in 1 blocks are still reachable in loss record 37 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x3707: getpars (estlikC.c:322)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 236 bytes in 1 blocks are still reachable in loss record 38 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x31C7: stat_name (estlikC.c:840)
+==3615==    by 0x3943: getpars (estlikC.c:351)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 288 bytes in 6 blocks are still reachable in loss record 40 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x2525: init_cov (estlikC.c:1119)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 288 bytes in 6 blocks are still reachable in loss record 41 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x2562: init_cov (estlikC.c:1121)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 336 bytes in 1 blocks are still reachable in loss record 42 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0xA372: segtre_mig (streecC.c:289)
+==3615==    by 0x5000: gensam_estlik (estlikC.c:973)
+==3615==    by 0x83C1: main (estlikC.c:126)
+==3615== 
+==3615== 512 bytes in 4 blocks are still reachable in loss record 43 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x7856: read_ireg (estlikC.c:606)
+==3615==    by 0x814D: main (estlikC.c:63)
+==3615== 
+==3615== 513 bytes in 1 blocks are still reachable in loss record 44 of 53
+==3615==    at 0x25289: realloc (vg_replace_malloc.c:476)
+==3615==    by 0x22CB1A: reallocf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x2334F4: __svfscanf_l (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x23B174: sscanf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x7AAC: read_ireg (estlikC.c:632)
+==3615==    by 0x814D: main (estlikC.c:63)
+==3615== 
+==3615== 590 bytes in 59 blocks are still reachable in loss record 45 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x322E: stat_name (estlikC.c:845)
+==3615==    by 0x3943: getpars (estlikC.c:351)
+==3615==    by 0x8091: main (estlikC.c:48)
+==3615== 
+==3615== 640 bytes in 1 blocks are still reachable in loss record 46 of 53
+==3615==    at 0x25289: realloc (vg_replace_malloc.c:476)
+==3615==    by 0x9622: xover (streecC.c:725)
+==3615==    by 0x983A: re (streecC.c:603)
+==3615==    by 0xB4FA: segtre_mig (streecC.c:524)
+==3615==    by 0x5000: gensam_estlik (estlikC.c:973)
+==3615==    by 0x83C1: main (estlikC.c:126)
+==3615== 
+==3615== 816 bytes in 6 blocks are still reachable in loss record 47 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x24E6: init_cov (estlikC.c:1117)
+==3615==    by 0x813B: main (estlikC.c:62)
+==3615== 
+==3615== 1,000 bytes in 1 blocks are still reachable in loss record 48 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x806D: main (estlikC.c:46)
+==3615== 
+==3615== 1,152 bytes in 4 blocks are still reachable in loss record 49 of 53
+==3615==    at 0x250C8: calloc (vg_replace_malloc.c:418)
+==3615==    by 0x77E0: read_ireg (estlikC.c:602)
+==3615==    by 0x814D: main (estlikC.c:63)
+==3615== 
+==3615== 1,920 bytes in 1 blocks are still reachable in loss record 50 of 53
+==3615==    at 0x25289: realloc (vg_replace_malloc.c:476)
+==3615==    by 0x9658: xover (streecC.c:727)
+==3615==    by 0x983A: re (streecC.c:603)
+==3615==    by 0xB4FA: segtre_mig (streecC.c:524)
+==3615==    by 0x5000: gensam_estlik (estlikC.c:973)
+==3615==    by 0x83C1: main (estlikC.c:126)
+==3615== 
+==3615== 4,096 bytes in 1 blocks are still reachable in loss record 51 of 53
+==3615==    at 0x23406: malloc (vg_replace_malloc.c:195)
+==3615==    by 0x22D033: __smakebuf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x22CF0C: __swsetup (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x1F835E: __vfprintf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x22CE66: vfprintf_l (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x251FBA: printf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x8054: main (estlikC.c:43)
+==3615== 
+==3615== 4,096 bytes in 1 blocks are still reachable in loss record 52 of 53
+==3615==    at 0x23406: malloc (vg_replace_malloc.c:195)
+==3615==    by 0x22D033: __smakebuf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x22F2D2: __srefill (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x22F11D: fgets (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x497E: get_stat (estlikC.c:861)
+==3615==    by 0x811F: main (estlikC.c:59)
+==3615== 
+==3615== 4,096 bytes in 1 blocks are still reachable in loss record 53 of 53
+==3615==    at 0x23406: malloc (vg_replace_malloc.c:195)
+==3615==    by 0x22D033: __smakebuf (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x22F2D2: __srefill (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x22F11D: fgets (in /usr/lib/libSystem.B.dylib)
+==3615==    by 0x81DE: main (estlikC.c:76)
+==3615== 
+==3615== LEAK SUMMARY:
+==3615==    definitely lost: 0 bytes in 0 blocks
+==3615==    indirectly lost: 0 bytes in 0 blocks
+==3615==      possibly lost: 0 bytes in 0 blocks
+==3615==    still reachable: 22,495 bytes in 150 blocks
+==3615==         suppressed: 300 bytes in 7 blocks
+==3615== 
+==3615== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+--3615-- 
+--3615-- used_suppression:      1 darwin-still-reachable-1
+--3615-- used_suppression:      1 darwin-still-reachable-2
+==3615== 
+==3615== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

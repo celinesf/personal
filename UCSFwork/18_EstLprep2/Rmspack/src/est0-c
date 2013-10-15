@@ -1,0 +1,1 @@
+./estlikC -1 -R 1 -G 1 -r est0-ms0-S -pf est0-p > est0-ms0-lik

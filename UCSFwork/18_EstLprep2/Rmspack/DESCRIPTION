@@ -1,0 +1,10 @@
+Package: Rmspack
+Type: Package
+Title: A package to estimate the parameters of an extension of the Isolation-with-migration model. 
+Version: 1.0
+Date: 2010-04-14
+Author: Celine Becquet <celine.becquet@gmail.com>
+Maintainer: Celine Becquet <celine.becquet@gmail.com>
+Description: This package is meant to facilitate the calling of ms and tools to analyses samples simulated from ms. It can also be used to simulate data for independent regions and possibly multiple loci, gaps and missing data within each region. It is also the basis of the estimation program IMc.
+LazyLoad:  no	
+License: Artistic License, v2.0

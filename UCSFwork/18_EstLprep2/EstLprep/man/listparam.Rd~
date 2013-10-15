@@ -1,0 +1,47 @@
+\name{listparam}
+\alias{listparam}
+\docType{data}
+\title{
+  List of all possible keywords used in "paramfile"
+}
+\description{
+  Lists the 13 possible keywords one can use in the file \code{\link{paramfile}}.
+}
+\usage{data(listparam)}
+\format{
+  The 13 keywords are as follows and need to start a line in file  \code{\link{paramfile}}:
+  \itemize{
+    \item theta_1\cr
+    \item M_present\cr
+    \item theta_2\cr 
+    \item theta_A\cr
+    \item T_split\cr
+    \item T_change\cr
+    \item M_change\cr
+    \item rho\cr
+    \item nregions\cr
+    \item  type\cr
+    \item  stats\cr
+    \item howmany\cr
+    \item parallel
+  }
+}
+\seealso{
+  The list \code{\link{listparam}} is used as input by the functions
+ \code{\link{order_param}} and
+  \code{\link{check_param}} called from \code{\link{simulate_data}} and
+  \code{\link{input_EstL}}.\cr  
+  \code{\link{liststats}}, \code{\link{msout}}, \code{\link{regfile}},
+  \code{\link{paramfile}} are other data and file examples used
+  by the functions \code{\link{simulate_data}} and/or
+  \code{\link{input_EstL}}.\cr
+}
+\references{
+  See \code{References} section in \code{\link{EstLprep-package}}.
+}
+\examples{
+data(listparam)
+## The list of possible keywords in paramfile
+listparam
+}
+\keyword{datasets}

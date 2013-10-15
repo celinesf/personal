@@ -1,0 +1,272 @@
+\name{check_reg}
+\alias{check_reg}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{
+Check of the regions information
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+}
+\usage{
+check_reg(nregions, info_region, info_loci, locifile)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{nregions}{
+%%     ~~Describe \code{nregions} here~~
+}
+  \item{info_region}{
+%%     ~~Describe \code{info_region} here~~
+}
+  \item{info_loci}{
+%%     ~~Describe \code{info_loci} here~~
+}
+  \item{locifile}{
+%%     ~~Describe \code{locifile} here~~
+}
+}
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+}
+\value{
+%%  ~Describe the value returned
+%%  If it is a LIST, use
+%%  \item{comp1 }{Description of 'comp1'}
+%%  \item{comp2 }{Description of 'comp2'}
+%% ...
+}
+\references{
+%% ~put references to the literature/web site here ~
+}
+\author{
+ Celine Becquet - \email{celine.becquet@gmail.com}.
+}
+\note{
+%%  ~~further notes~~
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\seealso{
+%% ~~objects to See Also as \code{\link{help}}, ~~~
+}
+\examples{
+##---- Should be DIRECTLY executable !! ----
+##-- ==>  Define data, use random,
+##--	or do  help(data=index)  for the standard data sets.
+
+## The function is currently defined as
+function (nregions, info_region, info_loci, locifile) 
+{
+    ret = list()
+    ret$ok = 1
+    ret$reg = info_region
+    listreg = c("nregion", "name", "xi - inheritance scalar", 
+        "vi - mutation rate scalar", "wi - rec. rate scalar", 
+        "n1", "n2", "start", "end", "nloci")
+    listloci = c("nregion", "nloci", "n1", "n2", "start", "end")
+    if (length(unique(info_region[, 2])) < nregions) {
+        tp = c("PROBLEM: The names of the regions should be unique. As is, the names for regions are: ", 
+            as.character(info_region[, 2]), ".")
+        stp = "'"
+        for (j in 1:nregions) stp = c(stp, " ")
+        stp = c(stp, "'.")
+        error_message(tp, stp)
+        ret$ok = 0
+        return(ret)
+    }
+    for (i in 1:nregions) {
+        if (!is.numeric(info_region[i, 1])) {
+            tp = c("PROBLEM: No number was assigned to region # ", 
+                i, ". Instead the value is: ", info_region[i, 
+                  1], ". This value needs to start from 1 to 'nregions' value given in the file of argument.")
+            stp = c("'", "'", "'", "'")
+            error_message(tp, stp)
+            ret$ok = 0
+            return(ret)
+        }
+        else {
+            if (info_region[i, 1] != i) {
+                tp = c("PROBLEM: The number for the region # ", 
+                  i, " is: ", info_region[i, 1], ".")
+                stp = c("'", "'", "'", "'")
+                error_message(tp, stp)
+                ret$ok = 0
+                return(ret)
+            }
+        }
+        if (!is.factor(info_region[i, 2])) {
+            tp = c("PROBLEM: The names of the regions should be strings. As is, the name for region # ", 
+                i, " is: ", info_region[i, 2], ".")
+            stp = c("'", "'", "'", "'")
+            error_message(tp, stp)
+            ret$ok = 0
+            return(ret)
+        }
+        for (j in 3:length(info_region[i, ])) {
+            if (!is.numeric(info_region[, j])) {
+                tp = c("PROBLEM: The value in collumn # ", listreg[j], 
+                  " is not numerical")
+                stp = c("'", "'")
+                error_message(tp, stp)
+                ret$ok = 0
+                return(ret)
+            }
+            if (is.na(info_region[i, j])) {
+                tp = c("PROBLEM: The value for region # ", i, 
+                  " in collumn # ", listreg[j], " is missing")
+                stp = c("'", "'", "'", "'")
+                error_message(tp, stp)
+                ret$ok = 0
+                return(ret)
+            }
+        }
+        if ((info_region[i, 3] == 0 || info_region[i, 3] > 1)) {
+            tp = c("PROBLEM: In region # ", i, " the inheritance scalar was out of bound: ", 
+                info_region[i, 3], ", when it should be 0> and <=1")
+            stp = c("'", "'", "'", "'")
+            error_message(tp, stp)
+            ret$ok = 0
+            return(ret)
+        }
+        if (abs(info_region[i, 9] - info_region[i, 8]) < 100) {
+            tp = c("PROBLEM: The length of the region # ", i, 
+                " is <100: ", info_region[i, 9] - info_region[i, 
+                  8], ".")
+            stp = c("'", "'", "'", "'")
+            error_message(tp, stp)
+            ret$ok = 0
+            return(ret)
+        }
+        else {
+            if (abs(info_region[i, 9] - info_region[i, 8]) > 
+                100 & info_region[i, 9] - info_region[i, 8] < 
+                100) {
+                tp = c("WARNING: The length of the region # ", 
+                  i, " was: ", info_region[i, 9] - info_region[i, 
+                    8], ". I changed the strand positions. It is now")
+                l = info_region[i, 9]
+                info_region[i, 9] = info_region[i, 8]
+                info_region[i, 8] = l
+                ret$reg = info_region
+                tp = c(tp, info_region[i, 9] - info_region[i, 
+                  8], " as I changed the strand positions.")
+                stp = c("'", "'", "'", "'", "'", "'", "'")
+                error_message(tp, stp)
+            }
+        }
+        if (info_region[i, 12] > 1) {
+            if (dim(info_loci[info_loci$V1 == info_region[i, 
+                1], ])[1] != info_region[i, 12]) {
+                tp = c("PROBLEM: The number of loci for region # ", 
+                  i, " should be: ", info_region[i, 12], ", but I find only ", 
+                  dim(info_loci[info_loci$V1 == info_region[i, 
+                    1], ])[1], " loci in the file ", locifile, 
+                  ".")
+                stp = c("'", "'", "'", "'", "'", "'", "'", "'", 
+                  "'")
+                error_message(tp, stp)
+                ret$ok = 0
+                return(ret)
+            }
+            regbp = 0
+            for (j in 1:dim(info_loci[info_loci$V1 == info_region[i, 
+                1], ])[1]) {
+                for (k in 1:dim(info_loci[info_loci$V1 == info_region[i, 
+                  1], ])[2]) {
+                  if (!is.numeric(info_loci[info_loci$V1 == info_region[i, 
+                    1], ][j, k])) {
+                    tp = c("PROBLEM: The value in collumn # ", 
+                      listloci[k], " is not numerical")
+                    stp = c("'", "'")
+                    error_message(tp, stp)
+                    ret$ok = 0
+                    return(ret)
+                  }
+                  if (is.na(info_loci[info_loci$V1 == info_region[i, 
+                    1], ][j, k])) {
+                    tp = c("PROBLEM: The value for locus # ", 
+                      j, " in collumn # ", listloci[k], " is missing")
+                    stp = c("'", "'", "'", "'")
+                    error_message(tp, stp)
+                    ret$ok = 0
+                    return(ret)
+                  }
+                }
+                if (info_loci[info_loci$V1 == info_region[i, 
+                  1], ][j, 2] != j) {
+                  tp = c("PROBLEM: The number for the locus # ", 
+                    j, " is: ", info_loci[info_loci$V1 == info_region[i, 
+                      1], ][j, 2], ".")
+                  stp = c("'", "'", "'", "'")
+                  error_message(tp, stp)
+                  ret$ok = 0
+                  return(ret)
+                }
+                if (info_loci[info_loci$V1 == info_region[i, 
+                  1], ][j, 3] > info_region[i, 6]) {
+                  tp = c("PROBLEM: The number of chromosomes sampled in pop 1 in reg # ", 
+                    i, " is maximum: ", info_region[i, 6], " ,but I found: ", 
+                    info_loci[info_loci$V1 == info_region[i, 
+                      1], ][j, 3], " in locus # ", j, " in the file ", 
+                    locifile, ".")
+                  stp = c("'", "'", "'", "'", "'", "'", "'", 
+                    "'", "'", "'")
+                  error_message(tp, stp)
+                  ret$ok = 0
+                  return(ret)
+                }
+                if (info_loci[info_loci$V1 == info_region[i, 
+                  1], ][j, 4] > info_region[i, 7]) {
+                  tp = c("PROBLEM: The number of chromosomes sampled in pop 2 in reg # ", 
+                    i, " is maximum: ", info_region[i, 7], " ,but I found: ", 
+                    info_loci[info_loci$V1 == info_region[i, 
+                      1], ][j, 4], " in locus # ", j, " in the file ", 
+                    locifile, ".")
+                  stp = c("'", "'", "'", "'", "'", "'", "'", 
+                    "'", "'", "'")
+                  error_message(tp, stp)
+                  ret$ok = 0
+                  return(ret)
+                }
+                if (info_loci[info_loci$V1 == info_region[i, 
+                  1], ][j, 6] - info_loci[info_loci$V1 == info_region[i, 
+                  1], ][j, 5] < 100) {
+                  tp = c("PROBLEM: In locus ", j, " of region # ", 
+                    i, " the length of locus is <100: ", info_loci[info_loci$V1 == 
+                      info_region[i, 1], ][j, 6] - info_loci[info_loci$V1 == 
+                      info_region[i, 1], ][j, 5], ".")
+                  stp = c("'", "'", "'", "'", "'", "'")
+                  error_message(tp, stp)
+                  ret$ok = 0
+                  return(ret)
+                }
+            }
+            if (info_loci[info_loci$V1 == info_region[i, 1], 
+                ][1, 5] < info_region[i, 8] || info_loci[info_loci$V1 == 
+                info_region[i, 1], ][dim(info_loci[info_loci$V1 == 
+                info_region[i, 1], ])[1], 6] > info_region[i, 
+                9]) {
+                tp = c("PROBLEM: The positions of the loci are out of the region # ", 
+                  i, ": locus 1 starts at positions: ", info_loci[info_loci$V1 == 
+                    info_region[i, 1], ][1, 5], " when it should have been >= ", 
+                  info_region[i, 8], " and/or the end position of the last locus is: ", 
+                  info_loci[info_loci$V1 == info_region[i, 1], 
+                    ][dim(info_loci[info_loci$V1 == info_region[i, 
+                    1], ])[1], 6], " when it should be <= ", 
+                  info_region[i, 9], ".")
+                stp = c("'", "'", "'", "'", "'", "'", "'", "'", 
+                  "'", "'")
+                error_message(tp, stp)
+                ret$ok = 0
+                return(ret)
+            }
+        }
+    }
+    return(ret)
+  }
+}
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ ~kwd1 }
+\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

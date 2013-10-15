@@ -1,0 +1,94 @@
+##	Example of arguments to estimate parameters of IM model (or I2M) models.
+## Comments starts with #.
+## There is no more than 3 values after a keyword (exept for type which tape 4 values).
+## Alternative are shown in comments.
+############ REQUIRED PARAMETERS ############
+#
+#### theta_1 - Generational Population mutation rate per bp for the default population. NEEDS TO BE SPECIFIED.
+#
+# theta_1 0.0001 # If only theta_1=4N_1*mu is specified, then N_1=N_2=N_A by default
+theta_1 0.0001 0.001 10 # 10 values investigated in the interval [0.0001,0.001]
+#
+#
+#### M_present - Gene flow rate at present M_p (at time 0<t<inf or 0<t<T_s or 0<t<T_c).
+#### M_p=4N_1*m_p needs to be specified if n_1>0 and n_2>0 for any region and T_s=0 or not specified.
+#
+# M_present 10 # M_p=4N_1*m_p fixed to 10.
+M_present 0 10 20 # 20 values investigated in the interval [0,10].
+#
+#
+#
+############ OPTIONAL DEMOGRAPHIC PARAMETERS ############
+### 1 value specified: The parameter is fixed to this value.
+### 3 values specified: Defined the UNIFORM prior for the parameter: lower, upper limit and number of values to investigate within this range.
+#
+#### theta_2 - Population 2 mutation rate per bp per generation. Default, theta_2=4N_2*mu=theta_1.
+#
+# theta_2 0.0002 # theta_2=4N_2*mu fixed to 0.0002
+theta_2 0.0001 0.001 10 # 10 values investigated in the interval [0.0001,0.001].
+#
+# 
+#### theta_A Ancestral Population mutation rate per bp per generation. Default, theta_A=4N_A*mu=theta_1.
+#
+theta_A 0.00015 # theta_A=4N_A*mu fixed to 0.00015
+# theta_A 0.0001 0.001 10 # 10 values investigated in the interval [0.0001,0.001].
+# 
+#
+#### T_split - Time of split in unit of 4N_1 generations. Default, T_s=0.
+#
+#T_split 1 # The split time T_s fixed to 1/4N_1 generations
+T_split 0 2 10 # 10 values investigated in the interval [0,2]
+# 
+#
+#### T_change - Time when the gene flow rate changed in unit of 4N_1 generations. Default, epsilon=T_c/T_s=0.
+#
+T_change 0.8 # The epsilon fixed to .8.
+# T_change 0 1 10 # 10 values investigated in the interval [0,1]
+#
+#
+#### M_cchange - Gene flow rate from time T_c<t<T_s. Default M_c=4N_1*m_c=0.
+# M_change 0 # M_c=4N_1*m_c= fixed to 0
+M_change 0 20 10 # 20 values investigated in the interval [0,20]
+#
+#
+############ OPTIONAL NUISANCE PARAMETER ############
+#
+#### rho Recombination rate parameter. Default, rho=4N_1*c=0 per bp.
+#
+rho 0.0005 # rho=4N_1*c per pb fixed to 0.0005.
+# rho 1 # KNOWN region-specific population recombination rate per bp per generation: w=rho_o*beta in regfile.
+# rho 2 2e-8 # KNOWN region-specific cross-ver rate per bp per generation: w=c_o*beta in regfile. Specifies mu=2e-8.
+# rho -1 1.669 # UNKNOWN intra-region recombination rate. c_r/mu~exp(lambda=.6). rho=theta_1*c_r/mu for region r.
+# rho -2 1 1 # UNKNOWN intra-region recombination rate. c_r/mu~Normal(nu=1,sigma=1). rho=theta_1*c_r/mu for region r.
+#
+#
+#
+########### OPTIONAL OTHER PARAMETERS ############
+#
+#### nregions - Number of genomic regions considered. Default, R=1.
+#
+nregions 4 # R=4 regions considered.
+#
+#
+#### type - Information on how the data. default 0 1 5 10
+#### The four number specified are: haplotype/genotype (0/1) - phase/unphase (1/2) - lower limit in kb- upper limit in kb (for LD/rec. rate calculations)
+#
+type 1 2 0 10 # genotype and unphased data. LD calulated for pairs of SNPs distance of 0-10 kb.
+#
+#
+#
+########### OPTIONAL PARAMETERS SPECIFIC TO FUNCTION input_EstL ###########
+#### stats - List of summary statistics to use to estimate the composit-likelihood of a set of parameters
+#### by default S_1 S_2 S_sl S_sh F_st D_1 D_2 D_star1 D_star2
+#
+stats S_1 S_2 S_sl S_sh F_st D_1 D_2 D_star1 D_star2 S_nn r_square1 r_square2
+#
+#
+#### howmany - Number of Markovian data sets to simulate to estimate the composit-likelihood of a set of parameter. Default, H=1000.
+#
+howmany 10000 # H=1000
+#
+#
+#### parallel - Number of jobs to run in parallel. Default, J=1.
+#
+#parallel 10 # The composite-likelihood surface estimated with 10 parallel jobs

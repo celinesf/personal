@@ -1,0 +1,229 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 0.5cm
+\headsep 0.5cm
+\footskip 0.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+Orang/Data preparation 
+\end_layout
+
+\begin_layout Subsection
+vcf to ms like file and EstL input data file
+\end_layout
+
+\begin_layout Standard
+The dara are in the file 
+\begin_inset Quotes eld
+\end_inset
+
+Orang_Data.vcf
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The perl script 
+\begin_inset Quotes eld
+\end_inset
+
+perl-vcf2ms
+\begin_inset Quotes erd
+\end_inset
+
+ generated the following
+\end_layout
+
+\begin_layout Description
+Orang_msfile ms like file of 50kb chunk of genpme >10bp long
+\end_layout
+
+\begin_layout Description
+Orang_msfile-Summary Summary infromation for each region 
+\end_layout
+
+\begin_layout Description
+Orang_EstL_template The template of the input data file for EstL
+\end_layout
+
+\begin_layout Subsection
+Calculate the summary statistics
+\end_layout
+
+\begin_layout Standard
+Done by the C program 
+\begin_inset Quotes eld
+\end_inset
+
+stats_pop
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+./stats_pop -m Orang_msfile -a maf -f 5 15 -p 2 >Orang_EstL_summaries
+\end_layout
+
+\begin_layout Standard
+The file 
+\begin_inset Quotes eld
+\end_inset
+
+Orang_EstL_summaries
+\begin_inset Quotes erd
+\end_inset
+
+ contains all the summaries calculated by the program.
+ 
+\end_layout
+
+\begin_layout Subsection
+Create Finalized EstL data input file
+\end_layout
+
+\begin_layout Itemize
+Open 
+\begin_inset Quotes eld
+\end_inset
+
+Orang_EstL_summaries
+\begin_inset Quotes erd
+\end_inset
+
+ in exel and save as text delimited 
+\begin_inset Quotes eld
+\end_inset
+
+Orang_EstL_Data
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Open 
+\begin_inset Quotes eld
+\end_inset
+
+Orang_EstL_template
+\begin_inset Quotes erd
+\end_inset
+
+ in exel and copy the whole data, insert them in 
+\begin_inset Quotes eld
+\end_inset
+
+Orang_EstL_Data
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+delete the extra rows 
+\begin_inset Quotes eld
+\end_inset
+
+r n1 n2 L
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Add 
+\begin_inset Quotes eld
+\end_inset
+
+//
+\begin_inset Quotes erd
+\end_inset
+
+ to 
+\begin_inset Quotes eld
+\end_inset
+
+S//
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Save as text delimited (Open in some text editor [I use BBedit at bottom
+ chance from MAC(CR) to linux] to make sure the format is ASCII)
+\end_layout
+
+\end_body
+\end_document

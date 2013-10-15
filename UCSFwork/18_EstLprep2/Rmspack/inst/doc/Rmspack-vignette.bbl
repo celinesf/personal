@@ -1,0 +1,79 @@
+\begin{thebibliography}{}
+
+\bibitem[Becquet et~al., 2007]{Becquet2007}
+Becquet, C., Patterson, N., Stone, A., Przeworski, M., and Reich, D. (2007).
+\newblock Genomic analysis of chimpanzee population structure.
+\newblock {\em PLoS Genet.}, 3(4):e66.
+
+\bibitem[Fay and Wu, 2000]{Fay2000}
+Fay, J.~C. and Wu, C.-I. (2000).
+\newblock Hitchhiking under positive darwinian selection.
+\newblock {\em Genetics}, 155(3):1405--1413.
+
+\bibitem[Fu and Li, 1993]{Fu1993}
+Fu, Y.-X. and Li, W.-H. (1993).
+\newblock Statistical tests of neutrality of mutations.
+\newblock {\em Genetics}, 133(3):693--709.
+
+\bibitem[Hudson, 1983]{Hudson1983}
+Hudson, R.~R. (1983).
+\newblock Properties of a neutral allele model with intragenic recombination.
+\newblock {\em Theor. Popul. Biol.}, 23(2):183--201.
+
+\bibitem[Hudson, 1990]{Hudson1990}
+Hudson, R.~R. (1990).
+\newblock Gene genealogies and the coalescent process.
+\newblock In Press, O.~U., editor, {\em Oxford Surveys in Evolutionary
+  Biology}, volume~7, pages 1--44. D. Futuyma and J. Antonovics, New York.
+
+\bibitem[Hudson, 2000]{Hudson2000}
+Hudson, R.~R. (2000).
+\newblock A new statistic for detecting genetic differentiation.
+\newblock {\em Genetics}, 155(4):2011--2014.
+
+\bibitem[Hudson, 2002]{Hudson2002}
+Hudson, R.~R. (2002).
+\newblock Generating samples under a {Wright-Fisher} neutral model of genetic
+  variation.
+\newblock {\em Bioinformatics}, 18(2):337--338.
+
+\bibitem[Hudson et~al., 1992]{Hudson1992}
+Hudson, R.~R., Slatkin, M., and Maddison, W.~P. (1992).
+\newblock Estimation of levels of gene flow from {DNA} sequence data.
+\newblock {\em Genetics}, 132(2):583--589.
+
+\bibitem[Li and Stephens, 2003]{Li2003}
+Li, N. and Stephens, M. (2003).
+\newblock Modeling linkage disequilibrium and identifying recombination
+  hotspots using single-nucleotide polymorphism data.
+\newblock {\em Genetics}, 165(4):2213--2233.
+
+\bibitem[Nei and Li, 1979]{Nei1979}
+Nei, M. and Li, W.~H. (1979).
+\newblock Mathematical model for studying genetic variation in terms of
+  restriction endonucleases.
+\newblock {\em Proc. Natl. Acad. Sci.}, 76(10):5269--5273.
+
+\bibitem[Tajima, 1989]{Tajima1989}
+Tajima, F. (1989).
+\newblock Statistical method for testing the neutral mutation hypothesis by
+  {DNA} polymorphism.
+\newblock {\em Genetics}, 123(3):585--595.
+
+\bibitem[Wakeley and Hey, 1997]{Wakeley1997}
+Wakeley, J. and Hey, J. (1997).
+\newblock Estimating ancestral population parameters.
+\newblock {\em Genetics}, 145(3):847--855.
+
+\bibitem[Watterson, 1975]{Watterson1975}
+Watterson, G.~A. (1975).
+\newblock On the number of segregating sites in genetical models without
+  recombination.
+\newblock {\em Theor. Popul. Biol.}, 7(2):256--276.
+
+\bibitem[Wright, 1931]{Wright1931}
+Wright, S. (1931).
+\newblock Evolution in {M}endelian {P}opulations.
+\newblock {\em Genetics}, 16(2):97--159.
+
+\end{thebibliography}

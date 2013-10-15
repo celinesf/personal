@@ -1,0 +1,1 @@
+./estlikC 0.001 -R 100 -G 1 -pf simtest0-p -r simtest0-S > simtest0-lik &

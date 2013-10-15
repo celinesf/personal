@@ -1,0 +1,12 @@
+./estlikC 0.001 -R 4 -G 10 -pf est-reg-0 -r est-reg-S1
+
+./estlikC 0.001 -R 4 -G 10 -pf est-reg-0 -r est-reg-Snvar
+
+./estlikC 0.001 -R 1 -G 1 -pf est-reg-1 -r est-reg-S1
+
+
+./estlikC 0.001 -R 1 -G 1 -pf est-reg-1 -r est0-simtest0-S
+
+
+
+./estlikC 0.001 -R 1 -G 1 -pf est-reg-1 -r est0-simtest1-S

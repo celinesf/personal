@@ -1,0 +1,57 @@
+R CMD INSTALL Rmspack
+R CMD check Rmspack
+R CMD build Rmspack
+
+package.skeleton(name="Rmspack", 
+code_files=c(
+"check_fun.R",
+"cmd_line.R",
+"estimate.R", 
+"get_loci.R",
+"get_rho.R",
+"ms.R",
+"output_cmd.R",
+"simulate_data.R", 
+ "stats_pop.R", 
+"str_fun.R", 
+)) 
+
+ RShowDoc("KEYWORDS") # to check what keywords fit each function
+
+
+
+#####################
+library("Rmspack")
+
+
+############
+library("Rmspack")
+msframe=ms("/msC 12 3 -t 2 -r 10 9999 -I 2 6 6 0 -ej 0.5 1 2 -seeds 1 2 3")
+dyn.load("stats_popR.so")
+dyn.load("stats_popR.so")
+.Call("statsPop",msframe$cmdline_seeds[1],msframe$segsites, msframe$positions, msframe$haplotypes,type=c(1,1,5,10), PACKAGE="stats_popR")
+
+------------ vignette
+
+Sweave("Rmspack-vignette.Rnw")
+
+
+##################### ms
+dyn.load("msR.so")
+msline="./ms 5 2 -t 5 -seeds 36721 48411 39634"
+.Call("msMain",msline )
+
+########################
+
+R -d "valgrind --tool=memcheck --leak-check=yes --log-file=test-log -v --trace-children=yes --track-fds=yes  --read-var-info=yes --track-origins=yes  " --vanilla  < test.R >test-Rout
+
+valgrind --tool=memcheck --leak-check=yes --log-file=C-log -v --trace-children=yes --track-fds=yes  --read-var-info=yes  --track-origins=yes --leak-check=full --show-reachable=yes ./msC 5 2 -t 5 -seeds 36721 48411 39634 
+
+
+after compiling the C code with the "-O1" (not -O2, as per default) flag.
+
+
+
+
+
+

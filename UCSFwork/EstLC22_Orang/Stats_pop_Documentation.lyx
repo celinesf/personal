@@ -1,0 +1,1092 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 0.5cm
+\headsep 0.5cm
+\footskip 0.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+usage:
+\end_layout
+
+\begin_layout Standard
+./stats_pop -m msfile 
+\end_layout
+
+\begin_layout Description
+Options: 
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+-m filename with ms-like data
+\end_layout
+
+\begin_layout Description
+-a anc/maf (whether known and unknown ancestral allele) 
+\end_layout
+
+\begin_layout Description
+-f l u (lower and upper limint in KB for filtering pairwise SNP to calculate
+ the statistics of LD and recombination.
+ default is 5 to 10kb) 
+\end_layout
+
+\begin_layout Description
+-p 1 or 2 (1 for phased, 2 for unphased data) 
+\end_layout
+
+\begin_layout Description
+-h help
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Output ~ similar to input for EstL
+\end_layout
+
+\begin_layout Standard
+The header of the output is required by EstL, e.g.:
+\end_layout
+
+\begin_layout Itemize
+Known ancestral allele 
+\end_layout
+
+\begin_layout Itemize
+UnPhased data 
+\end_layout
+
+\begin_layout Itemize
+Filter for pairwise LD: 5.000000 15.000000 kb
+\end_layout
+
+\begin_layout Standard
+Then the header for all the summary statistics calculated followed by the
+ statistics for each region.
+\end_layout
+
+\begin_layout Subsection
+List of summaries
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r$
+\end_inset
+
+, region number 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+, sample size in sample 1(2).
+ 
+\begin_inset Formula $n=n_{1}+n_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L$
+\end_inset
+
+, length of the region in bp 
+\begin_inset Formula $L=z_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Summaries of the polymorphisms 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S$
+\end_inset
+
+, the total number of segregating sites found in the data set.
+ 
+\begin_inset Formula $S=S_{1}+S_{2}+S_{s}+S_{f} $
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+, the number of segregating sites with the derived alleles polymorphic uniquely
+ in the sample from population 1 (2).
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{s}$
+\end_inset
+
+, the number of segregating sites with the derived allele shared by both
+ population samples.
+ 
+\begin_inset Formula $S_{s}=S_{ss}+S_{sf1}+S_{sf2}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{s}=S_{sl}+S_{sh}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S_{ss}$
+\end_inset
+
+, the number of segregating sites with the derived allele shared AND polymorphic
+ in both population samples.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{sf1}$
+\end_inset
+
+and 
+\begin_inset Formula $S_{sf2}$
+\end_inset
+
+, the number of segregating sites with the derived allele shared AND polymorphic
+ ONLY in the sample from population 2 (or 1) (i.e., fixed in the sample from
+ population 1 or 2).
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{sl}$
+\end_inset
+
+and 
+\begin_inset Formula $S_{sh}$
+\end_inset
+
+, the number of segregating sites with the derived allele shared AND at
+ low (high) frequency (i.e., 
+\begin_inset Formula $\le10\%$
+\end_inset
+
+ ( 
+\begin_inset Formula $> 10\%$
+\end_inset
+
+)).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $S_{f}$
+\end_inset
+
+, the number of segregating sites with the alleles fixed between the population
+ sampled.
+ 
+\begin_inset Formula $S_{f}=S_{f1}+S_{f2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S_{f1}$
+\end_inset
+
+and 
+\begin_inset Formula $S_{f2}$
+\end_inset
+
+, the number of segregating sites with the derived allele fixed in the sample
+ from population 1 (2).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $S_{o}$
+\end_inset
+
+, the number of singletons found in the data set.
+ I.e.: 
+\begin_inset Formula $S_{o}=S_{o1}+S_{o2} \in[0,S]$
+\end_inset
+
+ where the frequency of the derived allele is 
+\begin_inset Formula $1/(n)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S_{o1}$
+\end_inset
+
+and 
+\begin_inset Formula $S_{o2}$
+\end_inset
+
+, the number of singletons found in the sample from population 1 (2).
+ I.e., 
+\begin_inset Formula $S_{o1} \in[0,S_{1}]$
+\end_inset
+
+ where the frequency of the derived allele is 
+\begin_inset Formula $1/n_{1}$
+\end_inset
+
+ ( 
+\begin_inset Formula $S_{o2} \in[0,S_{2}]$
+\end_inset
+
+ where the frequency of the derived allele is 
+\begin_inset Formula $1/n_{2}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Frequencies of the polymorphisms 
+\end_layout
+
+\begin_layout Standard
+The mean derived allele frequencies for seven types of segregating sites
+ described above.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(S)$
+\end_inset
+
+The mean derived allele frequency over n haplotypes for the S segregating
+ sites in the data set.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(S_{1})$
+\end_inset
+
+and 
+\begin_inset Formula $F(S_{2})$
+\end_inset
+
+ The mean derived allele frequency over 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ (
+\begin_inset Formula $n_{2}$
+\end_inset
+
+) haplotypes for the segregating sites in 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ ( 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F(S_{s})$
+\end_inset
+
+, 
+\begin_inset Formula $F(S_{ss})$
+\end_inset
+
+, 
+\begin_inset Formula $F(S_{sf1})$
+\end_inset
+
+, 
+\begin_inset Formula $F(S_{sf2})$
+\end_inset
+
+, 
+\begin_inset Formula $F(_{S_{s}l})$
+\end_inset
+
+ and 
+\begin_inset Formula $F(S_{sh})$
+\end_inset
+
+ The mean derived allele frequency over 
+\begin_inset Formula $n$
+\end_inset
+
+ haplotypes for the segregating sites in 
+\begin_inset Formula $S_{s}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{ss}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{sf1}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{sf2}$
+\end_inset
+
+, 
+\begin_inset Formula $S_{sl}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{sh}$
+\end_inset
+
+, respectively.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Measures of differentiation 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F_{ST}$
+\end_inset
+
+, the level of differentiation between the two population samples.
+ F_ST=1-(H_w1+H_w2)/H_b (Wright 1931; Hudson et al.
+ 1992).
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{b}$
+\end_inset
+
+, the mean pairwise differences between both population samples.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{w1}$
+\end_inset
+
+ and 
+\begin_inset Formula $H_{w2}$
+\end_inset
+
+, the mean pairwise differences within the sample from population 1 (2).
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{nn}$
+\end_inset
+
+, the nearest-neighbor statistic, which measures how often the nearest neighbors
+ of haplotypes are found in the same population sample.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $S_{n}n=\Sigma[X_{i}/n]=\Sigma[W_{i}/(T_{i}*n)]$
+\end_inset
+
+, 
+\begin_inset Formula $i \in[1,n]$
+\end_inset
+
+ (Hudson 2000).
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W_{i}$
+\end_inset
+
+: The number of nearest neighbors to haplotype 
+\begin_inset Formula $i$
+\end_inset
+
+ that are from the same population sample as haplotype 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $T_{i}$
+\end_inset
+
+: The number of nearest neighbors of haplotype 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X_{i}$
+\end_inset
+
+: The fraction of nearest neighbors of haplotype 
+\begin_inset Formula $i$
+\end_inset
+
+ that are from the same population sample as haplotype 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Estimators of the population mutation rate 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi$
+\end_inset
+
+, 
+\begin_inset Formula $\pi_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{2}$
+\end_inset
+
+, The unbiased estimator of the population mutation rate calculated from
+ the average nucleotide diversity (or heterozygosity) for the full sample
+ and samples from population 1 and 2, 
+\begin_inset Formula $\pi$
+\end_inset
+
+ (Nei and Li 1979, but equations 10 and 12 of Tajima 1989).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\pi=\Sigma[2*p*(1-p)*n/(n-1)] $
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{1}=\Sigma[2*p*(1-p)*n_{1}/(n_{1}-1)]$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\pi_{2}=\Sigma[2*p*(1-p)*n_{2}/(n_{2}-1)]$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\theta_{W}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{W1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{W2}$
+\end_inset
+
+.
+ The unbiased estimator of the population mutation rate calculated from
+ the number of segregating sites, 
+\backslash
+
+\begin_inset Formula $theta_{W}$
+\end_inset
+
+ (Watterson 1975).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\theta_{W}=\Sigma[1/(1/n)]$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{W}1=\Sigma[1/(1/n_{1})]$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{W}2=\Sigma[1/(1/n_{2})]$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\theta_{H}$
+\end_inset
+
+, 
+\begin_inset Formula $\theta_{H}1$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{H}2$
+\end_inset
+
+ The unbiased estimator of the population mutation rate weighted by the
+ homozygosity of the derived allele, 
+\begin_inset Formula $\theta_{H}$
+\end_inset
+
+ (Fay and Wu 2000).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\theta_{H}=\Sigma[2*(p^{2})/[n(n-1)]]$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{H}1=\Sigma[2*(p^{2})/[n_{1}(n_{1}-1)]]$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\theta_{H}2=\Sigma[2*(p^{2})/[n_{2}(n_{2}-1)]]$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Tests of neutrality 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $D_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{2}$
+\end_inset
+
+ The test of neutrality from the difference between 
+\begin_inset Formula $\pi$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{W}$
+\end_inset
+
+, Tajima's 
+\begin_inset Formula $D$
+\end_inset
+
+ (Tajima 1989).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $D=(\pi-\theta_{W})/\sqrt{(}var(\pi-\theta_{W}))$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{1}=(\pi_{1}-\theta_{W1})/\sqrt{(}var(\pi_{1}-\theta_{W1}))$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{2}=(\pi_{2}-\theta_{W2})/\sqrt{(}var(\pi_{2}-\theta_{W2}))$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+H, H_1 and H_2 The test of neutrality from the difference between 
+\begin_inset Formula $\pi$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{H}$
+\end_inset
+
+, Fay & Wu's 
+\begin_inset Formula $H$
+\end_inset
+
+ (Fay and Wu 2000).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $H=\pi-\theta_{H}=-2*p(2*p-1)n/(n-1)$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{1}=\pi_{1}-\theta_{H1}=-2*p(2*p-1)n_{1}/(n_{1}-1)$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{2}=\pi_{2}-\theta_{H2}=-2*p(2*p-1)n_{2}/(n_{2}-1)$
+\end_inset
+
+for the segregating sites in 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{1}^{\star}$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{1}^{\star}$
+\end_inset
+
+ The test of neutrality from the difference between the number of singletons
+ and the number of segregating sites, Fu & Li's 
+\begin_inset Formula $D^{\star}$
+\end_inset
+
+ (Fu & Li 1993).
+ 
+\end_layout
+
+\begin_layout Itemize
+D
+\begin_inset Formula $^{\star}=(S-S_{o})/\sqrt{(}var(S-S_{o}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{1}^{\star}=(S_{1}-S_{o1})/\sqrt{(}var(S_{1}-S_{o1}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D_{2}^{\star}=(S_{2}-S_{o2})/\sqrt{(}var(S_{2}-S_{o2}))$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Measure of recombination 
+\end_layout
+
+\begin_layout Standard
+These numbers are calculated between SNPs separated by the distance specified
+ qith option (-f)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $D^{\prime}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{1}^{\prime}$
+\end_inset
+
+ and 
+\begin_inset Formula $D_{2}^{\prime}$
+\end_inset
+
+, measure of LD in total and population samples.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $r_{1}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{2}^{2}$
+\end_inset
+
+, correlation coeafficient total and population samples.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n_{H}$
+\end_inset
+
+, 
+\begin_inset Formula $n_{H}{}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{H}{}_{2}$
+\end_inset
+
+Number of haplotype 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{m}$
+\end_inset
+
+, 
+\begin_inset Formula $R_{m}{}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{m}{}_{2}$
+\end_inset
+
+ Minimun number of recombiantion events (Hudson etal 1992).
+\end_layout
+
+\begin_layout Section*
+References
+\end_layout
+
+\begin_layout Standard
+Becquet, C., and M.
+ Przeworski.
+ 2007.
+ A new approach to estimate parameters of speciation models with application
+ to apes.
+ Genome Res.
+ 17:1505-1519.
+ 
+\end_layout
+
+\begin_layout Standard
+Fay, J.
+ C., and C.
+ -I.
+ Wu.
+ 2000.
+ Hitchhiking Under Positive Darwinian Selection.
+ Genetics 155:1405-1413.
+\end_layout
+
+\begin_layout Standard
+Fu, Y.
+ -X.
+ and W.
+ -H.
+ Li.
+ 1993.
+ Statistical tests of neutrality of mutations.
+ Genetics 133:693-709.
+ 
+\end_layout
+
+\begin_layout Standard
+Hudson, R.
+ R., 1983.
+ Properties of a neutral allele model with intragenic recombination.
+ Theor.
+ Popul.
+ Biol.
+ 23:183-201.
+ 
+\end_layout
+
+\begin_layout Standard
+Hudson, R.
+ R., 1990.
+ Gene genealogies and the coalescent process, in D.
+ Futuyma and J.
+ Antonovics (eds), Oxford Surveys in Evolutionary Biology, Vol.
+ 7:1-44.
+ 
+\end_layout
+
+\begin_layout Standard
+Hudson, R.
+ R., Slatkin, M., and Maddison, W.
+ P., 1992.
+ Estimation of levels of gene flow from DNA sequence data.
+ Genetics, 132:583-589.
+\end_layout
+
+\begin_layout Standard
+Hudson, R.
+ R., 2000.
+ A New Statistic for Detecting Genetic Differentiation.
+ Genetics 155:2011-2014.
+ 
+\end_layout
+
+\begin_layout Standard
+Hudson, R.
+ R., 2002.
+ Generating samples under a Wright-Fisher neutral model of genetic variation.
+ Bioinformatics 18:337-338.
+ 
+\begin_inset LatexCommand url
+target "\\url{http://pps-spud.uchicago.edu/~cbecquet/msdoc.pdf}"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Nei, M., and W.
+ H.
+ Li.
+ 1979.
+ Mathematical model for studying genetic variation in terms of restriction
+ endonucleases.
+ Proc.
+ Natl.
+ Acad.
+ Sci.
+ USA 76:5269-5273.
+ 
+\end_layout
+
+\begin_layout Standard
+Tajima, F., 1989.
+ Statistical method for testing the neutral mutation hypothesis by DNA polymorph
+ism.
+ Genetics 123:585-595.
+ 
+\end_layout
+
+\begin_layout Standard
+Wakeley, J., and J.
+ Hey.
+ 1997.
+ Estimating ancestral population parameters.
+ Genetics 145:847-855.
+ 
+\end_layout
+
+\begin_layout Standard
+Watterson, G.
+ A., 1975.
+ On the number of segregating sites in genetical models without recombination.
+ Theor.
+ Popul.
+ Biol.
+ 7:256-276.
+ 
+\end_layout
+
+\begin_layout Standard
+Wright, S., 1931.
+ Evolution in Mendelian populations.
+ Genetics 16:97-159.
+ 
+\end_layout
+
+\end_body
+\end_document

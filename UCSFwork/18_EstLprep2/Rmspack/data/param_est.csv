@@ -1,0 +1,66 @@
+##	Example of arguments to estimate parameters of extentions of the IM model.
+##	Comments starts with "#".
+##	There is no more than 3 values after a keyword.
+##	Alternative are shown in comments.
+
+############ REQUIRED PARAMETERS: ############
+
+## theta_1=4N1*mu - Population 1 mutation rates per bp per generation. NEEDS TO BE SPECIFIED.
+# theta_1 .0001			# If only theta_1 is specified, then N_1=N_2=N_A by default 
+theta_1 .0001 .001 10		# 10 values investigated in the interval [.0001,.001]
+
+## M_p=4N_1*m_p - Gene flow rate at present (0<t<inf or 0<t<T_s or 0<t<T_c). 
+## M_p needs to be specified if at least one of the genomic regions considered has n_1>0 and n_2>0 and T_split is not specified.
+# M_present 10			# M_p=4N_1*m_p fixed to 10.
+M_present 0 10 20		# 20 values investigated in the interval [0,10].
+
+############ OPTIONAL DEMOGRAPHIC PARAMETERS: ############
+
+### 1 value specified: The parameter is fixed to this value.
+### 3 values specified: Defined the UNIFORM prior for the parameter: lower, upper limit and number of values to investigate within this range.
+
+## theta_2=4N2*mu - Population 2 mutation rates per bp per generation. Default, theta_2=theta_1.
+# theta_2 .0002			# theta_2 fixed to .0002 
+theta_2 .0001 .001 10		# 10 values investigated in the interval [.0001,.001].
+
+## theta_2=4N2*mu - Population 2 mutation rates per bp per generation. Default, theta_A=theta_1.
+theta_A .00015		# theta_A fixed to .00015 
+# theta_A .0001 .001 10		# 10 values investigated in the interval [.0001,.001].
+
+## T_s - Time of split in unit of 4N_1 generations. Default, T_s=0.
+# T_split 1			# T_s The split timeis fixed to 1 
+T_split 0 2 10			# 10 values investigated in the interval [0,2]
+
+## epsilon=T_c/T_sT_c - T_c=Time when the gene flow rate changed in unit of 4N_1 generations.Default, T_c/T_s=0.
+T_change .8			# The ratio r_cs fixed to .8.
+# T_change 0 1 10			# 10 values investigated in the interval [0,1]
+
+## M_c=4N_1*m_c - The rate of gene flow for T_c<t<T_s. Default, M_c=0.
+# M_change 0			# M_c fixed to 1 
+M_change 0 20 10		# 20 values investigated in the interval [0,20]
+
+
+############ OPTIONAL NUISANCE PARAMETER: ############
+
+### Recombination rate parameters. 
+## rho=4N_1*c - Genomic average population intra-region recombination rate per bp per generation. 
+## The region-specific recombination rate per generation is rho*w*(L-1). Default, rho=0.
+rho	.0005# rho=4N_1*c fixed to .0005.
+# rho 1				# KNOWN region-specific population recombination rate per bp per generation: w=rho_o*beta in the file regfile.
+# rho 2	 2e-8			# KNOWN region-specific cross-ver rate per bp per generation: w=c_o*beta in the file regfile. Specifies mu=2e-8.
+# rho -1 1.669			# UNKNOWNintra-region recombination rate. c_r/mu~exp(lambda=.6). rho=theta_1*c_r/mu for region r.
+# rho -2 1 1			# UNKNOWNintra-region recombination rate. c_r/mu~Normal(nu=1,sigma=1). rho=theta_1*c_r/mu for region r.
+
+########### OPTIONAL OTHER PARAMETERS: ############
+
+## R - Number of genomic regions considered. Default, R=1.
+nregions 4			# R=4 regions considered.
+
+####### OPTIONAL PARAMETERS SPECIFIC TO ESTIMATE_IMC: ########
+## H - Number of data sets to simulate per set of parameters. Default, H=1000.
+# howmany 1000			# H=1000
+
+## J - Number of jobs to run in parallel. Default, J=1.
+# parallel 10			# The likelihood will be estimated via 10 parallel jobs
+
+

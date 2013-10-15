@@ -1,0 +1,340 @@
+### Function to check the information files for the regions and loci. ###
+
+'check_reg'<-
+  function(nregions,info_region,info_loci, locifile)
+{
+  ret=list()
+  ret$ok=1;
+  ret$reg=info_region
+  
+  listreg=c("nregion","name","xi - inheritance scalar", "vi - mutation rate scalar","wi - rec. rate scalar", "n1", "n2","start", "end", "nloci")
+  listloci=c("nregion","nloci", "n1", "n2","start", "end")
+  if(length(unique(info_region[,2]))<nregions)
+    {
+      tp=c("PROBLEM: The names of the regions should be unique. As is, the names for regions are: ",as.character(info_region[,2]) ,".");
+      stp="'"
+      for(j in 1:nregions)
+        stp=c(stp," ")
+      stp=c(stp,"'.") ;error_message(tp,stp); ret$ok=0;return(ret)
+    }
+### Loop on regions
+  for(i in 1:nregions)
+    {
+### check values given for info
+      ## #region number from 1 to nregion
+      if(!is.numeric(info_region[i,1]) ){tp=c("PROBLEM: No number was assigned to region # ",i, ". Instead the value is: ",info_region[i,1],". This value needs to start from 1 to 'nregions' value given in the file of argument."); stp=c("'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} #
+      else
+        {
+          if(info_region[i,1] !=i) {tp=c("PROBLEM: The number for the region # ",i, " is: ",info_region[i,1],"."); stp=c("'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} # num region check
+        }
+      
+      ## Name: Character for name
+      if(!is.factor(info_region[i,2]) )
+        {tp=c("PROBLEM: The names of the regions should be strings. As is, the name for region # ",i, " is: ",info_region[i,2],"."); stp=c("'","'","'","'");  error_message(tp,stp); ret$ok=0;return(ret)
+       }
+      
+      ## all other values are numerical
+      for(j in 3:length(info_region[i,]))
+        {
+          if(!is.numeric(info_region[,j]) ){tp=c("PROBLEM: The value in collumn # ", listreg[j], " is not numerical"); stp=c("'","'"); error_message(tp,stp); ret$ok=0;return(ret)} #
+          
+          if( is.na(info_region[i,j]) ){tp=c("PROBLEM: The value for region # ",i, " in collumn # ", listreg[j], " is missing"); stp=c("'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} #
+        }
+      
+      ## xr need value between 0> and <=1 for xr
+      if((info_region[i,3]==0 ||info_region[i,3]>1)  ){tp=c("PROBLEM: In region # ",i," the inheritance scalar was out of bound: ",info_region[i,3],", when it should be 0> and <=1"); stp=c("'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} #
+      
+      ## region bp should be >100
+      if(abs(info_region[i,9]-info_region[i,8])<100){tp=c("PROBLEM: The length of the region # ",i," is <100: ",info_region[i,9]-info_region[i,8],"."); stp=c("'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)}
+      else{
+        if(abs(info_region[i,9]-info_region[i,8])>100 & info_region[i,9]-info_region[i,8]<100 )
+          {
+            tp=c("WARNING: The length of the region # ",i," was: ",info_region[i,9]-info_region[i,8],". I changed the strand positions. It is now"); 
+            l=info_region[i,9]
+            info_region[i,9]=info_region[i,8]
+            info_region[i,8]=l
+            ret$reg=info_region
+            tp=c(tp,info_region[i,9]-info_region[i,8]," as I changed the strand positions."); 
+            stp=c("'","'","'","'","'","'","'"); error_message(tp,stp); 
+          }# end if abs
+      } #end else
+      
+      if(info_region[i,12]>1)                 # case with multiple loci
+        {
+          if(dim(info_loci[info_loci$V1== info_region[i,1],])[1]!=info_region[i,12]){tp=c("PROBLEM: The number of loci for region # ",i," should be: ",info_region[i,12],", but I find only ",dim(info_loci[info_loci$V1==info_region[i,1],])[1], " loci in the file ", locifile, "." ); stp=c("'","'","'","'","'","'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} # number of loci in region
+          regbp=0;
+          for(j in 1:dim(info_loci[info_loci$V1== info_region[i,1],])[1]) ## all must be numerical
+            { 
+              for(k in 1:dim(info_loci[info_loci$V1== info_region[i,1],])[2]) ## all must be numerical
+                {
+                  if(!is.numeric(info_loci[info_loci$V1== info_region[i,1],][j,k]) ){tp=c("PROBLEM: The value in collumn # ", listloci[k], " is not numerical"); stp=c("'","'"); error_message(tp,stp); ret$ok=0;return(ret)} #
+                  
+                  if( is.na(info_loci[info_loci$V1== info_region[i,1],][j,k]) ){tp=c("PROBLEM: The value for locus # ",j, " in collumn # ", listloci[k], " is missing"); stp=c("'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} #
+                }                     # end loop on info
+              
+              if( info_loci[info_loci$V1== info_region[i,1],][j,2]!=j) {tp=c("PROBLEM: The number for the locus # ",j, " is: ",info_loci[info_loci$V1== info_region[i,1],][j,2],"."); stp=c("'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} #check  loci #
+              
+              if( info_loci[info_loci$V1== info_region[i,1],][j,3]> info_region[i,6]) {tp=c("PROBLEM: The number of chromosomes sampled in pop 1 in reg # ",i, " is maximum: ",info_region[i,6], " ,but I found: ", info_loci[info_loci$V1== info_region[i,1],][j,3]," in locus # ",j, " in the file ",locifile,"."); stp=c("'","'","'","'","'","'","'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} # n1l<n11r
+              
+              if( info_loci[info_loci$V1== info_region[i,1],][j,4]> info_region[i,7]) {tp=c("PROBLEM: The number of chromosomes sampled in pop 2 in reg # ",i, " is maximum: ",info_region[i,7], " ,but I found: ", info_loci[info_loci$V1== info_region[i,1],][j,4]," in locus # ",j, " in the file ",locifile,"."); stp=c("'","'","'","'","'","'","'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} # n2l<n2r
+              ## check length of loci >100
+              if(info_loci[info_loci$V1== info_region[i,1],][j,6]-info_loci[info_loci$V1== info_region[i,1],][j,5]<100 ){tp=c("PROBLEM: In locus ", j, " of region # ",i," the length of locus is <100: ",info_loci[info_loci$V1== info_region[i,1],][j,6]-info_loci[info_loci$V1== info_region[i,1],][j,5],"."); stp=c("'","'","'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret)} #
+              
+            }           # end loop on loci
+          ## check start and end fit with region limit
+          if(info_loci[info_loci$V1== info_region[i,1],][1,5] < info_region[i,8] || info_loci[info_loci$V1== info_region[i,1],][dim(info_loci[info_loci$V1== info_region[i,1],])[1],6] > info_region[i,9] )
+            {tp=c("PROBLEM: The positions of the loci are out of the region # ",i,": locus 1 starts at positions: ",info_loci[info_loci$V1== info_region[i,1],][1,5]," when it should have been >= ", info_region[i,8], " and/or the end position of the last locus is: ", info_loci[info_loci$V1== info_region[i,1],][dim(info_loci[info_loci$V1== info_region[i,1],])[1],6]," when it should be <= ", info_region[i,9], "."); stp=c("'","'","'","'","'","'","'","'","'","'"); error_message(tp,stp); ret$ok=0;return(ret);} #  
+        } ### multiple loci in one region     
+    }     ### end loop on regions
+  return(ret);
+}         ### end function check arg and reg
+
+
+
+### Function to check the paramater values in the file paramfile ###
+'check_param' <-
+  function(param,paramfile, listparam, type=NA, summaries=NA)
+{
+  ret=list()
+  ret$ok=1;
+  ret$param=param  
+  ret$type=c(0,1,5,10)
+  ret$summaries="S_1 S_2 S_sl S_sh F_st D_1 D_2 D_star1 D_star2"
+###theta1 required
+  a=1                               
+  if((is.na(param[a,1])) ) {  tp=c("PROBLEM: The required parameter ",listparam[a]," was not found in the file of parameter ",paramfile,"."); stp=c("'","'","'","'"); error_message(tp,stp);ret$ok=0 ;return(ret); }
+  
+### check priors
+  for(a in 1:7)
+    {
+      if(!(is.na(param[a,3]))&& param[a,3]<=0) ## define prior ok
+        { tp=c("PROBLEM: ",listparam[a],3,"=",param[a,3],". It needs to be >0 when specifying the number of parameter values to consider in the uniform prior distribution for the parameter ", listparam[a],"."); stp=c("'","[","]","","'","'","'","'","'","'"); error_message(tp,stp);ret$ok=0 ;return(ret); }
+      else{
+        if(!(is.na(param[a,3])))          # if prior defined
+          {          	
+            if(!(is.na(param[a,2]))&&!(is.na(param[a,1])) && param[a,2]==param[a,1]) {
+              tp=c("WARNING: There are three values for the parameter ",listparam[a],", but ",listparam[a],1,"=",listparam[a],2,"=", param[a,1],". ", listparam[a], " will therefore be fixed to ",param[a,1] , "."); stp=c("'","'","'","[","]","","[","]","","'","'","'","'","'"); error_message(tp,stp); param[a,2]=param[a,3]=NA  }
+            if(!(is.na(param[a,1]))&& param[a,1]<0) {
+              tp=c("PROBLEM: The lower limit for the prior of ",listparam[a], " needs to be >=0. The value is now ",listparam[a],1,"=",param[a,1],"."); stp=c("'","'","'","[","]","","'","","'"); error_message(tp,stp);ret$ok=0 ;return(ret);   }
+            
+            if(!(is.na(param[a,2]))&&!(is.na(param[a,1])) && param[a,2]<param[a,1]) {
+              tp=c("PROBLEM: The upper limit of the prior for the parameter ", listparam[a]," needs to be larger than the lower limit. The value is now ",listparam[a],1,"=",param[a,1]," > ",listparam[a],2,"=",param[a,2], "."); stp=c("'","'","'","[","]","","'","'","[","]","","'","'","'"); error_message(tp,stp);ret$ok=0 ;return(ret);   }  
+              
+             if(!is.na(param[a,3]) && param[a,3]==1)
+          	{
+              	param[a,1]=(param[a,2]-param[a,1])/2
+              tp=c("WARNING: There are three values for the parameter ",listparam[a],", but ",listparam[a],3,"=", param[a,3],". ", listparam[a], " will therefore be fixed to ",param[a,1] , "."); stp=c("'","'","'","[","]","","","'","'","'","'","'"); error_message(tp,stp) ;param[a,2]=param[a,3]=NA; 
+          	}      
+          }### end prior defines
+                                        #else{                      # no prior defined:  fixed parameter
+        if(!is.na(param[a,2]) && is.na(param[a,3])){
+          tp=c("WARNING: There are only two values specified for the parameter ",listparam[a],": ",listparam[a],1,"=", param[a,1], " and ",listparam[a],2,"=",param[a,2],". Three values needs to be specified to describe a uniform prior distribution. The second values is therefore ignored and the parameter ", listparam[a], " will be fixed to ",param[a,1] , ".");
+          stp=c("'","'","'","[","]","","'","'","[","]","","'","'","'","'","'","'"); error_message(tp,stp);  param[a,2]=param[a,3]=NA;}
+### thetas >0
+        if( is.na(param[a,3]) && (!is.na(param[a,1]) && param[a,1]<=0 && (a==1 ||a==3||a==4))) {
+          tp=c("PROBLEM: The population mutation rate, when fixed, needs to be >0. The value is now ",listparam[a],1,"=",param[a,1],"."); stp=c("'","[","]","","'","'","'","'"); error_message(tp,stp);ret$ok=0 ;return(ret);   }
+        
+### T and M >=0
+        if( is.na(param[a,3]) && (!is.na(param[a,1])&& param[a,1]<0 && (a==2|| a>4))) {
+          tp=c("PROBLEM: The values for the parameter ",listparam[a], ", when fixed, needs to be >=0. The value is now ",listparam[a],1,"=",param[a,1],"."); stp=c("'","'","'","[","]","","'","'",""); error_message(tp,stp);ret$ok=0 ;return(ret);   }
+      } ## end else  define priors    
+    }   ### end loop on parameters with priors
+  
+### Check the ratio for Tc/Ts
+  if((!is.na(param[6,1]) && param[6,1]>1)||(!is.na(param[6,2]) && param[6,2]>1)) {
+    tp=c("PROBLEM: The maximum ratio of T_c/T_s is now ",listparam[6],2,"=",param[6,2]," but should be < 1 in the file ",paramfile,"."); stp=c("'","[","]","","'","'","'","'","'"); error_message(tp,stp);ret$ok=0 ;return(ret); }
+### M_c and T_c complement
+  if(((!is.na(param[6,1]) && param[6,1]==0 && is.na(param[6,2]))||(is.na(param[6,1])))&&((!is.na(param[7,1]) && param[7,1]!=param[2,1] && is.na(param[7,2])) || (!is.na(param[7,1]) && param[7,1]>=0 && !is.na(param[7,2])))){ 
+    tp=c("WARNING: Since ", listparam[6], "=", param[6,], ", the information specified for the parameter ", listparam[7], "=",param[7,],", will be ignored."); stp=c("'"," "," "," "," ","'","'"," "," "," "," ","'","'"); error_message(tp,stp); param[7,]=c(NA,NA,NA)}
+  
+  if(((!is.na(param[7,1]) && param[7,1]==param[2,1] && is.na(param[2,2])  && is.na(param[7,2]))||(is.na(param[7,1])))&&((!is.na(param[6,1]) && param[6,1]>0 && is.na(param[6,2]))||(!is.na(param[6,1]) && param[6,1]>=0 && !is.na(param[6,2])))){ 
+    tp=c("WARNING: Since ", listparam[7], "=", param[7,], ", the information specified for the parameter ", listparam[6], "=",param[6,],", will be ignored."); stp=c("'"," "," "," "," ","'","'"," "," "," "," ","'","'"); error_message(tp,stp); param[6,]=c(NA,NA,NA) }
+  
+### rho either 1 or -1 or real
+  a=8
+  if(!(is.na(param[a,1])))
+    {
+      if(param[a,1]==0 || (param[a,1]>0 && param[a,1]>1 && param[a,1]!=2 ) || param[a,1]<0 && param[a,1]!=-1 && param[a,1]!=-2  )
+        { tp=c("WARNING: Since the value for the parameter ",listparam[a], " is ",param[a,],", the parameter ",listparam[a], " will be ignored. Rho can be '-2 nu sigma', '-1 lambda', '1', '2 mu' or 0<=rho<theta_1*100."); stp=c("'","'","'",", ",", ","'","'","'","'","'","'","'"); error_message(tp,stp);param[a,]=c(NA,NA,NA);
+        }
+      else
+        {## rec taken from exponential prior
+          if(param[a,1]<0)
+            {
+              if( param[a,1]==-1  && !is.na(param[a,2]) && param[a,2]>1e-2)
+                { tp=c("WARNING: Since the value for the parameter ",listparam[a], " is ",param[a,1],param[a,2],", the ratio of recombination over mutation rate for the genomic region r, c_r/mu, is drawn from an exponential distribution with mean 1/lambda=",1/param[a,2],"."); stp=c("'","'","'",", ","'","'","","","'"); error_message(tp,stp);
+                }else
+              {
+                if(param[a,1]==-2  && !is.na(param[a,2]) && param[a,2]>=0 && param[a,2]<100 && !is.na(param[a,3]) && param[a,3]>=0)
+                  {tp=c("WARNING: Since the value for the parameter ",listparam[a], " is ",param[a,],", the ratio of recombination over mutation rate for the genomic region r, c_r/mu, is drawn from a normal distribution with mean nu=",param[a,2]," and variance sigma=",param[a,3],"."); stp=c("'","'","'",", ",", ","'","","","'","'","'","'"); error_message(tp,stp);
+                 }else
+                {tp=c("WARNING: Since the value for the parameter ",listparam[a], " is ",param[a,],", the parameter ",listparam[a], " will be ignored. Rho can be '-2 nu sigma', '-1 lambda', '1', '2 mu' or 0<=rho<theta_1*100."); stp=c("'","'","'",", ",", ","'","'","'","'","'","'"); error_message(tp,stp);param[a,]=c(NA,NA,NA);
+               }# end else ignore
+              }# end -1
+            }# end if <0
+          else
+            {# rec estimates 4Nc
+              if( param[a,1]==1)
+                { tp=c("WARNING: Since the value for the parameter ",listparam[a], " is ",param[a,1],", the region-specific population recombination rate is fixed and specified for each region in the file 'regfile'."); stp=c("'","'","'","'","'","'","'","'","'"); error_message(tp,stp);
+                }else
+              {# rec estimates c
+                if( param[a,1]==2 && !(is.na(param[a,2])))
+                  {tp=c("WARNING: Since the value for the parameter ",listparam[a], " is ",param[a,1],param[a,2],", the region-specific cross-over rate is fixed and specified for each region in the file 'regfile'."); stp=c("'","'","'",", ","'","'","'","'","'","'"); error_message(tp,stp);
+                 }else
+                {
+                  if(param[a,1]>1|| param[a,1]<1e-6)
+                    {tp=c("WARNING: Since the value for the parameter ",listparam[a], " is ",param[a,],", the parameter ",listparam[a], " will be ignored. Rho can be '-2 nu sigma', '-1 lambda', '1', '2 mu' or 0<=rho<theta_1*100."); stp=c("'","'","'",", ",", ","'","'","'","'","'","'"); error_message(tp,stp);param[a,]=c(NA,NA,NA);
+                   }# end else ignore
+                }#else 2
+              }# else 1
+            }# else >0 
+        }# end else ok rho
+    }# end if rho
+  
+### extra nregions 
+  a=9
+  if(!is.na(param[a,1])&&param[a,1]<=0){
+    tp=c("PROBLEM: The parameter ",listparam[a]," has the value ",param[a,1]," when it should be '>0' to specify the number of regions considered."); stp=c("'","'","'","'",""); error_message(tp,stp);ret$ok=0 ;return(ret); }
+  
+### Type array
+  a=10
+  i=1 #maf anc
+  if(!is.na(type[i]) && (type[i]!=0 && type[i]!=1))
+    { tp=c("WARNING: The parameter ",listparam[a]," #",i," has the value ",type[i]," when it should be '0' or '1' to specify known or unknown ancestry. I am going to use the default value: ",ret$type[i],"."); stp=c("'","'","'","'","'","'","'","'"); error_message(tp,stp); type[i]=0;
+    }
+  if(!is.na(type[i]) )
+    {
+ 		ret$type[i]=type[i]
+      i=2 #phazing
+ 		if(is.na(type[i]) || (type[i]!=1 && type[i]!=2))
+        { tp=c("WARNING: The parameter ",listparam[a]," #",i," has the value ",type[i]," when it should be '1' or '2' to specify phased or unphased data. I am going to use the default value: ",ret$type[i],"."); stp=c("'","'","'","'","'","'","'","'"); error_message(tp,stp); 
+        } else {ret$type[i]=type[i]}
+      i=3 # range LD
+ 		if(is.na(type[i]) || is.na(type[i+1]) || type[i]<0 || type[i+1]<0 || type[i+1]<type[i] )
+        { tp=c("WARNING: The parameter ",listparam[a]," #",i," and ",i+1," have the values ",type[i:(i+1)]," to specify the filtering range for the LD calulations. I am going to use the default values: ",ret$type[i:(i+1)],"."); stp=c("'","'","'","'","'","'","'","' '","'","'","' '","'"); error_message(tp,stp); 
+        } else {ret$type[i]=type[i];ret$type[i+1]=type[i+1] }
+    }# end if not na
+
+  if(dim(param)[1]>10)
+    {
+### list of stats
+		if(length(summaries>0))
+		{
+		if(is.na(summaries)){
+        tp=c("WARNING: The list of statistics has the value ",summaries," when I expect a list of summary statistics to consider. I am therefore going to use the default list ",ret$summaries,"."); stp=c("'","'","'","'",""); error_message(tp,stp); 
+        	}else
+        	{ret$summaries=summaries}
+        }
+
+### extra howmany
+      if(!is.na(param[10,1])&&param[10,1]<=0){
+        tp=c("PROBLEM: The parameter ",listparam[10]," has the value ",param[10,1]," when it should be '>0' to specify the number of data sets to simulate per grid point."); stp=c("'","'","'","'",""); error_message(tp,stp);ret$ok=0 ;return(ret); }
+      if(is.na(param[10,1]))
+        param[10,1]=1
+### extra parallel
+      if(!is.na(param[11,1])&&param[11,1]<=0){
+        tp=c("PROBLEM: The parameter ",listparam[11]," has the value ",param[11,1]," when it should be '>0' to specify the number parallel jobs to run."); stp=c("'","'","'","'",""); error_message(tp,stp);ret$ok=0 ;return(ret); }
+      if(is.na(param[11,1]))
+        param[11,1]=1
+    }
+  ret$param=param
+  return(ret);
+}### check_param
+
+
+### Function to order parameters/ keywords from a file of parameters. ###
+'order_param' <-
+  function(param,listparam,outparam=TRUE,outdata=TRUE)
+{
+  for(i in 1:length(param))
+    {
+      tp=clean_str(str=param[i], sep=" ")
+      param[i]=tp[1]
+    }
+    
+  if(length(listparam)==10) 
+    {nrow=length(listparam)-1
+   }else {nrow=length(listparam)-2}
+  ret=list()
+  ret$vparam=matrix(nr=nrow,nc=3) # 7 model parameters only
+  ret$type=matrix(nr=1,nc=4)
+  #ret$summaries=""
+  for(a in 1:length(param))
+    {
+      paramtp=strsplit(param[a],split=c(" "))
+      ## ordering the table of parameters.
+      nparam=get_nparam(keyword=paramtp[[1]][1], listparam=listparam)
+      if(nparam==10 || nparam==11)# type
+        { 
+          if(nparam==10)
+            {
+              j=1
+              i=2
+              while(i<=length(paramtp[[1]]))
+                {
+                  if(paramtp[[1]][i]!= "")
+                    {
+                      if(!is.na(as.numeric(paramtp[[1]][i]))) {ret$type[1,j]=as.numeric(paramtp[[1]][i])}
+                      else {tp=c("WARNING: In the parameter ",paramtp[[1]][1]," a value is not numeric: ",paramtp[[1]][i],". It was therefor ignored."); stp=c("'","'","'","'" );  error_message(tp,stp)}
+                      j=j+1
+                    }
+                  i=i+1
+                } ## loop to remove empty cells
+            # end type
+          }else # recover summaries
+            {
+              if(outdata)
+                {
+                  tp=strsplit(param[a],split="stats ")
+                  ret$summaries=tp[[1]][2]
+                }              
+            }# end else 
+        }
+      else
+        { 
+          if(outparam || ((!outparam) && (nparam==1 || nparam>11 || nparam==9)))
+            {
+              if(nparam>11){nparam=nparam-2} 
+              if(nparam!=0 && is.na(ret$vparam[nparam,1]))
+                {
+                  j=1
+                  i=2
+                  while(i<=length(paramtp[[1]]))
+                    {
+                      if(paramtp[[1]][i]!= "")
+                        {
+                          if(!is.na(as.numeric(paramtp[[1]][i]))) {ret$vparam[nparam,j]=as.numeric(paramtp[[1]][i])}
+                          else {tp=c("WARNING: In the parameter ",paramtp[[1]][1]," a value is not numeric: ",paramtp[[1]][i],". It was therefor ignored."); stp=c("'","'","'","'" );  error_message(tp,stp)}
+                          j=j+1
+                        }
+                      i=i+1
+                    } ## loop to remove empty cells
+                }
+              else #### check point
+                {
+                  if(nparam==0)
+                    { tp=c("WARNING: The parameter ",paramtp[[1]][1]," does not correspond to known information. It was therefor ignored."); stp=c("'","'");  error_message(tp,stp) }
+                  else
+                    { tp=c("WARNING: The parameter ",paramtp[[1]][1]," with values ",paramtp[[1]][2:length(paramtp[[1]])], " was already used before with the values: ",ret$vparam[nparam,1:3], ". It was therefore ignored.");
+                      tpstp="'"
+                      for(a in 2: length(paramtp[[1]]))
+                        {tpstp=c(tpstp,"'")}
+                      stp=c("'","'",tpstp,"'",", ",", ","'", "");  error_message(tp,stp) }
+                } ## end check points
+            }# if out param then check
+        }# not nparam==10
+    }     ## end loop on parameters
+  return(ret)
+} ### order param
+
+
+### Function to obtain the number of a particular Keyword/parameter. ###
+`get_nparam` <- function(keyword, listparam)
+{
+  nparam=0;
+  for(i in 1:length(listparam))
+    {
+      if(tolower(keyword)==tolower(listparam[i])) {nparam=i}
+    }
+  return(nparam)
+} ## end get nparam function

@@ -1,0 +1,283 @@
+### Function to calculate summary statistics of from ms samples with two populations. ###
+
+`stats_pop` <-
+function (msframe, type=c(0,1,5,10)) 
+{
+    stat=.Call("statsPop",cmdline=msframe$cmdline_seeds[1],seg=msframe$segsites, pos=msframe$positions, haplo=msframe$haplotypes,type=type, PACKAGE="stats_popR")
+    for(i in 1:dim(stat$segsites)[1])## loop on haplo
+      {
+         for(j in 1:dim(stat$segsites)[2])## loop on stats
+           {
+             if(stat$segsites[i,j] == "NaN" || stat$segsites[i,j] == "Inf")
+               {stat$segsites[i,j] = NA_integer_ }
+
+             if(j<8 && (stat$frequencies[i,j] == "NaN" || stat$frequencies[i,j] == "Inf"))
+               {stat$frequencies[i,j] = NA_real_ }
+
+
+             if(j<6 && (stat$fst[i,j] == "NaN" || stat$fst[i,j] == "Inf"))
+               {stat$fst[i,j] = NA_real_ }
+             
+             if(j<4)
+               {
+                 if(stat$pi[i,j] == "NaN" || stat$pi[i,j] == "Inf")
+                  {stat$pi[i,j] = NA_real_ }
+                 
+                 if(stat$thetaW[i,j] == "NaN" || stat$thetaW[i,j] == "Inf")
+                   {stat$thetaW[i,j] = NA_real_ }
+                 
+                 if(stat$D[i,j] == "NaN" || stat$D[i,j] == "Inf")
+                   {stat$D[i,j] =  NA_real_ }
+
+                 if(stat$thetaH[i,j] == "NaN" || stat$thetaH[i,j] == "Inf")
+                   {stat$thetaH[i,j] = NA_real_}
+
+                 if(stat$H[i,j] == "NaN" || stat$H[i,j] == "Inf")
+                    {stat$H[i,j] = NA_real_ }
+                 
+                  if(stat$D_star[i,j] == "NaN" || stat$D_star[i,j] == "Inf")
+                    {stat$D_star[i,j] = NA_real_ }
+                 
+                  if(stat$D_prime[i,j] == "NaN" || stat$D_prime[i,j] == "Inf")
+                    {stat$D_prime[i,j] = NA_real_ }
+                 
+                  if(stat$r_square[i,j] == "NaN" || stat$r_square[i,j] == "Inf")
+                    {stat$r_square[i,j] = NA_real_ }
+
+               }
+           }## end loop stat
+      }## end loop haplo
+    return(stat)
+}
+
+
+## function to transform frame from stats_pop into list of frames
+'get_liststats'<-  function(liststats,summaries)
+{
+	nstats=list()
+	nstats$list=vector("integer",length(summaries[[1]]))
+	nstats$stats=list()
+	nstats$stats$segsites=nstats$stats$singletons=nstats$stats$frequencies=nstats$stats$fst=nstats$stats$pi=nstats$stats$thetaW= nstats$stats$thetaH=nstats$stats$D=nstats$stats$H=nstats$stats$D_star=nstats$stats$D_prime=nstats$stats$r_square=nstats$stats$nH=nstats$stats$Rm=vector("numeric")
+	
+	for(s in 1:length(summaries[[1]]))
+    {
+    	tp=which(tolower(summaries[[1]][s])==tolower(liststats[[1]]))
+    	print(length(tp)==1)
+    	{
+		nstats$list[s]=
+		
+		if(nstats$list[s] <=12)
+		nstats$stats$segsites[length(nstats$stats$segsites)+1]=nstats$list[s]
+		if(nstats$list[s]>12 && nstats$list[s] <=15)
+        nstats$stats$singletons[length(nstats$stats$singletons)+1]=nstats$list[s]-12
+		if(nstats$list[s]>15 && nstats$list[s] <=24)
+        nstats$stats$frequencies[length(nstats$stats$frequencies)+1]=nstats$list[s]-15
+		if(nstats$list[s]>24 && nstats$list[s] <=29)
+        nstats$stats$fst[length(nstats$stats$fst)+1]=nstats$list[s]-24
+		if(nstats$list[s]>29 && nstats$list[s] <=32)
+        nstats$stats$pi[length(nstats$stats$pi)+1]=nstats$list[s]-29
+		if(nstats$list[s]>32 && nstats$list[s] <=35)
+        nstats$stats$thetaW[length(nstats$stats$thetaW)+1]=nstats$list[s]-32
+		if(nstats$list[s]>35 && nstats$list[s] <=38)
+        nstats$stats$thetaH[length(nstats$stats$thetaH)+1]=nstats$list[s]-35
+		if(nstats$list[s]>38 && nstats$list[s] <=41)
+        nstats$stats$D[length(nstats$stats$D)+1]=nstats$list[s]-38
+        if(nstats$list[s]>41 && nstats$list[s] <=44)
+        nstats$stats$H[length(nstats$stats$H)+1]=nstats$list[s]-41
+		if(nstats$list[s]>44 && nstats$list[s] <=47)
+        nstats$stats$D_star[length(nstats$stats$D_star)+1]=nstats$list[s]-44
+        
+        if(nstats$list[s]>47 && nstats$list[s] <=50)
+        nstats$stats$D_prime[length(nstats$stats$D_prime)+1]=nstats$list[s]-47
+		if(nstats$list[s]>50 && nstats$list[s] <=53)
+        nstats$stats$r_square[length(nstats$stats$r_square)+1]=nstats$list[s]-50
+		if(nstats$list[s]>53 && nstats$list[s] <=56)
+        nstats$stats$nH[length(nstats$stats$nH)+1]=nstats$list[s]-53
+		if(nstats$list[s]>56 && nstats$list[s] <=59)
+        nstats$stats$Rm[length(nstats$stats$Rm)+1]=nstats$list[s]-56        
+        }
+	}
+	nstats$stats$segsites=sort(nstats$stats$segsites)
+	nstats$stats$singletons=sort(nstats$stats$singletons)
+	nstats$stats$frequencies=sort( nstats$stats$frequencies)
+	nstats$stats$fst=sort(nstats$stats$fst)
+	nstats$stats$pi=sort(nstats$stats$pi)
+	nstats$stats$thetaW=sort(nstats$stats$thetaW)
+	nstats$stats$thetaH=sort(nstats$stats$thetaH)
+	nstats$stats$D=sort(nstats$stats$D)
+	nstats$stats$H=sort(nstats$stats$H)
+	nstats$stats$D_star=sort(nstats$stats$D_star)
+	nstats$stats$D_prime=sort(nstats$stats$D_prime)
+	nstats$stats$r_square=sort(nstats$stats$r_square)
+	nstats$stats$nH=sort(nstats$stats$nH)
+	nstats$stats$Rm=sort(nstats$stats$Rm)
+	
+	nstats$list=sort( nstats$list)
+	return(nstats)
+}
+
+## function to transform frame from statss_pop into list of frames
+'get_stats'<-  function(nloci, nlocus ,sumstats,statslocus, info,summaries)
+{ 
+	if(nlocus==1)
+    {
+		sumstats=list()
+		sumstats$type=statslocus$type
+		sumstats$loci=matrix(nc=2,nr=nloci)
+		
+		if(length(summaries$segsites)>0)
+        sumstats$segsites=matrix(nc=length(summaries$segsites),nr=nloci)
+		if(length(summaries$singletons)>0)
+        sumstats$singletons=matrix(nc=length(summaries$singletons),nr=nloci)
+		if(length(summaries$frequencies)>0)
+        sumstats$frequencies=matrix(nc=length(summaries$frequencies),nr=nloci)
+		if(length(summaries$fst)>0)
+        sumstats$fst=matrix(nc=length(summaries$fst),nr=nloci) 
+		if(length(summaries$pi)>0)
+        sumstats$pi=matrix(nc=length(summaries$pi),nr=nloci)
+		if(length(summaries$thetaW)>0)
+        sumstats$thetaW=matrix(nc=length(summaries$thetaW),nr=nloci)
+		if(length(summaries$thetaH)>0)
+        sumstats$thetaH=matrix(nc=length(summaries$thetaH),nr=nloci)
+		if(length(summaries$D)>0)
+        sumstats$D=matrix(nc=length(summaries$D),nr=nloci)
+		if(length(summaries$H)>0)
+        sumstats$H=matrix(nc=length(summaries$H),nr=nloci)
+		if(length(summaries$D_star)>0)
+        sumstats$D_star=matrix(nc=length(summaries$D_star),nr=nloci)        
+		if(length(summaries$D_prime)>0)
+        sumstats$D_prime=matrix(nc=length(summaries$D_prime),nr=nloci)
+		if(length(summaries$r_square)>0)
+        sumstats$r_square=matrix(nc=length(summaries$r_square),nr=nloci)
+		if(length(summaries$nH)>0)
+        sumstats$nH=matrix(nc=length(summaries$nH),nr=nloci)
+		if(length(summaries$Rm)>0)
+	sumstats$Rm=matrix(nc=length(summaries$Rm),nr=nloci)    }
+	if(length(info)==10) # region    
+    {sumstats$loci[nlocus,1]=sumstats$loci[nlocus,2]=info$V1
+	}else
+    { sumstats$loci[nlocus,1]=info$V1
+		sumstats$loci[nlocus,2]=info$V2
+    }
+	sumstats$segsites[nlocus,]=statslocus$segsites[1,summaries$segsites]
+	sumstats$singletons[nlocus,]=statslocus$singletons[1,summaries$singletons]
+	sumstats$frequencies[nlocus,]=statslocus$frequencies[1,summaries$frequencies]
+	sumstats$fst[nlocus,]=statslocus$fst[1,summaries$fst]
+	sumstats$pi[nlocus,]=statslocus$pi[1,summaries$pi]
+	sumstats$thetaW[nlocus,]=statslocus$thetaW[1,summaries$thetaW]
+	sumstats$thetaH[nlocus,]=statslocus$thetaH[1,summaries$thetaH]
+	sumstats$D[nlocus,]=statslocus$D[1,summaries$D]
+	sumstats$H[nlocus,]=statslocus$H[1,summaries$H]
+	sumstats$D_star[nlocus,]=statslocus$D_star[1,summaries$D_star]
+	sumstats$D_prime[nlocus,]=statslocus$D_prime[1,summaries$D_prime]
+	sumstats$r_square[nlocus,]=statslocus$r_square[1,summaries$r_square]
+	sumstats$nH[nlocus,]=statslocus$nH[1,summaries$nH]
+	sumstats$Rm[nlocus,]=statslocus$Rm[1,summaries$Rm]
+	return(sumstats)
+}
+
+
+## function to output statsistics in a file
+'output_stats'<-  function(datafile,reg, regfile,sumstats, liststats,locifile=NA,loci)
+{
+	name=paste(datafile,"S",sep="-")
+	write(file=name,x="$type")
+	write(file=name,x=sumstats$type, append=TRUE)
+	s1=readLines(regfile)[1]
+	s=clean_str(str=s1,sep="\t")
+	if(is.na(locifile) & !is.null(reg[,13])){
+		s=strsplit(s,"//")[[1]]
+		s=paste(s,"S//",sep="\t")
+	}else{  if(!is.null(reg[,13]))
+		{
+			s1=s
+			s="nlocus";
+			s=paste(s,s1,sep="\t");
+			s=strsplit(s,"//")[[1]]
+			s=paste(s,"S//",sep="\t")
+		}
+	}
+	for(i in 1:length(liststats))     	
+    s=paste(s,liststats[i],sep="\t")
+	write(file=name,x=s, append=TRUE)
+	nl=1;# locus number
+	for(i in 1:length(sumstats$segsites[,1]))
+    {
+# s=sumstats$loci[i,1]
+		if(is.na(locifile) )
+		{
+         	n=12
+         	if(!is.null(reg[,13])) {n=13}
+         	s=reg[i,1]
+         	for(j in 2:n)
+         	{s=paste(s,reg[i,j],sep="\t");}
+#s=paste(s,sumstats$segsites[1,1],sep="\t");
+		} else {
+			if(reg[sumstats$loci[i,1],12]==1)
+			{
+				s="1"
+				s1=readLines(regfile)[sumstats$loci[i,1]+1]
+				tp=clean_str(str=s1,sep="\t")
+				s=paste(s,tp,sep="\t");
+				s=paste(s,reg[i,13],sep="\t");
+			}else{
+				s=sumstats$loci[i,2]
+				s=paste(s,sumstats$loci[i,1],sep="\t")
+				for(j in 2:5)
+				s=paste(s,reg[sumstats$loci[i,1],j],sep="\t")
+				for(j in 3:6)
+				s=paste(s,loci[nl,j],sep="\t")
+				for(j in 10:11)
+				s=paste(s,reg[sumstats$loci[i,1],j],sep="\t")
+				s=paste(s,"1",sep="\t")
+				s=paste(s,loci[nl,7],sep="\t");
+				nl=nl+1;
+			}
+		}
+		
+		if(length(sumstats$segsites[1,])>0)
+        for(j in 1:length(sumstats$segsites[1,]))
+		s=paste(s,sumstats$segsites[i,j],sep="\t")
+		if(length(sumstats$singletons[1,])>0)
+        for(j in 1:length(sumstats$singletons[1,]))
+		s=paste(s,sumstats$singletons[i,j],sep="\t") 
+		if(length(sumstats$frequencies[1,])>0)
+		for(j in 1:length(sumstats$frequencies[1,]))
+		s=paste(s,sumstats$frequencies[i,j],sep="\t") 
+		if(length(sumstats$fst[1,])>0)
+		for(j in 1:length(sumstats$fst[1,]))
+		s=paste(s,sumstats$fst[i,j],sep="\t") 
+		if(length(sumstats$pi[1,])>0)
+		for(j in 1:length(sumstats$pi[1,]))
+		s=paste(s,sumstats$pi[i,j],sep="\t") 
+		if(length(sumstats$thetaW[1,])>0)
+		for(j in 1:length(sumstats$thetaW[1,]))
+		s=paste(s,sumstats$thetaW[i,j],sep="\t") 
+		if(length(sumstats$thetaH[1,])>0)
+		for(j in 1:length(sumstats$thetaH[1,]))
+		s=paste(s,sumstats$thetaH[i,j],sep="\t") 
+		if(length(sumstats$D[1,])>0)
+		for(j in 1:length(sumstats$D[1,]))
+		s=paste(s,sumstats$D[i,j],sep="\t") 
+		if(length(sumstats$H[1,])>0)
+		for(j in 1:length(sumstats$H[1,]))
+		s=paste(s,sumstats$H[i,j],sep="\t") 
+		if(length(sumstats$D_star[1,])>0)
+		for(j in 1:length(sumstats$D_star[1,]))
+		s=paste(s,sumstats$D_star[i,j],sep="\t")
+		
+		if(length(sumstats$D_prime[1,])>0)
+		for(j in 1:length(sumstats$D_prime[1,]))
+		s=paste(s,sumstats$D_prime[i,j],sep="\t")
+		if(length(sumstats$r_square[1,])>0)
+		for(j in 1:length(sumstats$r_square[1,]))
+		s=paste(s,sumstats$r_square[i,j],sep="\t")
+		if(length(sumstats$nH[1,])>0)
+		for(j in 1:length(sumstats$nH[1,]))
+		s=paste(s,sumstats$nH[i,j],sep="\t")
+		if(length(sumstats$Rm[1,])>0)
+		for(j in 1:length(sumstats$Rm[1,]))
+		s=paste(s,sumstats$Rm[i,j],sep="\t")
+		write(file=name,x=s, append=TRUE)
+    }
+}

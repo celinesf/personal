@@ -1,0 +1,30 @@
+\name{regfile}
+\alias{regfile}
+\docType{data}
+\title{
+  Example file of information on the regions
+}
+\description{
+  Example file of information on the regions
+}
+\usage{data(regfile)}
+\format{
+  A data frame with 5 observations on the following variable.
+  \describe{
+    \item{\code{V1}}{a factor with levels \code{1	reg.1	1	1	1	4	4	0	10000	.1 .1 1} \code{2	reg.2	0.75	1	0.5	4	4	50000	0 .2 .01	1} \code{3	reg.3	1	0.5	1	4	4	0	10000	0 0 1} \code{4	reg.4	1	1	1	4	4	0	10000	0 0 1} \code{r	Name	x	v	w	n_1	n_2	z_s	z_e	m_1	m_2 Y//}}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+  See \code{References} section in \code{\link{EstLprep-package}}.
+}
+\examples{
+data(regfile)
+## maybe str(regfile) ; plot(regfile) ...
+}
+\keyword{datasets}

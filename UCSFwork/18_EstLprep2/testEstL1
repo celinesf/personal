@@ -1,0 +1,70 @@
+R CMD INSTALL Rmspack
+
+
+library("Rmspack")
+
+
+input_estlik(param="est-orang", datafile="msouttest",regfile="regorangtest",outparam=FALSE)
+
+
+
+
+R CMD roxygen -d EstLprep0
+
+
+ package.skeleton(name="EstLprep", code_files=c("ms.R","cmd_line.R","EstLprep-package.R"),force=TRUE)
+
+
+package.skeleton(name="EstLprep", 
+code_files=c(
+"check_fun.R",
+"cmd_line.R",
+"estimate.R", 
+"get_loci.R",
+"get_rho.R",
+"ms.R",
+"output_cmd.R",
+"simulate_data.R", 
+ "stats_pop.R", 
+"str_fun.R"
+)
+)
+
+R CMD INSTALL EstLprep
+
+R CMD check EstLprep
+
+library(EstLprep) 
+? liststats
+
+ ?EstLprep
+
+######################
+roxygenize('mspack',roxygen.dir='mspack',copy.package=FALSE,unlink.target=FALSE) 
+
+
+library(Rd2roxygen) 
+parse_and_save("stats_pop.Rd",file="stat")
+parse_and_save("write_ms_output.Rd",file="write")
+parse_and_save("get_stats.Rd",file="gets")
+parse_and_save("get_liststats.Rd",file="getls")
+parse_and_save("output_stats.Rd",file="outs")
+-------------------
+library("Rmspack")
+
+input_estlik(paramfile="estim2",regfile="regions", datafile="reg0", outdata=TRUE,outparam=TRUE,locifile="loci");
+
+
+
+
+
+---------------- roxygen
+R CMD roxygen 
+
+install.packages('rogygen',type="source")
+
+ library(roxygen) 
+ package.skeleton('helloRoxygen', code_files='hello-roxygen.R',force=TRUE) 
+
+R CMD roxygen -d helloRoxygen works, too. 
+ roxygenize('helloRoxygen',roxygen.dir='helloRoxygen',copy.package=FALSE,unlink.target=FALSE) 

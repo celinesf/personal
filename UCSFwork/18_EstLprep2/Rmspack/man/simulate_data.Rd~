@@ -1,0 +1,831 @@
+\name{simulate_data}
+\alias{simulate_data}
+
+\title{
+  Function to simulate data for independent genomic regions using the \R
+  function ms in the format required to estimate parameters of
+  extensions of the Isolation-with-migration model. 
+}
+
+\description{
+  The function \code{\link{simulate_data}} simulates data in the format
+  required by the \R function
+  \code{\link{estimate_IMc}}. \code{\link{simulate_data}} uses the \R
+  function \code{\link{ms}} with the set of parameters specified in the
+  file \code{paramfile} as well as the information on independent
+  genomic regions specified in the file \code{regfile}. \cr 
+  If there are multiple loci with gaps in one or more regions considered
+  (as specified by \eqn{Y>0} in the file \code{regfile}), the function
+  \code{\link{simulate_data}} also requires the information on the
+  multiple loci to be specified in the file \code{locifile}. \cr
+  The parameters of the model specified in \code{paramfile} can be
+  either fixed or variable.
+  \code{\link{simulate_data}} writes the simulated data in \code{ms}-like text files
+  named \code{"datafile}\eqn{r}\code{"}, where \eqn{r} \eqn{\in}
+  \eqn{[1,R]} is the genomic region number. It also writes the \eqn{47}
+  summary statistics of the simulated polymorphisms calculated by
+  \code{\link{stats_pop}}
+  for the independent genomic
+  regions considered (and their loci is applicable) in the file named
+  \code{"datafile-S"} (\code{"datafile-loci-S"}).
+}
+
+\usage{
+simulate_data(paramfile="simulation.par",datafile="reg", regfile="info.reg",
+locifile="info.loc", type="anc")
+}
+
+\arguments{
+  \item{paramfile}{
+    The name of the file with the parameters values required to simulate
+    data using the \R function \code{\link{simulate_data}}. \cr 
+    By default the file name is \code{"simulation.par"}. \cr 
+    Comments start with \code{"#"} and are ignored by the function. The
+    keywords and the values are separated by space or tabulations. \cr
+    \item{\strong{Specifying variable parameters: }}{
+      Any of the demographic parameters listed below can be either fixed
+      (i.e., only one value specified after the keyword) or variable
+      accross independent genomic regions. \cr 
+      If a parameter is to be variable accross independent genomic
+      regions, the information on the uniform prior  distribution is
+      specified with three values, two floating numbers and an 
+      integer as follows: \cr 
+      \code{"}\emph{\code{variable_param }}\eqn{\Theta_l}\code{ }\eqn{\Theta_u}\code{ }\eqn{\Theta_n}\code{"}. 
+      \tabular{ll}{
+        \eqn{\Theta_l}\tab 
+        : The lower limit on the prior distribution
+        range. \eqn{\Theta_l}\eqn{\ge}\eqn{0}. \cr 
+        \eqn{\Theta_u} \tab 
+        : The upper limit on the prior distribution range.
+        \eqn{\Theta_l}\eqn{\le}\eqn{\Theta_u}. \cr 
+        \eqn{\Theta_n} \tab 
+        : The number of values to consider along the prior distribution
+        range (including the bounderies). \eqn{\Theta_n>0} \cr 
+      } ATTENTION: \code{\link{simulate_data}} requires that
+      \eqn{0\le}\eqn{\Theta_l}\eqn{\le}\eqn{\Theta_u} and
+      \eqn{\Theta_n>0}. \cr 
+      If only one value is specified (i.e., \eqn{\Theta_l>0} and
+      \eqn{\Theta_u} not specified or \eqn{\Theta_u=\Theta_l}), the
+      parameter is considered fixed to \eqn{\Theta_l}.
+    }
+    The information on the fixed and/or variable accross independent
+    genomic regions parameters for the IM-like model  are specified
+    with the nine following keywords: 
+    \item{\strong{REQUIRED PARAMETERS: }}{
+      \item{\emph{\code{theta_1}}}{
+        ATTENTION: \code{\link{simulate_data}} requires that
+        either the parameter value of the population mutation rate per bp per
+      generation for population 1 (i.e. \eqn{\theta_1>0}) or the prior
+        distribution for \eqn{\theta_1} (see above for the restrictions)
+        be specified: \cr 
+        \code{"}\emph{\code{theta_1}}\code{ }\eqn{\theta_1}\code{"} or
+        \code{"}\emph{\code{theta_1}}\code{ }\eqn{\theta_1l}\code{ }\eqn{\theta_1u}\code{ }\eqn{\theta_1n}\code{"}. 
+        \tabular{ll}{
+          ---> Where: \tab \cr
+          \eqn{\theta_1=4N_1*\mu} \tab
+          : The population mutation rate per bp per generation for
+          population 1 (required). \cr 
+          \eqn{N_1} \tab 
+          : The effective population size in population 1 (the reference
+          population so by default and unless specified, \eqn{N_1=N_2=N_A}). \cr
+          \eqn{\mu} \tab
+          : The genomic generational mutation rate per bp. 
+        }NOTE: If \eqn{\theta_1l=0}, \code{\link{simulate_data}}
+        will sample a value of \eqn{\theta_1} among the \eqn{\theta_1n}
+        possible values \eqn{\in} \eqn{[(\theta_1u-\theta_1l)/\theta_1n,\theta_1u]}.
+      }% end theta
+      \item{\emph{\code{M_present}}}{
+        Use \code{"}\emph{\code{M_present}}\code{ }\eqn{M_p}\code{"} or 
+        \code{"}\emph{\code{M_present}}\code{ }\eqn{M_pl}\code{ }\eqn{M_pu}\code{ }\eqn{M_pn}\code{"}\cr
+        to specify \eqn{M_p=4N_1*m_p}, the number of migrants exchanged
+        each generation by the TWO populations at present. \cr
+        By default there is no gene flow. \cr
+        \eqn{M_p} is ignored unless there is population structure (as
+        specified with \eqn{n_1>0} and \eqn{n_2>0} for the genomic region
+        considered in the file \code{regfile}). \cr
+        \eqn{M_p} has different definitions depending of the model
+        considered: \cr 
+        * \eqn{M_p} is the symmetrical rate of gene flow between
+        TWO populations in an island model (i.e., \eqn{0<t<\inf}) as specified
+        with: \cr 
+        -- At least one of the independent genomic regions has
+        \eqn{n_1>0} and \eqn{n_2>0} as specified in the file
+        \code{regfile}. \cr 
+        -- Either \eqn{T_s=0} when fixed and specified with the keyword
+        \emph{\code{T_split}} or unspecified. \cr
+        ATTENTION: \code{\link{simulate_data}} requires that
+        \eqn{M_p>0} when fixed or
+        \eqn{0\le}\eqn{M_pl}\eqn{\le}\eqn{M_pu} and \eqn{M_pn>0} when
+        variable accross independent genomic regions be specified in
+        case of an island model. 
+        In this case and even if
+  \eqn{M_pl=0}, \code{\link{simulate_data}} will sample a value
+  \eqn{M_p>0} among the \eqn{M_pn} 
+        possible values \eqn{\in} \eqn{[(M_pu-M_pl)/M_pn,M_pu]}.\cr 
+        * \eqn{M_p} is the constant symmetrical rate of gene flow
+        since the split until present (i.e., \eqn{0<t<T_s}) if there is a
+        population split (as specified with the keyword
+        \emph{\code{T_split}} with \eqn{T_s>0} when fixed or
+        \eqn{0\le}\eqn{T_sl}\eqn{\le}\eqn{T_su} and \eqn{T_sn>0} when
+        variable accross independent genomic regions). \cr
+        * \eqn{M_p} is the constant symmetrical rate of gene flow since
+        the time of gene flow rate change until present (i.e., \eqn{0<t<T_c})
+        if a time at which the gene flow rate changed is specified with: \cr 
+        -- \eqn{0<T_c<T_s} (as specified with the keyword
+        \emph{\code{T_change}} with \eqn{0<\epsilon<1} when fixed or
+        \eqn{0\le}\eqn{\epsilon_l}\eqn{\le}\eqn{\epsilon_u}\eqn{\le1} and \eqn{\epsilon_n>0}
+        when variable accross independent genomic regions). \cr
+        -- \eqn{M_c \not=M_p} (as specified with the keywords
+        \emph{\code{M_present}} and \emph{\code{M_change}} with
+        \eqn{0\le}\eqn{M_c \not=M_p} when fixed).
+        \tabular{l}{
+          ---> Where, \eqn{m_p}
+          : The generational fraction of migrant individuals at
+          present. 
+        }
+      }% end M_p
+    }% end req arg
+    \item{\strong{OPTIONAL DEMOGRAPHIC PARAMETERS: }}{
+      All the parameters listed below are optional and can be either
+      fixed or variable accross independent genomic regions. 
+      \item{\emph{\code{theta_2}}}{
+        Use \code{"}\emph{\code{theta_2}}\code{ }\eqn{\theta_2}\code{"} or
+        \code{"}\emph{\code{theta_2}}\code{ }\eqn{\theta_2l}\code{ }\eqn{\theta_2u}\code{ }\eqn{\theta_2n}\code{"}\cr
+        to specify \eqn{\theta_2=4N_2*\mu}, the population mutation rate
+        per bp per generation for population 2. \cr 
+        \eqn{\theta_2} is ignored unless there is population structure
+        (as specified with \eqn{n_1>0} and \eqn{n_2>0} for the genomic region
+        considered in the file \code{regfile}). 
+        \tabular{l}{
+          ---> Where, \eqn{N_2} 
+          : The effective population size in population 2. 
+        }
+        ATTENTION: \code{\link{simulate_data}} requires that
+        \eqn{\theta_2>0} when specified and fixed. \cr
+        NOTE: If \eqn{\theta_2l=0}, \code{\link{simulate_data}}
+        will sample a value of \eqn{\theta_2} among the \eqn{\theta_2n}
+        possible values \eqn{\in} \eqn{[(\theta_2u-\theta_2l)/\theta_2n,\theta_2u]}.\cr
+        If \eqn{\theta_2} is not specified the \eqn{\theta_2=\theta_1}.
+      }% end theta2 
+      \item{\emph{\code{theta_A}}}{
+        Use \code{"}\emph{\code{theta_A}}\code{ }\eqn{\theta_A}\code{"} or
+        \code{"}\emph{\code{theta_A}}\code{ }\eqn{\theta_Al}\code{ }\eqn{\theta_Au}\code{ }\eqn{\theta_An}\code{"}\cr
+        to specify \eqn{\theta_A=4N_A*\mu}, the ancestral population
+        mutation rate per bp per generation. \cr 
+        \eqn{\theta_A} is ignored unless there is a population split (as
+        specified with the keyword \emph{\code{T_split}} with \eqn{T_s>0} or
+        \eqn{0\le}\eqn{T_sl}\eqn{\le}\eqn{T_su} and \eqn{T_sn>0} when
+        variable accross independent genomic regions).
+        \tabular{l}{
+          ---> Where, \eqn{N_A} 
+          : The ancestral effective population size. 
+        }
+        ATTENTION: \code{\link{simulate_data}} requires that
+        \eqn{\theta_A>0} when specified and fixed. \cr
+        NOTE: If \eqn{\theta_Al=0}, \code{\link{simulate_data}}
+        will sample a value of \eqn{\theta_A} among the \eqn{\theta_An}
+        possible values \eqn{\in} \eqn{[(\theta_Au-\theta_Al)/\theta_An,\theta_Au]}.\cr
+        If \eqn{\theta_A} is not specified the \eqn{\theta_A=\theta_1}.
+      }% end thetaA
+      \item{\emph{\code{T_split}}}{
+        Use \code{"}\emph{\code{T_split}}\code{ }\eqn{T_s}\code{"} or 
+        \code{"}\emph{\code{T_split}}\code{ }\eqn{T_sl}\code{ }\eqn{T_su}\code{ }\eqn{T_sn}\code{"}\cr
+        to specify \eqn{T_s}, the split time in unit of \eqn{4N_1}
+        generations between the TWO populations. \cr 
+        By default \eqn{T_s=0} to specify a model without population
+        split. \cr
+        \eqn{T_s} is ignored unless there is population structure (as
+        specified with \eqn{n_1>0} and \eqn{n_2>0} for the genomic region
+        considered in the file \code{regfile}).\cr
+        NOTE, in the case in which a value \eqn{M_p=0} has been sampled,
+  \code{\link{simulate_data}} will sample a value \eqn{T_s>0} among the \eqn{T_sn}
+        possible values \eqn{\in} \eqn{[(T_su-T_sl)/T_sn,T_su]}.\cr 
+      }% end T_split
+      \item{\emph{\code{T_change}}}{
+        Use \code{"}\emph{\code{T_change}}\code{ }\eqn{\epsilon}\code{"} or 
+        \code{"}\emph{\code{T_change}}\code{ }\eqn{\epsilon_l}\code{ }\eqn{\epsilon_u}\code{ }\eqn{\epsilon_n}\code{"}\cr
+        to specify the ratio \eqn{\epsilon=T_c/T_s}. \cr
+        By default there is no change of gene flow rate since the
+        split. \cr 
+        * \eqn{\epsilon} is ignored unless: \cr
+        -- There is a population split (as specified with the keyword
+        \emph{\code{T_split}} with \eqn{T_s>0} when fixed or
+        \eqn{0\le}\eqn{T_sl}\eqn{\le}\eqn{T_su} and \eqn{T_sn>0} when
+        variable accross independent genomic regions). \cr 
+        -- \eqn{0<T_c<T_s} (as specified with \eqn{0<\epsilon<1} when fixed or
+        \eqn{0\le}\eqn{\epsilon_l}\eqn{\le}\eqn{\epsilon_u}\eqn{\le1} and \eqn{\epsilon_n>0}
+        when variable accross independent genomic regions). \cr 
+        -- \eqn{M_c \not=M_p} (as specified with the keywords
+        \emph{\code{M_present}} and \emph{\code{M_change}} with
+        \eqn{0\le}\eqn{M_c \not=M_p} when fixed). 
+        \tabular{l}{
+          ---> Where, \eqn{T_c} 
+          : The time at which the rate of gene flow changed between the
+          two populations in unit of \eqn{4N_1} generations.
+        } ATTENTION: \code{\link{simulate_data}} requires that
+        \eqn{0}\eqn{\le}\eqn{T_c}\eqn{\le}\eqn{T_s} when specified and fixed
+        with the keywords \emph{\code{T_split}} and
+        \emph{\code{T_change}}.\cr
+         NOTE: If \eqn{\epsilon_u=1}, \code{\link{simulate_data}}
+        will sample a value of \eqn{\epsilon} among the \eqn{\epsilon_n}
+        possible values \eqn{\in} \eqn{[\epsilon_l),\epsilon_u-(\epsilon_u-\epsilon_l)/\epsilon_n,]}.
+      }% end T_change
+      \item{\emph{\code{M_change}}}{
+        Use \code{"}\emph{\code{M_change}}\code{ }\eqn{M_c}\code{"} or 
+        \code{"}\emph{\code{M_change}}\code{ }\eqn{M_cl}\code{ }\eqn{M_cu}\code{ }\eqn{M_cn}\code{"}\cr
+        to specify \eqn{M_c=4N_1*m_c}, the number of migrants exchanged
+        each generation by the TWO populations since the split until the time
+        of gene flow rate change (i.e., \eqn{T_c<t<T_s}). \cr 
+        By default there is no change of gene flow rate since the
+        split. \cr 
+        * \eqn{M_c} is ignored unless: \cr
+        -- There is a population split (as specified with the keyword
+        \emph{\code{T_split}} with \eqn{T_s>0} when fixed or
+        \eqn{0\le}\eqn{T_sl}\eqn{\le}\eqn{T_su} and \eqn{T_sn>0} when
+        variable accross independent genomic regions). \cr 
+        -- \eqn{0<T_c<T_s} (as specified with the keyword
+        \emph{\code{T_change}} with \eqn{0<\epsilon<1} when fixed or
+        \eqn{0\le}\eqn{\epsilon_l}\eqn{\le}\eqn{\epsilon_u}\eqn{\le1} and \eqn{\epsilon_n>0}
+        when variable accross independent genomic regions). \cr 
+        -- \eqn{M_c \not=M_p} (as specified with the keywords
+        \emph{\code{M_present}} and \emph{\code{M_change}} with
+        \eqn{0\le}\eqn{M_c \not=M_p} when fixed).
+        \tabular{l}{
+          ---> Where, \eqn{m_c}
+          : The generational fraction of migrant individuals between
+          \eqn{T_c<t<T_s}.
+        }
+      }% end M_c
+    }% end Optional demo
+    \item{\strong{OPTIONAL NUISANCE PARAMETER: }}{
+      \item{\emph{\code{rho}}}{
+        Use this keyword to specify the parameter on the intra-region
+        recombination rate.\cr
+        By default there is no recombination. \cr
+        \emph{\code{rho}} is directly followed by either a floating
+        number, \eqn{\rho=4N_1*c}, or the values
+        \eqn{{\code{"-2"},\code{"-1"},\code{"1"},\code{"2"}}}. In all
+        cases, the function \code{\link{simulate_data}} obtains the
+        region-specific population recombination rate
+        \eqn{\rho_r=\beta*4N_1c*(Z-1)} for the genomic region \eqn{r}
+        \eqn{\in} \eqn{[1,R]} (as specified with the keyword
+        \emph{\code{nregions}}):
+        \tabular{lllll}{
+          \code{"}\emph{\code{rho}} \tab \eqn{\rho}\code{"} \tab \tab \tab
+          : This specifies that the genomic average population
+          intra-region recombination rate per bp per generation is fixed to the
+          value \eqn{\rho=4N_1*c}. \cr 
+          \tab \tab \tab \tab In this case, \code{\link{simulate_data}} calculates
+          \eqn{\rho_r=\rho*w*(Z-1)} for the genomic region \eqn{r} (here
+          \eqn{w=\beta}). \cr 
+          \code{"}\emph{\code{rho}} \tab \code{1"} \tab \tab \tab 
+          : This specifies that an estimate of the region-specific population
+          recombination rate per bp, \eqn{\rho_o=4N_1*c_o}, is KNOWN from
+          linkage disequilibrium analysis and specified with the parameter
+          \eqn{w=\beta*\rho_o} for each recombining region (in the file
+          \code{regfile}).\cr 
+          \tab \tab \tab \tab In this case, \code{\link{simulate_data}}
+          calculates \eqn{\rho_r=w*(Z-1)} for the genomic region
+          \eqn{r}. \cr 
+          \code{"}\emph{\code{rho}} \tab \code{2} \tab \eqn{\mu}\code{"} \tab \tab
+          : This specifies that an estimate of the region-specific
+          recombination rate per bp, \eqn{c_o}, is KNOWN from pedigree
+          analysis and specified with the parameter \eqn{w=\beta*c_o}
+          for each recombining region (in the file \code{regfile}).\cr
+          \tab \tab \tab \tab This also specifies \eqn{\mu}, an independent estimate of the
+          genomic generational mutation rate per bp.\cr 
+          \tab \tab \tab \tab In this case, \code{\link{simulate_data}}
+          calculates \eqn{\rho_r=w*(Z-1)\theta_1/\mu} for the genomic region \eqn{r}. \cr 
+          \code{"}\emph{\code{rho}} \tab \code{-1} \tab \eqn{\lambda}\code{"} \tab \tab 
+          : This specifies that the intra-region recombination rate is
+          UNKNOWN and the ratio of recombination over mutation
+          rate for the genomic region \eqn{r}, \eqn{\alpha=c_r/\mu}, is drawn
+          from an exponential distribution with mean \eqn{1/}\eqn{\lambda}. \cr 
+          \tab \tab \tab \tab In this case, \code{\link{simulate_data}}
+          calculates \eqn{\rho_r=w*\alpha*(Z-1)*theta_1} for the genomic region \eqn{r}. \cr 
+          \code{"}\emph{\code{rho}} \tab \code{-2} \tab \eqn{\nu} \tab \eqn{\sigma}\code{"} \tab
+          : This specifies that the intra-region recombination rate is
+          UNKNOWN and the ratio of recombination over mutation
+          rate for the genomic region \eqn{r}, \eqn{\alpha=c_r/\mu}, is drawn
+          from an normal distribution with mean
+          \eqn{\nu} and standard deviation \eqn{\sigma}. \cr
+          \tab \tab \tab \tab In this case, \code{\link{simulate_data}}
+          calculates \eqn{\rho_r=w*\alpha*(Z-1)*theta_1} for the genomic region \eqn{r}.
+        }
+        Where:
+        \tabular{ll}{ 
+          \eqn{\rho=4N_1*c}\tab
+          : The genomic average population intra-region recombination rate per bp
+          per generation. \cr 
+          \eqn{\rho_r=\beta*(Z}\eqn{-}\eqn{1)*4N_1c}\tab 
+          : The region-specific recombination rate per generation for the
+          genomic region considered. \cr 
+          \eqn{\rho_o=4N_1*c_o} \tab 
+          : The estimate of the region-specific population recombination
+          rate per bp per generation for the genomic region considered from
+          linkage disequilibrium analysis. \cr
+          \eqn{c} \tab 
+          : The genomic generational cross-over rate per bp. \cr
+          \eqn{c_o} \tab 
+          : The estimate of the region-specific cross-over rate per bp
+          per generation for the genomic region considered from pedigree
+          analysis. \cr 
+          \eqn{\alpha=c_r/\mu} \tab :Drawn from a prior distribution. \cr
+          \eqn{c_r} \tab
+          : The generational region-specific cross-over rate per bp for the
+          genomic region \eqn{r}. \cr 
+          \eqn{w} \tab 
+          : The recombination scalar for the genomic region considered
+          specified in the file \code{regfile}.\cr
+          \eqn{\beta} \tab
+          : The ratio of the region-specific population recombination
+          rate per bp over \eqn{\rho=4N_1*c} for the genomic region
+          considered.\cr
+          \tab \eqn{\beta=}\code{"1"} (\code{"0.5"} in
+          \emph{Drosophila}) for autosomal region, \code{"0.5"} for X- and
+          \code{"0"} for Y- and mtDNA-linked region. \cr
+          \eqn{Z} \tab
+          : The size in bp of the genomic region considered. \cr
+          \tab \eqn{z_s} and \eqn{z_e} (such as \eqn{Z=z_e-z_s}) are
+          specified in the file \code{regfile}. 
+        }
+      }% end rho
+    }% end nuisance
+    \item{\strong{OPTIONAL OTHER PARAMETERS: }}{
+      \item{\emph{\code{nregions}}}{
+        Use \code{"}\emph{\code{nregions}}\code{ }\eqn{R}\code{"} to specify
+        the number of independent genomic regions considered. \cr
+        By default, \eqn{R=1}.\cr
+        ATTENTION: \code{\link{simulate_data}} requires that \eqn{R>0}
+        when specified with the keyword \emph{\code{nregions}}. \cr 
+      }
+    }% end extra
+  }
+  \item{datafile}{
+    The argument \code{datafile} specifies the string
+    of characters that initiates the name of the text files output by
+    \code{\link{simulate_data}}  with the data for each independent
+    genomic region and the summary statistics of the simulated
+    polymorphism data. \cr  
+    By default the \code{datafile="reg"}. \cr
+  }
+  \item{regfile}{
+    The name of the file with the information on the independent genomic
+    regions to simulate. \cr 
+    By default the file name is \code{"info.reg"}. \cr 
+    The first line of the file is ignored. The information on the
+    independent genomic regions starts on the SECOND line. \cr 
+    Each genomic region is described by ten values: 
+    \tabular{ll}{
+      \eqn{r} \tab 
+      : The genomic region number, \eqn{r} \eqn{\in} \eqn{[1,R]}. \cr 
+      \tab \eqn{R} is the number of independent genomic regions to
+      simulate as specified with the keyword \emph{\code{nregions}} in the
+      file \code{paramfile}. \cr 
+      \tab ATTENTION: The independent genomic region numbers, \eqn{r},
+      need to be in order, i.e., region 1 starts on line 2, region 2 on line
+      3 \dots region \eqn{R} on line \eqn{R+1}. \cr 
+      \emph{\code{Region name}} \tab 
+      : The name of the genomic region \eqn{r}, which should contain at
+      least ONE non-numerical character. \cr 
+      \eqn{x} \tab 
+      : The inheritance scalar for the genomic region \eqn{r} (i.e.,
+      \code{"1"} for autosomal region, \code{"0.75"} for X- and \code{"0.5"}
+      for Y- and mtDNA-linked region). \cr 
+      \eqn{v} \tab 
+      : The mutation rate scalar for the genomic region \eqn{r} (which
+      can be variable accross independent genomic regions e.g., from divergence data). \cr 
+      \eqn{w} \tab 
+      : The recombination scalar for the genomic region \eqn{r}.\cr
+      \tab -- Usually \eqn{w=\beta}, the ratio of the locus-specific
+      population recombination rate per bp over \eqn{\rho=4N_1*c}. \cr 
+      \tab -- If an estimate of the region-specific population recombination
+      rate per bp is available for each region from linkage
+      disequilibrium analysis, \eqn{\rho_o=4N_1*c_o}, set
+      \eqn{w=\beta*\rho_o} to incorporate this knowledge in the
+      simulation (with \code{"}\emph{\code{rho}} \code{1"} in the
+      file \code{paramfile}).\cr
+      \tab In this case, \eqn{w} is the scaled
+      sex-averaged region-specific population recombination rate per
+      bp, i.e., for an X-linked locus \eqn{c_o} is the female
+      recombination rate and \eqn{\beta=0.5} so that
+      \eqn{\beta*\rho_o=2N_1*c_o}. \cr 
+      \tab -- If an estimate of the region-specific recombination rate per bp
+      is available for each region from pedigree analysis, \eqn{c_o},
+      set \eqn{w=\beta*c_o} to incorporate this knowledge in the simulation
+      (with \code{"}\emph{\code{rho}} \code{2 }\eqn{\mu}\code{"} in the file
+      \code{paramfile}).\cr
+      \tab In this case, \eqn{w} is the scaled sex-averaged
+      region-specific recombination rate per bp, i.e., for an X-linked locus,
+      \eqn{c_o} is the variable accross independent genomic regions female recombination rate so the
+      scaled sex-averaged recombination rate is \eqn{\beta*c_o=0.5c}. \cr 
+      \eqn{n_1} \tab 
+      : The sample size from population 1 for the genomic region
+      \eqn{r}. \cr 
+      \eqn{n_2} \tab
+      : The sample size from population 2 for the genomic region
+      \eqn{r}. \cr 
+      \eqn{z_s} \tab
+      : The start position of the genomic region \eqn{r} in bp. \cr 
+      \eqn{z_e} \tab
+      : The end position of the genomic region \eqn{r} in bp. \cr 
+      \eqn{Y} \tab
+      : The number of loci spanning the genomic region \eqn{r}. \cr 
+      \tab \eqn{Y=1} means that the whole genomic region \eqn{r} is
+      considered as a single locus. \cr 
+      \tab \eqn{Y>1} means that multiple loci are considered within the
+      genomic region \eqn{r} (the information on the loci should be given in
+      the file \code{locifile}). 
+    }
+  }
+  \item{locifile}{
+    The name of the file with the information on the loci for the
+    multi-locus genomic regions (as specified with \eqn{Y>1} in the file
+    \code{regfile}). \cr 
+    By default the file name is \code{"info.loc"}. \cr 
+    The first line of the file is ignored. The information on the loci
+    starts on the SECOND line. \cr 
+    Each locus is described by six values: 
+    \tabular{ll}{
+      \eqn{r} \tab
+      : The multi-locus genomic region number, \eqn{r} \eqn{\in}
+      \eqn{[1,R]}, that this locus is part of. \cr 
+      \tab \eqn{R} is the number of independent genomic regions to
+      simulate as specified with the keyword \emph{\code{nregions}} in the
+      file \code{paramfile}. \cr 
+      \tab ATTENTION: The multi-locus genomic region numbers, \eqn{r},
+      need to be in order, i.e., the information for the loci for the first
+      multi-locus genomic region (\eqn{a}) are from line 2 to \eqn{Y_a+1},
+      for the second multi-locus genomic region (\eqn{b}), the loci
+      information starts on line \eqn{Y_a+2} to \eqn{Y_a+Y_b+1} \dots \eqn{a}
+      and \eqn{b} \eqn{\in} \eqn{[1,R]}. \cr 
+      \eqn{y} \tab 
+      : The locus number, \eqn{y} \eqn{\in} \eqn{[1,Y]}. \cr 
+      \tab \eqn{Y} is the total number of loci spanning the multi-locus
+      genomic region \eqn{r} as specified in the file \code{regfile}. \cr 
+      \tab ATTENTION: The loci numbers, \eqn{y}, need to be in order,
+      i.e., information for locus 1 of the first multi-locus genomic region
+      \eqn{r} is on line 2, locus 2 on line 3 \dots locus \eqn{Y} on line
+      \eqn{Y+1}. \cr 
+      \eqn{n_1y} \tab 
+      : The sample size from population 1 for the locus \eqn{y}.\cr
+      \tab \eqn{n_1y}\eqn{\le}\eqn{n_1}, where \eqn{n_1} for the multi-locus
+      genomic region \eqn{r} is specified in the file \code{regfile}. \cr 
+      \eqn{n_2y} \tab 
+      : The sample size from population 2 for the locus \eqn{y}.\cr
+      \tab \eqn{n_2y}\eqn{\le}\eqn{n_2}, where \eqn{n_2} for the multi-locus
+      genomic region \eqn{r} is specified in the file \code{regfile}. \cr 
+      \eqn{z_sy} \tab 
+      : The start position of the locus \eqn{y} in bp.\cr
+      \tab \eqn{z_s1}\eqn{\ge}\eqn{z_s}, where \eqn{z_s} is the start position of
+      the multi-locus genomic region \eqn{r} specified in the file
+      \code{regfile}. \cr 
+      \eqn{z_ey} \tab 
+      : The end position of the locus \eqn{y} in bp.\cr
+      \tab \eqn{z_eY}\eqn{\le}\eqn{z_e} where \eqn{z_e} is the end position of
+      the multi-locus genomic region \eqn{r} specified in the file
+      \code{regfile}. 
+    }
+  }
+  \item{type}{
+    Use this argument to specify whether the ancestral alleles of the
+    \eqn{R} independent genomic regions considered is known when the
+    function \code{\link{simulate_data}} calculates the summary statistics
+    of the data. \cr 
+    \code{type} can take the two following values: 
+    \tabular{ll}{
+      \code{type="anc"} \tab 
+      : By default, \code{\link{simulate_data}} calculates the
+      summary statistics for the data set of the genomic region \eqn{r}
+      considering the character \code{"0"} at segregating site \eqn{s} as
+      the ancestral allele (as specified in lines 7 to 7\eqn{+n} in the
+      file \code{datafile}), \eqn{s} \eqn{\in} \eqn{[1,S]} (as specified in
+      line 5 in the file \code{datafile}). \cr 
+      \tab In turn, \code{\link{simulate_data}} considers the
+      character \code{"1"} as the derived allele at segregating site
+      \eqn{s}. \cr 
+      \code{type="maf"}  \tab 
+      : \code{\link{simulate_data}} considers the allele with the
+      minimum frequency at segregating site \eqn{s} as the derived allele
+      (regardless of the character specified in lines 7 to 7\eqn{+n} in the
+      file \code{datafile}). 
+    } 
+  }% end type
+}
+
+\details{
+  For each independent genomic region \eqn{r}, the function
+  \code{\link{simulate_data}} recovers the information from the input
+  files \code{paramfile}, \code{regfile} and if there are multi-locus
+  genomic regions, \code{locifile}. \cr 
+  \code{\link{simulate_data}} then generates \code{ms}-like command
+  lines corresponding to each genomic region with the \R function
+  \code{\link{cmd_line}} with the following arguments. Note that the
+  variable parameters are chosen from discrete uniform distributions as
+  specified in the file \code{paramfile}.
+  \item{\code{nsam}}{
+    \code{nsam=}\eqn{n=n_1+n_2} specifies the total number of
+    chromosomes sampled for the genomic region \eqn{r}, where \eqn{n_1}
+    and \eqn{n_2} are specified in the file \code{regfile}. 
+  } 
+  \item{\code{theta}}{
+    The vector of at least one or up to three floating numbers
+    specifying the region-specific population mutation rates per
+    generation: \cr 
+    \code{theta=c(}\eqn{\theta_1*x*v*Z}\code{,
+    }\eqn{\theta_2*x*v*Z}\code{, }\eqn{\theta_A*x*v*Z}\code{)}. \cr 
+    \eqn{\theta_i=4N_i*\mu}, \eqn{i} \eqn{\in} \eqn{{1,2,A}}, are
+    specified with the keywords \emph{\code{theta_i}} in the file
+    \code{paramfile}. \cr 
+    \eqn{x}, \eqn{v}, \eqn{z_s} and \eqn{z_e} (such as \eqn{Z=z_e-z_s})
+    are specified in the file \code{regfile}. 
+  } 
+  \item{\code{rho}}{
+    The vector of values specifying the region-specific population
+    recombination rate: \cr 
+    \code{rho=c(}\eqn{\rho*w*(Z-1)}\code{, }\eqn{Z}\code{)}. \cr 
+    \eqn{\rho} is specified with the keyword \emph{\code{rho}} in the
+    file \code{paramfile} and \eqn{w}, \eqn{z_s} and \eqn{z_e} (such as
+    \eqn{Z=z_e-z_s}) are specified in the file \code{regfile}. 
+  }
+  \item{\code{structure}}{
+    The vector of integers specifying population structure or an island
+    model: \cr 
+    \code{structure=c(2, }\eqn{n_1}\code{, }\eqn{n_2}\code{)}. \cr 
+    \eqn{n_1} and \eqn{n_2} are specified in the file \code{regfile}. 
+  }
+  \item{\code{time}}{
+    The vector of one or two floating numbers specifying the times of
+    events as specified with the keywords \emph{\code{T_split}} and
+    \emph{\code{\T_change}} in the file \code{paramfile}: \cr 
+    \code{time=c(}\eqn{T_s}\code{, }\eqn{T_c}\code{)}. 
+  }
+  \item{\code{migration}}{
+    The vector of one or two floating numbers specifying the gene flow
+    rates as specified with the keywords  \emph{\code{M_present}} and
+    \emph{\code{M_change}} in the file \code{paramfile}: \cr 
+    \code{migration=c(}\eqn{M_p}\code{, }\eqn{M_c}\code{)}. 
+  }
+  \code{\link{simulate_data}} calls the \R function \code{\link{ms}}
+  with the command line generated. \cr
+  \code{\link{simulate_data}} calls the \R function
+  \code{\link{output_ms}} to print the \code{\link{ms}} output into 
+  \code{ms}-like text files and obtain the updated \code{\link{ms}}-like
+  data frame considering multiple loci and missing data (if applicable)
+  and with the positions of the remaining segregating sites in bp.\cr
+   \code{\link{simulate_data}} calls the \R function
+  \code{\link{stats_pop}} to calculate the summary statistics of the
+  polymorphisms for each region and locus.\cr
+   \code{\link{simulate_data}} calls the \R function
+  \code{\link{output_stats}} to write those  summary statistics into files.
+  
+}% end of details
+
+\value{
+  \item{\code{"}\code{datafile}\eqn{r}\code{"}}{
+    The function \code{\link{simulate_data}} creates \eqn{R} text files
+    named \code{"}\code{reg}\eqn{r}\code{"} in the local directory. \cr 
+    \eqn{r} is the number of the genomic region considered, \eqn{r}
+    \eqn{\in} \eqn{[1,R]}. \cr 
+    \eqn{R} is the number of independent genomic regions to simulate as
+    specified with the keyword \emph{\code{nregions}} in the file
+    \code{paramfile}. \cr 
+    In each file \code{"reg}\eqn{r}\code{"},
+    \code{\link{simulate_data}} writes the output of the \R function
+    \code{\link{ms}} for the genomic region \eqn{r} in the usual \code{ms} format
+    (with some variations from Hudson's program): 
+    \item{Line 1}{   
+      The \code{ms} command line used to run the C program \code{ms}. \cr 
+      i.e., \code{cmdline_seeds[1]} output by the \R
+      function \code{\link{ms}}.
+    } 
+    \item{Line 2}{   
+      The three random seeds used to run the C program \code{ms}. \cr 
+      i.e., \code{cmdline_seeds[2]} output by the \R
+      function \code{\link{ms}}.
+    } 
+    \item{Line 3}{ 
+      An empty line.} 
+    \item{Line 4}{   
+      \code{"\\\\"} to specify that the data set simulated for the genomic
+      region \eqn{r} starts below.
+    }  
+    \item{Line 5}{   
+      \code{"}\code{segsites: }\eqn{S}\code{"}, the number of segregating
+      sites found in the data set simulated for the genomic region
+      \eqn{r}. \cr 
+      i.e., \code{segsites[1]} output by the \R function
+      \code{\link{ms}}. \cr 
+      -- In case of a multi-locus genomic region (as specified with
+      \eqn{Y>1} in the vector \code{info_region}), \eqn{S_n},
+      the number of segregating sites left once gaps and missing data for
+      the multiple loci are accounted for. \cr  
+      \eqn{S_n=\Sigma(S_y)\le S}, where \eqn{S_y} is the
+      number of segregating sites found in locus \eqn{y}, \eqn{y} \eqn{\in}
+      \eqn{[1,Y]} for the multi-locus genomic region \eqn{r}.
+    } 
+    \item{Line 6 }{ 
+      \code{"}\code{position:}\code{"} followed by the \eqn{S} positions
+      in base pairs of the \eqn{S} segregating sites found in the data set
+      along the genomic region \eqn{r}. \cr 
+      The position of the segregating site \eqn{j}
+      \eqn{\in} \eqn{[1,S]} is \eqn{p_j} \eqn{\in} \eqn{[0,Z]}. \cr 
+      i.e., \eqn{p_j=}\code{positions[[1]][}\eqn{s}\code{]}
+      output by the \R function \code{\link{ms}} \eqn{\times} \eqn{Z}. \cr 
+      \eqn{Z=z_e-z_s} is the size of the genomic region
+      \eqn{r} as specified in the file \code{regfile}.\cr
+        -- In case of a multi-locus genomic region (as specified with
+      \eqn{Y>1} in the vector \code{info_region}), the \eqn{S_n} 
+      \eqn{p_j} values are all \eqn{\in} \eqn{[z_sy, z_ey]}, \eqn{y}
+      \eqn{\in} \eqn{[1,Y]}.
+    } 
+    \item{Lines 7  to 7\emph{+n}}{ 
+      \eqn{n=n_1+n_2} lines follow corresponding to the \eqn{n} haplotypes
+      simulated with the C program \code{ms} for the genomic region
+      \eqn{r}. \cr 
+      \eqn{n_1} and \eqn{n_2} are the sample sizes in the
+      two populations for the genomic region \eqn{r} specified in the file
+      \code{regfile}. \cr 
+      Each line \eqn{j=i+7} \eqn{\in} \eqn{[7,7+n]} of
+      haplotype is a string of \eqn{S} characters corresponding to the
+      alleles found at the \eqn{S} segregating sites in the data set
+      simulated for the genomic region \eqn{r}. \cr 
+      i.e., \code{haplotypes[}\eqn{1,i}\code{]} output by
+      the \R function \code{\link{ms}}, \eqn{i} \eqn{\in} \eqn{[1,n]}, with
+      the values \code{"0"}, \code{"1"} or \code{"?"}, for ancestral,
+      derived and missing allele, respectively. \cr
+      -- In case of a multi-locus genomic region (as specified with
+      \eqn{Y>1} in the vector \code{info_region}),
+      \code{msframe$haplotypes[}\eqn{1,i}\code{]} contains only \eqn{S_n}
+      characters. \cr 
+      -- If for any locus \eqn{y} \eqn{n_py<n_p} (where \eqn{n_1y} and
+      \eqn{n_2y} are the sample sizes for the locus \eqn{y} specified in the
+      matrix \code{info_loci}), the segregating sites spanning the positions
+      of locus \eqn{y} at \eqn{n_p-n_py} randomly chosen haplotypes are noted as
+      missing data with \code{"?"}.
+    }
+  }
+  \item{\code{"datafile}\code{-}\code{S"} \code{"datafile}\code{-}\code{loci}\code{-}\code{S"}}{
+    The function  \code{\link{simulate_data}} writes the summary statistics
+    considered for the \eqn{R} independent genomic regions and the
+    \eqn{\Sigma Y_r} uni-locus genomic
+    regions and multiple locis, into two files named \code{"datafile-S"} and
+    \code{"datafile-loci-S"}, respectively. \cr
+    The statistics for the genomic regions without multiple loci are 
+    reported in both files (i.e., if the \eqn{R} genomic regions are
+    uni-locus, \code{"datafile-S"} and
+    \code{"datafile-loci-S"} are indentical).
+    \item{}{ The format of the files is as follows:
+      \item{Line 1}{ The word "\code{type}".}
+      \item{Line 2}{ The sentence describing the type of summary statistics
+        calculated as specified with the argument \code{type}:
+        \tabular{ll}{
+          \code{"Known ancestral allele"}\tab
+          : Specifies that  \code{\link{simulate_data}} calculated the summary statistics
+          for the data sets considering the character \code{"0"} at each
+          segregating site (as specified in the files
+          \code{"}\code{datafile}\eqn{r}\code{"}) as the ancestral allele. \cr     
+          \tab In turn,  \code{\link{simulate_data}} considered the character
+          \code{"1"} as the derived allele at each segregating site.\cr
+          \code{"Unknown ancestral allele"} \tab     
+          : Specifies that  \code{\link{simulate_data}} considered the allele with
+          the minimum frequency at each segregating site as the derived allele
+          (regardless of the character specified in the files \code{"}\code{datafile}\eqn{r}\code{"}).
+        }
+      }
+      \item{Line 3}{ The header for the summary statistics
+        separated by tabulations.
+        \code{"nregions nloci ..."} followed by the list of \eqn{47}
+        string of characters corresponding to the
+        summary statistics calculated by the function
+        \code{\link{stats_pop}} (see  \code{\link{list_stats}}).
+      }
+      \item{Line  4 to 4\emph{+X}}{ The values for the  \eqn{47} summary
+        statistics  calculated by the function \code{\link{stats_pop}} separated 
+        by tabulations for \eqn{X=R} independent genomic regions in
+        \code{"datafile-S"} and  \eqn{X=\Sigma Y_r} uni-locus genomic
+        regions and linked loci in  \code{"datafile-loci-S"}.
+      } 
+    }
+  }
+}
+
+\note{
+  \item{ATTENTION: It is the user's responsibility to mind the following
+    restrictions:}{
+    -> The user needs to be comfortable with the use of the C program
+    \code{ms} and needs to be familiar with the documentation at
+    \url{http://pps-spud.uchicago.edu/~cbecquet/msdoc.pdf}.
+  }
+  \item{In the file \code{paramfile}:}{
+    -> \code{\link{simulate_data}} requires that either the parameter value
+    (i.e. \eqn{\theta_1>0}) or the prior distribution for \eqn{\theta_1}
+    (see above for the restrictions) be specified with the keyword
+    \emph{\code{theta_1}}. \cr 
+    -> \code{\link{simulate_data}} requires that \eqn{\theta_i>0} for any
+    \eqn{i} \eqn{\in} \eqn{{1,2,A}} when these parameters are fixed (as specified
+    with the keywords \emph{\code{theta_i}}). \cr
+    -> \code{\link{simulate_data}} requires that \eqn{M_p>0} when fixed
+    or \eqn{0\le}\eqn{M_pl}\eqn{\le}\eqn{M_pu} and \eqn{M_pn>0} when
+    estimated be specified in case of an island model. \cr 
+    -> \code{\link{simulate_data}} requires that
+    \eqn{0}\eqn{\le}\eqn{T_c}\eqn{\le}\eqn{T_s} when specified and fixed
+    with the keywords \emph{\code{T_split}} and
+    \emph{\code{T_change}}.\cr
+    -> \code{\link{simulate_data}} requires that \eqn{R>0} when specified
+    with the keyword \emph{\code{nregions}}. 
+  }
+  \item{In the file \code{regfile}:}{
+    -> The information on the first genomic region starts on the SECOND
+    line of the file. \cr 
+    -> The independent genomic region numbers, \eqn{r}, need to be in
+    order, i.e., region 1 starts on line 2, region 2 on line 3 \dots region
+    \eqn{R} on line \eqn{R+1}. \cr 
+    -> Reasonable values need to be specified for each genomic region.
+  }
+  \item{In the file \code{locifile}:}{
+    -> The information on the first locus of the first multi-locus
+    genomic region starts on the SECOND line of the file. \cr 
+    -> The loci numbers, \eqn{y}, need to be in order, i.e., information
+    for locus 1 of the first multi-locus genomic region is on line 2,
+    locus 2 on line 3 \dots locus \eqn{Y} on line \eqn{Y+1}. \cr 
+    -> The multi-locus genomic region numbers, \eqn{r}, need to be in
+    order, i.e., the information for the loci for the first multi-locus
+    genomic region (\eqn{a}) are from line 2 to \eqn{Y_a+1}, for the
+    second multi-locus genomic region (\eqn{b}), the loci information
+    starts on line \eqn{Y_a+2} to \eqn{Y_a+Y_b+1} \dots \eqn{a} and \eqn{b}
+    are \eqn{\in} \eqn{[1,R]}. \cr 
+    -> Reasonable values need to be specified for each locus.
+  }
+}
+
+\author{
+  Celine Becquet - \email{celine.becquet@gmail.com}. 
+}
+
+\references{
+  Hudson, R. R., 1983. Properties of a neutral allele model with
+  intragenic recombination. Theor. Popul. Biol. 23:183-201. \cr 
+  Hudson, R. R., 1990. Gene genealogies and the coalescent process, in
+  D. Futuyma and J. Antonovics (eds), Oxford Surveys in Evolutionary
+  Biology, Vol. 7:1-44. \cr 
+  Hudson, R. R., 2002. Generating samples under a Wright-Fisher neutral
+  model of genetic variation. Bioinformatics 18:337-338. \cr 
+  \url{http://pps-spud.uchicago.edu/~cbecquet/msdoc.pdf}. 
+}
+
+\seealso{
+  The function \code{\link{simulate_data}} calls the following
+  functions: \cr
+  \code{\link{check_param}}, \code{\link{check_reg}}, \code{\link{cmd_line}},
+  \code{\link{get_ms_output}}, \code{\link{get_liststats}},
+  \code{\link{get_loci}}, \code{\link{get_rho}}, \code{\link{get_stats}},  \code{\link{ms}},
+  \code{\link{order_param}},  \code{\link{output_ms}}, \code{\link{output_stats}} and
+  \code{\link{stats_pop}}. \cr 
+  Data file examples required as input for the function
+  \code{\link{simulate_data}}: \cr 
+  \code{\link{param_sim}},
+  \code{\link{info_region}} and \code{\link{info_loci}}. \cr 
+  \code{\link{data_file}} is the data file example output by the
+  function \code{\link{write_ms_output}}. \cr 
+  Text files for independent genomic regions in the format as output by
+  the function \code{\link{simulate_data}} are used as input by the
+  functions \code{\link{estimate_IMc}} and
+  \code{\link{get_ms_output}}. \cr 
+  Lists of definitions of the symbols and parameters mentioned in
+  this file are found in \code{\link{Rmspack-package}}.
+}
+
+\examples{
+### Write the files of information in the local directory. 
+data(simulation_files) # download the data
+
+write.table(file="sim", x=param_sim, row.name=FALSE, col.names=FALSE, quote=FALSE)
+# Creates the file "sim" containing (with comments):
+read.csv("sim",header =FALSE,sep="", comment="#")
+
+write.table(file="regions", x=info_region, row.name=FALSE, col.names=FALSE, quote=FALSE)
+# Creates the file "regions" containing:
+read.csv("regions",header =FALSE,sep="", comment="#")
+
+write.table(file="loci", x=info_loci, row.name=FALSE, col.names=FALSE, quote=FALSE)
+# Creates the file "loci" containing:
+read.csv("loci",header =FALSE,sep="", comment="#")
+
+## Create 4 files named regr (r in [1,4]) with simulated data and files
+## of summaries reg-S and reg-loci-S. 
+simulate_data(paramfile="sim", regfile="regions", locifile="loci");
+get_ms_output("reg1")
+get_ms_output("reg2")
+get_ms_output("reg3")
+get_ms_output("reg4")
+read.csv("reg-S",header =FALSE,sep="", comment="#")[,1:15]
+read.csv("reg-loci-S",header =FALSE,sep="", comment="#")[,1:15]
+
+# Clean up the directory. 
+unlink(c("sim", "regions", "loci", "reg1", "reg2", "reg3", "reg4", "reg-S", "reg-loci-S"))
+}
+
+\keyword{IO}
+\keyword{programming}
+\keyword{methods}

@@ -1,0 +1,114 @@
+\name{stats_pop}
+\alias{stats_pop}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{
+Calculate the summary statistics from an msframe
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+}
+\usage{
+stats_pop(msframe, type = c(0, 1, 5, 10))
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{msframe}{
+%%     ~~Describe \code{msframe} here~~
+}
+  \item{type}{
+%%     ~~Describe \code{type} here~~
+}
+}
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+}
+\value{
+%%  ~Describe the value returned
+%%  If it is a LIST, use
+%%  \item{comp1 }{Description of 'comp1'}
+%%  \item{comp2 }{Description of 'comp2'}
+%% ...
+}
+\references{
+%% ~put references to the literature/web site here ~
+}
+\author{
+  Celine Becquet - \email{celine.becquet@gmail.com}. 
+}
+\note{
+%%  ~~further notes~~
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\seealso{
+%% ~~objects to See Also as \code{\link{help}}, ~~~
+}
+\examples{
+##---- Should be DIRECTLY executable !! ----
+##-- ==>  Define data, use random,
+##--	or do  help(data=index)  for the standard data sets.
+
+## The function is currently defined as
+function (msframe, type = c(0, 1, 5, 10)) 
+{
+    stat = .Call("statsPop", cmdline = msframe$cmdline_seeds[1], 
+        seg = msframe$segsites, pos = msframe$positions, haplo = msframe$haplotypes, 
+        type = type, PACKAGE = "stats_popR")
+    for (i in 1:dim(stat$segsites)[1]) {
+        for (j in 1:dim(stat$segsites)[2]) {
+            if (stat$segsites[i, j] == "NaN" || stat$segsites[i, 
+                j] == "Inf") {
+                stat$segsites[i, j] = NA_integer_
+            }
+            if (j < 8 && (stat$frequencies[i, j] == "NaN" || 
+                stat$frequencies[i, j] == "Inf")) {
+                stat$frequencies[i, j] = NA_real_
+            }
+            if (j < 6 && (stat$fst[i, j] == "NaN" || stat$fst[i, 
+                j] == "Inf")) {
+                stat$fst[i, j] = NA_real_
+            }
+            if (j < 4) {
+                if (stat$pi[i, j] == "NaN" || stat$pi[i, j] == 
+                  "Inf") {
+                  stat$pi[i, j] = NA_real_
+                }
+                if (stat$thetaW[i, j] == "NaN" || stat$thetaW[i, 
+                  j] == "Inf") {
+                  stat$thetaW[i, j] = NA_real_
+                }
+                if (stat$D[i, j] == "NaN" || stat$D[i, j] == 
+                  "Inf") {
+                  stat$D[i, j] = NA_real_
+                }
+                if (stat$thetaH[i, j] == "NaN" || stat$thetaH[i, 
+                  j] == "Inf") {
+                  stat$thetaH[i, j] = NA_real_
+                }
+                if (stat$H[i, j] == "NaN" || stat$H[i, j] == 
+                  "Inf") {
+                  stat$H[i, j] = NA_real_
+                }
+                if (stat$D_star[i, j] == "NaN" || stat$D_star[i, 
+                  j] == "Inf") {
+                  stat$D_star[i, j] = NA_real_
+                }
+                if (stat$D_prime[i, j] == "NaN" || stat$D_prime[i, 
+                  j] == "Inf") {
+                  stat$D_prime[i, j] = NA_real_
+                }
+                if (stat$r_square[i, j] == "NaN" || stat$r_square[i, 
+                  j] == "Inf") {
+                  stat$r_square[i, j] = NA_real_
+                }
+            }
+        }
+    }
+    return(stat)
+  }
+}
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ ~kwd1 }
+\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

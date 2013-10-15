@@ -1,0 +1,244 @@
+\name{data4EstL}
+\alias{data4EstL}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{
+Generate the file of information on the regions used to run EstL
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+}
+\usage{
+data4EstL(paramfile = "estimation.par", datafile = "datafiles/reg", regfile = "datafiles/info.reg", locifile = "datafiles/info.loc", summaries = "S_1 S_2 S_sl S_sh F_st D_1 D_2 D_star1 D_star2", type = c(0, 1, 5, 10), nreg = 1)
+}
+%- maybe also 'usage' for other objects documented here.
+\arguments{
+  \item{paramfile}{
+%%     ~~Describe \code{paramfile} here~~
+}
+  \item{datafile}{
+%%     ~~Describe \code{datafile} here~~
+}
+  \item{regfile}{
+%%     ~~Describe \code{regfile} here~~
+}
+  \item{locifile}{
+%%     ~~Describe \code{locifile} here~~
+}
+  \item{summaries}{
+%%     ~~Describe \code{summaries} here~~
+}
+  \item{type}{
+%%     ~~Describe \code{type} here~~
+}
+  \item{nreg}{
+%%     ~~Describe \code{nreg} here~~
+}
+}
+\details{
+%%  ~~ If necessary, more details than the description above ~~
+}
+\value{
+%%  ~Describe the value returned
+%%  If it is a LIST, use
+%%  \item{comp1 }{Description of 'comp1'}
+%%  \item{comp2 }{Description of 'comp2'}
+%% ...
+}
+\references{
+%% ~put references to the literature/web site here ~
+}
+\author{
+ Celine Becquet - \email{celine.becquet@gmail.com}.
+}
+\note{
+%%  ~~further notes~~
+}
+
+%% ~Make other sections like Warning with \section{Warning }{....} ~
+
+\seealso{
+%% ~~objects to See Also as \code{\link{help}}, ~~~
+}
+\examples{
+##---- Should be DIRECTLY executable !! ----
+##-- ==>  Define data, use random,
+##--	or do  help(data=index)  for the standard data sets.
+
+## The function is currently defined as
+function (paramfile = "estimation.par", datafile = "datafiles/reg", 
+    regfile = "datafiles/info.reg", locifile = "datafiles/info.loc", 
+    summaries = "S_1 S_2 S_sl S_sh F_st D_1 D_2 D_star1 D_star2", 
+    type = c(0, 1, 5, 10), nreg = 1) 
+{
+    ok = 1
+    liststats = list()
+    liststats[[1]] = c("S", "S_1", "S_2", "S_s", "S_ss", "S_sf1", 
+        "S_sf2", "S_sl", "S_sh", "S_f", "S_f1", "S_f2", "S_o", 
+        "S_o1", "S_o2", "F(S)", "F(S_1)", "F(S_2)", "F(S_s)", 
+        "F(S_ss)", "F(S_sf1)", "F(S_sf2)", "F(S_sl)", "F(S_sh)", 
+        "F_st", "H_b", "H_w1", "H_w2", "Snn", "pi", "pi_1", "pi_2", 
+        "theta_W", "theta_W1", "theta_W2", "theta_H", "theta_H1", 
+        "theta_H2", "D", "D_1", "D_2", "H", "H_1", "H_2", "D_star", 
+        "D_star1", "D_star2", "D_prime", "D_prime1", "D_prime2", 
+        "r_square", "r_square1", "r_square2", "nH", "nH_1", "nH_2", 
+        "Rm", "Rm_1", "Rm_2")
+    summaries = clean_str(str = summaries, sep = " ")
+    nstats = get_liststats(liststats = liststats, summaries = strsplit(summaries, 
+        split = " "))
+    reg = read.table(regfile, skip = 1, fill = TRUE)
+    nregions = dim(reg)[1]
+    if (nreg != nregions) {
+        tp = c("PROBLEM: I found ", nregions, " regions/lines in the file ", 
+            regfile, " but in the file of parameters I found ", 
+            nreg, " regions. I didn't output the datafiles.")
+        stp = c("'", "'", "'", "'", "'", "'")
+        error_message(tp, stp)
+    }
+    else {
+        loci = 0
+        if (sum(reg[(1:nregions), 12]) > nregions) {
+            if (file.exists(locifile)) {
+                loci = read.table(locifile, skip = 1, fill = TRUE)
+            }
+            else {
+                tp = c("PROBLEM: the file of information on the loci ", 
+                  locifile, " doesn't exist. I could not output the grid of parameters and the cmd line.")
+                stp = c("'", "'", "'", "'")
+                error_message(tp, stp)
+                ok = 0
+            }
+        }
+        if (ok) {
+            check = check_reg(nregions = nregions, info_region = reg, 
+                info_loci = loci, locifile = locifile)
+            if (check$ok) {
+                append = 0
+                if (file.exists(datafile)) {
+                  tp = c("I found all the data in the file ", 
+                    datafile, ".")
+                  stp = c("'", "'", "'", "'", "")
+                  error_message(tp, stp)
+                  msout = get_ms_output(msoutput = datafile)
+                  append = 1
+                  if (dim(msout$segsites)[1] != nreg) {
+                    tp = c("PROBLEM: I found ", nregions, " regions in the file ", 
+                      regfile, " but in the data file ", datafile, 
+                      " I found ", dim(msout$segsites)[1], " regions. I didn't output the datafiles.")
+                    stp = c("'", "'", "'", "'", "'", "'", "'", 
+                      "'")
+                    error_message(tp, stp)
+                    check$ok = 0
+                  }
+                }
+                data = list()
+                sumstats = list()
+                sumstatsloci = list()
+                nloci = 1
+                nl = 1
+                nsam = 0
+                for (nr in 1:nregions) {
+                  if (check$ok) {
+                    data[[nr]] = list()
+                    if (append == 1) {
+                      data[[nr]]$cmdline_seeds[1] = msout$cmdline_seeds[1, 
+                        nr]
+                      data[[nr]]$segsites = msout$segsites[nr]
+                      data[[nr]]$positions[[1]] = msout$positions[[nr]]
+                      data[[nr]]$haplotypes = msout$haplotypes[[nr]]
+                      tp = strsplit(data[[nr]]$cmdline_seeds[1], 
+                        split = " ")
+                      nsam = as.numeric(tp[[1]][2]) + as.numeric(tp[[1]][3])
+                    }
+                    else {
+                      fdata = paste(datafile, nr, sep = "")
+                      if (file.exists(fdata)) {
+                        tp = c("I am recovering the data for region #", 
+                          nr, " in file ", fdata, ".")
+                        stp = c("", "", "'", "'", "'", "'", "'", 
+                          "'")
+                        error_message(tp, stp)
+                        data[[nr]] = get_ms_output(msoutput = fdata)
+                        tp = strsplit(data[[nr]]$cmdline_seeds[1], 
+                          split = " ")
+                        nsam = as.numeric(tp[[1]][2])
+                      }
+                      else {
+                        tp = c("PROBLEM: I couldn't find the data file for the region #", 
+                          nr, " named ", fdata, ". I didn't output the datafiles.")
+                        stp = c("", "", "'", "'", "'", "'", "'", 
+                          "'")
+                        error_message(tp, stp)
+                        check$ok = 0
+                      }
+                    }
+                    if (nsam == reg[nr, 6] + reg[nr, 7] && check$ok) {
+                      nsam = reg[nr, 6] + reg[nr, 7]
+                      w = reg[nr, 5]
+                      Z = reg[nr, 9] - reg[nr, 8]
+                      rho = c(w, Z - 1)
+                      zxv = Z * reg[nr, 3] * reg[nr, 4]
+                      mig = struct = time = 0
+                      if (check$ok && reg[nr, 6] > 0 && reg[nr, 
+                        7] > 0) {
+                        struct = c(2, reg[nr, 6], reg[nr, 7])
+                      }
+                      if (check$ok) {
+                        cmd = cmd_line(nsam = nsam, theta = zxv, 
+                          rho = rho, structure = struct, migration = 1, 
+                          time = time)
+                        data[[nr]]$cmdline_seeds[1] = cmd[1]
+                        st = stats_pop(msframe = data[[nr]], 
+                          type = type)
+                        reg[nr, 13] = st$segsites[1, 1]
+                        sumstats = get_stats(nloci = nregions, 
+                          nlocus = nr, sumstats = sumstats, statslocus = st, 
+                          info = reg[nr, ], summaries = nstats$stats)
+                        if (reg[nr, 12] > 1) {
+                          for (l in 1:reg[nr, 12]) {
+                            mslocus = get_loci(msframe = data[[nr]], 
+                              info_region = reg[nr, ], info_loci = loci[loci$V1 == 
+                                reg[nr, 1], ], nlocus = l)
+                            mslocus$cmdline_seeds = data[[nr]]$cmdline_seeds
+                            stl = stats_pop(msframe = mslocus, 
+                              type = type)
+                            sumstatsloci = get_stats(nloci = sum(reg[, 
+                              12]), nlocus = nloci, sumstats = sumstatsloci, 
+                              statslocus = stl, info = loci[loci$V1 == 
+                                reg[nr, 1], ][loci[loci$V1 == 
+                                reg[nr, 1], ]$V2 == l, ], summaries = nstats$stats)
+                            loci[nl, 7] = stl$segsites[1, 1]
+                            nl = nl + 1
+                            nloci = nloci + 1
+                          }
+                        }
+                        else {
+                          sumstatsloci = get_stats(nloci = sum(reg[, 
+                            12]), nlocus = nloci, sumstats = sumstatsloci, 
+                            statslocus = st, info = reg[nr, ], 
+                            summaries = nstats$stats)
+                          nloci = nloci + 1
+                        }
+                      }
+                    }
+                  }
+                }
+                if (check$ok) {
+                  parfile = get_fname(parf = paramfile, regf = datafile)
+                  output_stats(datafile = parfile, sumstats = sumstats, 
+                    liststats = liststats[[1]][nstats$list], 
+                    reg = reg, locifile = NA, regfile = regfile)
+                  if (sum(reg[(1:nregions), 12]) > nregions) 
+                    output_stats(datafile = paste(parfile, "loci", 
+                      sep = "-"), sumstats = sumstatsloci, liststats = liststats[[1]][nstats$list], 
+                      reg = reg, loci = loci, locifile = locifile, 
+                      regfile = regfile)
+                }
+            }
+        }
+    }
+  }
+}
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ ~kwd1 }
+\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

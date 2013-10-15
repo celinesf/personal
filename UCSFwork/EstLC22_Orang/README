@@ -1,0 +1,13 @@
+
+
+################### Valgrind - check memory leaks of programs
+
+valgrind --tool=memcheck --leak-check=yes --log-file=C-log -v --trace-children=yes --track-fds=yes  --read-var-info=yes  --track-origins=yes --leak-check=full --show-reachable=yes ./msC 5 2 -t 5 -seeds 36721 48411 39634 
+
+after compiling the C code with the "-O1" (not -O2, as per default) flag.
+
+
+
+
+
+
