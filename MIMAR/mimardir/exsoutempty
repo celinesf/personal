@@ -1,0 +1,2 @@
+./mimar 11000 1000 4 -lf inputmimar -u 2e-8 -t u .001 .01 -ej u 0 1e5 -N .005 -M l -2 2 -o soutempty 
+3579 27011 59243

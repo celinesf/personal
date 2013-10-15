@@ -1,0 +1,9 @@
+./mimarsim 4 -lf inputsim -u 2e-8 -t .005 -ej 1e4 
+3579 27011 59243
+Parameter values
+0.005	0.005	0.04	10000	0.005	0	0	
+Name	lenght	x_y	v_y	w_y	n_1	n_2	S_1	S_2	S_s	S_f	//
+locus1_autosom	1000	1	1	1	10	10	14	1	11	0	
+locus2_Xlinked	1000	0.75	1	0.5	10	10	2	5	2	0	
+locus3_Ylinked	1000	0.25	1	0	10	10	2	2	0	0	
+locus3_mtDNA	1000	0.25	10	0	10	10	9	20	14	0	

@@ -1,0 +1,21 @@
+Example of input file for MIMAR	
+
+v_y=10 for mtDNA assumes that mu for mtDNA is 2e-7.
+
+w_y is set to  omega_y*rho_o, the scaled sex-averaged population rec. rate for locus  y
+   where rho_o=4N_1 c_y is the locus-specific population rec. rate per bp estimated from LD for locus y.
+- c_y is the locus-specific cross-over rate per bp (i.e., could be estimated from pedigree analysis). 
+  If y is X-linked, c_y is the recombination rate in females.
+- omega_y is the ratio of rho_o/rho, where rho=4N_1c and c is the autosomal sex-averaged rate,
+  i.e., omega_y=1/2 for X-linked loci so w_y=omega_y*rho_o=1/2 4N_1 c_y=2N_1c_y.
+
+Here we assume mammal-like data,  w_1=rho_1=4Nc=0.005 and
+rho_2=0.008 so w_2=2N_2c=1/2*rho_2=.004.
+
+In the command line use the tag "-r 1".
+
+Name	 	lenght	x_y	v_y	w_y	n_1	n_2	S_1	S_2	S_s	S_f	//
+locus1_autosom	1000	1	1	0.005	10	10	7	1	1	0	
+locus2_Xlinked	1000	0.75	1	0.004	10	10	4	2	7	0	
+locus3_Ylinked	1000	0.25	1	0	10	10	5	1	1	0	
+locus3_mtDNA	1000	0.25	10	0	10	10	21	13	33	0	

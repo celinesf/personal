@@ -1,0 +1,13 @@
+Example of input file for MIMARSIM
+				
+v_y=10 for mtDNA assumes that mu for mtDNA is 2e-7.
+
+w_y is set to omega_y the ratio of rho_y/rho, where rho=4N_1c, specified for mammal-like data.
+i.e., for X-linked loci, only female recombine.
+Since rho=4N_1c, rho_X = 2N_1*c = 1/2 rho.
+
+Name		lenght	x_y	v_y	w_y	n_1	n_2	//
+locus1_autosom	1000	1	1	1	10	10
+locus2_Xlinked	1000	0.75	1	0.5	10	10
+locus3_Ylinked	1000	0.25	1	0	10	10
+locus3_mtDNA	1000	0.25	10	0	10	10

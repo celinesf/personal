@@ -1,0 +1,106 @@
+#!/usr/bin/perl
+
+#########
+# script to relaunch mimar from an interupted run
+
+
+#########
+
+my $SOUTPUT="soutempty"; # Enter the name of the summary output file (should contains the command line and the original seed)
+my $POST="outputint"; # Enter the name of the interrupted posterior file         
+my $NEWPOST= "emptypost"; #name of file in which stdout will be written
+
+open (INFILE, "$SOUTPUT"); 
+open (OUTFILE, ">$SOUTPUT-R"); 
+my $nline=0;
+my $nstep;
+my $bstep;
+my $nloci;
+my $cline;
+my $seeds=0;
+while(<INFILE>)# read command line and seeds
+{ 
+    my $st=$_;
+    chomp($st);
+    if($nline==0)
+    {
+        my @tp=split(/ /,$st);
+         $nstep=$tp[1];
+         $bstep=$tp[2];
+       $nloci=$tp[3];
+    
+        my $i=4;
+        while ($tp[$i] ne "")
+        {
+            my @tp1=split(/-/,$tp[$i]);
+            if($foundname==1)
+            {
+                $tp[$i]="$tp[$i]-R";
+                $foundname++; 
+            }
+            if(($tp1[1] eq "o")&&($foundname==0))
+            {$foundname++;}
+            $cline="$cline $tp[$i]";
+            $i++;
+        }
+    }
+    if($nline==1)
+    {
+        $seeds=$st;
+    }
+    print OUTFILE "$st\n";
+    $nline++;
+}
+close(INFILE);
+ print OUTFILE "ATTENTION, This file does not contain the summaries from the full posterior distribution. File Generated after relaunching MIMAR. Use the posterior in the file $POST-R for any inferences.\n";
+close(OUTFILE);
+
+open(INFILE, "$POST"); 
+open(OUTFILE, ">$POST-R"); 
+my $pstep=0; #nuner of lines in the interuptes posterior distribution files
+$nline=0;
+my $param;
+print "Interrupted file: $POST \nComplete posterior in file $POST-R\n";
+ while(<INFILE>)# read command line and seeds
+{ 
+    my $st=$_;
+    chomp($st);
+    if($nline>10)
+    {
+        my @tp=split(/\t/,$st);
+        my $ok=0;
+        LINE:for(my $i=0; $i<9;$i++)
+        {
+            if($tp[$i]eq "")
+           {  $i=9;}
+            $ok++;
+        }
+        if($ok==9)
+        {
+            print OUTFILE "$st\n"; 
+            $pstep=$tp[0];
+            $param="";
+            for(my $i=0; $i<9;$i++)
+            {
+                $param="$param $tp[$i]";
+            }
+        }
+    }
+    else
+    {
+       print OUTFILE "$st\n";   
+    }
+  
+    $nline++;
+}
+
+close(INFILE);
+close(OUTFILE);
+
+$bstep=0;
+ print "./mimar $nstep $bstep $nloci -R $POST-R $param $cline\n";
+
+system("./mimar $nstep $bstep $nloci -R $POST-R $param $cline >$NEWPOST");
+
+
+

@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+
+############# Parameters Setting ###############
+my $nloci=4;                  # number of loci in input file
+my $mu=2e-8;                  # mutation rate per base pair
+my $int=1000;                 # number data sets simulated by MIMAR
+my $inputfile="inputmimar";   # input file name
+my $outfile="outputgofest";   # output file name
+my @temp;
+$temp[1]=0.00148198;          # theta_1
+$temp[2]=0.00148198;          # theta_2
+$temp[3]=7957.96;             # T in generation
+$temp[4]=0.005;               # theta_A
+$temp[5]=0.878097;            # M12 or M
+$temp[6]=0.878097;            # M21 or M
+
+#### NOTE: The commande line is for a *simple* Isolation-Migration model and has no recombination
+#### - Needs to add switch -r to include recombination and any other switches used for MIMAR analysis if the model was more complex.
+my $cmd_line="./mimargof $nloci -lf $inputfile -u $mu -t $temp[1] -ej $temp[3] -N  $temp[4] -n $temp[2] -m 1 2 $temp[5] -m 2 1 $temp[6] >>$outfile";
+
+########### End of parameters and option seting ############
+
+
+$count=1;               # number of sets of parameters analyzed
+ while($count<$int+1)   # Loop along MIMAR output file
+ {   
+     if($count==1)      # Write header
+     {
+         open (FILE, ">$outfile")|| die "Can't open FILEIN: $fparam!\n";
+         print FILE "Sim#\tStep#\tS1\tS2\tSs\tSf\tFst\tpi1\tpi2\tD1\tD2\n";
+         print FILE "$count\tNA\t";
+         close FILE;
+     }
+     else               # following simulations
+     {
+         open (FILE, ">>$outfile")|| die "Can't open FILEIN: $fparam!\n";
+         print FILE "$count\tNA\t";
+         close FILE;           
+     }
+     system($cmd_line);
+     $count+=1;
+}
+
+
+close(FILEIN);
+

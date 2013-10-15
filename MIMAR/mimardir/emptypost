@@ -1,0 +1,12 @@
+Analysis of file inputmimar
+
+Prior distributions ranges/parameter values (-1 means that no information was provided. If both values are the same, the parameter was fixed by the user)
+theta1	0.001	0.01
+theta2	0.001	0.01
+Tcoal	0	2
+Tgen	0	100000
+thetaA	0.005	0.005
+M12	-2	2
+M21	0	0
+
+Step #	theta1	theta2	Tcoal	Tgen	thetaA	M12	M21	L

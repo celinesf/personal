@@ -1,0 +1,22 @@
+Example of input file for MIMARSIM		
+								
+v_y=10 for mtDNA assumes that mu for mtDNA is 2e-7.
+
+w_y is set to  omega_y*c_y : the scaled locus-specific sex-averaged cross-over rate per bp for locus y.
+- c_y is the estimate of the locus-specific cross-over rate per bp obtained from pedigree analyses.
+  i.e., If y is X-linked, c_y is the estimated recombination rate in females.
+- omega_y is the ratio of rho_o/rho, where rho_o=4N_1c_y,  rho=4N_1c and c is the autosomal sex-averaged rate,
+  i.e., omega_y=1/2 for X-linked loci so when mimar calculate the locus specific pop. rec rate:
+ rho_y=w_y* theta_1/mu=omega_y*4N_1c_y=2N_1c_y.
+
+Here we assume mammal-like data, c_1=1e-8 and
+c_2=4e-8 so w_2=1/2 *c_2=2e-8.
+
+In the command line use the tag "-r 2".
+
+Name	         lenght	x_y	v_y	w_y	n_1	n_2
+//
+locus1_autosom	1000     1     1     1e-8	10    10		
+locus2_Xlinked	1000	   0.75	1	   2e-8	10	   10		
+locus3_Ylinked	1000	   0.25	1	   0	   10	   10	
+locus3_mtDNA	1000	   0.25	10	   0	   10	   10	
