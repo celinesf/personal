@@ -14,13 +14,35 @@ Functions used by multiple classes
 """
 
 
-import logging, json
+import logging, json, copy
 
 class SharedFunctions():
     def __init__(self, path):
         ''' '''
         self.path = path
         
+    def check_map(self,check_map, word):
+        logging.debug(' Function: check_map word: %s' % word )
+        key = word.lower().replace(' ',"_")
+        if key in check_map and check_map[key] == word:
+            logging.info(' found key: %s (check_map)' % key )
+            word = key
+        elif key in check_map and check_map[key] != word:
+            logging.warning(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
+            print(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
+        elif '/' in word:
+            words = word.split('/')
+            new_word=[]
+            for w in words:
+                w = self.check_map(check_map, w)
+                new_word.append(w)
+            word = copy.deepcopy(new_word)
+        elif key != 'null' and key != '':
+            logging.warning(' NEW KEY: %s (check_map)' % (key))
+            check_map[key] = word
+            word = key
+            print(' NEW KEY: %s (check_map)' % (key))
+        return word
     
     def get_map(self, file_name):
         logging.debug(' Function: get_map - filename: %s' % (file_name) )
