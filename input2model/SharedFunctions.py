@@ -20,29 +20,45 @@ class SharedFunctions():
     def __init__(self, path):
         ''' '''
         self.path = path
-        
-    def check_map(self,check_map, word):
+
+    def index_trait_supp_score(self,index, trait_supp_score ):
+        for doc in  trait_supp_score:
+            if doc['trait'] not in index:
+                index[doc['trait']]= {}
+            if doc['supplement'] not in index[doc['trait']]:
+                index[doc['trait']][doc['supplement']]= copy.deepcopy(doc) 
+
+ 
+    def check_map(self,check_map, word, slash, expect):
         logging.debug(' Function: check_map word: %s' % word )
         key = word.lower().replace(' ',"_")
-        if key in check_map and check_map[key] == word:
-            logging.info(' found key: %s (check_map)' % key )
-            word = key
-        elif key in check_map and check_map[key] != word:
-            logging.warning(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
-            print(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
-        elif '/' in word:
-            words = word.split('/')
-            new_word=[]
-            for w in words:
-                w = self.check_map(check_map, w)
-                new_word.append(w)
-            word = copy.deepcopy(new_word)
-        elif key != 'null' and key != '':
-            logging.warning(' NEW KEY: %s (check_map)' % (key))
-            check_map[key] = word
-            word = key
-            print(' NEW KEY: %s (check_map)' % (key))
-        return word
+        
+        if expect is not None and key in expect:
+            logging.warning( 'check_map found expections - %s' %key)
+            print( 'check_map found expections - %s' %key)
+            return None
+        else:
+            if key in check_map and check_map[key] == word:
+                logging.info(' found key: %s (check_map)' % key )
+                word = key
+            elif key in check_map and check_map[key] != word:
+                logging.warning(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
+#                 print(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
+            elif '/' in word and slash == True:
+                words = word.split('/')
+                new_word=[]
+                for w in words:
+                    w = self.check_map(check_map, w, slash,expect)
+                    new_word.append(w)
+                word = copy.deepcopy(new_word)
+            elif '/' in word and slash == False:
+                logging.warning( 'check_map found / - %s' %word)
+                print( 'check_map found / - %s' %word)
+            elif key != 'null' and key != '':
+                logging.warning(' NEW KEY: %s (check_map)' % (key))
+                check_map[key] = word
+                word = key
+            return word
     
     def get_map(self, file_name):
         logging.debug(' Function: get_map - filename: %s' % (file_name) )
@@ -67,7 +83,10 @@ class SharedFunctions():
         output = open('%s/%s.txt' % (self.path,name),'w')
         output.write('key\tvalue\n')
         for key in data:
-            output.write('%s\t%s\n' % (key, data[key]))
+            if type(data) == dict:
+                output.write('%s\t%s\n' % (key, data[key]))
+            elif type(data) == list:
+                output.write('%s\n' % (key))
         output.close()
     
     def write_output(self,name,header,data): 
