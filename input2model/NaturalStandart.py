@@ -120,7 +120,7 @@ class NaturalStandart():
     #                             else:
     #                                 print trait, self.index[trait]
                                 if supp not in self.index[trait]:
-                                    print supp, trait
+#                                     print supp, trait
                                     self.index[trait][supp]=copy.deepcopy(self.data)
                                     self.trait_supp_score.append(copy.deepcopy(self.data))
                                 else:
@@ -130,7 +130,7 @@ class NaturalStandart():
             ### reset grade
             self.grade = None
             ###### FOR ALAN QC PURPOSE ONLY ##########
-#             self.util.write_map('traits_map_%s' % filename,self.new_traits_map) 
+            self.util.write_map('traits_map_%s' % filename,self.new_traits_map) 
             self.new_traits_map = []
  
         self.util.write_map('index',self.index)

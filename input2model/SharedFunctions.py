@@ -51,9 +51,9 @@ class SharedFunctions():
                     w = self.check_map(check_map, w, slash,expect)
                     new_word.append(w)
                 word = copy.deepcopy(new_word)
-            elif '/' in word and slash == False:
-                logging.warning( 'check_map found / - %s' %word)
-                print( 'check_map found / - %s' %word)
+#             elif '/' in word and slash == False:
+#                 logging.warning( 'check_map found / - %s' %word)
+#                 print( 'check_map found / - %s' %word)
             elif key != 'null' and key != '':
                 logging.warning(' NEW KEY: %s (check_map)' % (key))
                 check_map[key] = word

@@ -11,110 +11,86 @@ __status__ = "dev"
 
 
 
-PATH = "/Users/Celine/vitagene/script_in_out/farzin_research"
+PATH = "/Users/Celine/vitagene/script_in_out/dosage"
 
-import logging, os, copy, re
+import logging, os, copy, re, json
 from SharedFunctions import SharedFunctions
 
-class AddFarzin():
+class Dosage():
     def __init__(self):
-        self.CATEGORY_MAP = {'A':'acute', 'B' : 'beauty', 'C' : 'chronic', 'P':'performance','W' : 'wellness'}
         self.util = SharedFunctions(PATH)
-        self.score_map = self.util.get_map('score_map')
-        self.traits_map = self.util.get_map('traits_map') 
         self.supplements_map = self.util.get_map('supplements_map') 
-        self.trait_supp_score = self.util.get_map('trait_supp_score')
-        self.index = {}
+        self.adverse_effects_map = {}
+        self.dosage_map = []
+        self.maps = {}
+        
+        self.effect_map = {}
+        self.doc = {}
      
-#     def index_trait_supp_score(self):
-#         for doc in  self.trait_supp_score:
-#             if doc['trait'] not in self.index:
-#                 self.index[doc['trait']]= {}
-#             if doc['supplement'] not in self.index[doc['trait']]:
-#                 self.index[doc['trait']][doc['supplement']]= copy.deepcopy(doc) 
-     
-    def recover_trait_info(self,words):
-        logging.debug(' Function: recover_trait_info words: %s' % words )
-        self.new_trait = {}
-        for i in range(0,3):
-            if self.header[i] == 'category':
-                categories = words[i].strip().split(' (')
-                words[i] = self.CATEGORY_MAP[categories[0]]
-                for cat in range(1,len(categories)):
-                    if categories[cat] in self.CATEGORY_MAP:
-                        words[i] = words[i] + "/"+ self.CATEGORY_MAP[categories[cat]]
-                    else:
-                        print "WARNING I DONT KNOW WHAT THIS IS (recover_trait_info) - %s" % (cat)
-                    logging.debug("WARNING I DONT KNOW WHAT THIS IS (recover_trait_info)- %s" % (cat))
-                
-            self.new_trait[self.header[i]]= words[i].strip().lower().replace(' ','_')
-            ### record disease/trait name
-            
-            if self.header[i] == 'trait' :
-                self.trait = words[i].strip().lower().replace(' ','_')
-                if  words[i].strip().lower().replace(' ','_') not in self.traits_map: 
-                    self.new_trait[self.header[i]] = self.trait
-                    self.traits_map[self.trait] =  words[i].strip()  
+    def fill_info(self, words):
+        
+        for h in range(0,len(self.header)):
+            if words[h] != '' and h < len(self.header)-1:
+                if '*' in words[h] : # not RDA but AI data
+                    self.info['ai'] = words[h].replace('*','')
+                elif type(words[h]) == str:
+                    word = self.util.check_map(self.maps[self.header[h]], words[h], False, None)
+                    self.info[self.header[h]] = word
+                else:
+                    self.info[self.header[h]] = words[h]
+                    
+            elif  words[h] != '' and h < len(self.header):
+                if self.info['supplement'] not in self.effect_map:
+                    self.effect_map[self.info['supplement']] = []
+                effect = self.util.check_map(self.maps[self.header[h]], words[h], False, None)
+                self.effect_map[self.info['supplement']].append(effect)
+
+
+    def init_info(self):
+        for h in range(3,len(self.header)):
+            if self.header[h] in self.info:
+                self.info.pop(self.header[h])
+        if 'ai' in self.info:
+            self.info.pop('ai')  
   
-    def recover_score(self,words):
-        logging.debug(' Function: recover_score - words: %s' %words)
-        for i in range(3,len(words)):
-            self.new_data = copy.deepcopy(self.new_trait)
-            w = re.split('[(/:)]', words[i].strip())
-            supp = w[0].strip()
-            self.supp = supp.lower().replace(' ','_') 
-            ### add supp to map
-            if  self.supp not in self.supplements_map:
-                self.supplements_map[ self.supp] = supp
-            self.new_data["supplement"] =  self.supp
-            for i in range(1,len(w)):
-                if w[i] in self.score_map:
-                    self.new_data[self.score_map[w[i]]['site']] = self.score_map[w[i]]['score']
-                if w[i] not in self.score_map and w[i] != "":
-                    sub_traits = w[i].strip().split(', ')
-                    self.new_data['vitaganic_sub_trait'] = sub_traits[0].strip().replace(' ','_')
-                    for sub in range(1,len(sub_traits)):
-                        self.new_data['vitaganic_sub_trait'] = self.new_data['vitaganic_sub_trait']+ '/' + sub_traits[sub].strip().replace(' ','_')
-                        if sub_traits[sub].strip().replace(' ','_') not in self.sub_trait_map:
-                            print 'HERE', sub_traits[sub], words
-            if self.trait not in self.index:
-                self.index[self.trait] = {}   
-            if self.supp not in self.index[self.trait]:
-                self.index[self.trait][self.supp]=copy.deepcopy(self.new_data)
-                self.trait_supp_score.append(copy.deepcopy(self.new_data))
-            else:
-                print self.index[self.trait][self.supp]
-            
-      
-    
     def extract_data(self):
         logging.debug(' Function: extract_data' )
-        
-        self.util.index_trait_supp_score(self.index,  self.trait_supp_score)
-        
-        input_file = open("%s/input/research.txt" %PATH)
+        input_file = open("%s/input/dosage.txt" % PATH)
         lines = input_file.readlines()
+        self.info = {}
         nl = 0
         for line in lines:
             if nl == 0:
-                self.header = self.util.get_header(line, ['dose','vitagene_score','mayo_clinic','webmd','vitaganic','vitaganic_sub_trait'])
+                self.header = self.util.get_header(line, None)
+                for h in self.header:
+                    self.maps[h] = {}
             elif nl>0:
-                self.recover_trait_info(line.strip().split('\t'))
-                self.recover_score(line.strip().split('\t'))
+                self.init_info()                    
+                self.fill_info(line.split('\t'))
+                self.dosage_map.append(copy.deepcopy(self.info))
             nl += 1
-        self.util.output_file('traits_map',self.traits_map)
-        self.util.output_file('supplements_map',self.supplements_map)
-        self.util.output_file('trait_supp_score',self.trait_supp_score)
-        self.util.write_map('traits_map',self.traits_map)
-        self.util.write_map('supplements_map',self.supplements_map)
-        self.util.write_output('trait_supp_score',self.header,self.trait_supp_score)
+        
+        self.header.insert(self.header.index('rda')+1,'ai')
+        self.header.pop(self.header.index('adverse_effects'))
+        
+        self.util.output_file('effect_map',self.effect_map)
+        self.util.write_map('effect_map',self.effect_map)
+        
+        self.util.output_file('dosage_map',self.dosage_map)
+        self.util.write_output('dosage_map',self.header,self.dosage_map)
+        
+        for data in self.maps:
+            self.util.output_file(data,self.maps[data])
+            self.util.write_map(data,self.maps[data])
+
+
                 
 ### main function
 if __name__ == "__main__":
-    logging.basicConfig(filename='%s/%s' % (PATH,'log_AddFarzin'), filemode='w',
+    logging.basicConfig(filename='%s/%s' % (PATH,'log_Dosage'), filemode='w',
                         level=logging.DEBUG,format='%(asctime)s - %(levelname)s -%(message)s')
     logging.debug(' Function: __main__ input' )
-    d = AddFarzin()
+    d = Dosage()
     d.extract_data()
 
     print(' DONE -- Function: __main__' )
