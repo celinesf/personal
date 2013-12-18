@@ -70,8 +70,7 @@ class TraitSuppInput():
                     for sub in range(1,len(sub_traits)):
                         self.new_data['vitaganic_sub_trait'] = self.new_data['vitaganic_sub_trait']+ '/' + sub_traits[sub].strip().replace(' ','_')
                         if sub_traits[sub].strip().replace(' ','_') not in self.sub_trait_map:
-                            print 'HERE', sub_traits[sub], words
-                            
+                            print 'HERE', sub_traits[sub], words                
             self.output_data.append(copy.deepcopy(self.new_data))
 
     
