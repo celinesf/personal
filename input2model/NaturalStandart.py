@@ -4,6 +4,7 @@
    List the unic "therapies" so that Alan can make a map of the true supplements
    10/31/13 - 0.0.1 : creation
    11/12/13 - 0.0.2 : add removal of non-oral supplements + add to trait_supp_score
+   01/08/14 - 0.0.3 : remove mayo if found in natural standart - add score of trunk in leaves + account for redundancy
 """
 __author__ = "Celine Becquet"
 __copyright__ = "Copyright 2013, Viragene Inc."
@@ -25,6 +26,8 @@ class NaturalStandart():
         self.score_map = self.util.get_map('score_map')
         self.traits_map = self.util.get_map('traits_map') 
         self.supplements_map = self.util.get_map('supplements_map') 
+        self.value_key = self.util.get_map('value_key') 
+        self.hierarchy_list = self.util.get_map('hierarchy_list') 
         self.grade =None
         self.general_trait = None
         self.output_data = []
@@ -46,17 +49,20 @@ class NaturalStandart():
     
     
     def check_map_trait(self,check_map, word):
-        logging.debug(' Function: check_map word: %s' % word )
+        logging.debug(' Function: check_map_trait word: %s' % word )
         key = word.lower().replace(' ',"_")
         if key in check_map and check_map[key] == word:
-            logging.info(' found key: %s (check_map)' % key )
+            logging.info(' found key: %s (check_map_trait)' % key )
             word = key
         elif key in check_map and check_map[key] != word:
-            logging.warning(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
-            print(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
+            logging.warning(' found key: %s but different name %s %s (check_map_trait)' % (key, check_map[key] , word))
+            if word[0].isupper():
+                    check_map[key] = word
+            word = key
         elif key != 'null' and key != '':
-            logging.warning(' NEW KEY: %s (check_map)' % (key))
-            self.new_traits_map.append(key)
+            logging.warning(' NEW KEY: %s (check_map_trait)' % (key))
+            if key not in self.new_traits_map:
+                self.new_traits_map.append(key)
             word = key
 #             print(' NEW KEY: %s (check_map)' % (key))
         
@@ -66,10 +72,12 @@ class NaturalStandart():
         logging.debug(' Function: extract_data' )
         self.util.index_trait_supp_score(self.index,  self.trait_supp_score)
         batches_list = [i for i in os.listdir('%s/input' % (PATH)) if i.endswith('.txt')] 
-
+        
+        issues = {}
+        mayo = {}
         for filename in batches_list:
 
-            self.util.warnMe('info', 'Extracting file: ' + filename )
+            logging.info(' Extracting file: ' + filename )
             f = open('%s/input/%s' % (PATH,filename), 'rb')
             data = f.readlines()
             self.grade = ''
@@ -82,12 +90,11 @@ class NaturalStandart():
                 try:
                     l.decode('UTF-8', 'strict')
                 except UnicodeDecodeError:
-                    
-                    print l, re.findall(r'[\x80-\xFF]', l)
+                    print self.util.warnMe('error','UTF error at line %s, data %s' % (l, re.findall(r'[\x80-\xFF]',l)))
                 if  l!= "":
                     if "and related conditions" in l:
                         self.general_trait =  l.split("and related conditions")[0]
-                        self.util.warnMe('info', 'Extracting data for general_trait: ' + self.general_trait )
+                        logging.info('Extracting data for general_trait: ' + self.general_trait )
                     elif 'Grade:' in l:
                         self.grade =  {"grade":l.split(" ")[1]}
                         if self.grade['grade'] in self.score_map:
@@ -109,29 +116,64 @@ class NaturalStandart():
                         elif counter== 1 : #Specific therapeutic Use(s)
                             counter =0
                             if  supp is not None:
-                                trait = self.check_map_trait(self.traits_map, l) 
-                                trait = self.util.check_map(self.traits_map, l, False,None) 
+                                ### get value of trait as a key                                
+                                temp_map = copy.deepcopy(self.traits_map)
+                                trait = self.check_map_trait(temp_map, l)                                
+                                trait = self.util.check_map(temp_map, trait, False,None) 
+                                ### check trait is in value-> find appropriate key
+                                if trait in self.value_key:
+                                    if trait != self.value_key[trait]:
+                                        logging.info(' replace trait: %s by key: %s' %(trait,self.value_key[trait] ))
+                                        trait = self.value_key[trait]
+                                else:
+                                    if trait not in issues:
+                                        issues[trait] = []
+                                    issues[trait].append(supp)
+                                    self.util.warnMe('critical', ' trait not in value_key -- trait: %s , supp: %s' % (trait, supp))
+
+                                ### add trait_key to list of traits
+                                trait = self.check_map_trait(self.traits_map, trait)                               
+                                trait = self.util.check_map(self.traits_map, trait, False,None) 
+
+                                ### add trait for natural standart list?
                                 self.data['trait'] = trait
                                 self.output_data.append(self.data)
+                                logging.info('considering: trait %s, supp: %s, data: %s' % (trait, supp, self.data))
                                 
+                                
+                                ### add natural standart data to trait_supp_map
                                 if trait not in self.index:
                                     self.index[trait] = {}   
-    #                                 print trait, supp
-    #                             else:
-    #                                 print trait, self.index[trait]
+#                                 elif 'mayo_clinic' in self.index[trait]:
+#                                     self.util.warnMe('warning', ' MAYO trait: %s in index: %s, line : %s' % (trait, self.index[trait], l))
+     
                                 if supp not in self.index[trait]:
-#                                     print supp, trait
                                     self.index[trait][supp]=copy.deepcopy(self.data)
                                     self.trait_supp_score.append(copy.deepcopy(self.data))
-                                else:
-                                    print self.index[trait][supp]
-                            
+                                elif 'natural_standart' in self.index[trait][supp]:
+                                     logging.error(' DUPLICATE trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
+                                elif 'mayo_clinic' in self.index[trait][supp]:
+                                    if self.index[trait][supp]['mayo_clinic'] == self.data['natural_standart']:
+                                        self.index[trait][supp]['natural_standart']= self.data['natural_standart']
+                                        self.index[trait][supp].pop('mayo_clinic')
+                                        logging.warning(' MAYO AGREES  -- trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
+                                    else:
+                                        self.index[trait][supp]['natural_standart']= self.data['natural_standart']
+                                        if trait not in mayo:
+                                            mayo[trait] = []
+                                        mayo[trait].append({'supp':supp, 'natural_standart':self.data['natural_standart'],'mayo_clinic':self.index[trait][supp]['mayo_clinic'] })
+                                        self.util.warnMe('critical', ' MAYO DISAGREES -- trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
+                                elif 'natural_standart' not in self.index[trait][supp]:
+                                    logging.warning(' NO MAYO FOUND trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
                           
             ### reset grade
             self.grade = None
             ###### FOR ALAN QC PURPOSE ONLY ##########
             self.util.write_map('traits_map_%s' % filename,self.new_traits_map) 
             self.new_traits_map = []
+            
+        self.util.write_map('issues',issues)
+        self.util.write_map('mayo_disagree',mayo)
  
         self.util.write_map('index',self.index)
         self.util.output_file('index',self.index)
@@ -152,7 +194,7 @@ class NaturalStandart():
 ### main function
 if __name__ == "__main__":
     logging.basicConfig(filename='%s/%s' % (PATH,'log_NaturalStandart'), filemode='w',
-                        level=logging.DEBUG,format='%(asctime)s - %(levelname)s -%(message)s')
+                        level=logging.INFO,format='%(asctime)s - %(levelname)s -%(message)s')
     logging.debug(' Function: __main__ input' )
     d = NaturalStandart()
     d.extract_data()

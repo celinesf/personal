@@ -35,7 +35,7 @@ class SharedFunctions():
         
         if expect is not None and key in expect:
             logging.warning( 'check_map found expections - %s' %key)
-            print( 'check_map found expections - %s' %key)
+#             print( 'check_map found expections - %s' %key)
             return None
         else:
             if key in check_map and check_map[key] == word:
@@ -43,7 +43,9 @@ class SharedFunctions():
                 word = key
             elif key in check_map and check_map[key] != word:
                 logging.warning(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
-#                 print(' found key: %s but different name %s %s (check_map)' % (key, check_map[key] , word))
+                if word[0].isupper():
+                    check_map[key] = word
+                word = key                    
             elif '/' in word and slash == True:
                 words = word.split('/')
                 new_word=[]
