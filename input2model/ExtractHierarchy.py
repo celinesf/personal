@@ -92,7 +92,7 @@ class ExtractHierarchy():
         
     def extract_redoundancy(self):
         logging.debug(' Function:  extract_redoundancy' )
-        infile =  xlrd.open_workbook("%s/input/Natural Standard Traits Map.xlsx" % PATH)
+        infile =  xlrd.open_workbook("%s/input/Redundant Traits Map.xlsx" % PATH)
         sheets_names = infile.sheet_names()
         
         for sheet_name in sheets_names:
@@ -105,15 +105,18 @@ class ExtractHierarchy():
                         self.key_value[key] = []
                     for nr in range(1,sheet.nrows):
                         if column[nr] != '':
+#                             self.util.warnMe('ERROR', "%s %s %s %s" % (sheet_name, nc, nr,  column[nr]))
     #                         print sheet_name, nc, nr,  column[nr]
                             if column[nr] not in self.value_key:
                                 self.value_key[column[nr]]= key
+                                logging.info(" IN VALUE KEY %s %s %s %s" % (sheet_name, nc, nr,  column[nr]))
                                 if column[nr] not in self.key_value[key]:
                                     self.key_value[key].append(column[nr] )
+                                    logging.info(" IN KEY VALUE %s %s %s %s" % (sheet_name, nc, nr,  column[nr]))
                                 else: 
-                                    self.util.warnMe('critical', ' EXIST- KEY_VALUE: key %s value %s -values %s' % (key,column[nr],self.key_value[key]))                 
+                                    self.util.warnMe('critical', ' EXIST- KEY_VALUE: -%s- key -%s- value %s -values -%s-' % (sheet_name,key,column[nr],self.key_value[key]))                 
                             else: 
-                                self.util.warnMe('critical', ' EXIST- VALUE_KEY: %s %s found as %s' % (key,column[nr], self.value_key[column[nr]]))
+                                self.util.warnMe('critical', ' EXIST- VALUE_KEY: -%s- -%s- -%s- found as -%s-' % (sheet_name,key,column[nr], self.value_key[column[nr]]))
                     ### make sure key if also a value
                     if key not in self.key_value[key]:
                         logging.info(' added key %s as value to itself' % key)
@@ -187,7 +190,7 @@ if __name__ == "__main__":
     d = ExtractHierarchy()
 #     d.extract_redoundancy()
 #     d.extract_data()
-#     d.check_data()
+    d.check_data()
   
     
     

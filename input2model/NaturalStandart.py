@@ -16,22 +16,24 @@ __status__ = "dev"
 
 PATH = "/Users/Celine/vitagene/script_in_out/natural_standart"
 
-import logging, os, copy, re
+import logging, os, copy, re, json
 from SharedFunctions import SharedFunctions
 
 class NaturalStandart():
     def __init__(self):
         self.util = SharedFunctions(PATH)
+        self.SITE_SCORE = {'vitagene_score':1.0,  'natural_standard':1.0,  'mayo_clinic':1.0,    'webmd':1.0,    'vitaganic': (2.0/3.0) }
         self.not_supp_map = self.util.get_map('not_supp_map') 
         self.score_map = self.util.get_map('score_map')
         self.traits_map = self.util.get_map('traits_map') 
         self.supplements_map = self.util.get_map('supplements_map') 
         self.value_key = self.util.get_map('value_key') 
+        self.key_value = self.util.get_map('key_value') 
         self.hierarchy_list = self.util.get_map('hierarchy_list') 
         self.grade =None
         self.general_trait = None
         self.output_data = []
-        self.header =['#','trait','priority','category','supplement','dose','natural_standart','mayo_clinic','webmd','vitaganic','vitaganic_sub_trait',]
+        self.header =['trait','priority','category','supplement','dose','score','vitagene_score','natural_standard','mayo_clinic','webmd','vitaganic','vitaganic_sub_trait','copied']
         self.new_traits_map = []
         self.trait_supp_score = self.util.get_map('trait_supp_score')
         self.index = {}
@@ -63,20 +65,104 @@ class NaturalStandart():
             logging.warning(' NEW KEY: %s (check_map_trait)' % (key))
             if key not in self.new_traits_map:
                 self.new_traits_map.append(key)
-            word = key
-#             print(' NEW KEY: %s (check_map)' % (key))
-        
+            word = key        
         return word
+
+    def clean_trait_maps(self):
+        logging.debug(' Function: clean_trait_maps' )
+        issue = {}
+        new_map = []
+        for data in self.trait_supp_score:
+            data = self.get_average(copy.deepcopy(data))
+            ## replace old trait by its key
+            if data['trait'] in self.value_key and data['trait'] not in self.key_value:
+                logging.info(' (clean_trait_maps) value: %s replaced by key: %s' %(data['trait'], self.value_key[data['trait']]) ) 
+                data['copied'] = [data['trait']] ;
+                data['trait']  = self.value_key[data['trait']]                
+            elif data['trait'] in self.value_key and data['trait'] not in self.key_value:
+                logging.info(' (clean_trait_maps) value: %s = key %s' %(data['trait'], self.value_key[data['trait']]) ) 
+            elif data['trait'] not in self.value_key and data['trait'] not in self.key_value:
+                self.util.warnMe('error',' NOT FOUND (clean_trait_maps) value: %s NOT FOUND in value_key and key_value' %(data['trait']) ) 
+                if data['trait'] not in issue:
+                    issue[data['trait']] = "NOT FOUND KEY OR VAL"
+            else:
+                logging.debug( ' FOUND IN KEY ONLY? (clean_trait_maps) value: %s NOT FOUND in value_key but in key_value %s' %(data['trait'],self.key_value[data['trait']]) ) 
+            
+            ## remove old trait from trait map -> add new trait if needed
+            if 'copied' in data:
+                for copied in data['copied']:
+                    if copied in self.traits_map and data['trait'] in self.traits_map:
+                        self.traits_map.pop(copied)
+                    elif copied in self.traits_map and data['trait'] not in self.traits_map:
+                        logging.info( ' FOUND copied %s, REPLACED BY NOT FOUND new trait %s (clean_trait_maps)' %(copied, data['trait']) ) 
+                        self.traits_map[data['trait']] = re.sub('_'," ", data['trait']).title()
+                        self.traits_map.pop(copied)
+                    elif copied not in self.traits_map and data['trait'] in self.traits_map: 
+                        ''' '''
+    #                     self.util.warnMe('critical',' NOT FOUND copied %s, FOUND new trait %s (clean_trait_maps)' %(copied, data['trait']) ) 
+                    else:
+                        self.util.warnMe('critical',' NOT FOUND copied %s,  new trait %s (clean_trait_maps) v' %(copied, data['trait']) ) 
+            new_map.append(data)
+        self.trait_supp_score = copy.deepcopy(new_map)
+        self.util.write_map('issues_traits',issue)
+                
+
+    def get_average(self, data): 
+        logging.debug(' Function: get_average' )
+        denum = num = 0
+        for sites in self.SITE_SCORE:                
+            if sites in data:
+                denum += self.SITE_SCORE[sites]
+                num += data[sites]*self.SITE_SCORE[sites]
+        if denum >0:
+            data['score'] = round((num/denum)/0.5,0)*0.5
+        else:
+            data['score'] = None
+        return copy.deepcopy(data)
+
+    def complete_from_hierarchy(self):
+        logging.debug(' Function: complete_from_hierarchy' )
+        issue=[]
+        for trait in self.index:
+            if trait in self.hierarchy_list and len(self.hierarchy_list[trait]['parent']) >0:
+                for parent in self.hierarchy_list[trait]['parent']:
+                    if parent in self.index:
+                        for supp in self.index[parent]:
+                            if supp != "priority" and supp != "category" :                                
+                                if supp in self.index[trait]: #check same values
+                                    for key in self.index[trait][supp]:
+                                        if key in self.index[parent][supp] :
+                                            if (self.index[trait][supp][key] != self.index[parent][supp][key] and key != 'category' and key != 'trait' and key !='priority' and key !='score' and key != 'copied'):
+                                                issue.append(' key:%s, supp:%s, trait:%s=%s, parent:%s=%s' %(key, supp,trait,self.index[trait][supp][key], parent, self.index[parent][supp][key] ))
+                                               
+                                                logging.warning( ' key:%s, supp:%s, trait:%s=%s, parent:%s=%s' %(key, supp,trait,self.index[trait][supp][key], parent, self.index[parent][supp][key] ) )
+                                else:
+                                    logging.info(" ADDED NEW SUPP TO CHILD (complete_from_hierarchy) supp:%s, trait:%s, parent:%s" %(supp, trait, parent))
+                                    self.index[trait][supp] = copy.deepcopy(self.index[parent][supp]) 
+                                    if 'copied' not in self.index[trait][supp]:
+                                        self.index[trait][supp]['copied'] = []    
+                                    self.index[trait][supp]['copied'].append(parent)
+                    else:
+                        logging.info(" not data for parent %s of %s (complete_from_hierarchy)" %(parent, trait))
+            for supp in self.index[trait]:
+                if supp != "priority" and supp != "category" :  
+                    self.output_data.append(self.index[trait][supp])
+
+                
+        self.util.write_map('diff_child_parents',issue)      
+                
     
     def extract_data(self):
         logging.debug(' Function: extract_data' )
+        self.clean_trait_maps()
+        
         self.util.index_trait_supp_score(self.index,  self.trait_supp_score)
         batches_list = [i for i in os.listdir('%s/input' % (PATH)) if i.endswith('.txt')] 
-        
+       
+        ### output for debugging purposes 
         issues = {}
         mayo = {}
         for filename in batches_list:
-
             logging.info(' Extracting file: ' + filename )
             f = open('%s/input/%s' % (PATH,filename), 'rb')
             data = f.readlines()
@@ -98,13 +184,13 @@ class NaturalStandart():
                     elif 'Grade:' in l:
                         self.grade =  {"grade":l.split(" ")[1]}
                         if self.grade['grade'] in self.score_map:
-                            self.grade['natural_standart'] = self.score_map[self.grade['grade']]['score']
+                            self.grade['natural_standard'] = self.score_map[self.grade['grade']]['score']
                         else:
-                            self.util.warnMe('CRITICAL', ' CANNOT FIND THIS GRADE IN MAP ' + self.grade['grade'] )
+                            self.util.warnMe('CRITICAL', ' CANNOT FIND THIS GRADE IN MAP ' % self.grade['grade'] )
                     elif 'Traditional or Theoretical Uses which Lack Sufficient Evidence' in l:
                         self.grade =  {"grade":"C"}
                         if self.grade['grade'] in self.score_map:
-                            self.grade['natural_standart'] = self.score_map[self.grade['grade']]['score']
+                            self.grade['natural_standard'] = self.score_map[self.grade['grade']]['score']
                         else:
                             self.util.warnMe('CRITICAL', ' CANNOT FIND THIS GRADE IN MAP ' + self.grade['grade'] )
                     elif self.grade is not None and "Therapy" != l and 'specific therap' not in l.lower() :
@@ -119,7 +205,8 @@ class NaturalStandart():
                                 ### get value of trait as a key                                
                                 temp_map = copy.deepcopy(self.traits_map)
                                 trait = self.check_map_trait(temp_map, l)                                
-                                trait = self.util.check_map(temp_map, trait, False,None) 
+                                trait = self.util.check_map(temp_map, trait, False,None)                                 
+                                
                                 ### check trait is in value-> find appropriate key
                                 if trait in self.value_key:
                                     if trait != self.value_key[trait]:
@@ -135,42 +222,59 @@ class NaturalStandart():
                                 trait = self.check_map_trait(self.traits_map, trait)                               
                                 trait = self.util.check_map(self.traits_map, trait, False,None) 
 
+                                ### check trait in hierarchy
+                                if trait not in self.hierarchy_list:
+                                    self.util.warnMe('critical', ' trait %s not in hierarchy_list (sup: %s)' % (trait, supp))
+                                    if trait not in issues:
+                                        issues[trait] = []
+                                    issues[trait].append("missing from hierarchy_list")
+
                                 ### add trait for natural standart list?
                                 self.data['trait'] = trait
-                                self.output_data.append(self.data)
+#                                 self.output_data.append(self.data)
                                 logging.info('considering: trait %s, supp: %s, data: %s' % (trait, supp, self.data))
                                 
                                 
                                 ### add natural standart data to trait_supp_map
                                 if trait not in self.index:
                                     self.index[trait] = {}   
-#                                 elif 'mayo_clinic' in self.index[trait]:
-#                                     self.util.warnMe('warning', ' MAYO trait: %s in index: %s, line : %s' % (trait, self.index[trait], l))
-     
+                                
+                                ### add priority/category
+                                if 'priority' in self.index[trait]:
+                                    self.data['priority']=self.index[trait]['priority' ]
+                                if 'category' in self.index[trait]:
+                                    self.data['category']=self.index[trait]['category' ]   
+
+                                
                                 if supp not in self.index[trait]:
                                     self.index[trait][supp]=copy.deepcopy(self.data)
-                                    self.trait_supp_score.append(copy.deepcopy(self.data))
-                                elif 'natural_standart' in self.index[trait][supp]:
-                                     logging.error(' DUPLICATE trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
+                                elif 'natural_standard' in self.index[trait][supp]:
+                                    logging.error(' DUPLICATE trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
+                                
                                 elif 'mayo_clinic' in self.index[trait][supp]:
-                                    if self.index[trait][supp]['mayo_clinic'] == self.data['natural_standart']:
-                                        self.index[trait][supp]['natural_standart']= self.data['natural_standart']
+                                    if self.index[trait][supp]['mayo_clinic'] == self.data['natural_standard']:
+                                        self.index[trait][supp]['natural_standard']= self.data['natural_standard']
                                         self.index[trait][supp].pop('mayo_clinic')
+                                        
                                         logging.warning(' MAYO AGREES  -- trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
                                     else:
-                                        self.index[trait][supp]['natural_standart']= self.data['natural_standart']
+                                        self.index[trait][supp]['natural_standard'] = self.data['natural_standard']
                                         if trait not in mayo:
                                             mayo[trait] = []
-                                        mayo[trait].append({'supp':supp, 'natural_standart':self.data['natural_standart'],'mayo_clinic':self.index[trait][supp]['mayo_clinic'] })
-                                        self.util.warnMe('critical', ' MAYO DISAGREES -- trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
-                                elif 'natural_standart' not in self.index[trait][supp]:
+                                        mayo[trait].append({'supp':supp, 'natural_standard':self.data['natural_standard'],'mayo_clinic':self.index[trait][supp]['mayo_clinic'] })
+                                        self.index[trait][supp].pop('mayo_clinic')
+                                        self.util.warnMe('critical', ' MAYO DISAGREES -- trait: %s, supp: %s -> %s' % (trait,supp, mayo[trait]))
+                                elif 'natural_standard' not in self.index[trait][supp]:
                                     logging.warning(' NO MAYO FOUND trait: %s, supp: %s in index: %s, data : %s' % (trait,supp, self.index[trait][supp], self.data))
-                          
+  
+                                self.index[trait][supp] = self.get_average(copy.deepcopy(self.index[trait][supp]))
+
             ### reset grade
             self.grade = None
             ###### FOR ALAN QC PURPOSE ONLY ##########
-            self.util.write_map('traits_map_%s' % filename,self.new_traits_map) 
-            self.new_traits_map = []
+#             self.util.write_map('traits_map_%s' % filename,self.new_traits_map) 
+            self.new_traits_map = []    
+        self.complete_from_hierarchy()    
             
         self.util.write_map('issues',issues)
         self.util.write_map('mayo_disagree',mayo)
@@ -178,8 +282,9 @@ class NaturalStandart():
         self.util.write_map('index',self.index)
         self.util.output_file('index',self.index)
         
-        self.util.write_map('trait_supp_score',self.trait_supp_score)
-        self.util.output_file('trait_supp_score',self.trait_supp_score)
+        self.util.write_map('trait_supp_score_map',self.trait_supp_score)
+        self.util.output_file('trait_supp_score_map',self.trait_supp_score)
+        self.util.write_output('trait_supp_score_DB',self.header,self.trait_supp_score)
         
         self.util.write_map('traits_map',self.traits_map)
         self.util.output_file('traits_map',self.traits_map)

@@ -40,8 +40,8 @@ class TraitSuppInput():
                     if categories[cat] in self.CATEGORY_MAP:
                         words[i] = words[i] + "/"+ self.CATEGORY_MAP[categories[cat]]
                     else:
-                        print "WARNING I DONT KNOW WHAT THIS IS (recover_trait_info) - %s" % (cat)
-                    logging.debug("WARNING I DONT KNOW WHAT THIS IS (recover_trait_info)- %s" % (cat))
+                        print "WARNING I DONT KNOW WHAT THIS IS (recover_trait_info) - %s %s" % (cat,categories[cat])
+                        logging.debug("WARNING I DONT KNOW WHAT THIS IS (recover_trait_info)- %s %s" % (cat, categories[cat]))
                 
             self.new_trait[self.header[i]]= words[i].strip().lower().replace(' ','_')
             ### record disease/trait name

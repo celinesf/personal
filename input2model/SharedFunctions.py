@@ -14,7 +14,7 @@ Functions used by multiple classes
 """
 
 
-import logging, json, copy
+import logging, json, copy, re
 
 class SharedFunctions():
     def __init__(self, path):
@@ -25,8 +25,11 @@ class SharedFunctions():
         for doc in  trait_supp_score:
             if doc['trait'] not in index:
                 index[doc['trait']]= {}
+                index[doc['trait']]['priority'] = doc['priority']
+                index[doc['trait']]['category'] = doc['category']
             if doc['supplement'] not in index[doc['trait']]:
                 index[doc['trait']][doc['supplement']]= copy.deepcopy(doc) 
+            
 
  
     def check_map(self,check_map, word, slash, expect):
@@ -58,7 +61,7 @@ class SharedFunctions():
 #                 print( 'check_map found / - %s' %word)
             elif key != 'null' and key != '':
                 logging.warning(' NEW KEY: %s (check_map)' % (key))
-                check_map[key] = word
+                check_map[key] = re.sub("_"," ", word).title()
                 word = key
             return word
     
