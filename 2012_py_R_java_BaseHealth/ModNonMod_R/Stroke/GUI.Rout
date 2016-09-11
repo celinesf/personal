@@ -1,0 +1,629 @@
+
+R version 2.13.0 (2011-04-13)
+Copyright (C) 2011 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+Loading Tcl/Tk interface ... done
+[Previously saved workspace restored]
+
+> setwd("/home/pouria3/workspace/GenStat/trunk/Stroke")
+> source("riskmodel.R")
+There were 50 or more warnings (use warnings() to see the first 50)
+> source("Snp.R")
+Loading required package: quadprog
+Loading required package: DBI
+[1] "rs7045889"
+       PMID     dbSNP  BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+59 21270820 rs7045889 AfricanAmerican               0    1.00      NA  additive
+60 21270820 rs7045889 AfricanAmerican               1    0.55   0.472  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Major/Minor Allele doesn't match with HapMap"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+61 21511257 rs7045889      Caucasian               G    1.12      NA  additive
+62 21511257 rs7045889      Caucasian               A    1.00      NA  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001472262 0.001648593 0.001846184
+[1] "rs4977756"
+       PMID     dbSNP  BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+47 21270820 rs4977756 AfricanAmerican               1    0.36   0.137  additive
+48 21270820 rs4977756 AfricanAmerican               0    1.00      NA  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Major/Minor Allele doesn't match with HapMap"
+[1] "rs3798220"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+43 20971364 rs3798220      Caucasian               C    2.07    0.01  additive
+44 20971364 rs3798220      Caucasian               T    1.00      NA  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.0004520165 0.0009352253 0.0019339781
+[1] "rs2383207"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+37 18048766 rs2383207          Asian              AA    1.00      NA  dominant
+38 18048766 rs2383207          Asian              AG    2.37      NA  dominant
+39 18048766 rs2383207          Asian              GG    2.37      NA  dominant
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.0007799943 0.0018467007 0.0018465531
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+40 18066490 rs2383207      Caucasian              AG    1.79      NA  dominant
+41 18066490 rs2383207      Caucasian              GG    1.79      NA  dominant
+42 18066490 rs2383207      Caucasian              AA    1.00      NA  dominant
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001018501 0.001821732 0.001821563
+[1] "rs6685323"
+       PMID     dbSNP  BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+55 17975119 rs6685323 AfricanAmerican               0     1.4      NA  additive
+56 17975119 rs6685323 AfricanAmerican               1      NA      NA  Additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Major/Minor Allele doesn't match with HapMap"
+[1] "rs10757278"
+[1] "rs10757274"
+      PMID      dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+1 18048766 rs10757274          Asian              GG    1.85      NA  dominant
+2 18048766 rs10757274          Asian              AG    1.85      NA  dominant
+3 18048766 rs10757274          Asian              AA    1.00      NA  dominant
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001088709 0.002012254 0.002012226
+      PMID      dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+4 18443000 rs10757274      Caucasian              GG    1.72      NA  additive
+5 18443000 rs10757274      Caucasian              AA    1.00      NA  additive
+6 18443000 rs10757274      Caucasian              AG    1.23      NA  additive
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001384155 0.002378510 0.001701920
+[1] "rs599839"
+       PMID    dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+49 19164808 rs599839      Caucasian               G    1.00      NA  additive
+50 19164808 rs599839      Caucasian               A    1.13      NA  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001724215 0.001947917 0.002200628
+[1] "rs2383206"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+28 18757290 rs2383206          Asian              GG    1.52      NA  Additive
+29 18757290 rs2383206          Asian              AG    1.05      NA  Additive
+30 18757290 rs2383206          Asian              AA    1.00      NA  Additive
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001545775 0.002347703 0.001622868
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+31 18443000 rs2383206      Caucasian              AG    1.25      NA  additive
+32 18443000 rs2383206      Caucasian              AA    1.00      NA  additive
+33 18443000 rs2383206      Caucasian              GG    1.69      NA  additive
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001379444 0.001723764 0.002329116
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+34 18443000 rs2383206       Hispanic              AA    1.00      NA  additive
+35 18443000 rs2383206       Hispanic              GG    3.96      NA  additive
+36 18443000 rs2383206       Hispanic              AG    2.88      NA  additive
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "quering SNPInfo for frequencies ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.0006846497 0.0027057284 0.0019692570
+[1] "rs646776"
+       PMID    dbSNP  BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+51 21378988 rs646776 Asian_Caucasian               A    1.14      NA  additive
+52 21378988 rs646776 Asian_Caucasian               G    1.00      NA  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Major/Minor Allele doesn't match with HapMap"
+       PMID    dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+53 21239051 rs646776      Caucasian               A    1.33    0.79  additive
+54 21239051 rs646776      Caucasian               G    1.00    0.21  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Major/Minor Allele doesn't match with HapMap"
+[1] "rs4977574"
+       PMID     dbSNP  BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+45 21378988 rs4977574 Asian_Caucasian               G     1.2      NA  additive
+46 21378988 rs4977574 Asian_Caucasian               A     1.0      NA  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001451415 0.001741316 0.002088685
+[1] "rs11206510"
+       PMID      dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+14 20864672 rs11206510      Caucasian               C    1.00      NA  additive
+15 20864672 rs11206510      Caucasian               T    1.07    0.77  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001732248 0.001853218 0.001982696
+[1] "rs964184"
+       PMID    dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+63 21378990 rs964184      Caucasian               G    1.13    0.13  additive
+64 21378990 rs964184      Caucasian               C    1.00    0.87  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001439216 0.001625903 0.001836896
+[1] "rs6725887"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+57 21239051 rs6725887      Caucasian               T    1.00    0.87  additive
+58 21239051 rs6725887      Caucasian               C    1.28    0.13  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001076494 0.001377537 0.001762570
+[1] "rs12526453"
+       PMID      dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+18 21239051 rs12526453      Caucasian               G    1.00    0.34  additive
+19 21239051 rs12526453      Caucasian               C    1.17    0.66  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001275707 0.001492245 0.001745484
+[1] "rs1122608"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+16 21239051 rs1122608      Caucasian               T    1.00    0.25  additive
+17 21239051 rs1122608      Caucasian               G    1.18    0.75  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001296877 0.001529841 0.001804863
+[1] "rs9818870"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+65 20738937 rs9818870      Caucasian               T    1.12    0.15  Additive
+66 20738937 rs9818870      Caucasian               C    1.00    0.85  Additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001743907 0.001952767 0.002186591
+[1] "rs17228212"
+       PMID      dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+22 20738937 rs17228212      Caucasian               T    1.00     0.7  Additive
+23 20738937 rs17228212      Caucasian               C    1.16     0.3  Additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001300443 0.001508227 0.001749066
+[1] "rs1746048"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+24 20738937 rs1746048      Caucasian               T    1.00    0.16  Additive
+25 20738937 rs1746048      Caucasian               C    1.18    0.84  Additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001402026 0.001653931 0.001951087
+[1] "rs1333049"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+20 20738937 rs1333049      Caucasian               G    1.00    0.47  Additive
+21 20738937 rs1333049      Caucasian               C    1.43    0.53  Additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001173455 0.001677151 0.002396759
+[1] "rs17465637"
+       PMID      dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+26 20738937 rs17465637      Caucasian               C    1.24    0.71  Additive
+27 20738937 rs17465637      Caucasian               A    1.00    0.29  Additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001315083 0.001630138 0.002020579
+[1] "rs9982601"
+       PMID     dbSNP BroadEthnicity Allele_Genotype ORValue FreqPop ModelType
+67 21378990 rs9982601      Caucasian               C    1.00    0.85  additive
+68 21378990 rs9982601      Caucasian               T    1.18    0.15  additive
+[1] "quering SNPInfo for Major Minor Allele ... "
+[1] "Data Gathering Completed, Solving the equations ..."
+  Successful convergence.
+[1] 0.001737828 0.002050044 0.002418109
+[1] "Number of Snps processed is :  22"
+There were 42 warnings (use warnings() to see them)
+> #source("Hap.R")
+> 
+> # Min & Max for every RiskFactor
+> T2D          <- data.frame(RiskFactorID=18 , name="T2D"         , Min=0  , Max=1  , normal=NA)
+> Sleep        <- data.frame(RiskFactorID=19 , name="Sleep"       , Min=0  , Max=2  , normal=NA)
+> PastCVD      <- data.frame(RiskFactorID=20 , name="PastCVD"     , Min=0  , Max=3  , normal=0)
+> 
+> SBP          <- data.frame(RiskFactorID=100, name="SBP"         , Min=110  , Max=190  , normal=Data$FactorValue[Data$RiskFactorID==100 & Data$RiskFactorValue==125])
+> DBP          <- data.frame(RiskFactorID=101, name="DBP"         , Min=70   , Max=120  , normal=Data$FactorValue[Data$RiskFactorID==101 & Data$RiskFactorValue==82])
+> 
+> LDL          <- data.frame(RiskFactorID=109, name="LDL"         , Min=100  , Max=250  , normal=0 )
+> 
+> eth          <- data.frame(RiskFactorID=111, name="Ethnicity"   , Min=1    , Max=6    , normal=NA)
+> Diet         <- data.frame(RiskFactorID=114, name="DIET"        , Min=0    , Max=45   , normal=NA)
+> PA           <- data.frame(RiskFactorID=115, name="PA"          , Min=0    , Max=42   , normal=NA)
+> Alcohol      <- data.frame(RiskFactorID=117, name="Alcohol"     , Min=1    , Max=4    , normal=0)
+> FacLimits <- rbind(Age, Gender, Waist, Trig, BMI, Smk, FutSmk, 
++         	   Sleep, PastCVD, T2D, SBP, DBP, LDL, eth, Diet, Alcohol, PA,
++         	   genetics_gui)
+> 
+> 
+> 
+> 
+> 
+> Modifiable    <- c("SBP", "DBP", "LDL", "Trig", "BMI", "Waist", "FutSmoking", "DIET", "Alcohol", "Sleep", "PA")
+> NonModifiable <- c("T2D", "Smoking")
+> GAE           <- c("Age", "Gender", "Ethnicity")
+> GE            <- c("Gender", "Ethnicity")
+> FH            <- c("PastCVD")
+> Genetics      <- snpnames
+> 
+> AllFactors    <- c(Modifiable, NonModifiable, GAE, Genetics, FH)
+> 
+> 
+> #Gather Data
+> limits <- FacLimits
+> 
+> # Lay out the GUI
+> units <- c("mm/Hg", "mm/Hg", "mg/dl", "mg/dl", "", "", "PckYrs", "AHEI", "", "", "PA", "", "pckyrs", "yrs", "Gender", "ethn")
+> require(tcltk)
+Loading required package: tcltk
+> tt <- tktoplevel()
+> 
+> frameOverall <- tkframe(tt)
+> frameUpper <- tkframe(frameOverall,relief="groove",borderwidth=2)
+> tkgrid(tklabel(frameUpper,text="RiskFactors"))
+<Tcl>  
+> frameLower <- tkframe(frameOverall,relief="groove",borderwidth=2)
+> tkgrid(tklabel(frameLower,text="Action"))
+<Tcl>  
+> 
+> tkgrid(frameUpper)
+<Tcl>  
+> tkgrid(tklabel(frameOverall,text="Hit run when you are done with sliders!"))
+<Tcl>  
+> tkgrid(frameLower)
+<Tcl>  
+> tkgrid(frameOverall)
+<Tcl>  
+> 
+> tt <- frameUpper
+> counter=1
+> for (fac in AllFactors)
++ {
++ 	varnm  <- paste(fac)
++ 	slval  <- paste("sl_", fac)
++ 	normal <- limits$normal[limits$name==fac]
++ 	riskid <- limits$RiskFactorID[limits$name==fac]
++ 	
++ 	if ( is.na(normal) )
++ 	{
++ 		normal <- Data$RiskFactorValue[Data$FactorValue== min(Data$FactorValue[Data$RiskFactorID==riskid])  & Data$RiskFactorID==riskid ]
++ 	}else
++ 	{
++ 		normal <- Data$RiskFactorValue[Data$FactorValue== normal & Data$RiskFactorID==riskid]
++ 	}
++ 	print (fac)
++ 	print(normal)
++ 	assign(slval, tclVar(as.character(normal)) )
++ 	assign(varnm,  tklabel(tt,text=as.character(tclvalue(get(slval))) ) )
++ 	tkgrid(get(varnm), tklabel(tt,text=fac), tklabel(tt, text=units[counter]) )
++ 	tkconfigure(get(varnm),textvariable=get(slval))
++ 	if (fac == "BMI")
++ 	{
++ 		slider <- tkscale(tt, to=limits$Max[limits$name==fac], from=limits$Min[limits$name==fac],
++ 				  showvalue=F, variable=get(slval),
++ 				  resolution=0.1, orient="horizontal")
++ 	}
++ 	else
++ 	{
++ 		slider <- tkscale(tt, to=limits$Max[limits$name==fac], from=limits$Min[limits$name==fac],
++ 		showvalue=F, variable=get(slval),
++ 		resolution=1, orient="horizontal")
++ 	}
++ 	tkgrid(slider)
++ 	counter <- counter + 1
++ }
+[1] "SBP"
+[1] 125
+[1] "DBP"
+[1] 82
+[1] "LDL"
+[1] 130
+[1] "Trig"
+[1] 150
+[1] "BMI"
+[1] 25
+[1] "Waist"
+[1] 0
+[1] "FutSmoking"
+[1] 0
+[1] "DIET"
+[1] 45
+[1] "Alcohol"
+[1] 1 2 3
+[1] "Sleep"
+[1] 0
+[1] "PA"
+[1] 42
+[1] "T2D"
+[1] 0
+[1] "Smoking"
+[1] 0
+[1] "Age"
+[1] 19
+[1] "Gender"
+[1] 0
+[1] "Ethnicity"
+[1] 0
+[1] "SLC5A3_MRP"
+[1] 0
+[1] "MIA3"
+[1] 0
+[1] "9p21_4"
+[1] 0
+[1] "CXCL12"
+[1] 0
+[1] "PastCVD"
+[1] 0
+> # Run botton
+> # button function call
+> PressedRun <- function()
++ {
++ 	par(lty=2, lwd=2, mfrow=c(1, 2))
++ 	
++ 	asses <- data.frame(Name=c(), RiskFactorID = c(), FactorValue = c(), DR=c(), minFacVal=c())
++ 	for (fac in Modifiable )
++ 	{
++ 		var        <- as.numeric(tclvalue(get(paste("sl_", fac))) )
++ 		riskid     <- limits$RiskFactorID[limits$name==fac]
++ 		normal     <- limits$normal[limits$name==fac]
++ 		riskvalue  <- Data$FactorValue[Data$RiskFactorID==riskid & Data$RiskFactorValue==var]
++ 		if ( is.na(normal) )
++ 		{
++ 			normal <- min(Data$FactorValue[Data$RiskFactorID==riskid])
++ 		}
++ 		tmp <- data.frame(Name=fac, RiskFactorID = riskid, FactorValue = riskvalue, DR = riskvalue - normal, minFacVal=min(Data$FactorValue[Data$RiskFactorID==riskid])-normal )
++ 		asses <- rbind(asses, tmp)
++ 	}
++ 	
++ 	# Non Modifiables, we are comparing the person to her/his self so "Gender", "Age", "Ethnicity", should match
++ 	nonmod <- data.frame(Name=c(), RiskFactorID = c(), FactorValue = c(), DR=c())
++ 	for (fac in NonModifiable )
++ 	{
++ 		var        <- as.numeric(tclvalue(get(paste("sl_", fac))) )
++ 		riskid     <- limits$RiskFactorID[limits$name==fac]
++ 		normal     <- limits$normal[limits$name==fac]
++ 		riskvalue  <- Data$FactorValue[Data$RiskFactorID==riskid & Data$RiskFactorValue==var]
++ 		if ( is.na(normal) )
++ 		{
++ 			normal <- min(Data$FactorValue[Data$RiskFactorID==riskid])
++ 		}
++ 		tmp <- data.frame(Name=fac, RiskFactorID = riskid, FactorValue = riskvalue, DR = riskvalue - normal )
++ 		nonmod <- rbind(nonmod, tmp)
++ 	}
++ 	
++ 	#Blood pressure, max of DBP and SBP and noth both
++ 	BP  <- min(asses$DR[asses$Name=="DBP"], asses$DR[asses$Name=="SBP"] )
++ 	BP_ <- min(asses$minFacVal[asses$Name=="DBP"], asses$minFacVal[asses$Name=="SBP"] )
++ 	
++ 	#Family History and Genetics
++ 	family_h <- 0; genetic <- 0
++ 	genefam  <- data.frame(Name=c(), RiskFactorID = c(), FactorValue = c(), DR=c())
++ 	genetic_detail  <- data.frame(Name=c(), RiskFactorID = c(), FactorValue = c(), DR=c())
++ 	for (fac in FH)
++ 	{
++ 		var        <- as.numeric(tclvalue(get(paste("sl_", fac))) )
++ 		riskid     <- limits$RiskFactorID[limits$name==fac]
++ 		normal     <- limits$normal[limits$name==fac]
++ 		riskvalue  <- Data$FactorValue[Data$RiskFactorID==riskid & Data$RiskFactorValue==var]
++ 		family_h   <- family_h + riskvalue
++ 		tmp <- data.frame(Name=fac, RiskFactorID = riskid, FactorValue = riskvalue, DR = riskvalue - normal )
++ 		genefam <- rbind(genefam, tmp)
++ 	}
++ 	for (fac in Genetics)
++ 	{
++ 		var        <- as.numeric(tclvalue(get(paste("sl_", fac))) )
++ 		riskid     <- limits$RiskFactorID[limits$name==fac]
++ 		normal     <- limits$normal[limits$name==fac]
++ 		riskvalue  <- Data$FactorValue[Data$RiskFactorID==riskid & Data$RiskFactorValue==var]
++ 		if (length(riskvalue) > 1 )
++ 		{
++ 			riskvalue <- riskvalue[1]
++ 		} # revise later
++ 		genetic    <- genetic + riskvalue
++ 		tmp  <- data.frame(Name="Genetics", RiskFactorID = riskid, FactorValue = genetic, DR = genetic - normal )
++ 		tmp2 <- data.frame(Name=fac, RiskFactorID = riskid, FactorValue = riskvalue, DR = riskvalue - normal )
++ 		genetic_detail <- rbind(genetic_detail, tmp2)
++ 	}
++ 	genefam <- rbind(genefam, tmp)
++ 	
++ 	lifetimerisk <- round(100*exp(abs(sum(asses$DR) + sum(nonmod$DR) - BP + max(family_h, genetic) )))/100
++ 	achievable   <- round(100*exp(abs(sum(nonmod$DR) + sum(asses$minFacVal) -BP_ + max(family_h, genetic) )  ))/100
++ 	
++ 	# gui setting for protective vs causative
++ 	if ((sum(asses$DR) + sum(nonmod$DR) - BP + max(family_h, genetic) ) < 0 )
++ 	{
++ 		main = paste("LifeTime Risk : ", lifetimerisk, "Fold", "-", "\n")
++ 	}else
++ 	{
++ 		main = paste("LifeTime Risk : ", lifetimerisk, "Fold", "+", "\n")
++ 	}
++ 	if (sum(nonmod$DR) + sum(asses$minFacVal)+ max(family_h, genetic) < 0 )
++ 	{
++ 		main= paste(main, "Achievable Risk : ", achievable, "Fold", "-", "\n",sep=" ")
++ 	}else
++ 	{
++ 		main= paste(main, "Achievable Risk : ", achievable, "Fold", "+", "\n",sep=" ")
++ 	}
++ 	
++ 	nonmod <- rbind(nonmod, genefam)
++ 	blbls  <- c(NonModifiable, FH, "Genetics")
++ 	bp1    <- barplot(nonmod$DR, names.arg=blbls, col=rainbow(length(blbls)),xlim=c(log(1/4), log(16)),
++ 		,main=main, 
++ 		width=0.5, horiz=TRUE, beside=TRUE, axes=FALSE)
++ 	axis(1, at=seq(log(1/4),log(16),by=log(4)), labels=c("4", "base","4","16"))
++ 	mtext(round(100*exp(abs(nonmod$DR)))/100, side=4, at=bp1,line=0.5,  cex=1.5 )
++ 	
++ 	
++ 	blbls <- Modifiable
++ 	bp <- barplot(asses$DR, names.arg=blbls, col=rainbow(length(blbls)), xlim=c(log(1/4), log(16)), width=0.5, horiz=TRUE, 
++ 		      beside=TRUE, legend=TRUE, axes=FALSE)
++ 	axis(1, at=seq(log(1/4),log(16),by=log(4)), labels=c("4", "base","4","16"))
++ 	mtext(round(100*exp(abs(asses$DR)))/100, side=4, at=bp,line=0.5,  cex=1.5 )
++ 	
++ 	# details of Genetics:
++ 	dev.new()
++ 	par(lty=2, lwd=2)
++ 	nonmod <- genetic_detail
++ 	blbls  <- Genetics
++ 	bp1    <- barplot(nonmod$DR, names.arg=blbls, col=rainbow(length(blbls)),xlim=c(log(1/4), log(16)),
++ 	,main="Genetics Expanded", 
++ 	width=0.5, horiz=TRUE, beside=TRUE, axes=FALSE)
++ 	axis(1, at=seq(log(1/4),log(16),by=log(4)), labels=c("4", "base","4","16"))
++ 	mtext(round(100*exp(abs(nonmod$DR)))/100, side=4, at=bp1,line=0.5,  cex=1.5 )
++ 	
++ 	
++ }
+> 
+> Pressedlife <- function()
++ {
++ 	paf <- function(x)
++ 	{
++ 		x2 = x
++ 		intervals = c(0, 0.2, 0.4, 0.6, 0.8, 0.9, 1 )
++ 		for (j in c(1:length(x)) )
++ 		{
++ 			for ( i in seq(1, length(intervals)-1 ) )
++ 			{
++ 				if ( intervals[i]<x[j] & x[j]<intervals[i+1] )
++ 				{
++ 					x2[j] = 1/(intervals[i+1] - intervals[i]) * (x[j]-intervals[i]) + (i-1)
++ 				}
++ 				#if (x[j]>0.99)
++ 				#{
++ 			#		x2[j] = 5
++ 		#		}
++ 			}
++ 		}
++ 		return(x2)
++ 	}
++ 		
++ 	AllFactors    <- c(Modifiable, NonModifiable, GE)
++ 	x=c(); y=c(); n=c();
++ 	asses <- data.frame(Name=c(), RiskFactorID = c(), FactorValue = c())
++ 	healthy <- data.frame(Name=c(), RiskFactorID = c(), FactorValue = c())
++ 	
++ 	for ( fac in Modifiable)
++ 	{
++ 					
++ 		var        <- as.numeric(tclvalue(get(paste("sl_", fac))) )
++ 		riskid     <- limits$RiskFactorID[limits$name==fac]
++ 		normal     <- limits$normal[limits$name==fac]
++ 		riskvalue  <- Data$FactorValue[Data$RiskFactorID==riskid & Data$RiskFactorValue==var]
++ 		tmp        <- data.frame(Name=fac, RiskFactorID = riskid, FactorValue = riskvalue ) 
++ 		asses      <- rbind(asses, tmp)
++ 		tmp        <- data.frame(Name=fac, RiskFactorID = riskid, FactorValue = min(Data$FactorValue[Data$RiskFactorID==riskid]) )
++ 		healthy    <- rbind(healthy, tmp)
++ 			
++ 	}
++ 	
++ 	for (fac in c(GE, NonModifiable) )
++ 	{
++ 		var        <- as.numeric(tclvalue(get(paste("sl_", fac))) )
++ 		riskid     <- limits$RiskFactorID[limits$name==fac]
++ 		normal     <- limits$normal[limits$name==fac]
++ 		riskvalue  <- Data$FactorValue[Data$RiskFactorID==riskid & Data$RiskFactorValue==var]
++ 		tmp        <- data.frame(Name=fac, RiskFactorID = riskid, FactorValue = riskvalue )
++ 		healthy    <- rbind(healthy, tmp)
++ 		asses      <- rbind(asses, tmp)
++ 	}
++ 	#Family history and Genetics
++ 	family_h <- 0; genetic <- 0
++ 	for (fac in FH)
++ 	{
++ 		var        <- as.numeric(tclvalue(get(paste("sl_", fac))) )
++ 		riskid     <- limits$RiskFactorID[limits$name==fac]
++ 		normal     <- limits$normal[limits$name==fac]
++ 		family_h   <- family_h + Data$FactorValue[Data$RiskFactorID==riskid & Data$RiskFactorValue==var]
++ 	}
++ 	for (fac in Genetics)
++ 	{
++ 		var        <- as.numeric(tclvalue(get(paste("sl_", fac))) )
++ 		riskid     <- limits$RiskFactorID[limits$name==fac]
++ 		normal     <- limits$normal[limits$name==fac]
++ 		genetic    <- genetic + Data$FactorValue[Data$RiskFactorID==riskid & Data$RiskFactorValue==var]
++ 	}
++ 			
++ 			
++ 	healthy_risk  <- sum(healthy$FactorValue) + Data$FactorValue[Data$comment == "Intercept"] + max(family_h, genetic)
++ 	current_risk  <- sum(asses$FactorValue)   + Data$FactorValue[Data$comment == "Intercept"] + max(family_h, genetic)
++ 	
++ 	riskid_age   <- limits$RiskFactorID[limits$name=="Age"]
++ 	for ( age in seq(limits$Min[limits$name=="Age"], limits$Max[limits$name=="Age"], by=5 ) )
++ 	{
++ 		x <- c(x, age)
++ 		y <- c(y, current_risk + Data$FactorValue[Data$RiskFactorID==riskid_age & Data$RiskFactorValue==age] )
++ 		n <- c(n, healthy_risk + Data$FactorValue[Data$RiskFactorID==riskid_age & Data$RiskFactorValue==age] )
++ 	}
++ 			
++ 	prob  <- exp(y)/(exp(y) + 1) 
++ 	nprob <- exp(n)/(exp(n) + 1) 
++ 	dev.new()
++ 	par(lwd=2)
++ 	plot  (x, paf(prob), type="l", col="blue", xlab="Age", ylab="Risk ", ylim=c(0, 7), axes=FALSE, xlim=c(limits$Min[limits$name=="Age"], limits$Max[limits$name=="Age"]) )
++ 	axis(2, at=c(0, 0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5 ), labels=c("", "VL", "L", "M", "H", "VH", "XH", ""))
++ 	axis(1, at=x )
++ 	par(lwd=1)
++ 	grid(NULL, NULL, col="black")
++ 	par(lty=2, lwd=2)
++ 	points(x, paf(nprob), type="l", col="red")
++ 	abline(v=as.numeric(tclvalue(get(paste("sl_", "Age"))) ),col=3,lty=3)
++ 	
++ 
++ 
++ 
++ }
+> 
+> tt <- frameLower
+> run.but <- tkbutton(tt,text="Run",command=PressedRun)
+> #vis.but <- tkbutton(tt,text="Risks exposed!", command=PressedVis)
+> life.but<- tkbutton(tt,text="Life Time Risk", command=Pressedlife)
+> 
+> tkgrid(run.but)
+<Tcl>  
+> #tkgrid(vis.but)
+> tkgrid(life.but)
+<Tcl>  
+> 
+> 					
+> 
+> 	
+> 
+> proc.time()
+   user  system elapsed 
+ 19.600   0.350  22.095 

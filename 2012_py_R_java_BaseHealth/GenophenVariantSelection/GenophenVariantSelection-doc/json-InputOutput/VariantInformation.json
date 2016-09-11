@@ -1,0 +1,17 @@
+{
+    "rs2345":{
+        "nextbio_score":85,
+        "nextbio_pvalue":0.00001,
+        "broad_ethnicity":{
+            "Caucasian":"True",
+            "Hispanic":"False"
+        }
+    },
+    "rs1234":{
+        "nextbio_score":100,
+        "nextbio_pvalue":0.001,
+        "broad_ethnicity":{
+            "Hispanic":"False"
+        }
+    }
+}

@@ -1,0 +1,234 @@
+2012-08-09 18:29:46,172 - INFO - ***** Opening variant data file: /Users/celine/GenoPhen/GenophenVariantSelection-doc/json-InputOutput/InputFilterInput.json
+2012-08-09 18:29:46,172 - INFO -
+================================
+Function: variant_scoring
+================================
+2012-08-09 18:29:46,172 - INFO - variant: rs1234 (variant_scoring)
+2012-08-09 18:29:46,172 - INFO - ***** variant rs1234, ethnicity: Caucasian, sample 1x (variant_scoring) -- starting sample_scoring *****
+2012-08-09 18:29:46,172 - INFO - sample: 1x, model: allelic dominant (sample_scoring) -- starting model_scoring
+2012-08-09 18:29:46,172 - INFO - model: allelic dominant, allele/genotype: A (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,173 - INFO - allele/genotype: A (OR_scoring) -- I am reference 
+2012-08-09 18:29:46,173 - INFO - model: allelic dominant, allele: A (update_model_score) -- I am the reference allele
+2012-08-09 18:29:46,173 - INFO - model: allelic dominant, allele/genotype: C (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,173 - INFO - allele/genotype: %s (OR_scoring) -- confidence measured by pvalue only 
+2012-08-09 18:29:46,173 - INFO - Iallele/genotype: C (pvalue only) -- pvalue is risky
+2012-08-09 18:29:46,173 - INFO - model: allelic dominant, allele: C (update_model_score) -- I amt the risk allele
+2012-08-09 18:29:46,173 - INFO - model: allelic dominant, allele_genotype: C (update_model_score) -- I do not have max_error
+2012-08-09 18:29:46,173 - INFO - model: allelic dominant, allele_genotype: C (update_model_score) -- I have max_pvalue
+2012-08-09 18:29:46,173 - INFO - model: allelic dominant, allele_genotype: C (update_model_score) -- I have min_OR 
+2012-08-09 18:29:46,173 - INFO - model: allelic dominant (update_model_alleles) -- I am significant
+2012-08-09 18:29:46,174 - INFO - model: allelic dominant, allele: A (get_model_alleles) -- I am the reference and protective
+2012-08-09 18:29:46,174 - INFO - best: allelic dominant, model: allelic dominant (compare_models) -- perform comparison
+2012-08-09 18:29:46,174 - WARNING - score: max_error (test) -- CAN NOT COMPARE VALUES: NO DATA FOUND
+2012-08-09 18:29:46,174 - INFO - score: max_pvalue (test) -- no difference
+2012-08-09 18:29:46,174 - INFO - score: min_OR (test) -- no difference
+2012-08-09 18:29:46,174 - INFO - object: model_id, best allelic dominant, new allelic dominant (find_best) -- best is still best
+2012-08-09 18:29:46,174 - INFO - sample: 1x, risk_allele C (sample_scoring) -- creating sample_risk_allele
+2012-08-09 18:29:46,175 - INFO - variant: rs2345 (variant_scoring)
+2012-08-09 18:29:46,176 - INFO - ***** variant rs2345, ethnicity: Caucasian, sample 1a (variant_scoring) -- starting sample_scoring *****
+2012-08-09 18:29:46,176 - INFO - sample: 1a, model: Genotypic Additive (sample_scoring) -- starting model_scoring
+2012-08-09 18:29:46,177 - INFO - model: Genotypic Additive, allele/genotype: GG (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,177 - INFO - allele/genotype: GG (OR_scoring) -- I am reference 
+2012-08-09 18:29:46,177 - INFO - model: Genotypic Additive, allele: G (update_model_score) -- I am the reference allele
+2012-08-09 18:29:46,177 - INFO - model: Genotypic Additive, allele/genotype: TG (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,177 - INFO - allele/genotype: TG (OR_scoring) -- I am reference 
+2012-08-09 18:29:46,177 - INFO - model: Genotypic Additive, genotype: TG (update_model_score) -- I am a reference heterozygous genotype
+2012-08-09 18:29:46,177 - INFO - model: Genotypic Additive, allele/genotype: TT (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,177 - INFO - allele/genotype: TT (OR_scoring) -- I have full OR data
+2012-08-09 18:29:46,177 - INFO - allele/genotype: TT (OR & CI) -- I am risky
+2012-08-09 18:29:46,178 - INFO - allele/genotype: TT (CI & pvalue) -- pvalue is significant too
+2012-08-09 18:29:46,178 - INFO - model: Genotypic Additive, allele: T (update_model_score) -- I amt the risk allele
+2012-08-09 18:29:46,178 - INFO - model: Genotypic Additive, allele_genotype: TT (update_model_score) -- I have max_error
+2012-08-09 18:29:46,178 - INFO - model: Genotypic Additive, allele_genotype: TT (update_model_score) -- I have max_pvalue
+2012-08-09 18:29:46,178 - INFO - model: Genotypic Additive, allele_genotype: TT (update_model_score) -- I have min_OR 
+2012-08-09 18:29:46,178 - INFO - model: Genotypic Additive (update_model_alleles) -- I am significant
+2012-08-09 18:29:46,178 - INFO - model: Genotypic Additive, allele: G (get_model_alleles) -- I am the reference and protective
+2012-08-09 18:29:46,179 - INFO - best: Genotypic Additive, model: Genotypic Additive (compare_models) -- perform comparison
+2012-08-09 18:29:46,179 - INFO - score: max_error (test) -- no difference
+2012-08-09 18:29:46,179 - INFO - score: max_pvalue (test) -- no difference
+2012-08-09 18:29:46,179 - INFO - score: min_OR (test) -- no difference
+2012-08-09 18:29:46,179 - INFO - object: model_id, best Genotypic Additive, new Genotypic Additive (find_best) -- best is still best
+2012-08-09 18:29:46,179 - INFO - sample: 1a, model: Allelic Additive (sample_scoring) -- starting model_scoring
+2012-08-09 18:29:46,180 - INFO - model: Allelic Additive, allele/genotype: T (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,180 - INFO - allele/genotype: T (OR_scoring) -- I have full OR data
+2012-08-09 18:29:46,180 - INFO - allele/genotype: T (OR & CI) -- I am risky
+2012-08-09 18:29:46,181 - INFO - allele/genotype: T (CI & pvalue) -- pvalue is significant too
+2012-08-09 18:29:46,181 - INFO - model: Allelic Additive, allele: T (update_model_score) -- I amt the risk allele
+2012-08-09 18:29:46,181 - INFO - model: Allelic Additive, allele_genotype: T (update_model_score) -- I have max_error
+2012-08-09 18:29:46,181 - INFO - model: Allelic Additive, allele_genotype: T (update_model_score) -- I have max_pvalue
+2012-08-09 18:29:46,181 - INFO - model: Allelic Additive, allele_genotype: T (update_model_score) -- I have min_OR 
+2012-08-09 18:29:46,181 - INFO - model: Allelic Additive, allele/genotype: G (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,181 - INFO - allele/genotype: G (OR_scoring) -- I am reference 
+2012-08-09 18:29:46,181 - INFO - model: Allelic Additive, allele: G (update_model_score) -- I am the reference allele
+2012-08-09 18:29:46,182 - INFO - model: Allelic Additive (update_model_alleles) -- I am significant
+2012-08-09 18:29:46,182 - INFO - model: Allelic Additive, allele: G (get_model_alleles) -- I am the reference and protective
+2012-08-09 18:29:46,182 - INFO - best: Genotypic Additive, model: Allelic Additive (compare_models) -- perform comparison
+2012-08-09 18:29:46,182 - INFO - score: max_error (test) -- x is minimum (dif>0)
+2012-08-09 18:29:46,182 - INFO - score: max_pvalue (test) -- best is minimum (dif<0)
+2012-08-09 18:29:46,182 - INFO - score: min_OR (test) -- best is maximum (dif>0)
+2012-08-09 18:29:46,182 - INFO - object: model_id, best Genotypic Additive, new Allelic Additive (find_best) -- best is still best
+2012-08-09 18:29:46,182 - INFO - sample: 1a, risk_allele T (sample_scoring) -- creating sample_risk_allele
+2012-08-09 18:29:46,182 - INFO - ***** variant rs2345, ethnicity: Caucasian, sample 3c (variant_scoring) -- starting sample_scoring *****
+2012-08-09 18:29:46,183 - INFO - sample: 3c, model: Allelic codominant (sample_scoring) -- starting model_scoring
+2012-08-09 18:29:46,183 - INFO - model: Allelic codominant, allele/genotype: T (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,183 - INFO - allele/genotype: T (OR_scoring) -- I am reference 
+2012-08-09 18:29:46,183 - INFO - model: Allelic codominant, allele: T (update_model_score) -- I am the reference allele
+2012-08-09 18:29:46,183 - INFO - model: Allelic codominant, allele/genotype: G (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,183 - INFO - allele/genotype: G (OR_scoring) -- I have full OR data
+2012-08-09 18:29:46,184 - INFO - allele/genotype: G (OR & CI) -- I am risky
+2012-08-09 18:29:46,184 - INFO - allele/genotype: G (CI & pvalue) -- pvalue is significant too
+2012-08-09 18:29:46,184 - INFO - model: Allelic codominant, allele: G (update_model_score) -- I amt the risk allele
+2012-08-09 18:29:46,184 - INFO - model: Allelic codominant, allele_genotype: G (update_model_score) -- I have max_error
+2012-08-09 18:29:46,184 - INFO - model: Allelic codominant, allele_genotype: G (update_model_score) -- I have max_pvalue
+2012-08-09 18:29:46,184 - INFO - model: Allelic codominant, allele_genotype: G (update_model_score) -- I have min_OR 
+2012-08-09 18:29:46,184 - INFO - model: Allelic codominant (update_model_alleles) -- I am significant
+2012-08-09 18:29:46,185 - INFO - model: Allelic codominant, allele: T (get_model_alleles) -- I am the reference and protective
+2012-08-09 18:29:46,185 - INFO - best: Allelic codominant, model: Allelic codominant (compare_models) -- perform comparison
+2012-08-09 18:29:46,185 - INFO - score: max_error (test) -- no difference
+2012-08-09 18:29:46,185 - INFO - score: max_pvalue (test) -- no difference
+2012-08-09 18:29:46,185 - INFO - score: min_OR (test) -- no difference
+2012-08-09 18:29:46,185 - INFO - object: model_id, best Allelic codominant, new Allelic codominant (find_best) -- best is still best
+2012-08-09 18:29:46,185 - INFO - sample: 3c, risk_allele G (sample_scoring) -- creating sample_risk_allele
+2012-08-09 18:29:46,185 - INFO - best: 1a, sample: 3c (compare_samples) -- perform comparison
+2012-08-09 18:29:46,185 - INFO - score: study_type (test) -- no difference
+2012-08-09 18:29:46,185 - INFO - score: sample_size (test) -- best is maximum (dif>0)
+2012-08-09 18:29:46,185 - INFO - score: sign_sample (test) -- no difference
+2012-08-09 18:29:46,186 - INFO - score: nsign_sample (test) -- no difference
+2012-08-09 18:29:46,186 - INFO - best: Genotypic Additive, model: Allelic codominant (compare_models) -- perform comparison
+2012-08-09 18:29:46,186 - INFO - score: max_error (test) -- x is minimum (dif>0)
+2012-08-09 18:29:46,186 - INFO - score: max_pvalue (test) -- best is minimum (dif<0)
+2012-08-09 18:29:46,186 - INFO - score: min_OR (test) -- best is maximum (dif>0)
+2012-08-09 18:29:46,186 - INFO - object: model_id, best Genotypic Additive, new Allelic codominant (find_best) -- best is still best
+2012-08-09 18:29:46,186 - INFO - best: 1a, sample: 3c (test_best_models) -- best sample has best_model
+2012-08-09 18:29:46,186 - INFO - object: sample_id, best 1a, new 3c (find_best) -- best is still best
+2012-08-09 18:29:46,186 - INFO - ***** variant rs2345, ethnicity: Caucasian, sample 2b (variant_scoring) -- starting sample_scoring *****
+2012-08-09 18:29:46,187 - INFO - sample: 2b, model: Allelic recessive (sample_scoring) -- starting model_scoring
+2012-08-09 18:29:46,187 - INFO - model: Allelic recessive, allele/genotype: T (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,187 - INFO - allele/genotype: T (OR_scoring) -- I am reference 
+2012-08-09 18:29:46,187 - INFO - model: Allelic recessive, allele: T (update_model_score) -- I am the reference allele
+2012-08-09 18:29:46,187 - INFO - model: Allelic recessive, allele/genotype: G (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,187 - INFO - allele/genotype: G (OR_scoring) -- I have full OR data
+2012-08-09 18:29:46,187 - INFO - allele/genotype: G (OR & CI) -- I am risky
+2012-08-09 18:29:46,187 - INFO - allele/genotype: G (CI & pvalue) -- pvalue is significant too
+2012-08-09 18:29:46,187 - INFO - model: Allelic recessive, allele: G (update_model_score) -- I amt the risk allele
+2012-08-09 18:29:46,187 - INFO - model: Allelic recessive, allele_genotype: G (update_model_score) -- I have max_error
+2012-08-09 18:29:46,187 - INFO - model: Allelic recessive, allele_genotype: G (update_model_score) -- I have max_pvalue
+2012-08-09 18:29:46,188 - INFO - model: Allelic recessive, allele_genotype: G (update_model_score) -- I have min_OR 
+2012-08-09 18:29:46,188 - INFO - model: Allelic recessive (update_model_alleles) -- I am significant
+2012-08-09 18:29:46,188 - INFO - model: Allelic recessive, allele: T (get_model_alleles) -- I am the reference and protective
+2012-08-09 18:29:46,188 - INFO - best: Allelic recessive, model: Allelic recessive (compare_models) -- perform comparison
+2012-08-09 18:29:46,188 - INFO - score: max_error (test) -- no difference
+2012-08-09 18:29:46,188 - INFO - score: max_pvalue (test) -- no difference
+2012-08-09 18:29:46,188 - INFO - score: min_OR (test) -- no difference
+2012-08-09 18:29:46,188 - INFO - object: model_id, best Allelic recessive, new Allelic recessive (find_best) -- best is still best
+2012-08-09 18:29:46,188 - INFO - sample: 2b, risk_allele G (sample_scoring) -- creating sample_risk_allele
+2012-08-09 18:29:46,188 - INFO - IF sample['best_model']['is_OK']==T & sample['meta_sample']not None : sample 2b -- part of meta samples
+2012-08-09 18:29:46,188 - INFO - best: 1a, sample: 2b (compare_samples) -- perform comparison
+2012-08-09 18:29:46,188 - INFO - score: study_type (test) -- best is maximum (dif>0)
+2012-08-09 18:29:46,189 - INFO - score: sample_size (test) -- best is maximum (dif>0)
+2012-08-09 18:29:46,189 - INFO - score: sign_sample (test) -- no difference
+2012-08-09 18:29:46,189 - INFO - score: nsign_sample (test) -- no difference
+2012-08-09 18:29:46,189 - INFO - best: Genotypic Additive, model: Allelic recessive (compare_models) -- perform comparison
+2012-08-09 18:29:46,189 - INFO - score: max_error (test) -- x is minimum (dif>0)
+2012-08-09 18:29:46,189 - INFO - score: max_pvalue (test) -- best is minimum (dif<0)
+2012-08-09 18:29:46,189 - INFO - score: min_OR (test) -- best is maximum (dif>0)
+2012-08-09 18:29:46,189 - INFO - object: model_id, best Genotypic Additive, new Allelic recessive (find_best) -- best is still best
+2012-08-09 18:29:46,189 - INFO - best: 1a, sample: 2b (test_best_models) -- best sample has best_model
+2012-08-09 18:29:46,190 - INFO - object: sample_id, best 1a, new 2b (find_best) -- best is still best
+2012-08-09 18:29:46,190 - WARNING - ethnicity: Caucasian (risk allele: [u'G']), best_sample: 1a (risk allele: [u'T']) (risk_allele_check) -- UNMATCHNING RISK ALLELES
+2012-08-09 18:29:46,190 - INFO -ethnicity: Caucasian, sample: 3c (risk_allele_check) -- call compare_samples again
+2012-08-09 18:29:46,190 - INFO -ethnicity: Caucasian, sample: 2b (risk_allele_check) -- call compare_samples again
+2012-08-09 18:29:46,190 - INFO - Meta sample: found sample_id: 3c in meta_sample list: [u'3c']
+2012-08-09 18:29:46,190 - WARNING - best: 3c, sample: 2b (compare_samples) -- CAN NOT PERFORM COMPARISON
+2012-08-09 18:29:46,192 - INFO - ***** variant rs2345, ethnicity: Asian, sample 5d (variant_scoring) -- starting sample_scoring *****
+2012-08-09 18:29:46,192 - INFO - sample: 5d, model: Genotypic dominant (sample_scoring) -- starting model_scoring
+2012-08-09 18:29:46,192 - INFO - model: Genotypic dominant, allele/genotype: GG (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,192 - INFO - allele/genotype: G (OR_scoring) -- I have full OR data
+2012-08-09 18:29:46,192 - INFO - allele/genotype: G (OR & CI) -- I am risky
+2012-08-09 18:29:46,193 - INFO - allele/genotype: G (CI & pvalue) -- pvalue is significant too
+2012-08-09 18:29:46,193 - INFO - model: Genotypic dominant, allele: G (update_model_score) -- I amt the risk allele
+2012-08-09 18:29:46,193 - INFO - model: Genotypic dominant, allele_genotype: G (update_model_score) -- I have max_error
+2012-08-09 18:29:46,193 - INFO - model: Genotypic dominant, allele_genotype: G (update_model_score) -- I have max_pvalue
+2012-08-09 18:29:46,193 - INFO - model: Genotypic dominant, allele_genotype: G (update_model_score) -- I have min_OR 
+2012-08-09 18:29:46,193 - INFO - model: Genotypic dominant, allele/genotype: TG (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,193 - INFO - allele/genotype: TG (OR_scoring) -- I am reference 
+2012-08-09 18:29:46,194 - INFO - model: Genotypic dominant, genotype: TG (update_model_score) -- I am a reference heterozygous genotype
+2012-08-09 18:29:46,194 - INFO - model: Genotypic dominant, allele/genotype: TT (model_scoring) -- starting OR_scoring
+2012-08-09 18:29:46,194 - INFO - allele/genotype: TT (OR_scoring) -- I am reference 
+2012-08-09 18:29:46,194 - INFO - model: Genotypic dominant, allele: T (update_model_score) -- I am the reference allele
+2012-08-09 18:29:46,194 - INFO - model: Genotypic dominant (update_model_alleles) -- I am significant
+2012-08-09 18:29:46,194 - INFO - model: Genotypic dominant, allele: T (get_model_alleles) -- I am the reference and protective
+2012-08-09 18:29:46,194 - INFO - best: Genotypic dominant, model: Genotypic dominant (compare_models) -- perform comparison
+2012-08-09 18:29:46,194 - INFO - score: max_error (test) -- no difference
+2012-08-09 18:29:46,195 - INFO - score: max_pvalue (test) -- no difference
+2012-08-09 18:29:46,195 - INFO - score: min_OR (test) -- no difference
+2012-08-09 18:29:46,195 - INFO - object: model_id, best Genotypic dominant, new Genotypic dominant (find_best) -- best is still best
+2012-08-09 18:29:46,195 - INFO - sample: 5d, risk_allele G (sample_scoring) -- creating sample_risk_allele
+2012-08-09 18:29:46,196 - INFO - ***** I AM DONE SCORING THE VARIANTS *****
+2012-08-09 18:29:46,196 - INFO - ***** Writing LD variant selection in file: InputFilterInput_selection.json
+2012-08-09 18:29:46,197 - INFO - ***** Opening LD data file: /Users/celine/GenoPhen/GenophenVariantSelection-doc/json-InputOutput/LDVariantSelectionInput.json
+2012-08-09 18:29:46,197 - INFO -
+================================
+Function: LD_variant_selection
+================================
+2012-08-09 18:29:46,197 - INFO - *****: ethnicity: Caucasian, LD block: LD2 (LD_variant_selection)-- start variant selection *****
+2012-08-09 18:29:46,197 - WARNING - variant: rs3456 (check_LD_variant) -- COULD NOT FIND SCORE OR INFORMATION FOR THIS VARIANT
+2012-08-09 18:29:46,197 - WARNING - LD block: LD2, variant: rs3456 (initiation) -- UNFIT VARIANT FOR COMPARISON
+2012-08-09 18:29:46,198 - WARNING - variant: rs4567 (check_LD_variant) -- COULD NOT FIND SCORE OR INFORMATION FOR THIS VARIANT
+2012-08-09 18:29:46,198 - WARNING - LD block: LD2, variant: rs4567 (initiation) -- UNFIT VARIANT FOR COMPARISON
+2012-08-09 18:29:46,198 - WARNING - LD block: LD2 (update) -- COULD NOT FIND ANY VARIANT
+2012-08-09 18:29:46,198 - INFO - *****: ethnicity: Caucasian, LD block: LD1 (LD_variant_selection)-- start variant selection *****
+2012-08-09 18:29:46,198 - INFO - ethnicity: Caucasian, variant: rs1234 (check_LD_variant) -- variant OK for comparison
+2012-08-09 18:29:46,198 - INFO - LD block: LD1, variant (initiation): rs1234 -- fit for comparison
+2012-08-09 18:29:46,199 - INFO - ethnicity: Caucasian, variant: rs2345 (check_LD_variant) -- variant OK for comparison
+2012-08-09 18:29:46,199 - INFO - LD block: LD1, variant (initiation): rs2345 -- fit for comparison
+2012-08-09 18:29:46,200 - WARNING - variant: rs4567 (check_LD_variant) -- COULD NOT FIND SCORE OR INFORMATION FOR THIS VARIANT
+2012-08-09 18:29:46,200 - WARNING - LD block: LD1, variant: rs4567 (initiation) -- UNFIT VARIANT FOR COMPARISON
+2012-08-09 18:29:46,200 - INFO - LD block: LD1, variant: rs1234 (initiation) -- Initial best variant
+2012-08-09 18:29:46,200 - INFO - ***** ethnicity: Caucasian, LD block: LD1, variant: rs1234 (LD_variant_selection) -- start compare_variants function
+2012-08-09 18:29:46,200 - INFO - best: rs1234, variant: rs1234 (compare_variants) -- no comparison needed, best = variant
+2012-08-09 18:29:46,200 - INFO - ***** ethnicity: Caucasian, LD block: LD1, variant: rs2345 (LD_variant_selection) -- start compare_variants function
+2012-08-09 18:29:46,201 - INFO - best: rs1234, variant: rs2345 (compare_variants) -- compare variants
+2012-08-09 18:29:46,201 - INFO - score: nextbio_score (test) -- best is maximum (dif>0)
+2012-08-09 18:29:46,201 - INFO - score: nextbio_pvalue (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,201 - INFO - score: variant_nsign_ethnicity (test) -- no difference
+2012-08-09 18:29:46,201 - INFO - score: variant_sign_ethnicity (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,201 - INFO - score: num_allele (test) -- best is minimum (dif<0)
+2012-08-09 18:29:46,201 - INFO - score: count_allele (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,201 - WARNING - object: variant_id, best rs1234, new rs2345 (find_best) -- NEED TO CALL FIND_BEST AGAIN (test: [1, 0, 0, 1, 0], [0, 1, 1, 0, 1], dif [15, 0, 0, 1, 0], [0, 9.9999999999e-06, 1, 0, 1])
+2012-08-09 18:29:46,201 - INFO - object: variant_id, best rs1234, new rs2345 (find_best) -- best is still best
+2012-08-09 18:29:46,202 - INFO - score: mean_study_type (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,202 - INFO - score: mean_sample_size (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,202 - INFO - score: mean_error (test) -- best is minimum (dif<0)
+2012-08-09 18:29:46,202 - INFO - score: mean_pvalue (test) -- best is minimum (dif<0)
+2012-08-09 18:29:46,202 - INFO - score: mean_OR (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,202 - INFO - object: variant_id, best rs1234, new rs2345 (find_best) -- new is best
+2012-08-09 18:29:46,202 - INFO - best: 1x, sample: 3c (compare_samples) -- perform comparison
+2012-08-09 18:29:46,202 - INFO - score: study_type (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,203 - INFO - score: sample_size (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,203 - INFO - score: sign_sample (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,203 - INFO - score: nsign_sample (test) -- no difference
+2012-08-09 18:29:46,203 - INFO - best: allelic dominant, model: Allelic codominant (compare_models) -- perform comparison
+2012-08-09 18:29:46,203 - INFO - score: max_error (test) -- x wins by default
+2012-08-09 18:29:46,203 - INFO - score: max_pvalue (test) -- best is minimum (dif<0)
+2012-08-09 18:29:46,203 - INFO - score: min_OR (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,203 - INFO - object: model_id, best allelic dominant, new Allelic codominant (find_best) -- new is best
+2012-08-09 18:29:46,203 - INFO - best: 1x, sample: 3c (test_best_models) -- new sample has best_model
+2012-08-09 18:29:46,204 - INFO - object: variant_id, best rs1234, new rs2345 (find_best) -- new is best
+2012-08-09 18:29:46,204 - INFO - best: rs1234, variant: rs2345 (choose_best_variant) -- best variant still best
+2012-08-09 18:29:46,204 - INFO - best: rs1234, variant: rs2345 (choose_best_variant) -- new variant is best
+2012-08-09 18:29:46,204 - INFO - best: rs1234, variant: rs2345 (choose_best_variant) -- new variant is best
+2012-08-09 18:29:46,204 - INFO - score: best (test) -- x is maximum (dif<0)
+2012-08-09 18:29:46,204 - INFO - object: variant_id, best rs1234, new rs2345 (find_best) -- new is best
+2012-08-09 18:29:46,204 - INFO - LD block: LD1, variant: rs2345 (update) -- best variant
+2012-08-09 18:29:46,204 - INFO - *****: ethnicity: Asian, LD block: LD3 (LD_variant_selection)-- start variant selection *****
+2012-08-09 18:29:46,205 - INFO - ethnicity: Asian, variant: rs2345 (check_LD_variant) -- variant OK for comparison
+2012-08-09 18:29:46,205 - INFO - LD block: LD4, variant (initiation): rs2345 -- fit for comparison
+2012-08-09 18:29:46,205 - WARNING -  ethnicity: Asian, variant: rs1234 (check_LD_variant) -- COULD NOT FIND DATA FOR VARIANT IN THIS ETHNICITY
+2012-08-09 18:29:46,206 - WARNING - LD block: LD4, variant: rs1234 (initiation) -- UNFIT VARIANT FOR COMPARISON
+2012-08-09 18:29:46,206 - INFO - LD block: LD4, variant: rs2345 (initiation) -- Initial best variant
+2012-08-09 18:29:46,206 - INFO - ***** ethnicity: Asian, LD block: LD3, variant: rs2345 (LD_variant_selection) -- start compare_variants function
+2012-08-09 18:29:46,206 - INFO - best: rs2345, variant: rs2345 (compare_variants) -- no comparison needed, best = variant
+2012-08-09 18:29:46,206 - INFO - LD block: LD3, variant: rs2345 (update) -- best variant
+2012-08-09 18:29:46,206 - INFO - ***** I AM DONE SELECTING THE VARIANTS FOR ALL THE LD BLOCKS *****
+2012-08-09 18:29:46,206 - INFO - ***** Writing LD variant selection in file: InputFilterInput_selection.json

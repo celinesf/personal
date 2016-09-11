@@ -1,0 +1,469 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{lscape}
+\end_preamble
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Variant selection algorithm 
+\end_layout
+
+\begin_layout Standard
+For a specific disease and ethnicity, we want to chose a list of genetic
+ variations (called variants)
+\end_layout
+
+\begin_layout Itemize
+with convising evidence of association (i.e., replicated data).
+\end_layout
+
+\begin_layout Itemize
+independent from each other (i.e., belong to different genes and these genes
+ are not in linkage disequilibrium (LD).
+\end_layout
+
+\begin_layout Standard
+For each of those chosen variations we want to use the best association
+ value (odd ratio):
+\end_layout
+
+\begin_layout Itemize
+Largest sample size
+\end_layout
+
+\begin_layout Itemize
+Best study design
+\end_layout
+
+\begin_layout Standard
+The following describes the logic we use to decide which variations and
+ odd ratios will be considered for a specific disease and ethnicity.
+\end_layout
+
+\begin_layout Section
+Variant Scoring process
+\end_layout
+
+\begin_layout Standard
+As an initial phase, each studied variant is assigned a score describing
+ the strenght of its association with a specific disease, as well as a score
+ of association with this disease in a specific ethnicity.
+\end_layout
+
+\begin_layout Standard
+In the process, we select the best association data (odd ratio) for this
+ variant and this ethnicity out of the sample data in which that variant
+ has been studied.
+\end_layout
+
+\begin_layout Subsection
+The Variant Scoring Process general design
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+begin{landscape}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename VariantScoring-Functions/VariantScoringRequirements.pdf
+	display none
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Input data structure for the Variant Scoring Process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+end{landscape}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename VariantScoring-Functions/VariantScoringProcess.pdf
+	display none
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Visual graphs of the Variant Scoring Process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Choose sample_OR
+\end_layout
+
+\begin_layout Standard
+This function is specific to a 
+\begin_inset Quotes eld
+\end_inset
+
+variant_id
+\begin_inset Quotes erd
+\end_inset
+
+, an 
+\begin_inset Quotes eld
+\end_inset
+
+ethnicity
+\begin_inset Quotes erd
+\end_inset
+
+ and a 
+\begin_inset Quotes eld
+\end_inset
+
+sample_id
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The goal is several folds:
+\end_layout
+
+\begin_layout Enumerate
+If there are association data for both alleles and genotypes, one needs
+ to choose which of those association to consider for this sample (
+\begin_inset Quotes eld
+\end_inset
+
+best_sample_OR
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+Define what is the risk allele of this variant in  this sample
+\end_layout
+
+\begin_layout Enumerate
+Record the maximum error of this sample association
+\end_layout
+
+\begin_layout Enumerate
+If this sample is part of a meta-analysis sample, 
+\begin_inset Quotes eld
+\end_inset
+
+sample_risk_allele
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+sign_sample
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+nsign_sample
+\begin_inset Quotes erd
+\end_inset
+
+ of the meta-analysis sample are updated.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename VariantScoring-Functions/ChooseSampleOR.pdf
+	display none
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Visual graphs of the function 
+\begin_inset Quotes eld
+\end_inset
+
+choose sample_OR
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Update ethnicity score
+\end_layout
+
+\begin_layout Standard
+This function is specific to a 
+\begin_inset Quotes eld
+\end_inset
+
+variant_id
+\begin_inset Quotes erd
+\end_inset
+
+, an 
+\begin_inset Quotes eld
+\end_inset
+
+ethnicity
+\begin_inset Quotes erd
+\end_inset
+
+ and a 
+\begin_inset Quotes eld
+\end_inset
+
+sample_id
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The goal is to update the ethnicity risk allele count, means and numbers
+ of significant, non-significant samples
+\end_layout
+
+\begin_layout Subsection
+Compare to ethnicity best sample
+\end_layout
+
+\begin_layout Standard
+This function is specific to a 
+\begin_inset Quotes eld
+\end_inset
+
+variant_id
+\begin_inset Quotes erd
+\end_inset
+
+, an 
+\begin_inset Quotes eld
+\end_inset
+
+ethnicity
+\begin_inset Quotes erd
+\end_inset
+
+ and a 
+\begin_inset Quotes eld
+\end_inset
+
+sample_id
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The goal is to select the best sample to consider for this variant and ethnicity.
+\end_layout
+
+\begin_layout Standard
+The priorities are as follows:
+\end_layout
+
+\begin_layout Enumerate
+maximum study_type
+\end_layout
+
+\begin_layout Enumerate
+maximum sample_size
+\end_layout
+
+\begin_layout Enumerate
+minimum max_sample_error
+\end_layout
+
+\begin_layout Enumerate
+minimum pvalue
+\end_layout
+
+\begin_layout Subsection
+Check risk_allele
+\end_layout
+
+\begin_layout Standard
+This function is specific to a 
+\begin_inset Quotes eld
+\end_inset
+
+variant_id
+\begin_inset Quotes erd
+\end_inset
+
+ and an 
+\begin_inset Quotes eld
+\end_inset
+
+ethnicity.
+\end_layout
+
+\begin_layout Standard
+The goal is to smake sure that the risk allele of the best sample for this
+ ethnicity correspond to the risk allele with the maximum counts found in
+ this ethnicity.
+\end_layout
+
+\begin_layout Standard
+If this is not the case, this variant is likely ambiguous 
+\series bold
+[MAYBE TRANSFER THIS CHECK WHEN SELECTING BEST VARIANT FOR A GENE?]
+\end_layout
+
+\begin_layout Section
+Gene scoring
+\end_layout
+
+\begin_layout Section
+Loop on LD blocks per Ethnicity
+\end_layout
+
+\end_body
+\end_document

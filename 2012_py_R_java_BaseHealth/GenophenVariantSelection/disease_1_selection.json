@@ -1,0 +1,1155 @@
+{
+    "AfricanAmerican": {
+        "RPL9P23": {
+            "LD_best_variant": "rs9300039", 
+            "max_error": 0.72, 
+            "max_pvalue": 0.029, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18443202"
+        }, 
+        "TCF7L2": {
+            "LD_best_variant": "rs7903146", 
+            "max_error": 0.39, 
+            "max_pvalue": 1.59e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18443202"
+        }
+    }, 
+    "Asian": {
+        "C11ORF41": {
+            "LD_best_variant": "rs10836097", 
+            "max_error": 0.78, 
+            "max_pvalue": 5.3e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18711366"
+        }, 
+        "CDKAL1": {
+            "LD_best_variant": "rs9465871", 
+            "max_error": 0.45, 
+            "max_pvalue": 1.8e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18633108"
+        }, 
+        "CDKN2BAS_LOC729983": {
+            "LD_best_variant": "rs2383208", 
+            "max_error": 0.11, 
+            "max_pvalue": 1.45e-11, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20818381"
+        }, 
+        "FTO": {
+            "LD_best_variant": "rs8050136", 
+            "max_error": 0.18, 
+            "max_pvalue": 1e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 2, 
+            "total_samples": 3, 
+            "variant_best_sample": "20509872"
+        }, 
+        "HHEX_EXOC6": {
+            "LD_best_variant": "rs5015480", 
+            "max_error": 0.26, 
+            "max_pvalue": 1e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 3, 
+            "total_samples": 3, 
+            "variant_best_sample": "20509872"
+        }, 
+        "HNF1B": {
+            "LD_best_variant": "rs7501939", 
+            "max_error": 0.16, 
+            "max_pvalue": 1e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20509872"
+        }, 
+        "IGF2BP2": {
+            "LD_best_variant": "rs6769511", 
+            "max_error": 0.16, 
+            "max_pvalue": 1.3e-09, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18711366"
+        }, 
+        "KCNQ1": {
+            "LD_best_variant": "rs2283228", 
+            "max_error": 0.16, 
+            "max_pvalue": 3.1e-12, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18711366"
+        }, 
+        "LOC100129972_FAM148B": {
+            "LD_best_variant": "rs7172432", 
+            "max_error": 0.09, 
+            "max_pvalue": 3.66e-09, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 2, 
+            "total_samples": 2, 
+            "variant_best_sample": "20818381"
+        }, 
+        "LOC100130785_UBE2E2": {
+            "LD_best_variant": "rs6780569", 
+            "max_error": 0.13, 
+            "max_pvalue": 4.37e-09, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20818381"
+        }, 
+        "LOC100131652_DUSP9": {
+            "LD_best_variant": "rs5945326", 
+            "max_error": 0.23, 
+            "max_pvalue": 0.02, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21643948"
+        }, 
+        "MGLL": {
+            "LD_best_variant": "rs3773159", 
+            "max_error": -1, 
+            "max_pvalue": 1.552e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21799836"
+        }, 
+        "MLXIPL": {
+            "LD_best_variant": "rs7800944", 
+            "max_error": 0.4, 
+            "max_pvalue": 0.0042, 
+            "sample_best_OR": "Allelic recessive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18477659"
+        }, 
+        "SEMA3A_HMGN2L11": {
+            "LD_best_variant": "rs612774", 
+            "max_error": 0.37, 
+            "max_pvalue": 3e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18711366"
+        }, 
+        "SLC30A8": {
+            "LD_best_variant": "rs13266634", 
+            "max_error": 0.08, 
+            "max_pvalue": -1, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 5, 
+            "total_samples": 6, 
+            "variant_best_sample": "20167458"
+        }, 
+        "TCF7L2": {
+            "LD_best_variant": "rs7903146", 
+            "max_error": 0.51, 
+            "max_pvalue": -1, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 2, 
+            "total_samples": 3, 
+            "variant_best_sample": "18469204"
+        }, 
+        "TRPA1": {
+            "LD_best_variant": "rs13259803", 
+            "max_error": 0.69, 
+            "max_pvalue": 3e-07, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18711366"
+        }, 
+        "WFS1": {
+            "LD_best_variant": "rs6446482", 
+            "max_error": 0.45, 
+            "max_pvalue": 0.009, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20509872"
+        }
+    }, 
+    "Caucasian": {
+        "AHI1": {
+            "LD_best_variant": "rs1535435", 
+            "max_error": 0.344, 
+            "max_pvalue": 0.0002, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17668382"
+        }, 
+        "AP3S2": {
+            "LD_best_variant": "rs2028299", 
+            "max_error": 0.06, 
+            "max_pvalue": 1.9e-11, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21874001"
+        }, 
+        "ARAP1": {
+            "LD_best_variant": "rs1552224", 
+            "max_error": 0.06, 
+            "max_pvalue": 1.4e-22, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "BCL11A": {
+            "LD_best_variant": "rs243021", 
+            "max_error": 0.04, 
+            "max_pvalue": 2.9e-15, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "C6orf217_GAPDHL19": {
+            "LD_best_variant": "rs9494266", 
+            "max_error": 0.34, 
+            "max_pvalue": 5e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17668382"
+        }, 
+        "CACNA2D3_WNT5A": {
+            "LD_best_variant": "rs358806", 
+            "max_error": 1.02, 
+            "max_pvalue": 3.05e-06, 
+            "sample_best_OR": "Genotypic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17554300"
+        }, 
+        "CCDC33": {
+            "LD_best_variant": "rs2930291", 
+            "max_error": 0.58, 
+            "max_pvalue": 4.4e-05, 
+            "sample_best_OR": "Genotypic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17554300"
+        }, 
+        "CDKAL1": {
+            "LD_best_variant": "rs9465871", 
+            "max_error": 1.35, 
+            "max_pvalue": 3.34e-07, 
+            "sample_best_OR": "Genotypic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17554300"
+        }, 
+        "CDKN2BAS_LOC729983": {
+            "LD_best_variant": "rs10811661", 
+            "max_error": 0.11, 
+            "max_pvalue": 7.8e-15, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 4, 
+            "total_samples": 6, 
+            "variant_best_sample": "17463249"
+        }, 
+        "CSN3": {
+            "LD_best_variant": "rs3775745", 
+            "max_error": -1, 
+            "max_pvalue": 0.002, 
+            "sample_best_OR": "Genotypic Dominant", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "FTO": {
+            "LD_best_variant": "rs8050136", 
+            "max_error": 0.1, 
+            "max_pvalue": 1.3e-12, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 2, 
+            "total_samples": 2, 
+            "variant_best_sample": "17463249"
+        }, 
+        "GRB14_COBLL1": {
+            "LD_best_variant": "rs3923113", 
+            "max_error": 0.07, 
+            "max_pvalue": 1e-08, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21874001"
+        }, 
+        "HHEX_EXOC6": {
+            "LD_best_variant": "rs5015480", 
+            "max_error": 0.21, 
+            "max_pvalue": 5.4e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17463249"
+        }, 
+        "HIGD1C": {
+            "LD_best_variant": "rs12304921", 
+            "max_error": 2.56, 
+            "max_pvalue": 7.07e-06, 
+            "sample_best_OR": "Genotypic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17554300"
+        }, 
+        "HMG20A": {
+            "LD_best_variant": "rs7178572", 
+            "max_error": 0.06, 
+            "max_pvalue": 7.1e-11, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21874001"
+        }, 
+        "HTR4_ADRB2": {
+            "LD_best_variant": "rs1833714", 
+            "max_error": -1, 
+            "max_pvalue": 0.026, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "IGF2BP2": {
+            "LD_best_variant": "rs9864104", 
+            "max_error": 0.33, 
+            "max_pvalue": 0.012, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18430866"
+        }, 
+        "JAZF1": {
+            "LD_best_variant": "rs864745", 
+            "max_error": 0.14, 
+            "max_pvalue": 0.03, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "19020324"
+        }, 
+        "KCNE4_SCG2": {
+            "LD_best_variant": "rs1517645", 
+            "max_error": -1, 
+            "max_pvalue": 0.005, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "KCNJ11_ABCC8": {
+            "LD_best_variant": "rs5219", 
+            "max_error": 0.28, 
+            "max_pvalue": 6.7e-11, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 3, 
+            "total_samples": 3, 
+            "variant_best_sample": "20424228"
+        }, 
+        "KCNQ1": {
+            "LD_best_variant": "rs2283228", 
+            "max_error": 0.29, 
+            "max_pvalue": 0.00031, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "18711366"
+        }, 
+        "KIAA1486_IRS1": {
+            "LD_best_variant": "rs7578326", 
+            "max_error": 0.05, 
+            "max_pvalue": 5.4e-20, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "KLF14_LOC347674": {
+            "LD_best_variant": "rs972283", 
+            "max_error": 0.05, 
+            "max_pvalue": 2.2e-10, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "KRT18P24_CHCHD9": {
+            "LD_best_variant": "rs13292136", 
+            "max_error": 0.08, 
+            "max_pvalue": 2.8e-08, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "LINGO2": {
+            "LD_best_variant": "rs981864", 
+            "max_error": -1, 
+            "max_pvalue": 0.02, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "LOC100129972_FAM148B": {
+            "LD_best_variant": "rs7172432", 
+            "max_error": 0.1, 
+            "max_pvalue": 6.36e-05, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20818381"
+        }, 
+        "LOC100131652_DUSP9": {
+            "LD_best_variant": "rs5945326", 
+            "max_error": 0.19, 
+            "max_pvalue": 3e-10, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "LOC728723": {
+            "LD_best_variant": "rs4457053", 
+            "max_error": 0.05, 
+            "max_pvalue": 2.8e-12, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "MRPS9_GPR45": {
+            "LD_best_variant": "rs6712932", 
+            "max_error": 0.182, 
+            "max_pvalue": 0.008, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17668382"
+        }, 
+        "MTNR1B": {
+            "LD_best_variant": "rs1387153", 
+            "max_error": 0.05, 
+            "max_pvalue": 7.8e-15, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "NOTCH2": {
+            "LD_best_variant": "rs10923931", 
+            "max_error": 0.19, 
+            "max_pvalue": 0.02, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "19020324"
+        }, 
+        "OASL": {
+            "LD_best_variant": "rs7957197", 
+            "max_error": 0.05, 
+            "max_pvalue": 2.4e-08, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "PDE4B": {
+            "LD_best_variant": "rs4655595", 
+            "max_error": 3.19, 
+            "max_pvalue": 1.33e-05, 
+            "sample_best_OR": "Genotypic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17554300"
+        }, 
+        "PPARG": {
+            "LD_best_variant": "rs1801282", 
+            "max_error": 0.12, 
+            "max_pvalue": 1.7e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 4, 
+            "total_samples": 4, 
+            "variant_best_sample": "17463249"
+        }, 
+        "PRC1": {
+            "LD_best_variant": "rs8042680", 
+            "max_error": 0.04, 
+            "max_pvalue": 2.4e-10, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "R3HDML_HNF4A": {
+            "LD_best_variant": "rs4812829", 
+            "max_error": 0.06, 
+            "max_pvalue": 2.6e-10, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21874001"
+        }, 
+        "RALGPS2_LOC646976": {
+            "LD_best_variant": "rs2773080", 
+            "max_error": -1, 
+            "max_pvalue": 0.033, 
+            "sample_best_OR": "Genotypic Dominant", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "RBMS1": {
+            "LD_best_variant": "rs7593730", 
+            "max_error": 0.07, 
+            "max_pvalue": 3.7e-08, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20418489"
+        }, 
+        "RORA": {
+            "LD_best_variant": "rs7164773", 
+            "max_error": -1, 
+            "max_pvalue": 0.021, 
+            "sample_best_OR": "Genotypic recessive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "RPL37P3_CHODL": {
+            "LD_best_variant": "rs158081", 
+            "max_error": 0.26, 
+            "max_pvalue": 2.36e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17668382"
+        }, 
+        "RPL9P23": {
+            "LD_best_variant": "rs9300039", 
+            "max_error": 0.22, 
+            "max_pvalue": 4.3e-07, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 2, 
+            "variant_best_sample": "17463248"
+        }, 
+        "RPSAP52_HMGA2": {
+            "LD_best_variant": "rs1531343", 
+            "max_error": 0.07, 
+            "max_pvalue": 3.6e-09, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "RUNX2_CLIC5": {
+            "LD_best_variant": "rs10498761", 
+            "max_error": -1, 
+            "max_pvalue": 0.041, 
+            "sample_best_OR": "Genotypic recessive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "SLC30A8": {
+            "LD_best_variant": "rs13266634", 
+            "max_error": 0.07, 
+            "max_pvalue": -1, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 6, 
+            "total_samples": 6, 
+            "variant_best_sample": "20167458"
+        }, 
+        "SREBF1_RAI1_MIR33B": {
+            "LD_best_variant": "rs1889018", 
+            "max_error": 0.34, 
+            "max_pvalue": 0.001, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17019602"
+        }, 
+        "ST6GAL1": {
+            "LD_best_variant": "rs16861329", 
+            "max_error": 0.06, 
+            "max_pvalue": 3.4e-08, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21874001"
+        }, 
+        "TCF7L2": {
+            "LD_best_variant": "rs7903146", 
+            "max_error": 0.12, 
+            "max_pvalue": 1e-48, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 4, 
+            "total_samples": 4, 
+            "variant_best_sample": "17463248"
+        }, 
+        "TOM1L2": {
+            "LD_best_variant": "rs2236513", 
+            "max_error": 0.34, 
+            "max_pvalue": 0.003, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17019602"
+        }, 
+        "TP53INP1": {
+            "LD_best_variant": "rs896854", 
+            "max_error": 0.86, 
+            "max_pvalue": 9.9e-10, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "TSPAN8_LGR5": {
+            "LD_best_variant": "rs1495377", 
+            "max_error": 0.5, 
+            "max_pvalue": 6.52e-06, 
+            "sample_best_OR": "Genotypic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17554300"
+        }, 
+        "TTC7B": {
+            "LD_best_variant": "rs1749718", 
+            "max_error": 0.138, 
+            "max_pvalue": 0.001, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17668382"
+        }, 
+        "UBQLNL_LOC643810": {
+            "LD_best_variant": "rs979752", 
+            "max_error": -1, 
+            "max_pvalue": 0.03, 
+            "sample_best_OR": "Genotypic Dominant", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "VPS26A": {
+            "LD_best_variant": "rs1802295", 
+            "max_error": 0.07, 
+            "max_pvalue": 4.1e-08, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21874001"
+        }, 
+        "WFS1": {
+            "LD_best_variant": "rs10010131", 
+            "max_error": 0.15, 
+            "max_pvalue": 0.001, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "19020324"
+        }, 
+        "ZFAND6": {
+            "LD_best_variant": "rs11634397", 
+            "max_error": 0.04, 
+            "max_pvalue": 2.4e-09, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "20581827"
+        }, 
+        "ZNF239_LOC100129906": {
+            "LD_best_variant": "rs9326506", 
+            "max_error": 0.48, 
+            "max_pvalue": 2.99e-05, 
+            "sample_best_OR": "Genotypic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17554300"
+        }
+    }, 
+    "Hispanic": {
+        "ACTN2_LOC100129366": {
+            "LD_best_variant": "rs819639", 
+            "max_error": -1, 
+            "max_pvalue": 0.00021, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "C1orf220_LOC646976_RALGPS2": {
+            "LD_best_variant": "rs2773080", 
+            "max_error": -1, 
+            "max_pvalue": 0.0008, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "C21orf94_N6AMT1": {
+            "LD_best_variant": "rs2831605", 
+            "max_error": -1, 
+            "max_pvalue": 6.82e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "CSN3": {
+            "LD_best_variant": "rs3775745", 
+            "max_error": -1, 
+            "max_pvalue": 0.00078, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "CXCR7_COPS8": {
+            "LD_best_variant": "rs10192201", 
+            "max_error": 0.27, 
+            "max_pvalue": 0.000444, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "DYRK2_LOC341333": {
+            "LD_best_variant": "rs10492202", 
+            "max_error": -1, 
+            "max_pvalue": 3.48e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "EGR2_NRBF2": {
+            "LD_best_variant": "rs1509957", 
+            "max_error": -1, 
+            "max_pvalue": 0.00084, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "EPB41L3_LOC645355": {
+            "LD_best_variant": "rs1941011", 
+            "max_error": -1, 
+            "max_pvalue": 4.96e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "EPHA4": {
+            "LD_best_variant": "rs16862811", 
+            "max_error": 0.55, 
+            "max_pvalue": 2.65e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "GRIK1": {
+            "LD_best_variant": "rs458685", 
+            "max_error": -1, 
+            "max_pvalue": 6.54e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "HPSE2": {
+            "LD_best_variant": "rs1159006", 
+            "max_error": -1, 
+            "max_pvalue": 4.01e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "HTR4_ADRB2": {
+            "LD_best_variant": "rs1833714", 
+            "max_error": -1, 
+            "max_pvalue": 0.00078, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "IL34": {
+            "LD_best_variant": "rs3813905", 
+            "max_error": 0.32, 
+            "max_pvalue": 3.35e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "KRT18P33_LOC729348": {
+            "LD_best_variant": "rs6728803", 
+            "max_error": 0.25, 
+            "max_pvalue": 6.8e-07, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "LINGO2": {
+            "LD_best_variant": "rs981864", 
+            "max_error": -1, 
+            "max_pvalue": 0.00024, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "LOC100128253_LOC100129223": {
+            "LD_best_variant": "rs4766119", 
+            "max_error": 0.41, 
+            "max_pvalue": 2.65e-06, 
+            "sample_best_OR": "Allelic Additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "LOC100128403_LOC441732": {
+            "LD_best_variant": "rs8033124", 
+            "max_error": 0.28, 
+            "max_pvalue": 1.83e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "LOC344741_RPL38P1": {
+            "LD_best_variant": "rs1879976", 
+            "max_error": 0.26, 
+            "max_pvalue": 8.91e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "LOC391696_ANKRD50": {
+            "LD_best_variant": "rs10518442", 
+            "max_error": -1, 
+            "max_pvalue": 3.22e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "LOC399950_NCAM1": {
+            "LD_best_variant": "rs951432", 
+            "max_error": -1, 
+            "max_pvalue": 0.0009, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "LOC642337": {
+            "LD_best_variant": "rs1932465", 
+            "max_error": -1, 
+            "max_pvalue": 5.61e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "LOC729993": {
+            "LD_best_variant": "rs149228", 
+            "max_error": 0.29, 
+            "max_pvalue": 1.49e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "MIR301B_MIR130B": {
+            "LD_best_variant": "rs861844", 
+            "max_error": -1, 
+            "max_pvalue": 3.21e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "NCKAP5_MGAT5": {
+            "LD_best_variant": "rs4522658", 
+            "max_error": 0.23, 
+            "max_pvalue": 3.4e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "NMT": {
+            "LD_best_variant": "rs3099797", 
+            "max_error": 0.25, 
+            "max_pvalue": 4.6e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "NXPH1": {
+            "LD_best_variant": "rs757705", 
+            "max_error": -1, 
+            "max_pvalue": 2.79e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "OR13D1_OR13D3P": {
+            "LD_best_variant": "rs10512332", 
+            "max_error": -1, 
+            "max_pvalue": 4.6e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "PARD3B": {
+            "LD_best_variant": "rs849230", 
+            "max_error": 0.53, 
+            "max_pvalue": 6.86e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "PER3": {
+            "LD_best_variant": "rs10462020", 
+            "max_error": 0.32, 
+            "max_pvalue": 8.39e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "PLEKHG1": {
+            "LD_best_variant": "rs6919370", 
+            "max_error": -1, 
+            "max_pvalue": 0.00095, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "PTPRD": {
+            "LD_best_variant": "rs649891", 
+            "max_error": 0.27, 
+            "max_pvalue": 0.000169, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "RORA": {
+            "LD_best_variant": "rs7164773", 
+            "max_error": -1, 
+            "max_pvalue": 0.00016, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "SLC24A3": {
+            "LD_best_variant": "rs6136651", 
+            "max_error": -1, 
+            "max_pvalue": 1.81e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "SORBS1": {
+            "LD_best_variant": "rs1536558", 
+            "max_error": -1, 
+            "max_pvalue": 4.77e-05, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "TMEFF2": {
+            "LD_best_variant": "rs10497723", 
+            "max_error": -1, 
+            "max_pvalue": 8.45e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }, 
+        "TOMM7": {
+            "LD_best_variant": "rs2240727", 
+            "max_error": 0.26, 
+            "max_pvalue": 2.79e-06, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "21647700"
+        }, 
+        "UBQLNL_LOC643810": {
+            "LD_best_variant": "rs979752", 
+            "max_error": -1, 
+            "max_pvalue": 0.00012, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846124"
+        }
+    }, 
+    "NativeAmerican": {
+        "CDH10_MSNL1": {
+            "LD_best_variant": "rs10520926", 
+            "max_error": -1, 
+            "max_pvalue": 0.0335, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "FANCF": {
+            "LD_best_variant": "rs10500938", 
+            "max_error": -1, 
+            "max_pvalue": 0.0011, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "FTO": {
+            "LD_best_variant": "rs8050136", 
+            "max_error": 0.39, 
+            "max_pvalue": 0.03, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "19008344"
+        }, 
+        "HHEX_EXOC6": {
+            "LD_best_variant": "rs2096177", 
+            "max_error": -1, 
+            "max_pvalue": 0.0446, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "LOC728114": {
+            "LD_best_variant": "rs1859441", 
+            "max_error": -1, 
+            "max_pvalue": 0.0027, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "MMP16": {
+            "LD_best_variant": "rs6994019", 
+            "max_error": -1, 
+            "max_pvalue": 0.0189, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "NMD3_LOC100129403": {
+            "LD_best_variant": "rs9290075", 
+            "max_error": -1, 
+            "max_pvalue": 0.0134, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "PPFIA2_CCDC59": {
+            "LD_best_variant": "rs10506855", 
+            "max_error": -1, 
+            "max_pvalue": 0.0335, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "RPL7P10_RPL10AP4": {
+            "LD_best_variant": "rs10493685", 
+            "max_error": -1, 
+            "max_pvalue": 0.0043, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "SGOL1_VENTXP7": {
+            "LD_best_variant": "rs1500415", 
+            "max_error": -1, 
+            "max_pvalue": 0.0489, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "SLC30A8_MED30": {
+            "LD_best_variant": "rs10505309", 
+            "max_error": -1, 
+            "max_pvalue": 0.0332, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "TSEN2": {
+            "LD_best_variant": "rs10510422", 
+            "max_error": -1, 
+            "max_pvalue": 0.0384, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "ZBTB16": {
+            "LD_best_variant": "rs672849", 
+            "max_error": -1, 
+            "max_pvalue": 0.0164, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }, 
+        "ZNF385D": {
+            "LD_best_variant": "rs424695", 
+            "max_error": -1, 
+            "max_pvalue": 0.0149, 
+            "sample_best_OR": "Allelic additive", 
+            "significant_samples": 1, 
+            "total_samples": 1, 
+            "variant_best_sample": "17846125"
+        }
+    }
+}

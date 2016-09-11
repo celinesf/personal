@@ -1,0 +1,1414 @@
+{
+    "AfricanAmerican": {
+        "CDKAL1": {
+            "LD_block_id": "CDKAL1", 
+            "variant_list": [
+                "rs10946398", 
+                "rs7754840"
+            ]
+        }, 
+        "CDKN2BAS_LOC729983": {
+            "LD_block_id": "CDKN2BAS_LOC729983", 
+            "variant_list": [
+                "rs564398", 
+                "rs10811661", 
+                "rs10811661"
+            ]
+        }, 
+        "EXT2": {
+            "LD_block_id": "EXT2", 
+            "variant_list": [
+                "rs3740878", 
+                "rs1113132", 
+                "rs11037909"
+            ]
+        }, 
+        "FTO": {
+            "LD_block_id": "FTO", 
+            "variant_list": [
+                "rs8050136"
+            ]
+        }, 
+        "HHEX_EXOC6": {
+            "LD_block_id": "HHEX_EXOC6", 
+            "variant_list": [
+                "rs7923837", 
+                "rs7923837", 
+                "rs1111875", 
+                "rs1111875", 
+                "rs5015480", 
+                "rs5015480"
+            ]
+        }, 
+        "IGF2BP2": {
+            "LD_block_id": "IGF2BP2", 
+            "variant_list": [
+                "rs4402960"
+            ]
+        }, 
+        "LOC387761": {
+            "LD_block_id": "LOC387761", 
+            "variant_list": [
+                "rs7480010"
+            ]
+        }, 
+        "LOC391686_LOC132719": {
+            "LD_block_id": "LOC391686_LOC132719", 
+            "variant_list": [
+                "rs17044137", 
+                "rs17044137"
+            ]
+        }, 
+        "PKN2": {
+            "LD_block_id": "PKN2", 
+            "variant_list": [
+                "rs6698181"
+            ]
+        }, 
+        "RPL9P23": {
+            "LD_block_id": "RPL9P23", 
+            "variant_list": [
+                "rs9300039"
+            ]
+        }, 
+        "SLC30A8": {
+            "LD_block_id": "SLC30A8", 
+            "variant_list": [
+                "rs13266634"
+            ]
+        }, 
+        "TCF7L2": {
+            "LD_block_id": "TCF7L2", 
+            "variant_list": [
+                "rs7903146"
+            ]
+        }
+    }, 
+    "Asian": {
+        "ADRA2A": {
+            "LD_block_id": "ADRA2A", 
+            "variant_list": [
+                "rs553668"
+            ]
+        }, 
+        "ARAP1": {
+            "LD_block_id": "ARAP1", 
+            "variant_list": [
+                "rs1552224"
+            ]
+        }, 
+        "BCL11A": {
+            "LD_block_id": "BCL11A", 
+            "variant_list": [
+                "rs243021"
+            ]
+        }, 
+        "C11ORF41": {
+            "LD_block_id": "C11ORF41", 
+            "variant_list": [
+                "rs10836097"
+            ]
+        }, 
+        "CDKAL1": {
+            "LD_block_id": "CDKAL1", 
+            "variant_list": [
+                "rs2206734", 
+                "rs4712524", 
+                "rs7756992", 
+                "rs7754840", 
+                "rs10946398", 
+                "rs9465871", 
+                "rs9295475", 
+                "rs9460546"
+            ]
+        }, 
+        "CDKN2BAS_LOC729983": {
+            "LD_block_id": "CDKN2BAS_LOC729983", 
+            "variant_list": [
+                "rs564398", 
+                "rs10811661", 
+                "rs10811661", 
+                "rs1333040", 
+                "rs10757278", 
+                "rs2383208", 
+                "rs2383208"
+            ]
+        }, 
+        "EXT2": {
+            "LD_block_id": "EXT2", 
+            "variant_list": [
+                "rs3740878", 
+                "rs1113132", 
+                "rs11037909"
+            ]
+        }, 
+        "FTO": {
+            "LD_block_id": "FTO", 
+            "variant_list": [
+                "rs9939609", 
+                "rs8050136"
+            ]
+        }, 
+        "HHEX_EXOC6": {
+            "LD_block_id": "HHEX_EXOC6", 
+            "variant_list": [
+                "rs1111875", 
+                "rs1111875", 
+                "rs5015480", 
+                "rs5015480", 
+                "rs7923837", 
+                "rs7923837"
+            ]
+        }, 
+        "HNF1B": {
+            "LD_block_id": "HNF1B", 
+            "variant_list": [
+                "rs7501939"
+            ]
+        }, 
+        "IGF2BP2": {
+            "LD_block_id": "IGF2BP2", 
+            "variant_list": [
+                "rs4402960", 
+                "rs1470579", 
+                "rs6769511", 
+                "rs4376068"
+            ]
+        }, 
+        "KCNJ11_ABCC8": {
+            "LD_block_id": "KCNJ11_ABCC8", 
+            "variant_list": [
+                "rs5219", 
+                "rs5219"
+            ]
+        }, 
+        "KCNQ1": {
+            "LD_block_id": "KCNQ1", 
+            "variant_list": [
+                "rs2237897", 
+                "rs2237895", 
+                "rs2074196", 
+                "rs2237892", 
+                "rs163182", 
+                "rs2283228"
+            ]
+        }, 
+        "KIAA1486_IRS1": {
+            "LD_block_id": "KIAA1486_IRS1", 
+            "variant_list": [
+                "rs7578326", 
+                "rs7578326"
+            ]
+        }, 
+        "LOC100129972_FAM148B": {
+            "LD_block_id": "LOC100129972_FAM148B", 
+            "variant_list": [
+                "rs1370176", 
+                "rs1370176", 
+                "rs7172432", 
+                "rs7172432", 
+                "rs1436953", 
+                "rs1436953"
+            ]
+        }, 
+        "LOC100130785_UBE2E2": {
+            "LD_block_id": "LOC100130785_UBE2E2", 
+            "variant_list": [
+                "rs7612463", 
+                "rs6780569", 
+                "rs6780569", 
+                "rs9812056", 
+                "rs9812056"
+            ]
+        }, 
+        "LOC100131652_DUSP9": {
+            "LD_block_id": "LOC100131652_DUSP9", 
+            "variant_list": [
+                "rs5945326", 
+                "rs5945326"
+            ]
+        }, 
+        "LOC387761": {
+            "LD_block_id": "LOC387761", 
+            "variant_list": [
+                "rs7480010"
+            ]
+        }, 
+        "MGLL": {
+            "LD_block_id": "MGLL", 
+            "variant_list": [
+                "rs3773159"
+            ]
+        }, 
+        "MLXIPL": {
+            "LD_block_id": "MLXIPL", 
+            "variant_list": [
+                "rs7800944"
+            ]
+        }, 
+        "NBNF": {
+            "LD_block_id": "NBNF", 
+            "variant_list": [
+                "rs79203837"
+            ]
+        }, 
+        "PPARG": {
+            "LD_block_id": "PPARG", 
+            "variant_list": [
+                "rs1801282"
+            ]
+        }, 
+        "RPL9P23": {
+            "LD_block_id": "RPL9P23", 
+            "variant_list": [
+                "rs9300039"
+            ]
+        }, 
+        "SEMA3A_HMGN2L11": {
+            "LD_block_id": "SEMA3A_HMGN2L11", 
+            "variant_list": [
+                "rs612774", 
+                "rs612774"
+            ]
+        }, 
+        "SLC30A8": {
+            "LD_block_id": "SLC30A8", 
+            "variant_list": [
+                "rs3802177", 
+                "rs13266634"
+            ]
+        }, 
+        "TCF7L2": {
+            "LD_block_id": "TCF7L2", 
+            "variant_list": [
+                "rs12255372", 
+                "rs11196205", 
+                "rs290487", 
+                "rs11196218", 
+                "rs7903146", 
+                "rs7901695"
+            ]
+        }, 
+        "TRPA1": {
+            "LD_block_id": "TRPA1", 
+            "variant_list": [
+                "rs13259803"
+            ]
+        }, 
+        "WFS1": {
+            "LD_block_id": "WFS1", 
+            "variant_list": [
+                "rs6446482"
+            ]
+        }
+    }, 
+    "Caucasian": {
+        "AHI1": {
+            "LD_block_id": "AHI1", 
+            "variant_list": [
+                "rs1535435"
+            ]
+        }, 
+        "ANXA5_TMEM155": {
+            "LD_block_id": "ANXA5_TMEM155", 
+            "variant_list": [
+                "rs7659604", 
+                "rs7659604"
+            ]
+        }, 
+        "AP3S2": {
+            "LD_block_id": "AP3S2", 
+            "variant_list": [
+                "rs2028299"
+            ]
+        }, 
+        "ARAP1": {
+            "LD_block_id": "ARAP1", 
+            "variant_list": [
+                "rs1552224"
+            ]
+        }, 
+        "BCL11A": {
+            "LD_block_id": "BCL11A", 
+            "variant_list": [
+                "rs243021"
+            ]
+        }, 
+        "C6orf217_GAPDHL19": {
+            "LD_block_id": "C6orf217_GAPDHL19", 
+            "variant_list": [
+                "rs9494266", 
+                "rs9494266"
+            ]
+        }, 
+        "CACNA2D3_WNT5A": {
+            "LD_block_id": "CACNA2D3_WNT5A", 
+            "variant_list": [
+                "rs358806", 
+                "rs358806"
+            ]
+        }, 
+        "CCDC33": {
+            "LD_block_id": "CCDC33", 
+            "variant_list": [
+                "rs2930291"
+            ]
+        }, 
+        "CDC123_CAMK1D": {
+            "LD_block_id": "CDC123_CAMK1D", 
+            "variant_list": [
+                "rs12779790", 
+                "rs12779790"
+            ]
+        }, 
+        "CDKAL1": {
+            "LD_block_id": "CDKAL1", 
+            "variant_list": [
+                "rs7756992", 
+                "rs10946398", 
+                "rs7754840", 
+                "rs9465871"
+            ]
+        }, 
+        "CDKN2BAS_LOC729983": {
+            "LD_block_id": "CDKN2BAS_LOC729983", 
+            "variant_list": [
+                "rs10811661", 
+                "rs10811661", 
+                "rs564398"
+            ]
+        }, 
+        "CSN3": {
+            "LD_block_id": "CSN3", 
+            "variant_list": [
+                "rs3775745"
+            ]
+        }, 
+        "FTO": {
+            "LD_block_id": "FTO", 
+            "variant_list": [
+                "rs8050136", 
+                "rs9939609"
+            ]
+        }, 
+        "GRB14_COBLL1": {
+            "LD_block_id": "GRB14_COBLL1", 
+            "variant_list": [
+                "rs3923113", 
+                "rs3923113"
+            ]
+        }, 
+        "HHEX_EXOC6": {
+            "LD_block_id": "HHEX_EXOC6", 
+            "variant_list": [
+                "rs1111875", 
+                "rs1111875", 
+                "rs5015480", 
+                "rs5015480"
+            ]
+        }, 
+        "HIGD1C": {
+            "LD_block_id": "HIGD1C", 
+            "variant_list": [
+                "rs12304921"
+            ]
+        }, 
+        "HMG20A": {
+            "LD_block_id": "HMG20A", 
+            "variant_list": [
+                "rs7178572"
+            ]
+        }, 
+        "HTR4_ADRB2": {
+            "LD_block_id": "HTR4_ADRB2", 
+            "variant_list": [
+                "rs1833714", 
+                "rs1833714"
+            ]
+        }, 
+        "IGF2BP2": {
+            "LD_block_id": "IGF2BP2", 
+            "variant_list": [
+                "rs1470579", 
+                "rs9864104", 
+                "rs4402960", 
+                "rs9826022"
+            ]
+        }, 
+        "JAZF1": {
+            "LD_block_id": "JAZF1", 
+            "variant_list": [
+                "rs864745"
+            ]
+        }, 
+        "KCNE4_SCG2": {
+            "LD_block_id": "KCNE4_SCG2", 
+            "variant_list": [
+                "rs1517645", 
+                "rs1517645"
+            ]
+        }, 
+        "KCNJ11_ABCC8": {
+            "LD_block_id": "KCNJ11_ABCC8", 
+            "variant_list": [
+                "rs5219", 
+                "rs5219", 
+                "rs5215"
+            ]
+        }, 
+        "KCNQ1": {
+            "LD_block_id": "KCNQ1", 
+            "variant_list": [
+                "rs231362", 
+                "rs2237897", 
+                "rs2237895", 
+                "rs2283228"
+            ]
+        }, 
+        "KIAA1486_IRS1": {
+            "LD_block_id": "KIAA1486_IRS1", 
+            "variant_list": [
+                "rs7578326", 
+                "rs7578326"
+            ]
+        }, 
+        "KLF14_LOC347674": {
+            "LD_block_id": "KLF14_LOC347674", 
+            "variant_list": [
+                "rs972283", 
+                "rs972283"
+            ]
+        }, 
+        "KRT18P24_CHCHD9": {
+            "LD_block_id": "KRT18P24_CHCHD9", 
+            "variant_list": [
+                "rs13292136", 
+                "rs13292136"
+            ]
+        }, 
+        "LCORL": {
+            "LD_block_id": "LCORL", 
+            "variant_list": [
+                "rs10516322"
+            ]
+        }, 
+        "LINGO2": {
+            "LD_block_id": "LINGO2", 
+            "variant_list": [
+                "rs981864"
+            ]
+        }, 
+        "LOC100129972_FAM148B": {
+            "LD_block_id": "LOC100129972_FAM148B", 
+            "variant_list": [
+                "rs1436953", 
+                "rs1436953", 
+                "rs7172432", 
+                "rs7172432"
+            ]
+        }, 
+        "LOC100130785_UBE2E2": {
+            "LD_block_id": "LOC100130785_UBE2E2", 
+            "variant_list": [
+                "rs6780569", 
+                "rs6780569", 
+                "rs7612463", 
+                "rs9812056", 
+                "rs9812056"
+            ]
+        }, 
+        "LOC100131652_DUSP9": {
+            "LD_block_id": "LOC100131652_DUSP9", 
+            "variant_list": [
+                "rs5945326", 
+                "rs5945326"
+            ]
+        }, 
+        "LOC391686_LOC132719": {
+            "LD_block_id": "LOC391686_LOC132719", 
+            "variant_list": [
+                "rs17044137", 
+                "rs17044137"
+            ]
+        }, 
+        "LOC728723": {
+            "LD_block_id": "LOC728723", 
+            "variant_list": [
+                "rs4457053"
+            ]
+        }, 
+        "LOC730057": {
+            "LD_block_id": "LOC730057", 
+            "variant_list": [
+                "rs4607103"
+            ]
+        }, 
+        "MRPS9_GPR45": {
+            "LD_block_id": "MRPS9_GPR45", 
+            "variant_list": [
+                "rs6712932", 
+                "rs6712932"
+            ]
+        }, 
+        "MTNR1B": {
+            "LD_block_id": "MTNR1B", 
+            "variant_list": [
+                "rs1387153", 
+                "rs61747139", 
+                "rs8192552", 
+                "rs8192553", 
+                "rs61746674"
+            ]
+        }, 
+        "MYO10": {
+            "LD_block_id": "MYO10", 
+            "variant_list": [
+                "rs173738", 
+                "rs253336", 
+                "rs31313"
+            ]
+        }, 
+        "NOTCH2": {
+            "LD_block_id": "NOTCH2", 
+            "variant_list": [
+                "rs10923931"
+            ]
+        }, 
+        "OASL": {
+            "LD_block_id": "OASL", 
+            "variant_list": [
+                "rs7957197"
+            ]
+        }, 
+        "PDE4B": {
+            "LD_block_id": "PDE4B", 
+            "variant_list": [
+                "rs4655595"
+            ]
+        }, 
+        "PKN2": {
+            "LD_block_id": "PKN2", 
+            "variant_list": [
+                "rs6698181"
+            ]
+        }, 
+        "PPARG": {
+            "LD_block_id": "PPARG", 
+            "variant_list": [
+                "rs1801282"
+            ]
+        }, 
+        "PRC1": {
+            "LD_block_id": "PRC1", 
+            "variant_list": [
+                "rs8042680"
+            ]
+        }, 
+        "R3HDML_HNF4A": {
+            "LD_block_id": "R3HDML_HNF4A", 
+            "variant_list": [
+                "rs2144908", 
+                "rs717247", 
+                "rs6017335", 
+                "rs3092370", 
+                "rs1884613", 
+                "rs1884613", 
+                "rs3818247", 
+                "rs6103716", 
+                "rs6065725", 
+                "rs6031580", 
+                "rs4812829", 
+                "rs717248", 
+                "rs1028583", 
+                "rs4812831"
+            ]
+        }, 
+        "RALGPS2_LOC646976": {
+            "LD_block_id": "RALGPS2_LOC646976", 
+            "variant_list": [
+                "rs2773080", 
+                "rs2773080"
+            ]
+        }, 
+        "RBMS1": {
+            "LD_block_id": "RBMS1", 
+            "variant_list": [
+                "rs6718526", 
+                "rs7593730"
+            ]
+        }, 
+        "RORA": {
+            "LD_block_id": "RORA", 
+            "variant_list": [
+                "rs7164773"
+            ]
+        }, 
+        "RPL37P3_CHODL": {
+            "LD_block_id": "RPL37P3_CHODL", 
+            "variant_list": [
+                "rs2254434", 
+                "rs2254434", 
+                "rs200801", 
+                "rs200801", 
+                "rs158081", 
+                "rs158081"
+            ]
+        }, 
+        "RPL9P23": {
+            "LD_block_id": "RPL9P23", 
+            "variant_list": [
+                "rs9300039"
+            ]
+        }, 
+        "RPSAP52_HMGA2": {
+            "LD_block_id": "RPSAP52_HMGA2", 
+            "variant_list": [
+                "rs1531343", 
+                "rs1531343"
+            ]
+        }, 
+        "RUNX2_CLIC5": {
+            "LD_block_id": "RUNX2_CLIC5", 
+            "variant_list": [
+                "rs10498761", 
+                "rs10498761"
+            ]
+        }, 
+        "SLC30A8": {
+            "LD_block_id": "SLC30A8", 
+            "variant_list": [
+                "rs13266634"
+            ]
+        }, 
+        "SREBF1_RAI1_MIR33B": {
+            "LD_block_id": "SREBF1_RAI1_MIR33B", 
+            "variant_list": [
+                "rs11868035", 
+                "rs11868035", 
+                "rs11868035", 
+                "rs4925118", 
+                "rs1889018"
+            ]
+        }, 
+        "ST6GAL1": {
+            "LD_block_id": "ST6GAL1", 
+            "variant_list": [
+                "rs16861329"
+            ]
+        }, 
+        "STK32C": {
+            "LD_block_id": "STK32C", 
+            "variant_list": [
+                "rs7910485"
+            ]
+        }, 
+        "TCF7L2": {
+            "LD_block_id": "TCF7L2", 
+            "variant_list": [
+                "rs7901695", 
+                "rs12255372", 
+                "rs7903146", 
+                "rs4506565"
+            ]
+        }, 
+        "THADA": {
+            "LD_block_id": "THADA", 
+            "variant_list": [
+                "rs7578597"
+            ]
+        }, 
+        "TOM1L2": {
+            "LD_block_id": "TOM1L2", 
+            "variant_list": [
+                "rs6502618", 
+                "rs2236513"
+            ]
+        }, 
+        "TP53INP1": {
+            "LD_block_id": "TP53INP1", 
+            "variant_list": [
+                "rs896854"
+            ]
+        }, 
+        "TSPAN8_LGR5": {
+            "LD_block_id": "TSPAN8_LGR5", 
+            "variant_list": [
+                "rs1495377", 
+                "rs1495377", 
+                "rs7961581", 
+                "rs7961581"
+            ]
+        }, 
+        "TTC7B": {
+            "LD_block_id": "TTC7B", 
+            "variant_list": [
+                "rs942740", 
+                "rs1749718"
+            ]
+        }, 
+        "UBQLNL_LOC643810": {
+            "LD_block_id": "UBQLNL_LOC643810", 
+            "variant_list": [
+                "rs979752", 
+                "rs979752"
+            ]
+        }, 
+        "VPS26A": {
+            "LD_block_id": "VPS26A", 
+            "variant_list": [
+                "rs1802295"
+            ]
+        }, 
+        "WFS1": {
+            "LD_block_id": "WFS1", 
+            "variant_list": [
+                "rs10010131"
+            ]
+        }, 
+        "ZFAND6": {
+            "LD_block_id": "ZFAND6", 
+            "variant_list": [
+                "rs2903265", 
+                "rs11634397"
+            ]
+        }, 
+        "ZNF239_LOC100129906": {
+            "LD_block_id": "ZNF239_LOC100129906", 
+            "variant_list": [
+                "rs9326506", 
+                "rs9326506"
+            ]
+        }
+    }, 
+    "Hispanic": {
+        "ACTN2_LOC100129366": {
+            "LD_block_id": "ACTN2_LOC100129366", 
+            "variant_list": [
+                "rs819639", 
+                "rs819639"
+            ]
+        }, 
+        "C1orf220_LOC646976_RALGPS2": {
+            "LD_block_id": "C1orf220_LOC646976_RALGPS2", 
+            "variant_list": [
+                "rs2773080", 
+                "rs2773080", 
+                "rs3922812", 
+                "rs3922812"
+            ]
+        }, 
+        "C21orf94_N6AMT1": {
+            "LD_block_id": "C21orf94_N6AMT1", 
+            "variant_list": [
+                "rs2831605", 
+                "rs2831605"
+            ]
+        }, 
+        "CSN3": {
+            "LD_block_id": "CSN3", 
+            "variant_list": [
+                "rs3775745"
+            ]
+        }, 
+        "CXCR7_COPS8": {
+            "LD_block_id": "CXCR7_COPS8", 
+            "variant_list": [
+                "rs10192201", 
+                "rs10192201"
+            ]
+        }, 
+        "DYRK2_LOC341333": {
+            "LD_block_id": "DYRK2_LOC341333", 
+            "variant_list": [
+                "rs10492202", 
+                "rs10492202"
+            ]
+        }, 
+        "EGR2_NRBF2": {
+            "LD_block_id": "EGR2_NRBF2", 
+            "variant_list": [
+                "rs1509957", 
+                "rs1509957"
+            ]
+        }, 
+        "EPB41L3_LOC645355": {
+            "LD_block_id": "EPB41L3_LOC645355", 
+            "variant_list": [
+                "rs1941011", 
+                "rs1941011"
+            ]
+        }, 
+        "EPHA4": {
+            "LD_block_id": "EPHA4", 
+            "variant_list": [
+                "rs16862811"
+            ]
+        }, 
+        "GDNF_EGFLAM": {
+            "LD_block_id": "GDNF_EGFLAM", 
+            "variant_list": [
+                "rs270568", 
+                "rs270568"
+            ]
+        }, 
+        "GRIK1": {
+            "LD_block_id": "GRIK1", 
+            "variant_list": [
+                "rs458685"
+            ]
+        }, 
+        "HPSE2": {
+            "LD_block_id": "HPSE2", 
+            "variant_list": [
+                "rs1159006"
+            ]
+        }, 
+        "HTR4_ADRB2": {
+            "LD_block_id": "HTR4_ADRB2", 
+            "variant_list": [
+                "rs1833714", 
+                "rs1833714"
+            ]
+        }, 
+        "IL34": {
+            "LD_block_id": "IL34", 
+            "variant_list": [
+                "rs3813905"
+            ]
+        }, 
+        "KCNE4_SCG2": {
+            "LD_block_id": "KCNE4_SCG2", 
+            "variant_list": [
+                "rs1517645", 
+                "rs1517645"
+            ]
+        }, 
+        "KRT18P33_LOC729348": {
+            "LD_block_id": "KRT18P33_LOC729348", 
+            "variant_list": [
+                "rs6728803", 
+                "rs6728803"
+            ]
+        }, 
+        "LCORL": {
+            "LD_block_id": "LCORL", 
+            "variant_list": [
+                "rs10516322"
+            ]
+        }, 
+        "LINGO2": {
+            "LD_block_id": "LINGO2", 
+            "variant_list": [
+                "rs981864"
+            ]
+        }, 
+        "LOC100128253_LOC100129223": {
+            "LD_block_id": "LOC100128253_LOC100129223", 
+            "variant_list": [
+                "rs4766119", 
+                "rs4766119"
+            ]
+        }, 
+        "LOC100128403_LOC441732": {
+            "LD_block_id": "LOC100128403_LOC441732", 
+            "variant_list": [
+                "rs8033124", 
+                "rs8033124"
+            ]
+        }, 
+        "LOC344741_RPL38P1": {
+            "LD_block_id": "LOC344741_RPL38P1", 
+            "variant_list": [
+                "rs1879976", 
+                "rs1879976"
+            ]
+        }, 
+        "LOC391696_ANKRD50": {
+            "LD_block_id": "LOC391696_ANKRD50", 
+            "variant_list": [
+                "rs1498024", 
+                "rs1498024", 
+                "rs10518442"
+            ]
+        }, 
+        "LOC399950_NCAM1": {
+            "LD_block_id": "LOC399950_NCAM1", 
+            "variant_list": [
+                "rs951432", 
+                "rs951432"
+            ]
+        }, 
+        "LOC642337": {
+            "LD_block_id": "LOC642337", 
+            "variant_list": [
+                "rs1932465"
+            ]
+        }, 
+        "LOC729993": {
+            "LD_block_id": "LOC729993", 
+            "variant_list": [
+                "rs149228"
+            ]
+        }, 
+        "MIR301B_MIR130B": {
+            "LD_block_id": "MIR301B_MIR130B", 
+            "variant_list": [
+                "rs861844", 
+                "rs861844"
+            ]
+        }, 
+        "NCKAP5_MGAT5": {
+            "LD_block_id": "NCKAP5_MGAT5", 
+            "variant_list": [
+                "rs4522658", 
+                "rs4522658"
+            ]
+        }, 
+        "NMT": {
+            "LD_block_id": "NMT", 
+            "variant_list": [
+                "rs3099797"
+            ]
+        }, 
+        "NXPH1": {
+            "LD_block_id": "NXPH1", 
+            "variant_list": [
+                "rs757705"
+            ]
+        }, 
+        "OR13D1_OR13D3P": {
+            "LD_block_id": "OR13D1_OR13D3P", 
+            "variant_list": [
+                "rs10512332", 
+                "rs10512332"
+            ]
+        }, 
+        "PARD3B": {
+            "LD_block_id": "PARD3B", 
+            "variant_list": [
+                "rs849230"
+            ]
+        }, 
+        "PER3": {
+            "LD_block_id": "PER3", 
+            "variant_list": [
+                "rs10462020"
+            ]
+        }, 
+        "PLEKHG1": {
+            "LD_block_id": "PLEKHG1", 
+            "variant_list": [
+                "rs6919370"
+            ]
+        }, 
+        "PTPRD": {
+            "LD_block_id": "PTPRD", 
+            "variant_list": [
+                "rs649891"
+            ]
+        }, 
+        "RORA": {
+            "LD_block_id": "RORA", 
+            "variant_list": [
+                "rs7164773"
+            ]
+        }, 
+        "RUNX2_CLIC5": {
+            "LD_block_id": "RUNX2_CLIC5", 
+            "variant_list": [
+                "rs10498761", 
+                "rs10498761"
+            ]
+        }, 
+        "SLC24A3": {
+            "LD_block_id": "SLC24A3", 
+            "variant_list": [
+                "rs6136651"
+            ]
+        }, 
+        "SORBS1": {
+            "LD_block_id": "SORBS1", 
+            "variant_list": [
+                "rs1536558"
+            ]
+        }, 
+        "TMEFF2": {
+            "LD_block_id": "TMEFF2", 
+            "variant_list": [
+                "rs10497723"
+            ]
+        }, 
+        "TOMM7": {
+            "LD_block_id": "TOMM7", 
+            "variant_list": [
+                "rs2240727"
+            ]
+        }, 
+        "UBQLNL_LOC643810": {
+            "LD_block_id": "UBQLNL_LOC643810", 
+            "variant_list": [
+                "rs979752", 
+                "rs979752"
+            ]
+        }
+    }, 
+    "NativeAmerican": {
+        "ALMS1": {
+            "LD_block_id": "ALMS1", 
+            "variant_list": [
+                "rs10496191", 
+                "rs10496193"
+            ]
+        }, 
+        "BANK1_SLC39A8": {
+            "LD_block_id": "BANK1_SLC39A8", 
+            "variant_list": [
+                "rs460610", 
+                "rs460610"
+            ]
+        }, 
+        "C14orf145": {
+            "LD_block_id": "C14orf145", 
+            "variant_list": [
+                "rs10498547", 
+                "rs1959225"
+            ]
+        }, 
+        "C1orf220_LOC646976": {
+            "LD_block_id": "C1orf220_LOC646976", 
+            "variant_list": [
+                "rs3922812", 
+                "rs3922812"
+            ]
+        }, 
+        "CDH10_MSNL1": {
+            "LD_block_id": "CDH10_MSNL1", 
+            "variant_list": [
+                "rs10520926", 
+                "rs10520926"
+            ]
+        }, 
+        "CDKAL1": {
+            "LD_block_id": "CDKAL1", 
+            "variant_list": [
+                "rs9295491", 
+                "rs9295496", 
+                "rs9295497", 
+                "rs7756992", 
+                "rs7754840", 
+                "rs9465948", 
+                "rs9465946", 
+                "rs4076112", 
+                "rs4710965", 
+                "rs10946425", 
+                "rs4351239", 
+                "rs898165", 
+                "rs7758851", 
+                "rs1498426", 
+                "rs9295479", 
+                "rs6937610", 
+                "rs1004172", 
+                "rs6456396", 
+                "rs9465982", 
+                "rs6935317", 
+                "rs9460612", 
+                "rs9295501", 
+                "rs1569660", 
+                "rs2328528", 
+                "rs9295488", 
+                "rs12527222", 
+                "rs4712580", 
+                "rs12055489"
+            ]
+        }, 
+        "CDKN2BAS_LOC729983_DMRTA1": {
+            "LD_block_id": "CDKN2BAS_LOC729983_DMRTA1", 
+            "variant_list": [
+                "rs2025798", 
+                "rs2025798", 
+                "rs10811661", 
+                "rs10811661"
+            ]
+        }, 
+        "CLK4": {
+            "LD_block_id": "CLK4", 
+            "variant_list": [
+                "rs543862"
+            ]
+        }, 
+        "CLLU1_LOC100132126": {
+            "LD_block_id": "CLLU1_LOC100132126", 
+            "variant_list": [
+                "rs7301434", 
+                "rs7301434"
+            ]
+        }, 
+        "EGR2_NRBF2": {
+            "LD_block_id": "EGR2_NRBF2", 
+            "variant_list": [
+                "rs1509957", 
+                "rs1509957"
+            ]
+        }, 
+        "ENDOD1": {
+            "LD_block_id": "ENDOD1", 
+            "variant_list": [
+                "rs586421"
+            ]
+        }, 
+        "EXT2": {
+            "LD_block_id": "EXT2", 
+            "variant_list": [
+                "rs3740878"
+            ]
+        }, 
+        "FANCF": {
+            "LD_block_id": "FANCF", 
+            "variant_list": [
+                "rs10500938"
+            ]
+        }, 
+        "FTO": {
+            "LD_block_id": "FTO", 
+            "variant_list": [
+                "rs8050136", 
+                "rs10521308"
+            ]
+        }, 
+        "GULP1_DIRC1": {
+            "LD_block_id": "GULP1_DIRC1", 
+            "variant_list": [
+                "rs10497681", 
+                "rs10497681"
+            ]
+        }, 
+        "HHEX_EXOC6": {
+            "LD_block_id": "HHEX_EXOC6", 
+            "variant_list": [
+                "rs1111875", 
+                "rs1111875", 
+                "rs2096177", 
+                "rs2096177", 
+                "rs10509646", 
+                "rs10509646"
+            ]
+        }, 
+        "IGF2BP2": {
+            "LD_block_id": "IGF2BP2", 
+            "variant_list": [
+                "rs6763887", 
+                "rs4402960", 
+                "rs16860234", 
+                "rs6777038"
+            ]
+        }, 
+        "ISM1_TASP1": {
+            "LD_block_id": "ISM1_TASP1", 
+            "variant_list": [
+                "rs477184", 
+                "rs477184", 
+                "rs1223271", 
+                "rs1223271"
+            ]
+        }, 
+        "LOC100130532_KIAA1239": {
+            "LD_block_id": "LOC100130532_KIAA1239", 
+            "variant_list": [
+                "rs10517403", 
+                "rs10517403"
+            ]
+        }, 
+        "LOC149844_BMP2_FUSIP1P2": {
+            "LD_block_id": "LOC149844_BMP2_FUSIP1P2", 
+            "variant_list": [
+                "rs6140410", 
+                "rs6140410", 
+                "rs958435", 
+                "rs958435"
+            ]
+        }, 
+        "LOC222052_LOC730338": {
+            "LD_block_id": "LOC222052_LOC730338", 
+            "variant_list": [
+                "rs1486171", 
+                "rs1486171"
+            ]
+        }, 
+        "LOC387761": {
+            "LD_block_id": "LOC387761", 
+            "variant_list": [
+                "rs7480010"
+            ]
+        }, 
+        "LOC728114": {
+            "LD_block_id": "LOC728114", 
+            "variant_list": [
+                "rs1859441"
+            ]
+        }, 
+        "MIR100_GLULL3": {
+            "LD_block_id": "MIR100_GLULL3", 
+            "variant_list": [
+                "rs516415", 
+                "rs516415"
+            ]
+        }, 
+        "MKLN1": {
+            "LD_block_id": "MKLN1", 
+            "variant_list": [
+                "rs3847109"
+            ]
+        }, 
+        "MMP16": {
+            "LD_block_id": "MMP16", 
+            "variant_list": [
+                "rs6994019"
+            ]
+        }, 
+        "MTHFD2L": {
+            "LD_block_id": "MTHFD2L", 
+            "variant_list": [
+                "rs1072389"
+            ]
+        }, 
+        "NEGR1_KRT8P21": {
+            "LD_block_id": "NEGR1_KRT8P21", 
+            "variant_list": [
+                "rs1775368", 
+                "rs1775368"
+            ]
+        }, 
+        "NMD3_LOC100129403": {
+            "LD_block_id": "NMD3_LOC100129403", 
+            "variant_list": [
+                "rs9290075", 
+                "rs9290075"
+            ]
+        }, 
+        "PLEKHG1": {
+            "LD_block_id": "PLEKHG1", 
+            "variant_list": [
+                "rs6919370"
+            ]
+        }, 
+        "PPFIA2_CCDC59": {
+            "LD_block_id": "PPFIA2_CCDC59", 
+            "variant_list": [
+                "rs10506855", 
+                "rs10506855"
+            ]
+        }, 
+        "PTMAP5_LOC647317": {
+            "LD_block_id": "PTMAP5_LOC647317", 
+            "variant_list": [
+                "rs9285325", 
+                "rs9285325", 
+                "rs1537779", 
+                "rs1537779"
+            ]
+        }, 
+        "PTPRT": {
+            "LD_block_id": "PTPRT", 
+            "variant_list": [
+                "rs6030447"
+            ]
+        }, 
+        "RPL13AP25": {
+            "LD_block_id": "RPL13AP25", 
+            "variant_list": [
+                "rs54939"
+            ]
+        }, 
+        "RPL7P10_RPL10AP4": {
+            "LD_block_id": "RPL7P10_RPL10AP4", 
+            "variant_list": [
+                "rs10493685", 
+                "rs10493685"
+            ]
+        }, 
+        "SETX": {
+            "LD_block_id": "SETX", 
+            "variant_list": [
+                "rs3780825"
+            ]
+        }, 
+        "SGOL1_VENTXP7": {
+            "LD_block_id": "SGOL1_VENTXP7", 
+            "variant_list": [
+                "rs2366760", 
+                "rs2366760", 
+                "rs1500415", 
+                "rs1500415"
+            ]
+        }, 
+        "SLC30A8_MED30": {
+            "LD_block_id": "SLC30A8_MED30", 
+            "variant_list": [
+                "rs10505309", 
+                "rs10505309", 
+                "rs13266634", 
+                "rs7002176", 
+                "rs1995222", 
+                "rs1995222"
+            ]
+        }, 
+        "TBX19_LOC441914": {
+            "LD_block_id": "TBX19_LOC441914", 
+            "variant_list": [
+                "rs1886004", 
+                "rs1886004"
+            ]
+        }, 
+        "TCF7L2": {
+            "LD_block_id": "TCF7L2", 
+            "variant_list": [
+                "rs10509970"
+            ]
+        }, 
+        "THSD7A_TMEM106B": {
+            "LD_block_id": "THSD7A_TMEM106B", 
+            "variant_list": [
+                "rs10488205", 
+                "rs10488205"
+            ]
+        }, 
+        "TMEM135": {
+            "LD_block_id": "TMEM135", 
+            "variant_list": [
+                "rs2130154", 
+                "rs2048973"
+            ]
+        }, 
+        "TSEN2": {
+            "LD_block_id": "TSEN2", 
+            "variant_list": [
+                "rs10510422"
+            ]
+        }, 
+        "USH1C": {
+            "LD_block_id": "USH1C", 
+            "variant_list": [
+                "rs2190454"
+            ]
+        }, 
+        "ZBTB16": {
+            "LD_block_id": "ZBTB16", 
+            "variant_list": [
+                "rs672849", 
+                "rs686989"
+            ]
+        }, 
+        "ZC3H12C": {
+            "LD_block_id": "ZC3H12C", 
+            "variant_list": [
+                "rs1789369"
+            ]
+        }, 
+        "ZNF385D": {
+            "LD_block_id": "ZNF385D", 
+            "variant_list": [
+                "rs424695"
+            ]
+        }
+    }
+}

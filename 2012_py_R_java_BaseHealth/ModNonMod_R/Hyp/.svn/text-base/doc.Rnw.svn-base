@@ -1,0 +1,16 @@
+\documentclass{report}
+\usepackage[margin=1cm]{geometry}
+\SweaveOpts{prefix.string=EPFL}
+\begin{document}
+\title{HeartD SNP Documentation using \LaTeX{} }
+\author{Pouria Mojabi, \texttt{mojabi@genophen.com}}
+\date{\today}
+\maketitle
+\begin{flushleft}
+\small
+<<echo=T>>=
+setwd("/home/pouria3/workspace/GenStat/trunk/Hyp")
+source("Snp2.R")
+@
+\end{flushleft}
+\end{document}

@@ -1,0 +1,350 @@
+
+ DiseaseID : 5
+Found a statistically insignificant OR : 
+      PMID           dbSNP  BroadEthnicity NarrowEthnicity AG_Plus ORValue      CI FreqControl FreqPop ModelType Pvalue
+29 9343467 rs429358,rs7412 AfricanAmerican AfricanAmerican    <NA>     0.9 0.3-2.8        0.08      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP  BroadEthnicity NarrowEthnicity AG_Plus ORValue    CI FreqControl FreqPop ModelType Pvalue
+30 9343467 rs429358,rs7412 AfricanAmerican AfricanAmerican    <NA>     1.2 0.8-2       0.021      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue       CI FreqControl FreqPop ModelType Pvalue
+34 9343467 rs429358,rs7412          Asian        Japanese    <NA>     2.4 0.4-15.4       0.008      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue      CI FreqControl FreqPop ModelType Pvalue
+35 9343467 rs429358,rs7412          Asian        Japanese    <NA>     0.9 0.4-2.5       0.069      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue       CI FreqControl FreqPop ModelType Pvalue
+39 9343467 rs429358,rs7412          Asian        Japanese    <NA>     1.1 0.1-17.2       0.004      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue    CI FreqControl FreqPop ModelType Pvalue
+43 9343467 rs429358,rs7412      Caucasian         Various    <NA>     0.6 0.2-2       0.008      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue       CI FreqControl FreqPop ModelType Pvalue
+46 9343467 rs429358,rs7412       Hispanic        Hispanic    <NA>     2.6 0.2-33.3       0.004      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue       CI FreqControl FreqPop ModelType Pvalue
+47 9343467 rs429358,rs7412       Hispanic        Hispanic    <NA>     3.2 0.9-11.6       0.008      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue      CI FreqControl FreqPop ModelType Pvalue
+48 9343467 rs429358,rs7412       Hispanic        Hispanic    <NA>     0.6 0.3-1.3        0.12      NA  Additive     NA
+Found a statistically insignificant OR : 
+      PMID           dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue      CI FreqControl FreqPop ModelType Pvalue
+51 9343467 rs429358,rs7412       Hispanic        Hispanic    <NA>     2.2 0.7-6.7       0.019      NA  Additive     NA
+Found a statistically insignificant OR : 
+       PMID     dbSNP BroadEthnicity   NarrowEthnicity AG_Plus ORValue         CI FreqControl FreqPop ModelType  Pvalue
+55 21059989 rs4895298       Hispanic CaribbeanHispanic       G   0.705 0.579-0858          NA      NA  Additive 0.01078
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+       PMID      dbSNP BroadEthnicity   NarrowEthnicity AG_Plus ORValue          CI FreqControl FreqPop ModelType   Pvalue
+1 21059989 rs10197851       Hispanic CaribbeanHispanic       A   0.713 0.602-0.846          NA      NA  Additive 0.002209
+2 21059989 rs10197851       Hispanic CaribbeanHispanic       G   1.000        <NA>          NA      NA  Additive       NA
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.0862069 0.3620690 0.5517241
+  Successful convergence.
+0.02538551 0.01823263 0.01306834
+       snpID Genotype      freq       OR     NewOR BroadEthnicity   NarrowEthnicity    name
+1 rs10197851     <NA> 0.0000000 0.000000 0.0000000       Hispanic CaribbeanHispanic HPCAL1 
+2 rs10197851       GG 0.0862069 1.000000 1.6018732       Hispanic CaribbeanHispanic HPCAL1 
+3 rs10197851       AG 0.3620690 0.713000 1.1421309       Hispanic CaribbeanHispanic HPCAL1 
+4 rs10197851       AA 0.5517241 0.508369 0.8143454       Hispanic CaribbeanHispanic HPCAL1 
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+       PMID      dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue        CI FreqControl FreqPop ModelType   Pvalue
+3 20460622 rs11136000      Caucasian EuropeanVarious       C    1.00      <NA>          NA      NA  Additive       NA
+4 20460622 rs11136000      Caucasian EuropeanVarious       T    0.85 0.82-0.88          NA      NA  Additive 1.62e-16
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.4070796 0.4867257 0.1061947
+  Successful convergence.
+0.01779735 0.01516825 0.01292236
+       snpID Genotype      freq     OR     NewOR BroadEthnicity NarrowEthnicity name
+1 rs11136000     <NA> 0.0000000 0.0000 0.0000000      Caucasian EuropeanVarious  CLU
+2 rs11136000       CC 0.4070796 1.0000 1.1143697      Caucasian EuropeanVarious  CLU
+3 rs11136000       CT 0.4867257 0.8500 0.9472148      Caucasian EuropeanVarious  CLU
+4 rs11136000       TT 0.1061947 0.7225 0.8051295      Caucasian EuropeanVarious  CLU
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+       PMID      dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue        CI FreqControl FreqPop ModelType  Pvalue
+5 20460622 rs11771145      Caucasian EuropeanVarious       G    1.00      <NA>          NA      NA  Additive      NA
+6 20460622 rs11771145      Caucasian EuropeanVarious       A    0.91 0.87-0.94          NA      NA  Additive 1.7e-06
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.4159292 0.4690265 0.1150442
+  Successful convergence.
+0.01704036 0.01553057 0.01415254
+       snpID Genotype      freq     OR     NewOR BroadEthnicity NarrowEthnicity  name
+1 rs11771145     <NA> 0.0000000 0.0000 0.0000000      Caucasian EuropeanVarious EPHA1
+2 rs11771145       GG 0.4159292 1.0000 1.0661500      Caucasian EuropeanVarious EPHA1
+3 rs11771145       GA 0.4690265 0.9100 0.9701975      Caucasian EuropeanVarious EPHA1
+4 rs11771145       AA 0.1150442 0.8281 0.8828762      Caucasian EuropeanVarious EPHA1
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+       PMID    dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue      CI FreqControl FreqPop ModelType Pvalue
+7 17192785 rs165932          Asian              NA       G    1.00    <NA>          NA      NA  Additive     NA
+8 17192785 rs165932          Asian              NA       T    0.92 .86-.98          NA      NA  Additive  0.009
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Averaging freqs across all asian populations"
+Fetched Freq for CHD
+Fetched Freq for CHB 
+Fetched Freq for JPT
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.08516973 0.54967262 0.36515765
+  Successful convergence.
+0.01774816 0.01635151 0.01506312
+     snpID Genotype       freq     OR     NewOR BroadEthnicity NarrowEthnicity  name
+1 rs165932     <NA> 0.00000000 0.0000 0.0000000          Asian              NA PSEN1
+2 rs165932       GG 0.08516973 1.0000 1.1112343          Asian              NA PSEN1
+3 rs165932       TG 0.54967262 0.9200 1.0223348          Asian              NA PSEN1
+4 rs165932       TT 0.36515765 0.8464 0.9405497          Asian              NA PSEN1
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+        PMID    dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue      CI FreqControl FreqPop ModelType Pvalue
+9  17192785 rs165932      Caucasian              NA       G    0.92 .86-.98          NA      NA  Additive  0.009
+10 17192785 rs165932      Caucasian              NA       T    1.00    <NA>          NA      NA  Additive     NA
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.3185841 0.5044248 0.1769912
+  Successful convergence.
+0.01713993 0.01579039 0.01454552
+     snpID Genotype      freq     OR     NewOR BroadEthnicity NarrowEthnicity  name
+1 rs165932     <NA> 0.0000000 0.0000 0.0000000      Caucasian              NA PSEN1
+2 rs165932       TT 0.3185841 1.0000 1.0724880      Caucasian              NA PSEN1
+3 rs165932       TG 0.5044248 0.9200 0.9866891      Caucasian              NA PSEN1
+4 rs165932       GG 0.1769912 0.8464 0.9077535      Caucasian              NA PSEN1
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+        PMID     dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue      CI FreqControl FreqPop ModelType Pvalue
+11 17192785 rs1799990          Asian              NA       G    0.89 .81-.98          NA      NA  Additive   0.02
+12 17192785 rs1799990          Asian              NA       A    1.00    <NA>          NA      NA  Additive     NA
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Averaging freqs across all asian populations"
+Fetched Freq for CHD
+Fetched Freq for CHB 
+Fetched Freq for JPT
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.960811446 0.036833519 0.002355035
+  Successful convergence.
+0.01607197 0.01432938 0.01277328
+      snpID Genotype        freq     OR     NewOR BroadEthnicity NarrowEthnicity  name
+1 rs1799990     <NA> 0.000000000 0.0000 0.0000000          Asian              NA PRNP 
+2 rs1799990       AA 0.960811446 1.0000 1.0045717          Asian              NA PRNP 
+3 rs1799990       AG 0.036833519 0.8900 0.8940684          Asian              NA PRNP 
+4 rs1799990       GG 0.002355035 0.7921 0.7957205          Asian              NA PRNP 
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+        PMID     dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue      CI FreqControl FreqPop ModelType Pvalue
+13 17192785 rs1799990      Caucasian              NA       A    1.00    <NA>          NA      NA  Additive     NA
+14 17192785 rs1799990      Caucasian              NA       G    0.89 .81-.98          NA      NA  Additive   0.02
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.4424779 0.4247788 0.1327434
+  Successful convergence.
+0.01726417 0.0153944 0.01372406
+      snpID Genotype      freq     OR     NewOR BroadEthnicity NarrowEthnicity  name
+1 rs1799990     <NA> 0.0000000 0.0000 0.0000000      Caucasian              NA PRNP 
+2 rs1799990       AA 0.4424779 1.0000 1.0803983      Caucasian              NA PRNP 
+3 rs1799990       AG 0.4247788 0.8900 0.9615583      Caucasian              NA PRNP 
+4 rs1799990       GG 0.1327434 0.7921 0.8557743      Caucasian              NA PRNP 
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+        PMID     dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue        CI FreqControl FreqPop ModelType   Pvalue
+15 20460622 rs2043948      Caucasian EuropeanVarious       C    1.00      <NA>          NA      NA  Additive       NA
+16 20460622 rs2043948      Caucasian EuropeanVarious       T    1.13 1.06-1.22          NA      NA  Additive 0.000446
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.8715596 0.1284404 0.0000000
+  Successful convergence.
+0.01574182 0.01775193 0.02001349
+      snpID Genotype      freq     OR     NewOR BroadEthnicity NarrowEthnicity  name
+1 rs2043948     <NA> 0.0000000 0.0000 0.0000000      Caucasian EuropeanVarious LTBP2
+2 rs2043948       CC 0.8715596 1.0000 0.9836056      Caucasian EuropeanVarious LTBP2
+3 rs2043948       CT 0.1284404 1.1300 1.1114744      Caucasian EuropeanVarious LTBP2
+4 rs2043948       TT 0.0000000 1.2769 1.2559660      Caucasian EuropeanVarious LTBP2
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+        PMID     dbSNP BroadEthnicity        NarrowEthnicity AG_Plus ORValue       CI FreqControl FreqPop ModelType Pvalue
+17 21220680 rs2070045          Asian Japanese_Chinese_Malay       T    1.00     <NA>          NA      NA  Additive     NA
+18 21220680 rs2070045          Asian Japanese_Chinese_Malay       G    1.27 1.1-1.41          NA      NA  Additive  0.001
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Averaging freqs across all asian populations"
+Not including JPT for CHINESE 
+Fetched Freq for CHD
+Fetched Freq for CHB 
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.1933831 0.4716541 0.3349628
+  Successful convergence.
+0.01205966 0.01526606 0.01930831
+      snpID Genotype      freq     OR     NewOR BroadEthnicity        NarrowEthnicity  name
+1 rs2070045     <NA> 0.0000000 0.0000 0.0000000          Asian Japanese_Chinese_Malay SORL1
+2 rs2070045       TT 0.1933831 1.0000 0.7507225          Asian Japanese_Chinese_Malay SORL1
+3 rs2070045       TG 0.4716541 1.2700 0.9534176          Asian Japanese_Chinese_Malay SORL1
+4 rs2070045       GG 0.3349628 1.6129 1.2108404          Asian Japanese_Chinese_Malay SORL1
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+        PMID     dbSNP BroadEthnicity         NarrowEthnicity AG_Plus ORValue        CI FreqControl FreqPop ModelType Pvalue
+19 21220680 rs2070045      Caucasian EuropeanVarious_WhiteAm       T    1.00      <NA>          NA      NA  Additive     NA
+20 21220680 rs2070045      Caucasian EuropeanVarious_WhiteAm       G    1.08 1.01-1.14          NA      NA  Additive   0.02
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.55357143 0.39285714 0.05357143
+  Successful convergence.
+0.01538963 0.01660036 0.01790462
+      snpID Genotype       freq     OR     NewOR BroadEthnicity         NarrowEthnicity  name
+1 rs2070045     <NA> 0.00000000 0.0000 0.0000000      Caucasian EuropeanVarious_WhiteAm SORL1
+2 rs2070045       TT 0.55357143 1.0000 0.9612554      Caucasian EuropeanVarious_WhiteAm SORL1
+3 rs2070045       TG 0.39285714 1.0800 1.0381556      Caucasian EuropeanVarious_WhiteAm SORL1
+4 rs2070045       GG 0.05357143 1.1664 1.1212092      Caucasian EuropeanVarious_WhiteAm SORL1
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+        PMID     dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue        CI FreqControl FreqPop ModelType  Pvalue
+21 20460622 rs2825544      Caucasian EuropeanVarious       T    1.00      <NA>          NA      NA  Additive      NA
+22 20460622 rs2825544      Caucasian EuropeanVarious       C    1.09 1.05-1.13          NA      NA  Additive 2.1e-05
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.4247788 0.4424779 0.1327434
+  Successful convergence.
+0.01504191 0.01637351 0.01782085
+      snpID Genotype      freq     OR     NewOR BroadEthnicity NarrowEthnicity            name
+1 rs2825544     <NA> 0.0000000 0.0000 0.0000000      Caucasian EuropeanVarious SLC6A6P_RPL37P4
+2 rs2825544       TT 0.4247788 1.0000 0.9392047      Caucasian EuropeanVarious SLC6A6P_RPL37P4
+3 rs2825544       TC 0.4424779 1.0900 1.0237332      Caucasian EuropeanVarious SLC6A6P_RPL37P4
+4 rs2825544       CC 0.1327434 1.1881 1.1158680      Caucasian EuropeanVarious SLC6A6P_RPL37P4
+**********************************************************************************************************************
+
+in Genotype sec;quering SNPInfo for frequencies ... 
+       PMID     dbSNP BroadEthnicity  NarrowEthnicity AG_Plus ORValue        CI FreqControl FreqPop ModelType Pvalue
+23 17998437 RS3844508      Caucasian Canadian_British      GG    1.00      <NA>       0.009      NA  dominant     NA
+24 17998437 RS3844508      Caucasian Canadian_British      AG    1.00      <NA>       0.176      NA  dominant     NA
+25 17998437 RS3844508      Caucasian Canadian_British      AA    0.72 0.52-0.98       0.815      NA  dominant   0.04
+[1] "Frequencies are given, I am not going to hapmap!"
+[1] "Frequencies are given, I am not going to hapmap!"
+[1] "Frequencies are given, I am not going to hapmap!"
+Data Gathering Completed, Solving the equations ...
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.176 0.009 0.815
+  Successful convergence.
+0.02063957 0.0206396 0.01494689
+      snpID Genotype  freq   OR     NewOR BroadEthnicity  NarrowEthnicity name
+1 RS3844508     <NA> 0.000 0.00 0.0000000      Caucasian Canadian_British ESR1
+2 RS3844508       AG 0.176 1.00 1.2960839      Caucasian Canadian_British ESR1
+3 RS3844508       GG 0.009 1.00 1.2960859      Caucasian Canadian_British ESR1
+4 RS3844508       AA 0.815 0.72 0.9331816      Caucasian Canadian_British ESR1
+**********************************************************************************************************************
+
+in Allele sec;quering SNPInfo for Major Minor Allele ...
+        PMID     dbSNP BroadEthnicity NarrowEthnicity AG_Plus ORValue        CI FreqControl FreqPop ModelType   Pvalue
+26 20460622 rs3851179      Caucasian EuropeanVarious       T    0.87 0.84-0.91          NA      NA  Additive 3.16e-12
+27 20460622 rs3851179      Caucasian EuropeanVarious       C    1.00      <NA>          NA      NA  Additive       NA
+
+Calculate Genotype Frequencies based on Hardy-Weinberg principle 
+No Freq Found... Going to HapMap
+[1] "Data Gathering Completed, Solving the equations ..."
+The following object(s) are masked from 'params (position 3)':
+
+    Freq, OR
+solving non linear equations ... 
+ Freqs Are:  [1] 0.3539823 0.4690265 0.1769912
+  Successful convergence.
+0.01782671 0.01554517 0.01355169
+      snpID Genotype      freq     OR     NewOR BroadEthnicity NarrowEthnicity                name
+1 rs3851179     <NA> 0.0000000 0.0000 0.0000000      Caucasian EuropeanVarious LOC100130431_FNTAL1
+2 rs3851179       CC 0.3539823 1.0000 1.1162415      Caucasian EuropeanVarious LOC100130431_FNTAL1
+3 rs3851179       CT 0.4690265 0.8700 0.9711244      Caucasian EuropeanVarious LOC100130431_FNTAL1
+4 rs3851179       TT 0.1769912 0.7569 0.8448782      Caucasian EuropeanVarious LOC100130431_FNTAL1
+**********************************************************************************************************************
+
+WTF!!!
+I am guessing same snp, same broadethnicity but different narrow ethnicity ... 
+      PMID           dbSNP  BroadEthnicity NarrowEthnicity AG_Plus   ORValue       CI FreqControl FreqPop ModelType Pvalue
+28 9343467 rs429358,rs7412 AfricanAmerican AfricanAmerican      CC 12.500000 8.8-17.7       0.021      NA  Additive     NA
+29 9343467 rs429358,rs7412 AfricanAmerican AfricanAmerican    <NA>  1.000001  0.3-2.8       0.080      NA  Additive     NA
+30 9343467 rs429358,rs7412 AfricanAmerican AfricanAmerican    <NA>  1.000001    0.8-2       0.021      NA  Additive     NA
+31 9343467 rs429358,rs7412 AfricanAmerican AfricanAmerican    <NA>  0.600000  0.5-0.9       0.129      NA  Additive     NA
+32 9343467 rs429358,rs7412 AfricanAmerican AfricanAmerican    <NA>  2.700000  2.2-3.2       0.318      NA  Additive     NA
+33 9343467 rs429358,rs7412 AfricanAmerican AfricanAmerican    <NA>  1.000000     <NA>       0.504      NA  Additive     NA
+$$$$$$$
+                                  9                                8                                  7                                6
+1 /home/pouria3/Dropbox/EngExl/Hyp/ /home/pouria3/Dropbox/EngExl/DP/ /home/pouria3/Dropbox/EngExl/Strk/ /home/pouria3/Dropbox/EngExl/HD/
+                                  5                                 4                                 1
+1 /home/pouria3/Dropbox/EngExl/Alz/ /home/pouria3/Dropbox/EngExl/CRC/ /home/pouria3/Dropbox/EngExl/T2D/

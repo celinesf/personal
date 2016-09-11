@@ -1,0 +1,45 @@
+Scoring disease 103, found 1 SNPs 
+SELECT * FROM SNPOR WHERE DiseaseID=103 AND BroadEthnicity='Caucasian' AND dbsnp='rs1045485'
+<MySQLdb.cursors.Cursor object at 0x7f694a8046d0>
+0.0547
+0.84-1
+None
+0.91-1
+None
+
+Error: unable to fecth data SELECT * FROM SNPOR WHERE DiseaseID=103 AND BroadEthnicity='Caucasian' AND dbsnp='rs1045485'
+SELECT * FROM SNPOR WHERE DiseaseID=103 AND BroadEthnicity='AfricanAmerican' AND dbsnp='rs1045485'
+<MySQLdb.cursors.Cursor object at 0x7f694a8046d0>
+None
+0.67-1.30
+None
+None
+Error: unable to fecth data SELECT * FROM SNPOR WHERE DiseaseID=103 AND BroadEthnicity='AfricanAmerican' AND dbsnp='rs1045485'
+0.0547
+0.84-1
+None
+0.91-1
+None
+
+Error: unable to fecth data SELECT * FROM SNPOR WHERE DiseaseID=103 AND PMID=19330030 AND dbsnp='rs1045485'
+None
+0.67-1.30
+None
+None
+None
+0.76-1.08
+None
+None
+0.14
+.85-1.02
+None
+None
+1 0
+0.0547
+0.84-1
+None
+0.91-1
+None
+
+Error: unable to fecth data SELECT * FROM SNPOR WHERE DiseaseID=103 AND GenePaper='CASP8' AND dbsnp='rs1045485'
+Error:GeneNextBio SELECT DISTINCT GeneNextBio FROM SNPOR WHERE DiseaseID = 103 AND GeneNextBio is not NULL AND GeneNextBio != 'NBNA' AND GeneNextBio != 'NBNF' and  AND dbsnp='rs1045485' 

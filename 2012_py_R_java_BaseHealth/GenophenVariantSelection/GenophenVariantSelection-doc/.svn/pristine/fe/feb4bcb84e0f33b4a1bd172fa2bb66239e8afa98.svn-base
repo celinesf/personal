@@ -1,0 +1,437 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{lscape}
+\end_preamble
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Variant selection algorithm 
+\end_layout
+
+\begin_layout Standard
+For a specific disease and ethnicity, we want to chose a list of genetic
+ variations (called variants)
+\end_layout
+
+\begin_layout Itemize
+with convising evidence of association (i.e., replicated data).
+\end_layout
+
+\begin_layout Itemize
+independent from each other (i.e., belong to different genes and genes are
+ not in Linkage disequilibrium.
+\end_layout
+
+\begin_layout Standard
+For each of those chosen variations we want to use the best association
+ value (odd ratio):
+\end_layout
+
+\begin_layout Itemize
+Largest sample size
+\end_layout
+
+\begin_layout Itemize
+Best study design
+\end_layout
+
+\begin_layout Standard
+The following describes the logic we use decide which variations and odd
+ ratios will be considered for a spcific disease and ethnicity.
+\end_layout
+
+\begin_layout Section
+Variant Scoring process
+\end_layout
+
+\begin_layout Standard
+As an initial phase, each studied variant is assigned a score describing
+ the strenght of its association with a specific disease, as well as a score
+ of association with this disease in a specific ethnicity.
+\end_layout
+
+\begin_layout Standard
+In the process, we select the best association data (odd ratio) for this
+ variant and this ethnicity out of the sample data in which that variant
+ has been studied.
+\end_layout
+
+\begin_layout Subsection
+The Variant Scoring Process general design
+\end_layout
+
+\begin_layout Subsection*
+Input/Output
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+begin{landscape}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename VariantScoring-Functions/VariantScoringInputOutput.pdf
+	display none
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+Input data structure for the Variant Scoring Process
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+end{landscape}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Choose sample_OR
+\end_layout
+
+\begin_layout Standard
+This function is specific to a 
+\begin_inset Quotes eld
+\end_inset
+
+variant_id
+\begin_inset Quotes erd
+\end_inset
+
+, an 
+\begin_inset Quotes eld
+\end_inset
+
+ethnicity
+\begin_inset Quotes erd
+\end_inset
+
+ and a 
+\begin_inset Quotes eld
+\end_inset
+
+sample_id
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The goal is several folds:
+\end_layout
+
+\begin_layout Enumerate
+If there are association data for both alleles and genotypes, one needs
+ to choose which of those association to consider for this sample
+\end_layout
+
+\begin_layout Enumerate
+Define what is the risk allele of this variant in  this sample
+\end_layout
+
+\begin_layout Enumerate
+Record the maximum error of this sample association
+\end_layout
+
+\begin_layout Enumerate
+If this sample is part of a meta-analysis sample, 
+\end_layout
+
+\begin_layout Section
+Gene scoring
+\end_layout
+
+\begin_layout Section
+Loop on LD blocks per Ethnicity
+\end_layout
+
+\begin_layout Subsection
+Check for associated diseases in NextBioDisease
+\end_layout
+
+\begin_layout Standard
+Number of Keywords for this disease found in NextBioDisease.
+ 
+\series bold
+To be define with Deb now.
+\end_layout
+
+\begin_layout Standard
+"SELECT * FROM SNPOR WHERE DiseaseID = X AND dbsnp='R' "
+\end_layout
+
+\begin_layout Itemize
+Z = number of Keywords in NextBioDisease that fit with the disease.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+if DiseaseID = 9, NextBioKeyword= 'blood pressure'
+\end_layout
+
+\begin_layout Itemize
+if DiseaseID = 5: NextBioKeyword = 'Dementia', 'Alzheimer'
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+di=Z
+\end_layout
+
+\begin_layout Subsection
+Check LD replication 
+\end_layout
+
+\begin_layout Standard
+Number of unic dbSNP ID with at least one significant OR in the same LD
+ bloc.
+\end_layout
+
+\begin_layout Standard
+"SELECT * FROM SNPLD WHERE (dbsnp1='R' and dbsnp2 in (select dbsnp from
+ SNPOR where diseaseid=X)) or (dbsnp2='R' and dbsnp1 in (select dbsnp from
+ SNPOR where diseaseid=X))"
+\end_layout
+
+\begin_layout Itemize
+Z = number of SNPs in diseaseX in LD with SNP R
+\end_layout
+
+\begin_layout Itemize
+Y = number of these SNPs that have at least one significant OR
+\end_layout
+
+\begin_layout Itemize
+ld = Y/Z
+\end_layout
+
+\begin_layout Itemize
+"UPDATE SNPOR set Score = replace(Score,'ld= ','ld=Y/Z ') WHERE DiseaseID=X
+ AND dbsnp='R"
+\end_layout
+
+\begin_layout Subsection
+Check PMID replication 
+\end_layout
+
+\begin_layout Standard
+"SELECT DISTINCT pmid FROM SNPOR WHERE DiseaseID = X AND dbsnp='R'"
+\end_layout
+
+\begin_layout Itemize
+Z = number of PMID with SNP R 
+\end_layout
+
+\begin_layout Itemize
+Y = number of these PMID that have at least one significant OR
+\end_layout
+
+\begin_layout Itemize
+pm = Y/Z
+\end_layout
+
+\begin_layout Subsection
+Check Other replication and Results from meta-analyzis
+\end_layout
+
+\begin_layout Standard
+Check for the following keywords in 'comments':
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+NF means that we couldn't find any paper where this SNP and/or the associated
+ gene was studied for this disease.
+ If 'NF', none of the following 3 keywords should be found in comments for
+ any of the raws for this SNP.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+nr[AuYr-PMID] Gene was found not replicated in another study (not ialready
+ n the database).
+ 
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+ns[AuYr-PMID] The SNP was found not significant in another study
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+sg[AuYr-PMID] The SNP was found significant in another study
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+/ Should be surounded by 2 number e.g.
+ 3/5.
+ and specifies that in a paper this SNP was found significant in 3 studies
+ out of 5.
+ This can be reported for an OR in the database, or from a paper not in
+ the database.
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+"SELECT * FROM SNPOR WHERE DiseaseID = X AND dbsnp='R' AND comments is not
+ NULL"
+\end_layout
+
+\begin_layout Itemize
+Z = number 'sg' found for SNP R
+\end_layout
+
+\begin_layout Itemize
+Y = number 'ns'+'nr' found for SNP R
+\end_layout
+
+\begin_layout Itemize
+re=Z-Y
+\end_layout
+
+\begin_layout Subsection
+Information per PMID and BroadEthnicity
+\end_layout
+
+\begin_layout Standard
+"SELECT DISTINCT PMID,BroadEthnicity FROM SNPOR WHERE DiseaseID = X AND
+ dbsnp='R' "
+\end_layout
+
+\begin_layout Subsubsection
+Loop on PMID,BroadEthnicity 
+\end_layout
+
+\begin_layout Standard
+"SELECT * FROM SNPOR WHERE DiseaseID = X AND PMID = P AND BroadEthnicity='E'
+ AND dbsnp='R'" 
+\end_layout
+
+\begin_layout Paragraph
+Find HapMap Frequencies for ethnicity E
+\end_layout
+
+\begin_layout Standard
+"SELECT * FROM SNPInfo WHERE dbsnp ='R'"
+\end_layout
+
+\begin_layout Standard
+Y=1 if BroadEthnicity E has frequency, Y=0 otherwise
+\end_layout
+
+\begin_layout Itemize
+'Caucasian': hapmap['CEU']
+\end_layout
+
+\begin_layout Itemize
+'Asian': hapmap['CHB'], hapmap['CHD'], hapmap['JPT']=0 
+\end_layout
+
+\begin_layout Itemize
+'AfricanAmerican': hapmap['ASW']
+\end_layout
+
+\begin_layout Itemize
+'Hispanic': hapmap['MEX']
+\end_layout
+
+\begin_layout Itemize
+Other: Y=0
+\end_layout
+
+\begin_layout Paragraph
+Loop on raws for PMID P and BroadEthnicity E and SNPR
+\end_layout
+
+\end_body
+\end_document

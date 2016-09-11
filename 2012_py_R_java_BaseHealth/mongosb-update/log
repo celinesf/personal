@@ -1,0 +1,47 @@
+2013-01-28 16:23:01,586 - DEBUG - Function: __init__
+2013-01-28 16:23:01,811 - DEBUG - Function: check_gid
+2013-01-28 16:23:01,940 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:01,993 - INFO - update_riskoutput -- I found gid 0
+2013-01-28 16:23:01,993 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:02,034 - WARNING - update_riskoutput -- I could not find gid e663d360-3dab-11e2-a25f-0800200c9a66 (username: hossein)
+2013-01-28 16:23:02,115 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:02,408 - WARNING - update_riskoutput -- I could not find gid fd5432d0-3e47-11e2-a25f-0800200c9a66 (username: Javid)
+2013-01-28 16:23:02,581 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:02,618 - WARNING - update_riskoutput -- I could not find gid errortest (username: errortest)
+2013-01-28 16:23:02,708 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:02,747 - WARNING - update_riskoutput -- I could not find gid 139cf960-3dac-11e2-a25f-0800200c9a66 (username: thaovo)
+2013-01-28 16:23:02,843 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:02,915 - WARNING - update_riskoutput -- I could not find gid 18c81050-3dac-11e2-a25f-0800200c9a66 (username: pserame)
+2013-01-28 16:23:02,993 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:03,123 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:03,428 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:03,553 - INFO - update_riskoutput -- I found gid ec630330-3dab-11e2-a25f-0800200c9a66
+2013-01-28 16:23:03,553 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:11,965 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:14,305 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:14,533 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:14,621 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:14,663 - WARNING - update_riskoutput -- I could not find gid 9fa4c0a0-3dac-11e2-a25f-0800200c9a66 (username: anush)
+2013-01-28 16:23:14,705 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:29,707 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:29,743 - WARNING - update_riskoutput -- I could not find gid 0b045a00-3dac-11e2-a25f-0800200c9a66 (username: kumars)
+2013-01-28 16:23:29,868 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:30,091 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:30,135 - WARNING - update_riskoutput -- I could not find gid f5b75170-3dab-11e2-a25f-0800200c9a66 (username: bayrapetov1)
+2013-01-28 16:23:30,192 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:30,278 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:53,464 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:54,325 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:54,365 - WARNING - update_riskoutput -- I could not find gid dab3bad0-3dab-11e2-a25f-0800200c9a66 (username: kpourak)
+2013-01-28 16:23:54,460 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:54,499 - WARNING - update_riskoutput -- I could not find gid e02c7c90-3dab-11e2-a25f-0800200c9a66 (username: genehistory)
+2013-01-28 16:23:54,580 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:54,660 - INFO - update_riskoutput -- I found gid test1
+2013-01-28 16:23:54,660 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:57,384 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:58,409 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:58,448 - WARNING - update_riskoutput -- I could not find gid 05968080-74cc-4b0e-b0f5-999999977778 (username: sumit-updated-gid)
+2013-01-28 16:23:58,544 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:58,585 - WARNING - update_riskoutput -- I could not find gid 203e2fd0-3e48-11e2-a25f-0800200c9a66 (username: malekeh)
+2013-01-28 16:23:58,986 - DEBUG - Function: update_riskoutput
+2013-01-28 16:23:59,155 - INFO - update_riskoutput -- I found gid 48f4c511-5a3e-4ac4-b5ad-94f6cd25438a

@@ -1,0 +1,212 @@
+% This file was created with JabRef 2.6.
+% Encoding: UTF-8
+
+@ARTICLE{Dyken2009,
+  author = {Mark Eric Dyken and Kyoung Bin Im},
+  title = {Obstructive sleep apnea and stroke.},
+  journal = {Chest},
+  year = {2009},
+  volume = {136},
+  pages = {1668--1677},
+  number = {6},
+  month = {Dec},
+  abstract = {Obstructive sleep apnea (OSA) and stroke are frequent, multifactorial
+	entities that share risk factors, and for which case-control and
+	cross-sectional studies have shown a strong association. Stroke of
+	respiratory centers can lead to apnea. Snoring preceding stroke,
+	documentation of apneas immediately prior to transient ischemic attacks,
+	the results of autonomic studies, and the circadian pattern of stroke,
+	suggest that untreated OSA can contribute to stroke. Although cohort
+	studies indicate that OSA is a stroke risk factor, controversy surrounds
+	the cost-effectiveness of the screening for and treatment of OSA
+	once stroke has occurred.},
+  doi = {10.1378/chest.08-1512},
+  institution = {Sleep Disorders Center, the Roy J. and Lucille A. Carver College
+	of Medicine, University of Iowa, Iowa City, IA, USA. mark-dyken@uiowa.edu},
+  keywords = {Circadian Rhythm, physiology; Cost-Benefit Analysis, economics; Humans;
+	Mass Screening, economics; Polysomnography, economics; Risk Factors;
+	Sleep Apnea, Obstructive, complications/diagnosis/physiopathology;
+	Stroke, epidemiology/physiopathology/prevention /&/ control},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {pouria3},
+  pii = {136/6/1668},
+  pmid = {19995768},
+  timestamp = {2011.06.30},
+  url = {http://dx.doi.org/10.1378/chest.08-1512}
+}
+
+@ARTICLE{Kim2005,
+  author = {Hyeon Chang Kim and Chung Mo Nam and Sun Ha Jee and Il Suh},
+  title = {Comparison of blood pressure-associated risk of intracerebral hemorrhage
+	and subarachnoid hemorrhage: Korea Medical Insurance Corporation
+	study.},
+  journal = {Hypertension},
+  year = {2005},
+  volume = {46},
+  pages = {393--397},
+  number = {2},
+  month = {Aug},
+  __markedentry = {[pouria3]},
+  abstract = {Intracerebral hemorrhage and subarachnoid hemorrhage have different
+	pathogeneses and risk factor profiles. However, little information
+	is available on the difference between intracerebral and subarachnoid
+	hemorrhages in relation to blood pressure. We prospectively investigated
+	the relationships between blood pressure and risks of stroke subtypes.
+	We measured blood pressure and other cardiovascular risk factors
+	in 100,147 men and 59,558 women 35 to 59 years of age in 1990 and
+	1992. Outcomes were fatal and nonfatal events of stroke and its subtypes
+	from 1993 to 2002. Independent relationships between baseline blood
+	pressure and stroke subtypes were assessed using Cox's proportional
+	hazard models. During the 10 years, 1714 ischemic and 1159 hemorrhagic
+	strokes (742 intracerebral and 308 subarachnoid hemorrhages) occurred.
+	Blood pressure was related more closely with hemorrhagic stroke than
+	ischemic stroke, and the difference was more prominent in women.
+	Among the subtypes of hemorrhagic stroke, intracerebral hemorrhage
+	was more closely related with blood pressure than subarachnoid hemorrhage.
+	For each 20 mm Hg increase in systolic blood pressure, adjusted relative
+	risks of ischemic stroke, intracerebral hemorrhage, and subarachnoid
+	hemorrhage were 1.79 (95\% confidence interval, 1.68 to 1.90), 2.48
+	(2.30 to 2.68), and 1.65 (1.38 to 1.97) in men, and 1.64 (1.42 to
+	1.89), 3.15 (2.61 to 3.80), and 2.29 (1.82 to 2.89) in women, respectively.
+	In conclusion, blood pressure is more closely related with intracerebral
+	hemorrhage than subarachnoid hemorrhage, thus proportion of intracerebral
+	hemorrhage in hemorrhagic stroke may affect the association between
+	blood pressure and hemorrhagic stroke. Our data also emphasize the
+	importance of blood pressure control for the prevention of stroke,
+	especially in countries with a high incidence of intracerebral hemorrhage.},
+  doi = {10.1161/01.HYP.0000177118.46049.e6},
+  institution = {Department of Preventive Medicine, Yonsei University College of Medicine,
+	Seoul, Korea.},
+  keywords = {Adult; Antihypertensive Agents, therapeutic use; Blood Pressure; Cerebral
+	Hemorrhage, etiology; Female; Humans; Hypertension, complications/drug
+	therapy/physiopathology; Male; Middle Aged; Prospective Studies;
+	Risk; Stroke, etiology/prevention /&/ control; Subarachnoid Hemorrhage,
+	etiology},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {pouria3},
+  pii = {01.HYP.0000177118.46049.e6},
+  pmid = {15998702},
+  timestamp = {2011.06.30},
+  url = {http://dx.doi.org/10.1161/01.HYP.0000177118.46049.e6}
+}
+
+@ARTICLE{Pullicino2009,
+  author = {Patrick M Pullicino and Leslie A McClure and Virginia G Wadley and
+	Ali Ahmed and Virginia J Howard and George Howard and Monika M Safford},
+  title = {Blood pressure and stroke in heart failure in the REasons for Geographic
+	And Racial Differences in Stroke (REGARDS) study.},
+  journal = {Stroke},
+  year = {2009},
+  volume = {40},
+  pages = {3706--3710},
+  number = {12},
+  month = {Dec},
+  abstract = {The prevalence of stroke is increased in individuals with heart failure
+	(HF). The stroke mechanism in HF may be cardiogenic embolism or cerebral
+	hypoperfusion. Stroke risk increases with decreasing ejection fraction
+	and low cardiac output is associated with hypotension and poor survival.
+	We examine the relationship among blood pressure level, history of
+	stroke/transient ischemic attack (TIA), and HF.We compared the prevalence
+	of self-reported history of stroke or TIA in the REasons for Geographic
+	And Racial Differences in Stroke (REGARDS) participants with HF (as
+	defined by current digoxin use) and without HF. We excluded participants
+	with atrial fibrillation or missing data. We examined the relationship
+	between HF and history of stroke/TIA within tertiles of systolic
+	blood pressure (SBP) adjusting for patient demographic and health
+	characteristics.Prevalent stroke/TIA were reported by 66 (26.3\%)
+	of 251 participants with and 1805 (8.5\%) of 21 202 participants
+	without HF (P<0.0001). Within each tertile of SBP, the unadjusted
+	OR (95\% CI) for prior stroke/TIA among those with HF compared with
+	those without HF (the reference group) was, 4.0 (2.8 to 5.8) for
+	SBP <119.5 mm Hg, 2.7 (1.8 to 3.9) for SBP >or=119.5 but <131.5 mm
+	Hg, and 2.3 (1.6 to 3.2) for SBP >or=131.5 mm Hg. After adjustment,
+	the relationship between prior stroke/TIA and HF remained significant
+	only within the lowest tertile of SBP (<119.5 mm Hg; 3.0; 1.5 to
+	6.1).The odds of prevalent self-reported stroke/TIA are increased
+	in participants with HF and most markedly increased in participants
+	with low SBP. Longitudinal data are needed to determine whether this
+	reflects stroke/TIA secondary to thromboembolism from poor cardiac
+	function or secondary to cerebral hypoperfusion.},
+  doi = {10.1161/STROKEAHA.109.561670},
+  institution = {Department of Biosciences, University of Kent, Kent, UK. P.Pullicino@kent.ac.uk},
+  keywords = {African Continental Ancestry Group; Aged; Aged, 80 and over; Biological
+	Markers; Blood Pressure, physiology; Cohort Studies; Comorbidity;
+	Continental Population Groups; Digoxin, therapeutic use; European
+	Continental Ancestry Group; Female; Geography; Heart Failure, epidemiology/ethnology/physiopathology;
+	Humans; Hypotension, epidemiology/ethnology/physiopathology; Ischemic
+	Attack, Transient, epidemiology/etiology/physiopathology; Male; Medical
+	History Taking; Middle Aged; Odds Ratio; Prevalence; Questionnaires;
+	Risk Factors; Stroke, epidemiology/ethnology/physiopathology},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {pouria3},
+  pii = {STROKEAHA.109.561670},
+  pmid = {19834015},
+  timestamp = {2011.06.30},
+  url = {http://dx.doi.org/10.1161/STROKEAHA.109.561670}
+}
+
+@ARTICLE{Shahar2003,
+  author = {Eyal Shahar and Lloyd E Chambless and Wayne D Rosamond and Lori L
+	Boland and Christie M Ballantyne and Paul G McGovern and A. Richey
+	Sharrett and Atherosclerosis Risk in Communities Study},
+  title = {Plasma lipid profile and incident ischemic stroke: the Atherosclerosis
+	Risk in Communities (ARIC) study.},
+  journal = {Stroke},
+  year = {2003},
+  volume = {34},
+  pages = {623--631},
+  number = {3},
+  month = {Mar},
+  abstract = {The role of circulating lipids and lipoproteins in the pathogenesis
+	of ischemic stroke remains uncertain despite 3 decades of research.
+	We examined this issue in a large population-based cohort.Between
+	1987 and 1989, 14 175 middle-aged men and women, free of clinical
+	cardiovascular disease, took part in the first examination of the
+	Atherosclerosis Risk in Communities (ARIC) study cohort. Baseline
+	measurements included plasma levels of LDL cholesterol, HDL cholesterol,
+	apolipoprotein B, apolipoprotein A-1, and triglycerides and myriad
+	risk factors for cardiovascular disease. The cohort was followed
+	for cardiovascular disease end points.Over an average follow-up of
+	10 years (142 704 person-years at risk), we documented clinical ischemic
+	stroke in 305 participants (161 men and 144 women). After multivariable
+	adjustment for stroke risk factors, categorical and spline regression
+	analyses of the entire sample, as well as the sample of men alone,
+	revealed weak and inconsistent associations between ischemic stroke
+	and each of the 5 lipid factors. Among women, the most consistent
+	findings were decreasing risk of ischemic stroke within the top half
+	of the distribution of HDL cholesterol and increasing risk within
+	the lower range of the triglyceride distribution.The relation of
+	circulating cholesterol to ischemic stroke does not resemble its
+	well-known relation to coronary heart disease. Either the pathogenesis
+	of a substantial proportion of ischemic strokes does not involve
+	classic atherosclerotic mechanisms, or the effect of plasma lipids
+	on atherogenesis is substantially different in the intracranial vascular
+	bed.},
+  institution = {Division of Epidemiology, University of Minnesota, 1300 South Second
+	St, Suite 300, Minneapolis, MN 55454, USA. shahar@epi.umn.edu},
+  keywords = {Apolipoprotein A-I, blood; Apolipoproteins B, blood; Brain Ischemia,
+	blood/epidemiology; Causality; Cholesterol, HDL, blood; Cholesterol,
+	LDL, blood; Cohort Studies; Comorbidity; Female; Follow-Up Studies;
+	Humans; Incidence; Lipids, blood; Male; Middle Aged; Multivariate
+	Analysis; Prospective Studies; Residence Characteristics, statistics
+	/&/ numerical data; Risk Assessment; Risk Factors; Sex Distribution;
+	Stroke, blood/epidemiology; Triglycerides, blood; United States,
+	epidemiology},
+  language = {eng},
+  medline-pst = {ppublish},
+  owner = {pouria3},
+  pmid = {12624282},
+  timestamp = {2011.06.30}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+

@@ -1,0 +1,266 @@
+\documentclass{report}
+\usepackage{color}
+\usepackage{times}
+\usepackage{natbib}
+\usepackage{float}
+\SweaveOpts{prefix.string=EPFL}
+\begin{document}
+\title{Stroke Documentation using \LaTeX{} }
+\author{Pouria Mojabi, \texttt{mojabi@genophen.com}}
+\date{\today}
+\maketitle
+
+<<echo=FALSE>>=
+setwd("/home/pouria3/workspace/GenStat/trunk/Stroke")
+source("riskmodel.R")
+@
+
+\section{Introduction}
+This Documentation is intended for Strok Disease. all the risk factors that are associated with Stroke are identified and assesed. 
+From genitics to your daily routines. Calculations are primarily based on two sources. CDC(NHANES) dataset and scientific papers. 
+Some risk factors are extracted from CDC and some are extracted from the papers. Below you will find details about each risk factor. 
+risk Factors from NHANES dataset can all be found under CDC section.
+references can be found at the end of the document
+
+\newpage
+\section{\color{blue} Diabetes}
+Diabetes is a categorical variable with binary state. Either yes or no wheter you have it or not \newline
+\begin{tabular}{ | l | c || r |}
+\hline
+Diabetes & OR & CI\\ \hline
+No & 1 & ref \\ \hline
+Yes & 2.78 & 2.13-3.61\\ \hline
+\end{tabular}
+\newline \newline
+Values of this table are from \citet{shahar2003} paper.
+
+\newpage
+\section{\color{blue}Blood Pressure}
+After consulting with Dr.Malek we decide to implement 
+\citet{Kim2005}. {\bf \color{red} Note that population is Asian only}. on the website we should present this with a disclaimer.
+\newline \newline
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+Category & Optimal & Normal & HighNormal & HypertensionI & HypertensionII & HypertensionIII \\ \hline
+SBP & <120 & 120-129 & 130-139 & 140-159 & 160-179 & >180 \\ \hline
+OR & 1 & 1.43 & 1.81 & 2.82 & 3.91 & 6.58\\ \hline
+CI & 1.16-1.76 & 1.47-2.23 & 2.31-3.41 & 3.09-4.95 & 4.96-8.73\\ \hline
+\end{tabular}
+\newline \newline \newline \newline
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+Category & Optimal & Normal & HighNormal & HypertensionI & HypertensionII & HypertensionIII \\ \hline
+DBP & <80 & 80-84 & 85-89 & 90-99 & 100-109 & >110 \\ \hline
+OR & 1 & 1.43 & 1.81 & 2.82 & 3.91 & 6.58\\ \hline
+CI & 1.16-1.76 & 1.47-2.23 & 2.31-3.41 & 3.09-4.95 & 4.96-8.73\\ \hline
+\end{tabular}
+\newline 
+{\bf *Normal range is considered baseline and optimal range gives a protective effect*}
+Les see some graphs!
+<<echo=F, label=BP, fig=T, include=F>>=
+par(lty=2, lwd=2, mfrow=c(1, 2))
+RiskFactorValue <- c(110:190)
+comment         <- rep("SBP", length(RiskFactorValue))
+RiskFactorID    <- rep(100, length(RiskFactorValue))
+x               <- c(115, 125, 135, 150, 170, 190)
+y               <- c(log(1), log(1.43), log(1.85), log(2.82), log(3.91), log(6.58) )
+FactorValue     <- predict(lm(y~x), data.frame(x=RiskFactorValue) )
+plot(RiskFactorValue, FactorValue, col='blue')
+points(x, y, col='red')
+
+RiskFactorValue <- c(70:120)
+comment         <- rep("DBP", length(RiskFactorValue))
+RiskFactorID    <- rep(101, length(RiskFactorValue))
+x               <- c(78, 82, 87, 95, 105, 115)
+y               <- c(log(1), log(1.43), log(1.85), log(2.82), log(3.91), log(6.58) )
+FactorValue     <- predict(lm(y~x), data.frame(x=RiskFactorValue) )
+FactorValue[RiskFactorValue<76] <- FactorValue[RiskFactorValue=76] # 
+FactorValue[RiskFactorValue>115] <- FactorValue[RiskFactorValue==115] # 
+plot(RiskFactorValue, FactorValue, col='blue')
+points(x, y, col='red')
+@
+\begin{figure}[b!]
+\centering
+\includegraphics{EPFL-BP}
+\caption{OR vs BP}
+\end{figure}
+
+
+\newpage
+\section{\color{blue}SleepCondition}
+Not getting proper sleep can increase the probability of getting a Stroke. Odds ratios are taken from \cite{Dyken2009}
+\newline \newline
+\begin{tabular}{|l|l|l|}
+\hline
+SleepCondition & OR & CI\\ \hline
+Sleep Apnea & 2.89 & 1.3-6.09\\ \hline
+Sleep Disorder & 2.89 & 1.37-6.09\\ \hline
+\end{tabular}
+
+
+\newpage
+\section{\color{blue}Past CVD Condition}
+This considered your family history. ORs are extracted from \cite{Pullicino2009} and Shoshana Reshef (couldn't find this, check with sadaf)
+\newline \newline
+\begin{tabular}{|l|l|l|}
+\hline
+PastCVD & OR & CI\\ \hline
+Atrail Fibrilation & 2.86 & 1.25-6.58\\ \hline
+Myocardial Infaction & 2.09 & 1.23-3.55\\ \hline
+HeartFailure and Stroke & 2.2 & 1.5-3.4\\ \hline
+\end{tabular}
+
+
+\newpage
+\section{\color{blue}CDC}
+Some risk factors are calculated using NHANES dataset. Logistic regression is performed and odds ratios are calculated. 
+we will briefly mention the model below.
+{\color{red} Y-axis of all the Plots is log scale(log of odds ratio)}
+<<echo=FALSE>>=
+summary(Mbase)
+@
+\newpage
+Lets take a look at our Base Model 
+<<label=Mbase, fig=TRUE, include=FALSE, prefix.string=EPFL>>=
+layout(matrix(c(1, 2, 3, 4), 2, 2))
+plot(Mbase)
+@
+\begin{figure}[H]
+\centering
+\includegraphics{EPFL-Mbase}
+\caption{Logistic Regression}
+\end{figure}
+
+\newpage
+\subsection{\color{green}BMI}
+BMI is calculated directly from CDC dataset;
+\begin{center}
+<<label=BMI, echo=FALSE, fig=TRUE, include=F>>=
+bmi_min <- 10*min(Data1$BMIC2)
+bmi_max <- 10*max(Data1$BMIC2)
+bmi_cof <- Mbase$coefficient[["BMIC2"]]
+RiskFactorValue <- c(bmi_min:bmi_max)/10
+comment         <- rep("BMI", length(RiskFactorValue))
+RiskFactorID    <- rep(103, length(RiskFactorValue))
+FactorValue     <- c(0, c(1:(length(RiskFactorValue)-1))*bmi_cof/10)
+plot(RiskFactorValue, FactorValue, col='blue')
+@
+\begin{figure}[H]
+\includegraphics{EPFL-BMI}
+\caption{OR ratio vs BMI}
+\end{figure}
+\end{center}
+
+\newpage
+\subsection{\color{green}Age}
+Age (a categorical variable in this case) can directly get caluclated from the base model
+\begin{center}
+<<label=Age, echo=FALSE, fig=T, include=F>>=
+age_min <- min(Data1$AgeC); age_max <- max(Data1$AgeC)
+age_cof <- c(Mbase$coefficient[["Age3"]], 
+Mbase$coefficient[["Age4"]] - Mbase$coefficient[["Age3"]], 
+Mbase$coefficient[["Age5"]] - Mbase$coefficient[["Age4"]], 
+Mbase$coefficient[["Age6"]] - Mbase$coefficient[["Age5"]], 
+Mbase$coefficient[["Age7"]] - Mbase$coefficient[["Age6"]], 
+Mbase$coefficient[["Age8"]] - Mbase$coefficient[["Age7"]])
+RiskFactorValue <- c(age_min:age_max)
+comment         <- rep("Age", length(RiskFactorValue))
+RiskFactorID    <- rep(104, length(RiskFactorValue))
+FactorValue     <- rep(0, length(RiskFactorValue))
+for (i in c((age_min+1): age_max) )
+{
+	FactorValue[i-(age_min-1)] <- FactorValue[i-age_min] + age_cof[floor(i/10)-1]/10
+}
+	FactorValue[RiskFactorValue>79] <- FactorValue[RiskFactorValue==79]
+plot(RiskFactorValue, FactorValue, col='blue')
+@
+\begin{figure}[H]
+\includegraphics{EPFL-Age}
+\caption{OR vs Age}
+\end{figure}
+\end{center}
+
+\newpage
+\subsection{\color{green}Gender}
+Gender is also a categorical variable. either Male or Female can't be both!
+\begin{center}
+<<label=Gender, echo=FALSE, fig=T, include=F>>=
+RiskFactorValue <- c(0, 1) 
+comment         <- rep("Gender", length(RiskFactorValue))
+RiskFactorID    <- rep(105, length(RiskFactorValue))
+FactorValue     <- c(Mbase$coefficient[["GenderM"]], 0)
+Gender_Data     <- data.frame(RiskFactorID=RiskFactorID, RiskFactorValue=RiskFactorValue, FactorValue=FactorValue, comment=comment)
+Gender          <- data.frame(RiskFactorID=105, name="Gender"         , Min=0  , Max=1  , normal=NA)
+plot(RiskFactorValue, FactorValue, type="p", col='blue')
+@
+\begin{figure}[H]
+\includegraphics{EPFL-Gender}
+\caption{OR ratio vs Gender}
+\end{figure}
+\end{center}
+
+\newpage
+\subsection{\color{green}AdjustedWaist}
+Since BMI and Waist are highly correlated, together they can't contribute to the prediction. Infact Waist can be predicted by BMI,
+linear regression results in : 
+Waist = 2.74 * BMI - 16.9
+AdjustedWaist is the difference between an actual Waist and the predicted waist from BMI (basically the error)
+so, we have:
+WaistAdjustedBMI = waist - 2.74 * BMI + 16.9
+\begin{center}
+<<label=adwaist, echo=F, fig=T, include=F>>=
+waist_min = min(Data1$WaistAdBMI2); waist_max=max(Data1$WaistAdBMI2)
+RiskFactorValue <- c(waist_min : waist_max)
+comment         <- rep("Waist", length(RiskFactorValue))
+RiskFactorID    <- rep(106, length(RiskFactorValue))
+FactorValue     <- RiskFactorValue * Mbase$coefficient[["WaistAdBMI2"]]
+FactorValue[RiskFactorValue < -2] <- FactorValue[RiskFactorValue == -2]
+FactorValue[RiskFactorValue > 10] <- FactorValue[RiskFactorValue == 10]
+plot(RiskFactorValue, FactorValue, 'blue')
+@
+\begin{figure}[H]
+\includegraphics{EPFL-adwaist}
+\caption{OR vs AdjustedWaist}
+\end{figure}
+\end{center}
+
+\newpage
+\subsection{\color{green}Trig}
+Without further do we present the plot here that shows the Odds ratio with differen Trig values
+<<label=trig, echo=F, fig=T, include=F>>=
+trig_min <- min(Data1$TRIG2[!is.na(Data1$TRIG2)]) ; trig_max <- max(Data1$TRIG2[!is.na(Data1$TRIG2)])
+RiskFactorValue <- c(trig_min : trig_max )
+comment         <- rep("TRIG", length(RiskFactorValue))
+RiskFactorID    <- rep(108, length(RiskFactorValue))
+FactorValue     <- TRIGM$coefficient[[1]] + (RiskFactorValue-trig_min) * TRIGM$coefficient[[2]]
+plot(RiskFactorValue, FactorValue, col='blue')
+@
+\begin{figure}[H]
+\includegraphics{EPFL-trig}
+\caption{OR vs Trig}
+\end{figure}
+
+
+\newpage
+\subsection{\color{green}Smoking}
+Well, obviously smoking is bad for you! this should depict how bad it could be
+<<label=smk, echo=F, fig=T, include=F>>=
+smk_min <- min(Data1$SmokingIndPackYrs[!is.na(Data1$SmokingIndPackYrs)]) ; smk_max <- 120 # max pack per year, refer to CVD doc
+RiskFactorValue <- c(smk_min : smk_max )
+comment         <- rep("Smoking", length(RiskFactorValue))
+RiskFactorID    <- rep(112, length(RiskFactorValue))
+FactorValue     <- RiskFactorValue * SMKM$coefficient[[2]]*365 #because the model is smokingyear(not per year)
+plot(RiskFactorValue, FactorValue, col='blue')
+@
+\begin{figure}[H]
+\includegraphics{EPFL-smk}
+\caption{OR vs Smoking}
+\end{figure}
+
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{papers}
+\end{document}

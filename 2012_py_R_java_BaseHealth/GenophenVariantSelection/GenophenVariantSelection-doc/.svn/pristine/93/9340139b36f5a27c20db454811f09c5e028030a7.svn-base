@@ -1,0 +1,205 @@
+{
+    "variant_id": "rs10166942",
+    "variant_score": {
+        "nextbio_score": 85,
+        "nextbio_pvalue": 0.00001,
+        "significant_ethnicity": null,
+        "non_significant_ethnicity": null,
+        "variant_risk_allele": [
+            {
+                "risk_allele": null,
+                "count": null
+            }
+        ]
+    },
+    "ethnicity": [
+        {
+            "ethnicity": "Caucasian",
+            "hapmap_freq": true,
+            "variant_test_table": null,
+            "variant_dif_table": null,
+            "ethnicity_score": {
+                "mean_study_type": null,
+                "mean_sample_size": null,
+                "mean_OR ": null,
+                "mean_error": null,
+                "mean_pvalue": null,
+                "significant_OR": null,
+                "non_significant_OR": null,
+                "ehnicity_risk_allele": [
+                    {
+                        "risk_allele": null,
+                        "count": null
+                    }
+                ],
+                "best_sample_id": null
+            },
+            "sample": [
+                {
+                    "sample_id": "1",
+                    "sample_size": 41007,
+                    "control_freq": true,
+                    "study_type": 1,
+                    "meta_sample": null,
+                    "sample_risk_allele": [
+                        {
+                            "risk_allele": null,
+                            "count": null
+                        }
+                    ],
+                    "best_sample_OR": null,
+                    "max_sample_error": null,
+                    "sign_sample": null,
+                    "nsign_sample": null,
+                    "sample_test_table": null,
+                    "sample_sum_test": null,
+                    "sample_dif_table": null,
+                    "association": [
+                        {
+                            "id": "Allelic Additive",
+                            "OR_data": [
+                                {
+                                    "allele_genotype": "G",
+                                    "odd_ratio": 1,
+                                    "error": null,
+                                    "significant": null,
+                                    "pvalue": null
+                                },
+                                {
+                                    "allele_genotype": "T",
+                                    "odd_ratio": 0.85,
+                                    "error": 0.0175,
+                                    "significant": true,
+                                    "pvalue": 0.05
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Genotypic Additive",
+                            "OR_data": [
+                                {
+                                    "allele_genotype": "TT",
+                                    "odd_ratio": 1.89,
+                                    "error": 53.5,
+                                    "significant": true,
+                                    "pvalue": null
+                                },
+                                {
+                                    "allele_genotype": "TG",
+                                    "odd_ratio": 1.37,
+                                    "error": 43,
+                                    "significant": false,
+                                    "pvalue": null
+                                },
+                                {
+                                    "allele_genotype": "GG",
+                                    "odd_ratio": 1,
+                                    "error": null,
+                                    "significant": null,
+                                    "pvalue": null
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sample_id": "2",
+                    "sample_size": 41007,
+                    "control_freq": false,
+                    "study_type": 1,
+                    "meta_sample": null,
+                    "sample_risk_allele": [
+                        {
+                            "risk_allele": null,
+                            "count": null
+                        }
+                    ],
+                    "best_sample_OR": null,
+                    "max_sample_error": null,
+                    "sign_sample": null,
+                    "nsign_sample": null,
+                    "sample_test_table": null,
+                    "sample_sum_test": null,
+                    "sample_dif_table": null,
+                    "association": {
+                        "id": "Allelic Additive",
+                        "OR_data": [
+                            {
+                                "allele_genotype": "G",
+                                "odd_ratio": 1,
+                                "error": null,
+                                "significant": null,
+                                "pvalue": null
+                            },
+                            {
+                                "allele_genotype": "T",
+                                "odd_ratio": 0.55,
+                                "error": 0.6175,
+                                "significant": true,
+                                "pvalue": 0.005
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "ethnicity": "Hispanic",
+            "ethnicity_score": {
+                "mean_study_type": null,
+                "mean_sample_size": null,
+                "mean_OR ": null,
+                "mean_error": null,
+                "mean_pvalue": null,
+                "significant_OR": null,
+                "non_significant_OR": null,
+                "ehnicity_risk_allele": [
+                    {
+                        "risk_allele": null,
+                        "count": null
+                    }
+                ],
+                "best_sample_id": null
+            },
+            "sample": {
+                "sample_id": "2",
+                "sample_size": 41007,
+                "control_freq": false,
+                "study_type": 1,
+                "meta_sample": null,
+                "sample_risk_allele": [
+                    {
+                        "risk_allele": null,
+                        "count": null
+                    }
+                ],
+                "best_sample_OR": null,
+                "max_sample_error": null,
+                "sign_sample": null,
+                "nsign_sample": null,
+                "sample_test_table": null,
+                "sample_sum_test": null,
+                "sample_dif_table": null,
+                "association": {
+                    "id": "Allelic Additive",
+                    "OR_data": [
+                        {
+                            "allele_genotype": "G",
+                            "odd_ratio": 1,
+                            "error": null,
+                            "significant": null,
+                            "pvalue": null
+                        },
+                        {
+                            "allele_genotype": "T",
+                            "odd_ratio": 0.85,
+                            "error": 0.00175,
+                            "significant": true,
+                            "pvalue": 0.0001
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "ethnicity":"Caucasian",
+    "LD_block":[
+        {
+            "LD_block_id":1,
+            "variant_list":[
+                "rs1234",
+                "rs10166942"
+            ]
+        },
+        {
+            "LD_block_id":1,
+            "variant_list":[
+                "rs2345",
+                "rs4569"
+            ]
+        }
+    ]
+}

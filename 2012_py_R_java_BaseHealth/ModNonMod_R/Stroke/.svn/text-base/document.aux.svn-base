@@ -1,0 +1,32 @@
+\relax 
+\@writefile{toc}{\contentsline {section}{\numberline {0.1}Introduction}{1}}
+\citation{shahar2003}
+\@writefile{toc}{\contentsline {section}{\numberline {0.2}\color  {blue} Diabetes}{2}}
+\citation{Kim2005}
+\@writefile{toc}{\contentsline {section}{\numberline {0.3}\color  {blue}Blood Pressure}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces OR vs BP}}{3}}
+\citation{Dyken2009}
+\@writefile{toc}{\contentsline {section}{\numberline {0.4}\color  {blue}SleepCondition}{4}}
+\citation{Pullicino2009}
+\@writefile{toc}{\contentsline {section}{\numberline {0.5}\color  {blue}Past CVD Condition}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.6}\color  {blue}CDC}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Logistic Regression}}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.6.1}\color  {green}BMI}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces OR ratio vs BMI}}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.6.2}\color  {green}Age}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces OR vs Age}}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.6.3}\color  {green}Gender}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces OR ratio vs Gender}}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.6.4}\color  {green}AdjustedWaist}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces OR vs AdjustedWaist}}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.6.5}\color  {green}Trig}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces OR vs Trig}}{12}}
+\bibstyle{plain}
+\bibdata{papers}
+\@writefile{toc}{\contentsline {subsection}{\numberline {0.6.6}\color  {green}Smoking}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces OR vs Smoking}}{13}}
+\bibcite{Dyken2009}{{1}{}{{}}{{}}}
+\bibcite{Kim2005}{{2}{}{{}}{{}}}
+\bibcite{Pullicino2009}{{3}{}{{}}{{}}}
+\bibcite{shahar2003}{{4}{}{{}}{{}}}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers

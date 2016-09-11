@@ -1,0 +1,31 @@
+various R and python scripts developed at Basehealth,
+The main pipelines are 
+
+-------------------algogene-pipeline 
+AlgoGenePipeline.py <Disease_name> <lifetime_prevalence>: 
+   I)   variant aggregation : all the information is gathered for the genetic variation of interest
+   II)  Data aggregation    : all the variants are aggregated for the disease of interest
+   III) Data selection      : good variants are selected for the disease of interest (QC & selection routine)
+   IV)  Adjusted calculation: selected variatns go throug adjusted odds ration calculation
+   V)   Ethnicity decision  : Genophen covers about 6 different ethinicities at the time of this writting. what is the default ethnicity for the disease of interest
+
+--------------------GenophenVariantSelection
+Dev environment of steps I to III above 
++ documentation GenophenVariantSelection-doc can be seen using "Yed" application
+
+----------------DbSnpPipeline 
+ extracts dbsnp information from XML file:
+- XmlDbsnp2Json.py :  Convert xml dbsnp data into json
+- SimpleDbSnpInfo: Simplify dbsnp json structure
+-GatherSnpInfo: perform quality control on GatherSnpInfo data
+    1) check alleles strand
+    2) check minor allele for + strand
+    3) check reference allele on + strand
+    4) check ancestral allele on +
+
+
+----------------  ModNonMod_R
+R scripts to obtain OR for non genetic risk factor per disease
+
+-------------- haplophyzer_java
+java code translation of  python code in phasing-script

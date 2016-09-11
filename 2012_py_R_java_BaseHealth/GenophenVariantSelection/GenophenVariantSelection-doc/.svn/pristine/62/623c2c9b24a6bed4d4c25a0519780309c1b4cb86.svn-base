@@ -1,0 +1,34 @@
+{
+    "ethnicity":"Caucasian",
+    "LD_block":[
+        {
+            "LD_block_id":1,
+            "LD_best_variant":"rs1234"
+            "best_sample_id":"2",
+            "best_sample_OR":"allelic additive",
+        },
+        {
+            "LD_block_id":2,
+            "LD_best_variant":"rs2345"
+            "best_sample_id":"5",
+            "best_sample_OR":"dominant model",
+        }
+    ]
+},
+{
+    "ethnicity":"Hispanic",
+    "LD_block":[
+        {
+            "LD_block_id":1,
+            "LD_best_variant":"rs5678"
+            "best_sample_id":"2",
+            "best_sample_OR":"allelic additive",
+        },
+        {
+            "LD_block_id":2,
+            "LD_best_variant":"rs2345"
+            "best_sample_id":"1",
+            "best_sample_OR":"allelic model",
+        }
+    ]
+},

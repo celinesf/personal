@@ -1,0 +1,165 @@
+#LyX 1.5.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+SNPOR Scoring algorithm 
+\end_layout
+
+\begin_layout Section
+Open AlgoPhen
+\end_layout
+
+\begin_layout Section
+Initiation
+\end_layout
+
+\begin_layout Itemize
+"UPDATE SNPOR set Score = 'to= pm= et= st= ca= sa= mt= ld= gp= gn= di=
+ re= ' WHERE DiseaseID=X
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+"SELECT DISTINCT dbsnp FROM SNPOR WHERE DiseaseID = X "
+\end_layout
+
+\begin_layout Section
+Loop on SNPs for the diseaseX
+\end_layout
+
+\begin_layout Subsection
+Check for associated disease in NextBioDisease
+\end_layout
+
+\begin_layout Standard
+"SELECT * FROM SNPOR WHERE DiseaseID = X AND dbsnp='R' "
+\end_layout
+
+\begin_layout Itemize
+Z = number of Keywords in NextBioDisease that fit with the disease
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+if DiseaseID = 9, NextBioKeyword= 'blood pressure'
+\end_layout
+
+\begin_layout Itemize
+if DiseaseID = 5: NextBioKeyword = 'Dementia', 'Alzheimer'
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+"UPDATE SNPOR set Score = replace(Score,'di= ','di=Z ') WHERE DiseaseID=X
+ AND dbsnp='R"
+\end_layout
+
+\begin_layout Subsection
+Check LD replication 
+\end_layout
+
+\begin_layout Standard
+"SELECT * FROM SNPLD WHERE (dbsnp1='R' and dbsnp2 in (select dbsnp from
+ SNPOR where diseaseid=X)) or (dbsnp2='R' and dbsnp1 in (select dbsnp from
+ SNPOR where diseaseid=X))"
+\end_layout
+
+\begin_layout Itemize
+Z = number of SNPs in diseaseX in LD with SNP R
+\end_layout
+
+\begin_layout Itemize
+Y = number of these SNPs that have at least one significant OR
+\end_layout
+
+\begin_layout Itemize
+ld = Y/Z
+\end_layout
+
+\begin_layout Subsection
+Check PMID replication 
+\end_layout
+
+\begin_layout Standard
+"SELECT DISTINCT pmid FROM SNPOR WHERE DiseaseID = X AND dbsnp='R'"
+\end_layout
+
+\begin_layout Itemize
+Z = number of PMID with SNP R
+\end_layout
+
+\begin_layout Itemize
+Y = number of these SNPs that have at least one significant OR
+\end_layout
+
+\begin_layout Itemize
+pm = Y/Z
+\end_layout
+
+\begin_layout Subsection
+Check Other replication 
+\end_layout
+
+\begin_layout Standard
+"SELECT DISTINCT pmid FROM SNPOR WHERE DiseaseID = X AND dbsnp='R'"
+\end_layout
+
+\begin_layout Itemize
+Z = number of PMID with SNP R
+\end_layout
+
+\begin_layout Itemize
+Y = number of these SNPs that have at least one significant OR
+\end_layout
+
+\begin_layout Itemize
+pm = Y/Z
+\end_layout
+
+\end_body
+\end_document

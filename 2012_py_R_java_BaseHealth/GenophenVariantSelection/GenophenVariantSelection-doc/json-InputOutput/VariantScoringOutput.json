@@ -1,0 +1,150 @@
+{
+    "rs1234":{
+        "variant_sign_ethnicity":1,
+        "variant_nsign_ethnicity":0,
+        "ethnicity_score":{
+            "Caucasian":{
+                "ethnicity_nsign_sample":0,
+                "best_sample":{
+                    "nsign_sample":0,
+                    "study_type":1,
+                    "sample_risk_allele":{
+                        "A":1
+                    },
+                    "sample_size":2000,
+                    "sample_id":"10",
+                    "best_model":{
+                        "is_OK":true,
+                        "model_id":"dominant Additive1",
+                        "max_pvalue":0.01,
+                        "dif":[
+                            
+                        ],
+                        "max_error":0.20000000000000018,
+                        "reference_allele":"C",
+                        "risk_allele":"A",
+                        "test":[
+                            
+                        ],
+                        "min_OR":2,
+                        "significant":true,
+                        "control_freq":"True",
+                        "protective_allele":"C"
+                    },
+                    "sign_sample":0,
+                    "meta_sample":"None"
+                },
+                "mean_sample_size":2000,
+                "mean_study_type":1,
+                "ethnicity_sign_sample":1,
+                "mean_error":0.20000000000000018,
+                "ethnicity_risk_allele":{
+                    "A":1
+                },
+                "ethnicity_id":"Caucasian",
+                "mean_pvalue":0.01,
+                "mean_OR ":2
+            }
+        },
+        "variant_risk_allele":{
+            "A":1
+        }
+    },
+    "rs2345":{
+        "variant_sign_ethnicity":1,
+        "variant_nsign_ethnicity":1,
+        "ethnicity_score":{
+            "Caucasian":{
+                "ethnicity_nsign_sample":0,
+                "best_sample":{
+                    "nsign_sample":0,
+                    "study_type":4,
+                    "sample_risk_allele":{
+                        "G":2
+                    },
+                    "sample_size":2007,
+                    "sample_id":"3c",
+                    "test":[
+                        0,
+                        0
+                    ],
+                    "best_model":{
+                        "is_OK":true,
+                        "model_id":"Allelic Additive3",
+                        "max_pvalue":0.008,
+                        "dif":[
+                            
+                        ],
+                        "max_error":0.09999999999999987,
+                        "reference_allele":"T",
+                        "risk_allele":"G",
+                        "test":[
+                            
+                        ],
+                        "min_OR":2,
+                        "significant":true,
+                        "control_freq":"True",
+                        "protective_allele":"T"
+                    },
+                    "sign_sample":1,
+                    "dif":[
+                        -39000,
+                        -1
+                    ],
+                    "meta_sample":"None"
+                },
+                "mean_sample_size":43421,
+                "mean_study_type":9,
+                "ethnicity_sign_sample":3,
+                "mean_error":0.7999999999999998,
+                "ethnicity_risk_allele":{
+                    "T":1,
+                    "G":2
+                },
+                "ethnicity_id":"Caucasian",
+                "mean_pvalue":0.021,
+                "mean_OR ":7
+            },
+            "Asian":{
+                "ethnicity_nsign_sample":1,
+                "best_sample":{
+                    "nsign_sample":0,
+                    "study_type":4,
+                    "sample_risk_allele":{
+                        
+                    },
+                    "sample_size":20007,
+                    "sample_id":"5d",
+                    "best_model":{
+                        "is_OK":true,
+                        "model_id":"Allelic4 Additive4",
+                        "max_pvalue":-1,
+                        "protective_allele":"",
+                        "max_error":-1,
+                        "reference_allele":"T",
+                        "risk_allele":"",
+                        "min_OR":-1,
+                        "significant":false,
+                        "control_freq":"True"
+                    },
+                    "sign_sample":0,
+                    "meta_sample":"None"
+                },
+                "mean_sample_size":20007,
+                "mean_study_type":4,
+                "ethnicity_sign_sample":0,
+                "mean_error":-1,
+                "ethnicity_risk_allele":{
+                    
+                },
+                "ethnicity_id":"Asian",
+                "mean_pvalue":-1,
+                "mean_OR ":-1
+            }
+        },
+        "variant_risk_allele":{
+            "T":1,
+            "G":1
+        }
+    }
+}

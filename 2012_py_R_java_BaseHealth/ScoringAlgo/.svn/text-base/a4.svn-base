@@ -1,0 +1,4 @@
+Scoring disease 4, found 120 SNPs 
+Error: unable to fecth data SELECT * FROM SNPInfo WHERE dbsnp ='rs17831718_rs17125362_rs1254580'
+Error: unable to fecth data SELECT * FROM SNPInfo WHERE dbsnp ='rs2074739_rs2232170'
+Error: unable to fecth data SELECT * FROM SNPInfo WHERE dbsnp ='rs9312555_rs8752_rs2612656_rs17360144_rs7349744'

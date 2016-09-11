@@ -1,0 +1,1836 @@
+reading info for:  psoriasis  in batch :  gwas_standard1.txt
+reading info for:  adverse reaction to aspirin  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  longevity  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  thyroid cancer  in batch :  gwas_standard3.txt
+reading info for:  paget's disease  in batch :  gwas_standard3.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard3.txt
+reading info for:  scoliosis  in batch :  gwas_standard3.txt
+reading info for:  chronic kidney disease  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  cardioembolic stroke  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard3.txt
+reading info for:  bipolar alcoholism  in batch :  gwas_standard3.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  kidney stone  in batch :  gwas_standard3.txt
+reading info for:  bladder cancer  in batch :  gwas_standard3.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard3.txt
+reading info for:  congenital hypertrophic pyloric stenosis  in batch :  gwas_standard3.txt
+reading info for:  large artery atherosclerosis  in batch :  gwas_standard3.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard3.txt
+reading info for:  thyroid cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  congenital hypertrophic pyloric stenosis  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease without myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  testicular germ cancer  in batch :  gwas_standard3.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard3.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  hepatocellular carcinoma  in batch :  gwas_standard1.txt
+reading info for:  bladder cancer  in batch :  gwas_standard1.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard1.txt
+reading info for:  squamous cell carcinoma of lung  in batch :  gwas_standard1.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard1.txt
+reading info for:  atopic dermatitis  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  venous thrombosis  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  recurrent coronary arteriosclerosis after percutaneous transluminal coronary angioplasty  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (ata+)  in batch :  gwas_standard1.txt
+reading info for:  dilated cardiomyopathy  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  migraine with aura  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  neonatal lupus  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  meningococcal disease  in batch :  gwas_standard1.txt
+reading info for:  nodular regenerative hyperplasia of the liver in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (ata+)  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  gi enteropathy in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  smoking behavior  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  biliary atresia  in batch :  gwas_standard1.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard1.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  drug-induced stevens-johnson syndrome  in batch :  gwas_standard1.txt
+reading info for:  cytopenias in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  childhood asthma  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (ata+)  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  nasopharyngeal carcinoma  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard1.txt
+reading info for:  drug-induced stevens-johnson syndrome  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  malaria  in batch :  gwas_standard1.txt
+reading info for:  thyroid cancer  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard1.txt
+reading info for:  lymphoid interstitial pneumonitis in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (ata+)  in batch :  gwas_standard1.txt
+reading info for:  ovarian cancer  in batch :  gwas_standard1.txt
+reading info for:  thyroid cancer  in batch :  gwas_standard1.txt
+reading info for:  osteoporosis  in batch :  gwas_standard1.txt
+reading info for:  dengue shock syndrome  in batch :  gwas_standard1.txt
+reading info for:  presbycusis  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  graves' disease  in batch :  gwas_standard1.txt
+reading info for:  prostate cancer  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  amoxicillin-clavulanate induced liver injury  in batch :  gwas_standard1.txt
+reading info for:  graves' disease  in batch :  gwas_standard1.txt
+reading info for:  graves' disease  in batch :  gwas_standard1.txt
+reading info for:  splenectomy in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  myopathy  in batch :  gwas_standard1.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard1.txt
+reading info for:  graves' disease  in batch :  gwas_standard1.txt
+reading info for:  coronary artery aneurysmal lesion  in batch :  gwas_standard1.txt
+reading info for:  migraine without aura  in batch :  gwas_standard1.txt
+reading info for:  breast cancer  in batch :  gwas_standard1.txt
+reading info for:  periodontitis  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  autism spectrum disorder  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  presbycusis  in batch :  gwas_standard1.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard1.txt
+reading info for:  pancreatic cancer  in batch :  gwas_standard1.txt
+reading info for:  melanoma  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  melanoma  in batch :  gwas_standard1.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard1.txt
+reading info for:  hypospadias  in batch :  gwas_standard1.txt
+reading info for:  hypertriglyceridemia  in batch :  gwas_standard1.txt
+reading info for:  primary biliary cirrhosis  in batch :  gwas_standard1.txt
+reading info for:  liver cirrhosis  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  epilepsy  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  malabsorption in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard1.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard1.txt
+reading info for:  hepatocellular carcinoma  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis, diffuse  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  presbycusis  in batch :  gwas_standard1.txt
+reading info for:  ovarian cancer  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  paget's disease os  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  endometrial cancer  in batch :  gwas_standard1.txt
+reading info for:  end stage renal disease  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  non-small cell lung cancer  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis, limited  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  childhood asthma  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  meningococcal disease  in batch :  gwas_standard1.txt
+reading info for:  breast cancer  in batch :  gwas_standard1.txt
+reading info for:  pancreatic cancer  in batch :  gwas_standard1.txt
+reading info for:  major depressive disorder  in batch :  gwas_standard1.txt
+reading info for:  lymphocytosis  in batch :  gwas_standard1.txt
+reading info for:  biliary atresia  in batch :  gwas_standard1.txt
+reading info for:  primary open-angle glaucoma  in batch :  gwas_standard1.txt
+reading info for:  hypospadias  in batch :  gwas_standard1.txt
+reading info for:  endometrial cancer  in batch :  gwas_standard1.txt
+reading info for:  premature ovarian failure  in batch :  gwas_standard1.txt
+reading info for:  prostate cancer  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  obesity  in batch :  gwas_standard1.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  drug-induced stevens-johnson syndrome  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  iga nephropathy  in batch :  gwas_standard1.txt
+reading info for:  adenocarcinoma of lung  in batch :  gwas_standard1.txt
+reading info for:  lumiracoxib  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  psoriasis  in batch :  gwas_standard1.txt
+reading info for:  severe myopathy in response to statin therapy  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  breast cancer  in batch :  gwas_standard1.txt
+reading info for:  epilepsy  in batch :  gwas_standard1.txt
+reading info for:  diffuse large b-cell lymphoma  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  immunoglobulin a deficiency  in batch :  gwas_standard1.txt
+reading info for:  periodontitis  in batch :  gwas_standard1.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  nasopharyngeal carcinoma  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard1.txt
+reading info for:  pancreatic cancer  in batch :  gwas_standard1.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  lymphoma in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  gastric cancer  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard1.txt
+reading info for:  osteoporosis  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard1.txt
+reading info for:  male pattern alopecia  in batch :  gwas_standard1.txt
+reading info for:  pancreatic cancer  in batch :  gwas_standard1.txt
+reading info for:  pancreatic cancer  in batch :  gwas_standard1.txt
+reading info for:  arsenical skin lesions  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  rhabdomyolysis in response to cerivastatin without gemfibrozil  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  major depressive disorder  in batch :  gwas_standard1.txt
+reading info for:  keratoconus  in batch :  gwas_standard1.txt
+reading info for:  malaria  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  primary biliary cirrhosis  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  osteoporosis  in batch :  gwas_standard1.txt
+reading info for:  alzheimer disease  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  ventricular dysfunction after cabg surgery with cardiopulmonary bypass  in batch :  gwas_standard1.txt
+reading info for:  endometrial cancer  in batch :  gwas_standard1.txt
+reading info for:  osteoporosis  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard1.txt
+reading info for:  keratoconus  in batch :  gwas_standard1.txt
+reading info for:  nasopharyngeal carcinoma  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (ata+)  in batch :  gwas_standard1.txt
+reading info for:  longevity  in batch :  gwas_standard1.txt
+reading info for:  childhood asthma  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  primary open-angle glaucoma  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  gastric carcinoma  in batch :  gwas_standard1.txt
+reading info for:  adverse reaction to aspirin  in batch :  gwas_standard1.txt
+reading info for:  high myopia  in batch :  gwas_standard1.txt
+reading info for:  adverse reaction to aspirin  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  diffuse large b-cell lymphoma  in batch :  gwas_standard1.txt
+reading info for:  ventricular dysfunction after cabg surgery with cardiopulmonary bypass  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  breast cancer  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  breast cancer  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  testicular germ cell tumor  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  rhabdomyolysis in response to cerivastatin  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  ventricular dysfunction after cabg surgery with cardiopulmonary bypass  in batch :  gwas_standard1.txt
+reading info for:  breast cancer  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard2.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard2.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard2.txt
+reading info for:  gallbladder cancer  in batch :  gwas_standard2.txt
+reading info for:  partial epilepsy  in batch :  gwas_standard2.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard2.txt
+reading info for:  psoriasis  in batch :  gwas_standard2.txt
+reading info for:  graves' disease  in batch :  gwas_standard2.txt
+reading info for:  breast cancer  in batch :  gwas_standard2.txt
+reading info for:  breast cancer  in batch :  gwas_standard3.txt
+reading info for:  nephrolithiasis  in batch :  gwas_standard3.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard3.txt
+reading info for:  breast cancer  in batch :  gwas_standard3.txt
+reading info for:  psoriasis  in batch :  gwas_standard3.txt
+reading info for:  crohn's disease  in batch :  gwas_standard3.txt
+reading info for:  intracranial arterial aneurysm  in batch :  gwas_standard3.txt
+reading info for:  intracranial aneurysm  in batch :  gwas_standard3.txt
+reading info for:  open-angle glaucoma  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  crohn's disease  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  myopia  in batch :  gwas_standard3.txt
+reading info for:  nephrolithiasis  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  type 1 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard3.txt
+reading info for:  testicular germ cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  narcolepsy  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease without myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease in myocardial infarction patients  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease in myocardial infarction patients  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  small vessel disease  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease without myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  vitiligo  in batch :  gwas_standard3.txt
+reading info for:  psoriasis  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  advanced open-angle glaucoma  in batch :  gwas_standard3.txt
+reading info for:  myopia  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard3.txt
+reading info for:  thyroid cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard3.txt
+reading info for:  testicular germ cancer  in batch :  gwas_standard3.txt
+reading info for:  psoriasis  in batch :  gwas_standard3.txt
+reading info for:  glaucoma  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  nephrolithiasis  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  bladder cancer  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  congenital hypertrophic pyloric stenosis  in batch :  gwas_standard3.txt
+reading info for:  kidney stone  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  ewing sarcoma  in batch :  gwas_standard3.txt
+reading info for:  glaucoma  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  stevens-johnson syndrome  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  open-angle glaucoma  in batch :  gwas_standard3.txt
+reading info for:  paget's disease  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  vitiligo  in batch :  gwas_standard3.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard3.txt
+reading info for:  breast cancer  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  pulmonary embolism  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  pancreatic cancer  in batch :  gwas_standard1.txt
+reading info for:  eosinophlic esophagitis  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  allergic rhinitis  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  iga nephropathy  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (ata+)  in batch :  gwas_standard1.txt
+reading info for:  keratoconus  in batch :  gwas_standard1.txt
+reading info for:  ventricular dysfunction after cabg surgery with cardiopulmonary bypass  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  vitiligo  in batch :  gwas_standard1.txt
+reading info for:  vitiligo  in batch :  gwas_standard1.txt
+reading info for:  coronary artery aneurysmal lesion  in batch :  gwas_standard1.txt
+reading info for:  alopecia areata  in batch :  gwas_standard1.txt
+reading info for:  nasopharyngeal carcinoma  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis, diffuse  in batch :  gwas_standard1.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  juvenile idiopathic arthritis  in batch :  gwas_standard1.txt
+reading info for:  premature ovarian failure  in batch :  gwas_standard1.txt
+reading info for:  graves' disease  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  dental caries  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  male-pattern baldness  in batch :  gwas_standard1.txt
+reading info for:  bladder cancer  in batch :  gwas_standard1.txt
+reading info for:  vitiligo  in batch :  gwas_standard1.txt
+reading info for:  male pattern alopecia  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (ata+)  in batch :  gwas_standard1.txt
+reading info for:  migraine with aura  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus with anti-dsdna autoantibody  in batch :  gwas_standard1.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard1.txt
+reading info for:  adenocarcinoma of lung  in batch :  gwas_standard1.txt
+reading info for:  premature ovarian failure  in batch :  gwas_standard1.txt
+reading info for:  gout  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  gout  in batch :  gwas_standard1.txt
+reading info for:  psoriasis  in batch :  gwas_standard1.txt
+reading info for:  keratoconus  in batch :  gwas_standard1.txt
+reading info for:  recurrent coronary arteriosclerosis after percutaneous transluminal coronary angioplasty  in batch :  gwas_standard1.txt
+reading info for:  psoriasis  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  thyroid cancer  in batch :  gwas_standard1.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard1.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard1.txt
+reading info for:  primary biliary cirrhosis  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  psoriasis  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  gout  in batch :  gwas_standard1.txt
+reading info for:  atopy  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  diabetic retinopathy  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard1.txt
+reading info for:  nasopharyngeal carcinoma  in batch :  gwas_standard1.txt
+reading info for:  myopia  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (aca+)  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  breast cancer  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard1.txt
+reading info for:  polycystic ovary syndrome  in batch :  gwas_standard1.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  c4bpb  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  dilated cardiomyopathy  in batch :  gwas_standard1.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard1.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard1.txt
+reading info for:  primary sclerosing cholangitis  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  psoriasis  in batch :  gwas_standard2.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard2.txt
+reading info for:  idiopathic pulmonary fibrosis  in batch :  gwas_standard2.txt
+reading info for:  chronic myeloid leukemia  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  breast cancer  in batch :  gwas_standard2.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  creutzfeldt-jakob disease  in batch :  gwas_standard2.txt
+reading info for:  heart failure  in batch :  gwas_standard2.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard2.txt
+reading info for:  hodgkin's lymphoma  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  stevens-johnson syndrome  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  graves' disease  in batch :  gwas_standard2.txt
+reading info for:  nevirapine-induced rash (grade 3)  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  diabetes mellitus type 2  in batch :  gwas_standard2.txt
+reading info for:  hodgkin's lymphoma  in batch :  gwas_standard2.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard2.txt
+reading info for:  graves' disease  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  caecum cancer  in batch :  gwas_standard2.txt
+reading info for:  gallbladder cancer  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard2.txt
+reading info for:  nevirapine-induced rash (grade 1)  in batch :  gwas_standard2.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard2.txt
+reading info for:  psoriasis  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard2.txt
+reading info for:  intracranial glioma  in batch :  gwas_standard2.txt
+reading info for:  coronary spasm  in batch :  gwas_standard2.txt
+reading info for:  male pattern alopecia  in batch :  gwas_standard2.txt
+reading info for:  tuberculosis  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  primary sclerosing cholangitis  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer in current smokers  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer  in batch :  gwas_standard2.txt
+reading info for:  intracranial glioma  in batch :  gwas_standard2.txt
+reading info for:  peripheral arterial occlusive disease  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  endometriosis  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  keloid  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  childhood asthma  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  peripheral arterial occlusive disease  in batch :  gwas_standard2.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard2.txt
+reading info for:  asymptomatic coronary heart disease  in batch :  gwas_standard2.txt
+reading info for:  iss  in batch :  gwas_standard2.txt
+reading info for:  gallbladder cancer  in batch :  gwas_standard2.txt
+reading info for:  lung cancer in never smokers  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer in never smokers  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  graves' ophthalmopathy  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  endometriosis  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  schizophrenia  in batch :  gwas_standard2.txt
+reading info for:  hodgkin's lymphoma  in batch :  gwas_standard2.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard2.txt
+reading info for:  testicular germ cell tumor  in batch :  gwas_standard2.txt
+reading info for:  intracranial glioma  in batch :  gwas_standard2.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  diffuse large b-cell lymphoma  in batch :  gwas_standard2.txt
+reading info for:  primary sclerosing cholangitis  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  intracranial aneurysm  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  uterine fibroids  in batch :  gwas_standard2.txt
+reading info for:  lung cancer (other subtype)  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard2.txt
+reading info for:  diffuse large b-cell lymphoma  in batch :  gwas_standard2.txt
+reading info for:  ibd - inflammatory bowel disease  in batch :  gwas_standard2.txt
+reading info for:  allergic asthma  in batch :  gwas_standard2.txt
+reading info for:  liver cirrhosis  in batch :  gwas_standard2.txt
+reading info for:  tuberculosis  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  hypertention  in batch :  gwas_standard2.txt
+reading info for:  intracranial glioma  in batch :  gwas_standard2.txt
+reading info for:  crohn's diease  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard2.txt
+reading info for:  nevirapine-induced rash (grade 4)  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  epirubicin-induced leukopenia  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  nephrotic syndrome  in batch :  gwas_standard2.txt
+reading info for:  epirubicin-induced leukopenia  in batch :  gwas_standard2.txt
+reading info for:  crohn's disease  in batch :  gwas_standard2.txt
+reading info for:  hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  non-small cell lung cancer  in batch :  gwas_standard2.txt
+reading info for:  cancer of descending colon  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  crohn's diease  in batch :  gwas_standard2.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard2.txt
+reading info for:  epirubicin-induced leukopenia in breast cancer patients  in batch :  gwas_standard2.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard2.txt
+reading info for:  non-small cell lung cancer  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  asymptomatic coronary heart disease  in batch :  gwas_standard2.txt
+reading info for:  testicular germ cell tumor  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  familial alzheimer's disease of late onset  in batch :  gwas_standard2.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  tuberculosis  in batch :  gwas_standard2.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard2.txt
+reading info for:  scoliosis  in batch :  gwas_standard2.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  non-small cell lung cancer in non-smokers  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  lung cancer in former smokers  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  idiopathic pulmonary fibrosis  in batch :  gwas_standard2.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  caecum cancer  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  iloperidone  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  familial alzheimer's disease of late onset  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  narcolepsy  in batch :  gwas_standard2.txt
+reading info for:  intracranial glioma  in batch :  gwas_standard2.txt
+reading info for:  nephrotic syndrome  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  renal cell carcinoma  in batch :  gwas_standard2.txt
+reading info for:  diffuse large b-cell lymphoma  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  peripheral arterial occlusive disease  in batch :  gwas_standard2.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard2.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  scoliosis  in batch :  gwas_standard2.txt
+reading info for:  small cell carcinoma of lung  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  hodgkin's lymphoma  in batch :  gwas_standard2.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard2.txt
+reading info for:  nephropathy - diabetic  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard2.txt
+reading info for:  breast cancer  in batch :  gwas_standard2.txt
+reading info for:  hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer in ever smokers  in batch :  gwas_standard2.txt
+reading info for:  restless leg syndrome  in batch :  gwas_standard2.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard2.txt
+reading info for:  graves' disease  in batch :  gwas_standard2.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  hepatocellular carcinoma  in batch :  gwas_standard2.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  creutzfeldt-jakob disease  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer  in batch :  gwas_standard2.txt
+reading info for:  psoriasis  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  intracranial aneurysm  in batch :  gwas_standard2.txt
+reading info for:  nevirapine-induced rash  in batch :  gwas_standard2.txt
+reading info for:  ibd - inflammatory bowel disease  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer in former smokers  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  nevirapine-induced rash  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  breast cancer  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  breast cancer  in batch :  gwas_standard2.txt
+reading info for:  subarachnoid hemorrhage due to ruptured aneurysm  in batch :  gwas_standard2.txt
+reading info for:  hodgkin's lymphoma  in batch :  gwas_standard2.txt
+reading info for:  nevirapine-induced rash  in batch :  gwas_standard2.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  asymptomatic coronary heart disease  in batch :  gwas_standard2.txt
+reading info for:  acute lymphoid leukemia  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  premature ovarian failure  in batch :  gwas_standard2.txt
+reading info for:  osteonecrosis due to drugs  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  keloid  in batch :  gwas_standard2.txt
+reading info for:  nephrotic syndrome  in batch :  gwas_standard2.txt
+reading info for:  chronic myeloid leukemia  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  crohn's diease  in batch :  gwas_standard2.txt
+reading info for:  crohn's diease  in batch :  gwas_standard2.txt
+reading info for:  renal cell carcinoma  in batch :  gwas_standard2.txt
+reading info for:  asymptomatic coronary heart disease  in batch :  gwas_standard2.txt
+reading info for:  nephrotic syndrome  in batch :  gwas_standard2.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard2.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  colon cancer  in batch :  gwas_standard2.txt
+reading info for:  scoliosis  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer  in batch :  gwas_standard2.txt
+reading info for:  intracranial glioma  in batch :  gwas_standard2.txt
+reading info for:  epirubicin-induced leukopenia in breast cancer patients  in batch :  gwas_standard2.txt
+reading info for:  diabetes mellitus type 2  in batch :  gwas_standard2.txt
+reading info for:  psoriasis  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  neuroleptic-induced tardive dyskinesia  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  lung cancer in current smokers  in batch :  gwas_standard2.txt
+reading info for:  creutzfeldt-jakob disease  in batch :  gwas_standard2.txt
+reading info for:  asthma  in batch :  gwas_standard2.txt
+reading info for:  intracranial glioma  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard2.txt
+reading info for:  juvenile idiopathic arthritis  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  bladder cancer  in batch :  gwas_standard2.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  neuroleptic-induced tardive dyskinesia  in batch :  gwas_standard2.txt
+reading info for:  testicular germ cell cancer  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  high myopia  in batch :  gwas_standard2.txt
+reading info for:  primary sclerosing cholangitis  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  keloid  in batch :  gwas_standard2.txt
+reading info for:  idiopathic pulmonary fibrosis  in batch :  gwas_standard2.txt
+reading info for:  periodontitis  in batch :  gwas_standard2.txt
+reading info for:  lung adenocarcinoma  in batch :  gwas_standard2.txt
+reading info for:  endometriosis  in batch :  gwas_standard2.txt
+reading info for:  asymptomatic coronary heart disease  in batch :  gwas_standard2.txt
+reading info for:  acute lymphoid leukemia  in batch :  gwas_standard2.txt
+reading info for:  periodontitis  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  coronary spasm  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  diabetes mellitus type 2  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  allergic asthma  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  meningioma  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard2.txt
+reading info for:  uterine fibroids  in batch :  gwas_standard2.txt
+reading info for:  familial alzheimer's disease of late onset  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  narcolepsy  in batch :  gwas_standard2.txt
+reading info for:  familial alzheimer's disease of late onset  in batch :  gwas_standard2.txt
+reading info for:  squamous cell carcinoma of lung  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  juvenile idiopathic arthritis  in batch :  gwas_standard2.txt
+reading info for:  hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  creutzfeldt-jakob disease  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  nevirapine-induced rash (grade 2)  in batch :  gwas_standard2.txt
+reading info for:  lung cancer  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard2.txt
+reading info for:  keloid  in batch :  gwas_standard2.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard2.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  keloid  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  high myopia  in batch :  gwas_standard2.txt
+reading info for:  chronic myeloid leukemia  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard2.txt
+reading info for:  epirubicin-induced leukopenia  in batch :  gwas_standard2.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard2.txt
+reading info for:  high myopia  in batch :  gwas_standard2.txt
+reading info for:  acute liver failure  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  gastric cancer  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  adenocarcinoma of lung  in batch :  gwas_standard2.txt
+reading info for:  acute lymphoid leukemia  in batch :  gwas_standard2.txt
+reading info for:  meningioma  in batch :  gwas_standard2.txt
+reading info for:  uterine fibroids  in batch :  gwas_standard2.txt
+reading info for:  body mass index  in batch :  gwas_standard2.txt
+reading info for:  graves' disease  in batch :  gwas_standard2.txt
+reading info for:  non-obstructive azoospermia  in batch :  gwas_standard2.txt
+reading info for:  atopy  in batch :  gwas_standard2.txt
+reading info for:  crohn's diease  in batch :  gwas_standard2.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard2.txt
+reading info for:  chronic viral hepatitis c  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  sarcoidosis  in batch :  gwas_standard2.txt
+reading info for:  diabetes mellitus type 2  in batch :  gwas_standard2.txt
+reading info for:  hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  epirubicin-induced leukopenia  in batch :  gwas_standard2.txt
+reading info for:  hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  diabetes mellitus type 2  in batch :  gwas_standard2.txt
+reading info for:  creutzfeldt-jakob disease  in batch :  gwas_standard2.txt
+reading info for:  epirubicin-induced leukopenia  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  rheumatoid arthritis  in batch :  gwas_standard2.txt
+reading info for:  asymptomatic coronary heart disease  in batch :  gwas_standard2.txt
+reading info for:  cancer of descending colon  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  cancer of descending colon  in batch :  gwas_standard2.txt
+reading info for:  colon cancer  in batch :  gwas_standard2.txt
+reading info for:  chronic fatigue syndrome  in batch :  gwas_standard2.txt
+reading info for:  hypertention  in batch :  gwas_standard2.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard2.txt
+reading info for:  chronic hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard2.txt
+reading info for:  epirubicin-induced leukopenia  in batch :  gwas_standard2.txt
+reading info for:  carbamazepine adverse reaction  in batch :  gwas_standard2.txt
+reading info for:  diabetes mellitus type 2  in batch :  gwas_standard2.txt
+reading info for:  diffuse large b-cell lymphoma  in batch :  gwas_standard2.txt
+reading info for:  obesity  in batch :  gwas_standard2.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  scoliosis  in batch :  gwas_standard2.txt
+reading info for:  nephrotic syndrome  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard2.txt
+reading info for:  prostate cancer  in batch :  gwas_standard2.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard2.txt
+reading info for:  meningioma  in batch :  gwas_standard2.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard2.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard2.txt
+reading info for:  cancer of descending colon  in batch :  gwas_standard2.txt
+reading info for:  rectal cancer  in batch :  gwas_standard2.txt
+reading info for:  neuroleptic-induced tardive dyskinesia  in batch :  gwas_standard2.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard2.txt
+reading info for:  colon cancer  in batch :  gwas_standard2.txt
+reading info for:  hepatitis b  in batch :  gwas_standard2.txt
+reading info for:  breast cancer  in batch :  gwas_standard2.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  congenital hypertrophic pyloric stenosis  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard3.txt
+reading info for:  restless leg syndrome  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  essential tremor dysphonia  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  psoriasis  in batch :  gwas_standard3.txt
+reading info for:  cardioembolic stroke  in batch :  gwas_standard3.txt
+reading info for:  chronic kidney disease  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  presbycusis  in batch :  gwas_standard3.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard3.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  bladder cancer  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  psoriasis vulgaris  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  kidney stones  in batch :  gwas_standard3.txt
+reading info for:  vascular dementia  in batch :  gwas_standard3.txt
+reading info for:  venous thrombosis  in batch :  gwas_standard3.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard3.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  schizophrenia  in batch :  gwas_standard3.txt
+reading info for:  bladder cancer  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  chronic kidney disease  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  open-angle glaucoma  in batch :  gwas_standard3.txt
+reading info for:  scoliosis  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard3.txt
+reading info for:  paget's disease  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  f-cell distribution  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  crohn's disease  in batch :  gwas_standard3.txt
+reading info for:  intracranial aneurysm  in batch :  gwas_standard3.txt
+reading info for:  myopia  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  myopathy  in batch :  gwas_standard3.txt
+reading info for:  androgenic alopecia  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard3.txt
+reading info for:  type 1 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  endometriosis  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  large artery atherosclerosis  in batch :  gwas_standard3.txt
+reading info for:  cutaneous basal cell carcinoma  in batch :  gwas_standard3.txt
+reading info for:  glaucoma  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  ewing sarcoma  in batch :  gwas_standard3.txt
+reading info for:  paget's disease  in batch :  gwas_standard3.txt
+reading info for:  pulmonary embolism  in batch :  gwas_standard3.txt
+reading info for:  chronic kidney disease  in batch :  gwas_standard3.txt
+reading info for:  type 1 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  chronic kidney disease  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard3.txt
+reading info for:  intracranial aneurysm  in batch :  gwas_standard3.txt
+reading info for:  hepatocellular carcinoma  in batch :  gwas_standard3.txt
+reading info for:  androgenic alopecia  in batch :  gwas_standard3.txt
+reading info for:  type 1 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  congenital hypertrophic pyloric stenosis  in batch :  gwas_standard3.txt
+reading info for:  vitiligo  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  hepatocellular carcinoma  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  breast cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  psoriasis vulgaris  in batch :  gwas_standard3.txt
+reading info for:  schizophrenia  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  cardioembolic stroke  in batch :  gwas_standard3.txt
+reading info for:  open-angle glaucoma  in batch :  gwas_standard3.txt
+reading info for:  glaucoma  in batch :  gwas_standard3.txt
+reading info for:  behcets disease  in batch :  gwas_standard3.txt
+reading info for:  graves' disease  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  cardioembolic stroke  in batch :  gwas_standard3.txt
+reading info for:  small vessel disease  in batch :  gwas_standard3.txt
+reading info for:  essential tremor dysphonia  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  lapatinib  in batch :  gwas_standard3.txt
+reading info for:  crohn's disease  in batch :  gwas_standard3.txt
+reading info for:  platelet count in response to peg-ifn-rbv treatment  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  nephrolithiasis  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  glaucoma  in batch :  gwas_standard3.txt
+reading info for:  glaucoma  in batch :  gwas_standard3.txt
+reading info for:  restless leg syndrome  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  cardioembolic stroke  in batch :  gwas_standard3.txt
+reading info for:  narcolepsy  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  psoriatic arthritis  in batch :  gwas_standard3.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  chronic lymphocytic leukemia  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  alcohol dependence  in batch :  gwas_standard3.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  myopia  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  drug induced liver injury  in batch :  gwas_standard3.txt
+reading info for:  vitiligo  in batch :  gwas_standard3.txt
+reading info for:  atrial fibrillation and flutter  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  intracranial aneurysm  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  glaucoma  in batch :  gwas_standard3.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard3.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard3.txt
+reading info for:  uterine fibroids  in batch :  gwas_standard3.txt
+reading info for:  paget's disease  in batch :  gwas_standard3.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard3.txt
+reading info for:  cutaneous basal cell carcinoma  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  bladder cancer  in batch :  gwas_standard3.txt
+reading info for:  bronchopulmonary dysplasia of newborn  in batch :  gwas_standard3.txt
+reading info for:  open-angle glaucoma  in batch :  gwas_standard3.txt
+reading info for:  pulmonary embolism  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  pancreatic cancer  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  paget's disease  in batch :  gwas_standard3.txt
+reading info for:  crohn's disease  in batch :  gwas_standard3.txt
+reading info for:  congenital hypertrophic pyloric stenosis  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  schizophrenia  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  bladder cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  breast cancer  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  paget's disease  in batch :  gwas_standard3.txt
+reading info for:  small vessel disease  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  longevity  in batch :  gwas_standard3.txt
+reading info for:  graves' disease  in batch :  gwas_standard3.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard3.txt
+reading info for:  alcohol dependence  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  primary open angle glaucoma  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  hepatocellular carcinoma  in batch :  gwas_standard3.txt
+reading info for:  hepatocellular carcinoma  in batch :  gwas_standard3.txt
+reading info for:  ewing sarcoma  in batch :  gwas_standard3.txt
+reading info for:  alcohol dependence  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  bronchopulmonary dysplasia of newborn  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard3.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  hemoglobin concentration in response to peg-ifn-rbv treatment  in batch :  gwas_standard3.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard3.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard3.txt
+reading info for:  restless leg syndrome  in batch :  gwas_standard3.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard3.txt
+reading info for:  atrial fibrillation and flutter  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  bronchopulmonary dysplasia of newborn  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  atrial fibrillation and flutter  in batch :  gwas_standard3.txt
+reading info for:  myopia  in batch :  gwas_standard3.txt
+reading info for:  focal segmental glomerulosclerosis  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard3.txt
+reading info for:  pulmonary embolism  in batch :  gwas_standard3.txt
+reading info for:  essential tremor dysphonia  in batch :  gwas_standard3.txt
+reading info for:  diabetic nephropathy  in batch :  gwas_standard3.txt
+reading info for:  endometriosis  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  hypertensive disease  in batch :  gwas_standard3.txt
+reading info for:  psoriasis vulgaris  in batch :  gwas_standard3.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  venous thrombosis  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  psoriasis vulgaris  in batch :  gwas_standard3.txt
+reading info for:  restless leg syndrome  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  nephrolithiasis  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  myopia  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  cutaneous basal cell carcinoma  in batch :  gwas_standard3.txt
+reading info for:  thyroid cancer  in batch :  gwas_standard3.txt
+reading info for:  atrial fibrillation and flutter  in batch :  gwas_standard3.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard3.txt
+reading info for:  age-related macular degeneration  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  bipolar disorder without alcohol dependence  in batch :  gwas_standard3.txt
+reading info for:  psoriasis vulgaris  in batch :  gwas_standard3.txt
+reading info for:  atrial fibrillation and flutter  in batch :  gwas_standard3.txt
+reading info for:  narcolepsy  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  suicidal ideation  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  restless leg syndrome  in batch :  gwas_standard3.txt
+reading info for:  graves' disease  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  breast cancer  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  bone mineral density  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  breast cancer  in batch :  gwas_standard3.txt
+reading info for:  lapatinib  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  uterine fibroids  in batch :  gwas_standard3.txt
+reading info for:  thyroid cancer  in batch :  gwas_standard3.txt
+reading info for:  breast cancer  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  large artery atherosclerosis  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  uterine fibroids  in batch :  gwas_standard3.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard3.txt
+reading info for:  cutaneous basal cell carcinoma  in batch :  gwas_standard3.txt
+reading info for:  androgenic alopecia  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  presbycusis  in batch :  gwas_standard3.txt
+reading info for:  ewing sarcoma  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  diabetic nephropathy  in batch :  gwas_standard3.txt
+reading info for:  narcolepsy  in batch :  gwas_standard3.txt
+reading info for:  artery disease  in batch :  gwas_standard3.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard3.txt
+reading info for:  restless leg syndrome  in batch :  gwas_standard3.txt
+reading info for:  asthma  in batch :  gwas_standard3.txt
+reading info for:  chronic kidney disease  in batch :  gwas_standard3.txt
+reading info for:  cutaneous basal cell carcinoma  in batch :  gwas_standard3.txt
+reading info for:  hypertension  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  abdominal aortic aneurysm  in batch :  gwas_standard3.txt
+reading info for:  prostate cancer  in batch :  gwas_standard3.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard3.txt
+reading info for:  uterine fibroids  in batch :  gwas_standard3.txt
+reading info for:  behcets disease  in batch :  gwas_standard3.txt
+reading info for:  nephrolithiasis  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  kidney stones  in batch :  gwas_standard3.txt
+reading info for:  myopia  in batch :  gwas_standard3.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard3.txt
+reading info for:  myocardial infarction  in batch :  gwas_standard3.txt
+reading info for:  bladder cancer  in batch :  gwas_standard3.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard3.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard3.txt
+reading info for:  eosinophil  in batch :  gwas_standard3.txt
+reading info for:  kidney stones  in batch :  gwas_standard3.txt
+reading info for:  type 2 diabetes mellitus  in batch :  gwas_standard3.txt
+reading info for:  cancer in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard1.txt
+reading info for:  keratoconus  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (aca+)  in batch :  gwas_standard1.txt
+reading info for:  coronary artery aneurysmal lesion  in batch :  gwas_standard1.txt
+reading info for:  late-onset alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  migraine without aura  in batch :  gwas_standard1.txt
+reading info for:  dental caries  in batch :  gwas_standard1.txt
+reading info for:  nasopharyngeal carcinoma  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  diffuse large b-cell lymphoma  in batch :  gwas_standard1.txt
+reading info for:  autism spectrum disorder  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard1.txt
+reading info for:  serum urate  in batch :  gwas_standard1.txt
+reading info for:  erectile dysfunction in response to radiation  in batch :  gwas_standard1.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard1.txt
+reading info for:  migraine with aura  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard1.txt
+reading info for:  juvenile idiopathic arthritis  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  osteoporosis  in batch :  gwas_standard1.txt
+reading info for:  endometrial cancer  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  tuberculosis  in batch :  gwas_standard1.txt
+reading info for:  frontotemporal degeneration  in batch :  gwas_standard1.txt
+reading info for:  gout  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard1.txt
+reading info for:  membranous glomerulonephritis  in batch :  gwas_standard1.txt
+reading info for:  alopecia areata  in batch :  gwas_standard1.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard1.txt
+reading info for:  immunoglobulin a deficiency  in batch :  gwas_standard1.txt
+reading info for:  typical age-related macular degeneration  in batch :  gwas_standard1.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard1.txt
+reading info for:  ovarian cancer  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  major depressive disorder  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  vascular dementia  in batch :  gwas_standard1.txt
+reading info for:  glioma of brain  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  late-onset alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  late-onset alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  vascular dementia  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  recurrent coronary arteriosclerosis after percutaneous transluminal coronary angioplasty  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  gout  in batch :  gwas_standard1.txt
+reading info for:  hepatocellular carcinoma  in batch :  gwas_standard1.txt
+reading info for:  membranous glomerulonephritis  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  eosinophlic esophagitis  in batch :  gwas_standard1.txt
+reading info for:  serum urate  in batch :  gwas_standard1.txt
+reading info for:  major depressive disorder  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  meningococcal disease  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  late-onset alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  primary biliary cirrhosis  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus without anti-dsdna autoantibody  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  ovarian cancer  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  vitiligo  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  paget's disease os  in batch :  gwas_standard1.txt
+reading info for:  hirschsprung's disease  in batch :  gwas_standard1.txt
+reading info for:  dengue shock syndrome  in batch :  gwas_standard1.txt
+reading info for:  gastric cancer  in batch :  gwas_standard1.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard1.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard1.txt
+reading info for:  musculoskeletal adverse events  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  ovarian cancer  in batch :  gwas_standard1.txt
+reading info for:  childhood asthma  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  ventricular dysfunction after cabg surgery with cardiopulmonary bypass  in batch :  gwas_standard1.txt
+reading info for:  graves' disease  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  atopy  in batch :  gwas_standard1.txt
+reading info for:  atopic dermatitis  in batch :  gwas_standard1.txt
+reading info for:  chronic hepatitis c infection  in batch :  gwas_standard1.txt
+reading info for:  adenocarcinoma of lung  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis, diffuse  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  hypospadias  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease with late onset  in batch :  gwas_standard1.txt
+reading info for:  c4bpb  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  membranous glomerulonephritis  in batch :  gwas_standard1.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard1.txt
+reading info for:  frontotemporal degeneration  in batch :  gwas_standard1.txt
+reading info for:  lumiracoxib  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis, limited  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  low iga (<10 mg/dl) in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  early onset (<10 yrs) common variable immunodeficiency  in batch :  gwas_standard1.txt
+reading info for:  primary open-angle glaucoma  in batch :  gwas_standard1.txt
+reading info for:  keratoconus  in batch :  gwas_standard1.txt
+reading info for:  migraine without aura  in batch :  gwas_standard1.txt
+reading info for:  epilepsy  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  iga nephropathy  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  ventricular dysfunction after cabg surgery with cardiopulmonary bypass  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  frontotemporal degeneration  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  granuloma in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  longevity  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  ventricular dysfunction after cabg surgery with cardiopulmonary bypass  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  squamous cell carcinoma of lung  in batch :  gwas_standard1.txt
+reading info for:  gout  in batch :  gwas_standard1.txt
+reading info for:  obesity  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (aca+)  in batch :  gwas_standard1.txt
+reading info for:  vitiligo  in batch :  gwas_standard1.txt
+reading info for:  hodgkin's lymphoma (epstein- barr virus negative) (epstein- barr virus positive)  in batch :  gwas_standard1.txt
+reading info for:  behcets disease  in batch :  gwas_standard1.txt
+reading info for:  childhood asthma  in batch :  gwas_standard1.txt
+reading info for:  ankylosing spondylitis  in batch :  gwas_standard1.txt
+reading info for:  organ specific autoimmunity in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  paget's disease os  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (aca+)  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  frontotemporal degeneration  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  major depressive disorder  in batch :  gwas_standard1.txt
+reading info for:  ulcerative colitis  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (aca+)  in batch :  gwas_standard1.txt
+reading info for:  major depressive disorder  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  psoriasis with arthropathy  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  colorectal cancer  in batch :  gwas_standard1.txt
+reading info for:  frontotemporal degeneration  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis (aca+)  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  lymphadenopathy in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  male pattern alopecia  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  neuroblastoma  in batch :  gwas_standard1.txt
+reading info for:  dilated cardiomyopathy  in batch :  gwas_standard1.txt
+reading info for:  esophageal cancer  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  hodgkin's lymphoma (epstein- barr virus positive)  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  vitiligo  in batch :  gwas_standard1.txt
+reading info for:  atopic dermatitis  in batch :  gwas_standard1.txt
+reading info for:  hodgkin's lymphoma  in batch :  gwas_standard1.txt
+reading info for:  cleft palate  in batch :  gwas_standard1.txt
+reading info for:  tuberculosis  in batch :  gwas_standard1.txt
+reading info for:  autism spectrum disorder  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  bronchiectasis in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  frontotemporal degeneration  in batch :  gwas_standard1.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard1.txt
+reading info for:  immunoglobulin a deficiency  in batch :  gwas_standard1.txt
+reading info for:  myopia  in batch :  gwas_standard1.txt
+reading info for:  dilated cardiomyopathy  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  primary sclerosing cholangitis  in batch :  gwas_standard1.txt
+reading info for:  primary biliary cirrhosis  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  tuberculosis  in batch :  gwas_standard1.txt
+reading info for:  recurrent coronary arteriosclerosis after percutaneous transluminal coronary angioplasty  in batch :  gwas_standard1.txt
+reading info for:  atopic dermatitis  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  liver cirrhosis  in batch :  gwas_standard1.txt
+reading info for:  obesity  in batch :  gwas_standard1.txt
+reading info for:  paget's disease os  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  polypoidal choroidal vasculopathy  in batch :  gwas_standard1.txt
+reading info for:  kawasaki disease  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  venous thrombosis  in batch :  gwas_standard1.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  dilated cardiomyopathy  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  acute myocardial infarction  in batch :  gwas_standard1.txt
+reading info for:  primary open-angle glaucoma  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  follicular lymphoma  in batch :  gwas_standard1.txt
+reading info for:  low b cells (cd19+ cells <1%) in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  low igm (<50 mg/dl) in common variable immunodeficiency patients  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  basal cell carcinoma of skin  in batch :  gwas_standard1.txt
+reading info for:  migraine with aura  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  male-pattern baldness  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  inflammatory bowel disease  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  myopia  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  vitiligo  in batch :  gwas_standard1.txt
+reading info for:  systemic lupus erythematosus  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  atopic dermatitis  in batch :  gwas_standard1.txt
+reading info for:  obesity  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  hypothyroidism  in batch :  gwas_standard1.txt
+reading info for:  narcolepsy  in batch :  gwas_standard1.txt
+reading info for:  cutaneous malignant melanoma  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  myopia  in batch :  gwas_standard1.txt
+reading info for:  asthma  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  membranous glomerulonephritis  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  ovarian cancer  in batch :  gwas_standard1.txt
+reading info for:  osteoporosis  in batch :  gwas_standard1.txt
+reading info for:  tuberculosis  in batch :  gwas_standard1.txt
+reading info for:  hypospadias  in batch :  gwas_standard1.txt
+reading info for:  lung cancer  in batch :  gwas_standard1.txt
+reading info for:  hirschsprung's disease  in batch :  gwas_standard1.txt
+reading info for:  keratoconus  in batch :  gwas_standard1.txt
+reading info for:  crohn's disease  in batch :  gwas_standard1.txt
+reading info for:  primary open-angle glaucoma  in batch :  gwas_standard1.txt
+reading info for:  knee osteoarthritis  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  coronary artery disease  in batch :  gwas_standard1.txt
+reading info for:  restless legs syndrome  in batch :  gwas_standard1.txt
+reading info for:  c4bpb  in batch :  gwas_standard1.txt
+reading info for:  systemic sclerosis, limited  in batch :  gwas_standard1.txt
+reading info for:  venous thrombosis  in batch :  gwas_standard1.txt
+reading info for:  common variable immunodeficiency  in batch :  gwas_standard1.txt
+reading info for:  migraine  in batch :  gwas_standard1.txt
+reading info for:  celiac disease  in batch :  gwas_standard1.txt
+reading info for:  ischemic stroke  in batch :  gwas_standard1.txt
+reading info for:  ulcerative collitis  in batch :  gwas_standard1.txt
+reading info for:  dilated cardiomyopathy  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  vitiligo  in batch :  gwas_standard1.txt
+reading info for:  schizophrenia  in batch :  gwas_standard1.txt
+reading info for:  allergic rhinitis  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  amyotrophic lateral sclerosis  in batch :  gwas_standard1.txt
+reading info for:  bipolar disorder  in batch :  gwas_standard1.txt
+reading info for:  multiple sclerosis  in batch :  gwas_standard1.txt
+reading info for:  atopic dermatitis  in batch :  gwas_standard1.txt
+reading info for:  parkinson's disease  in batch :  gwas_standard1.txt
+reading info for:  polycystic ovary syndrome  in batch :  gwas_standard1.txt
+reading info for:  alzheimer's disease with late onset  in batch :  gwas_standard1.txt
+                 batch    disease         snp
+0   gwas_standard1.txt  psoriasis   rs4711269
+1   gwas_standard1.txt  psoriasis  rs10484554
+2   gwas_standard1.txt  psoriasis  rs13437082
+3   gwas_standard1.txt  psoriasis   rs2000291
+4   gwas_standard1.txt  psoriasis   rs2395029
+5   gwas_standard1.txt  psoriasis   rs9368699
+6   gwas_standard1.txt  psoriasis   rs3886972
+7   gwas_standard1.txt  psoriasis   rs9469003
+8   gwas_standard1.txt  psoriasis    rs740234
+9   gwas_standard1.txt  psoriasis   rs6141829
+10  gwas_standard1.txt  psoriasis  rs13199524
+11  gwas_standard1.txt  psoriasis   rs2523608
+12  gwas_standard1.txt  psoriasis   rs1265159
+13  gwas_standard1.txt  psoriasis   rs2697135
+14  gwas_standard1.txt  psoriasis   rs3815087
+15  gwas_standard1.txt  psoriasis   rs2240601
+16  gwas_standard1.txt  psoriasis   rs6575501
+17  gwas_standard1.txt  psoriasis   rs2844529
+18  gwas_standard1.txt  psoriasis   rs2428486
+19  gwas_standard1.txt  psoriasis    rs720465
+20  gwas_standard1.txt  psoriasis   rs6883825
+21  gwas_standard1.txt  psoriasis   rs2523535
+22  gwas_standard1.txt  psoriasis   rs2894207
+23  gwas_standard1.txt  psoriasis   rs1936307
+24  gwas_standard1.txt  psoriasis  rs12198173
+25  gwas_standard1.txt  psoriasis    rs930145
+26  gwas_standard1.txt  psoriasis    rs431649
+27  gwas_standard1.txt  psoriasis   rs2523467
+28  gwas_standard1.txt  psoriasis  rs12130439
+29  gwas_standard1.txt  psoriasis   rs3130453
+paget's disease os
+presbycusis
+coronary artery aneurysmal lesion
+squamous cell carcinoma of lung
+epilepsy
+cardioembolic stroke
+psoriasis vulgaris
+graves' ophthalmopathy
+longevity
+sarcoidosis
+non-small cell lung cancer
+hypothyroidism
+lung cancer (other subtype)
+follicular lymphoma
+testicular germ cell tumor
+stevens-johnson syndrome
+osteoporosis
+chronic hepatitis c infection
+asthma
+drug-induced stevens-johnson syndrome
+restless legs syndrome
+hodgkin's lymphoma
+subarachnoid hemorrhage due to ruptured aneurysm
+chronic fatigue syndrome
+erectile dysfunction in response to radiation
+lung cancer in never smokers
+narcolepsy
+kidney stone
+dilated cardiomyopathy
+pulmonary embolism
+allergic asthma
+autism spectrum disorder
+primary sclerosing cholangitis
+hypospadias
+crohn's diease
+frontotemporal degeneration
+small vessel disease
+lymphoma in common variable immunodeficiency patients
+hypertention
+recurrent coronary arteriosclerosis after percutaneous transluminal coronary angioplasty
+renal cell carcinoma
+gastric cancer
+diffuse large b-cell lymphoma
+alzheimer's disease with late onset
+tuberculosis
+hemoglobin concentration in response to peg-ifn-rbv treatment
+lymphoid interstitial pneumonitis in common variable immunodeficiency patients
+nevirapine-induced rash (grade 4)
+rectal cancer
+body mass index
+membranous glomerulonephritis
+bladder cancer in former smokers
+ischemic stroke
+age-related macular degeneration
+systemic lupus erythematosus
+chronic lymphocytic leukemia
+vascular dementia
+cytopenias in common variable immunodeficiency patients
+paget's disease
+testicular germ cancer
+obesity
+large artery atherosclerosis
+primary biliary cirrhosis
+osteonecrosis due to drugs
+juvenile idiopathic arthritis
+basal cell carcinoma of skin
+gout
+platelet count in response to peg-ifn-rbv treatment
+intracranial glioma
+atopy
+diabetes mellitus type 2
+late-onset alzheimer's disease
+ovarian cancer
+amyotrophic lateral sclerosis
+hirschsprung's disease
+nephrolithiasis
+celiac disease
+schizophrenia
+carbamazepine adverse reaction
+intracranial aneurysm
+bladder cancer in current smokers
+pancreatic cancer
+periodontitis
+systemic sclerosis
+idiopathic pulmonary fibrosis
+congenital hypertrophic pyloric stenosis
+high myopia
+lung cancer in former smokers
+serum urate
+heart failure
+cutaneous malignant melanoma
+bipolar disorder
+cutaneous basal cell carcinoma
+diabetic nephropathy
+eosinophlic esophagitis
+androgenic alopecia
+systemic lupus erythematosus with anti-dsdna autoantibody
+gastric carcinoma
+bronchopulmonary dysplasia of newborn
+myopathy
+biliary atresia
+systemic sclerosis, limited
+gallbladder cancer
+end stage renal disease
+colorectal cancer
+malaria
+ankylosing spondylitis
+vitiligo
+abdominal aortic aneurysm
+systemic sclerosis (aca+)
+eosinophil
+arsenical skin lesions
+myocardial infarction
+bipolar alcoholism
+epirubicin-induced leukopenia in breast cancer patients
+hodgkin's lymphoma (epstein- barr virus negative) (epstein- barr virus positive)
+type 2 diabetes
+uterine fibroids
+nodular regenerative hyperplasia of the liver in common variable immunodeficiency patients
+iss
+advanced open-angle glaucoma
+psoriatic arthritis
+essential tremor dysphonia
+chronic viral hepatitis c
+peripheral arterial occlusive disease
+early onset (<10 yrs) common variable immunodeficiency
+splenectomy in common variable immunodeficiency patients
+lymphadenopathy in common variable immunodeficiency patients
+behcets disease
+common variable immunodeficiency
+suicidal ideation
+intracranial arterial aneurysm
+chronic hepatitis b
+organ specific autoimmunity in common variable immunodeficiency patients
+hypertensive disease
+keloid
+cancer in common variable immunodeficiency patients
+f-cell distribution
+coronary artery disease in myocardial infarction patients
+male pattern alopecia
+keratoconus
+endometrial cancer
+acute lymphoid leukemia
+allergic rhinitis
+chronic kidney disease
+non-small cell lung cancer in non-smokers
+alzheimer disease
+meningioma
+lung cancer in current smokers
+migraine with aura
+nasopharyngeal carcinoma
+hepatocellular carcinoma
+nevirapine-induced rash (grade 3)
+systemic sclerosis, diffuse
+dengue shock syndrome
+chronic myeloid leukemia
+breast cancer
+type 1 diabetes mellitus
+alzheimer's disease
+meningococcal disease
+psoriasis
+low igm (<50 mg/dl) in common variable immunodeficiency patients
+polycystic ovary syndrome
+type 2 diabetes mellitus
+glaucoma
+adenocarcinoma of lung
+low b cells (cd19+ cells <1%) in common variable immunodeficiency patients
+hypertriglyceridemia
+colon cancer
+venous thrombosis
+small cell carcinoma of lung
+kidney stones
+kawasaki disease
+rhabdomyolysis in response to cerivastatin without gemfibrozil
+granuloma in common variable immunodeficiency patients
+ulcerative collitis
+focal segmental glomerulosclerosis
+testicular germ cell cancer
+ulcerative colitis
+thyroid cancer
+familial alzheimer's disease of late onset
+coronary artery disease without myocardial infarction
+primary open-angle glaucoma
+lapatinib
+myopia
+ventricular dysfunction after cabg surgery with cardiopulmonary bypass
+scoliosis
+polypoidal choroidal vasculopathy
+dental caries
+ewing sarcoma
+lymphocytosis
+hypertension
+neuroleptic-induced tardive dyskinesia
+artery disease
+iga nephropathy
+nevirapine-induced rash (grade 1)
+malabsorption in common variable immunodeficiency patients
+drug induced liver injury
+prostate cancer
+acute myocardial infarction
+caecum cancer
+nevirapine-induced rash (grade 2)
+systemic sclerosis (ata+)
+bronchiectasis in common variable immunodeficiency patients
+partial epilepsy
+bone mineral density
+nephropathy - diabetic
+immunoglobulin a deficiency
+hepatitis b
+asymptomatic coronary heart disease
+diabetic retinopathy
+alopecia areata
+premature ovarian failure
+parkinson's disease
+adverse reaction to aspirin
+bladder cancer in ever smokers
+neonatal lupus
+hodgkin's lymphoma (epstein- barr virus positive)
+melanoma
+bladder cancer
+atopic dermatitis
+major depressive disorder
+severe myopathy in response to statin therapy
+open-angle glaucoma
+primary open angle glaucoma
+rheumatoid arthritis
+bipolar disorder without alcohol dependence
+esophageal cancer
+ibd - inflammatory bowel disease
+epirubicin-induced leukopenia
+multiple sclerosis
+male-pattern baldness
+gi enteropathy in common variable immunodeficiency patients
+acute liver failure
+restless leg syndrome
+systemic lupus erythematosus without anti-dsdna autoantibody
+non-obstructive azoospermia
+alcohol dependence
+neuroblastoma
+nevirapine-induced rash
+nephrotic syndrome
+coronary spasm
+psoriasis with arthropathy
+knee osteoarthritis
+rhabdomyolysis in response to cerivastatin
+musculoskeletal adverse events
+lung adenocarcinoma
+bladder cancer in never smokers
+cancer of descending colon
+low iga (<10 mg/dl) in common variable immunodeficiency patients
+atrial fibrillation and flutter
+glioma of brain
+childhood asthma
+iloperidone
+creutzfeldt-jakob disease
+coronary artery disease
+crohn's disease
+smoking behavior
+graves' disease
+lumiracoxib
+cleft palate
+migraine without aura
+migraine
+inflammatory bowel disease
+amoxicillin-clavulanate induced liver injury
+liver cirrhosis
+lung cancer
+endometriosis
+c4bpb
+typical age-related macular degeneration

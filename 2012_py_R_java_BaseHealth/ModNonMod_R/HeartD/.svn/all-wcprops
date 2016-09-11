@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/algophen/!svn/ver/332/trunk/R/HeartD
+END
+Snp.R
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/algophen/!svn/ver/332/trunk/R/HeartD/Snp.R
+END
+3_Load_BP.R
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/algophen/!svn/ver/139/trunk/R/HeartD/3_Load_BP.R
+END
+worspace
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/algophen/!svn/ver/139/trunk/R/HeartD/worspace
+END
+GUI.R
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/algophen/!svn/ver/142/trunk/R/HeartD/GUI.R
+END
+2_Load_Smoking.R
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/algophen/!svn/ver/139/trunk/R/HeartD/2_Load_Smoking.R
+END
+1_Load_Demo_BMI_Diab_Chol_Trigly.R
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/algophen/!svn/ver/139/trunk/R/HeartD/1_Load_Demo_BMI_Diab_Chol_Trigly.R
+END
+GLM_Modeling_CVD.R
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/algophen/!svn/ver/139/trunk/R/HeartD/GLM_Modeling_CVD.R
+END
+riskmodel.R
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/algophen/!svn/ver/139/trunk/R/HeartD/riskmodel.R
+END
+CombinedRiskFactors.R
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/algophen/!svn/ver/142/trunk/R/HeartD/CombinedRiskFactors.R
+END
+4_Load_CVD.R
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/algophen/!svn/ver/139/trunk/R/HeartD/4_Load_CVD.R
+END

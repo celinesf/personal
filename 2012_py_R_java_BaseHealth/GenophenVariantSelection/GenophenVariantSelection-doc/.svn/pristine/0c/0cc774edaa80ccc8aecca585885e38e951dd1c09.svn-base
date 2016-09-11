@@ -1,0 +1,34 @@
+{
+    "Caucasian":{
+        "LD1":{
+            "LD_block_id":"LD1",
+            "variant_list":[
+                "rs1234",
+                "rs2345"
+            ]
+        },
+        "LD2":{
+            "LD_block_id":"LD2",
+            "variant_list":[
+                "rs3456",
+                "rs4567"
+            ]
+        }
+    },
+    "Asian":{
+        "LD3":{
+            "LD_block_id":"LD3",
+            "variant_list":[
+                "rs1235674",
+                "rs10166942"
+            ]
+        },
+        "LD4":{
+            "LD_block_id":"LD4",
+            "variant_list":[
+                "rs2345",
+                "rs1234"
+            ]
+        }
+    }
+}
