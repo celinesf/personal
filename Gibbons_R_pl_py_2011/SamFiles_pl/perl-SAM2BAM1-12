@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $fname="s";
+    my $fout="$fname\_12";
+    system("tar -jxvf $fout.sam.tar.bz2");
+    if(open(IN,"$fout.sam"))
+    {
+        close IN;
+        system("./samtools view -bS -o $fout.bam $fout.sam");
+        system("rm $fout.sam");
+    }

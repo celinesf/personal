@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+open(MASTER,">RUNsort0");
+
+for(my $lane=1;$lane<=8; $lane++)
+{
+    my $min=1;
+    if($lane==1 ||$lane==3 ||$lane==4 ||$lane==5 ||$lane==6)
+    {$min=41;}
+    my $scriptname="perl-sort-$lane";
+    print MASTER "nohup ./$scriptname >$scriptname-x &\n";
+    open(PERL,">$scriptname"); 
+    print PERL "#!/usr/bin/perl\n";
+    print PERL "use strict;\n";
+    print PERL "use warnings;\n";
+    print PERL "my \$fname=\"s\";\n";
+    print PERL "my \$endf=\"\_qseq.txt\";\n";
+    print PERL "for(my \$dset=$min;\$dset<=68; \$dset++)\n";
+    print PERL "{\n";
+    print PERL "    my \$nset=\"\$dset\$endf\";\n";
+    print PERL "    my \$fout=\"\$fname\\_$lane\\_00\$nset\";\n";
+   # print PERL "    system(\"tar -jxvf \$fout.sam.tar.bz2\");\n";
+    print PERL "    if(open(IN,\"\$fout.bam\"))\n";
+    print PERL "    {\n";
+    print PERL "        close IN;\n";
+    print PERL "        system(\".\/samtools sort \$fout.bam \$fout.sort\");\n";
+   # print PERL "        system(\"rm \$fout.sam\");\n";
+    print PERL "    }\n";
+    print PERL "}\n";
+    close PERL;
+    system("chmod +wx $scriptname");
+}
+close MASTER

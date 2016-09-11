@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $fname="s";
+my $endf="\_qseq.txt";
+for(my $dset=1;$dset<=68; $dset++)
+{
+    my $nset="$dset$endf";
+    my $fout="$fname\_8\_00$nset";
+    my $fbow="$fout.sam";
+    my $fin1="$fout-1.fq";
+   my $fin2="$fout-2.fq";
+    system("tar -jxvf $fin1.tar.bz2");
+    system("tar -jxvf $fin2.tar.bz2");
+    if(open(IN1,$fin1) && open(IN2,$fin2))
+    {
+        close IN1;
+        close IN2;
+        system("nohup ./bowtie mom -S --chunkmbs 200 -1 $fin1 -2 $fin2 $fbow >$fout-sum");
+        system("rm $fin1");
+        system("rm $fin2");
+        system("tar -cf $fbow.tar $fbow");
+        system("rm $fbow");
+        system("bzip2 -zf $fbow.tar");
+    }
+}

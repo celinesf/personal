@@ -1,0 +1,44 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $fname="s";
+my $endf="\_qseq.txt";
+for(my $lane=1;$lane<=2;$lane++)
+{
+    for(my $dset=1;$dset<=68; $dset++)
+    {
+        my $nset="$dset$endf";
+        my $fout="$fname\_$lane\_00$nset";
+        my $fbow="$fout.sam";
+        print"tar -jxvf $fbow.tar.bz2\n";   
+        system("tar -jxvf $fbow.tar.bz2");    
+    }
+
+    if($lane==2)
+    {
+        my $pl=$lane-1;
+        print "./samtools merge -f -n $fname\_$lane.sam s_$pl\*.sam s_$lane\*.sam >rm$pl$lane\n";
+        system("./samtools merge -f -n $fname\_$lane.sam s_$pl\*.sam s_$lane\*.sam >rm$pl$lane");
+
+        print "rm s_$pl*.sam s_$lane*.sam\n";
+        system("rm s_$pl*.sam s_$lane*.sam");
+
+        print"./samtools view -bS -o $fname\_$lane.bam $fname\_$lane.sam >rs2b$lane\n";
+        system("./samtools view -bS -o $fname\_$lane.bam $fname\_$lane.sam >rs2b$lane");
+
+        print"tar -cf $fname\_$lane.sam.tar $fname\_$lane.sam\n";
+        system("tar -cf $fname\_$lane.sam.tar $fname\_$lane.sam");
+
+        print"bzip2 $fname\_$lane.sam.tar\n";
+        system("bzip2 $fname\_$lane.sam.tar");
+
+        print"rm $fname\_$lane.sam\n";
+        system("rm $fname\_$lane.sam");
+
+        print"./samtools sort  $fname\_$lane.bam  $fname\_$lane.sort >rsort$lane\n";
+        system("./samtools sort  $fname\_$lane.bam  $fname\_$lane.sort >rsort$lane");
+
+        print"./samtools  mpileup -f nomascus2.fasta $fname\_$lane.sort.bam >rp$lane\n";
+        system("./samtools  mpileup -f nomascus2.fasta $fname\_$lane.sort.bam >rp$lane");
+    }
+}

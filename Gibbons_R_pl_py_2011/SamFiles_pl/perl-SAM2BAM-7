@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $fname="s";
+my $endf="_qseq.txt";
+for(my $dset=1;$dset<=68; $dset++)
+{
+    my $nset="$dset$endf";
+    my $fout="$fname\_7\_00$nset";
+    system("tar -jxvf $fout.sam.tar.bz2");
+    if(open(IN,"$fout.sam"))
+    {
+        close IN;
+        system("./samtools view -bS -o $fout.bam $fout.sam");
+        system("rm $fout.sam");
+    }
+}

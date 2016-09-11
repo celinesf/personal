@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+open(MASTER,">RUNsam2bam1");
+
+for(my $lane=9;$lane<=12; $lane++)
+{
+
+    my $scriptname="perl-SAM2BAM1-$lane";
+    print MASTER "nohup ./$scriptname >$scriptname-x &\n";
+    open(PERL,">$scriptname"); 
+    print PERL "#!/usr/bin/perl\n";
+    print PERL "use strict;\n";
+    print PERL "use warnings;\n";
+    print PERL "my \$fname=\"s\";\n";
+
+
+    print PERL "    my \$fout=\"\$fname\\_$lane\";\n";
+    print PERL "    system(\"tar -jxvf \$fout.sam.tar.bz2\");\n";
+    print PERL "    if(open(IN,\"\$fout.sam\"))\n";
+    print PERL "    {\n";
+    print PERL "        close IN;\n";
+    print PERL "        system(\".\/samtools view -bS -o \$fout.bam \$fout.sam\");\n";
+    print PERL "        system(\"rm \$fout.sam\");\n";
+    print PERL "    }\n";
+    close PERL;
+    system("chmod +wx $scriptname");
+}
+close MASTER

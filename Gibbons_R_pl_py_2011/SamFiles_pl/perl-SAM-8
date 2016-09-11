@@ -1,0 +1,37 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $fname="s";
+my $endf="\_qseq.txt";
+for(my $dset=21;$dset<=21; $dset++)
+{
+    my $nset="$dset$endf";
+    my $fout="$fname\_8\_00$nset";
+    my $fbow="$fout.sam";
+    my $fres="$fout-p";
+    system("tar -jxvf $fbow.tar.bz2");
+
+    if(open(IN,$fbow))
+    {
+        close IN;
+
+        system("./samtools view -bS $fout.bam >rview\_8\_00$dset");
+        system("./samtools sort $fout.bam $fout.sort >rsort\_8\_00$dset");
+        system("./samtools pileup -cv -f nomascus2.fast $fout.sort.bam >$fres");
+        system("rm $fbow");
+
+
+ #  system("tar -cf $fout.bam.tar $fout.bam");
+       # system("rm $fout.bam");
+        #system("bzip2 -zf $fout.bam.tar");
+
+ #  system("tar -cf $fout.sort.bam.tar $fout.sort.bam");
+       # system("rm $fout.sort.bam");
+        #system("bzip2 -zf $fout.sort.bam.tar");
+
+ #  system("tar -cf $fres.tar $fres");
+       # system("rm $fres");
+        #system("bzip2 -zf $res");
+
+    }
+}

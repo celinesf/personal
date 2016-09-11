@@ -1,0 +1,4 @@
+nohup ./perl-bow2-9 >perl-bow2-9-x &
+nohup ./perl-bow2-10 >perl-bow2-10-x &
+nohup ./perl-bow2-11 >perl-bow2-11-x &
+nohup ./perl-bow2-12 >perl-bow2-12-x &

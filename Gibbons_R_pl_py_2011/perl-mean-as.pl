@@ -1,0 +1,66 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $fname="s";
+my $endf="\_qseq.txt-b";
+my $OUT="meanAs0";
+open(MASTER,">$OUT");
+close MASTER;
+for(my $lane=5;$lane<=6; $lane++)
+{
+    for(my $dset=1;$dset<=68; $dset++)
+    {
+        my $mean=0;
+        my $var=0;
+        my $fin1="$fname\_$lane\_00";
+        my $nset="$dset$endf";        
+        $fin1="$fin1$nset";
+         system("tar -jxvf $fin1.tar.bz2");
+        if(open(IN1,$fin1) )
+        {
+            my $nline=0;
+            
+          FILEIN: while(defined(my $l1=<IN1>)  )
+          {
+              my $l2=readline(*IN1);
+              chomp($l1);   chomp($l2);
+              my @tp1=split(/\t/,$l1);
+              my @tp2=split(/\t/,$l2);
+              my @rn1=split(/\//,$tp1[0]);
+              my @rn2=split(/\//,$tp2[0]);
+              if($rn1[0] eq $rn2[0])
+              {
+                  my @sc1=split(/\_/,$rn1[0]);
+                  my @sc2=split(/\_/,$rn2[0]);
+                  my $score=($sc1[2]+$sc2[2])/2;
+                  my $namebac=$tp1[2];
+                  my $i=0;
+                
+                  my $st1=$tp1[3];
+                  my $st2=$tp2[3]+100;
+                  my $dif=$st2-$st1;
+                  $mean+=$st2-$st1;
+                  $var=($st2-$st1)*($st2-$st1);
+                  
+              }
+              else{print "PROBLEM paired end $rn1[0] ne $rn2[0]\n";}
+              $nline++;
+          }
+            close IN1;
+           #system("rm $fin1")
+     if($nline>0)
+     {
+            $mean/=($nline);
+            $var=($var-$mean*$mean)/($nline-1);
+     }
+           
+            open(MASTER,">>$OUT");
+            print MASTER "$lane\t$dset\t$mean\t $var\n";
+            close MASTER;
+        }
+       
+
+    }# end transect
+    
+}# end lanes
+

@@ -1,0 +1,16 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $fname="s";
+my $endf="_qseq.txt";
+for(my $dset=41;$dset<=68; $dset++)
+{
+    my $nset="$dset$endf";
+    my $fout="$fname\_4\_00$nset";
+    if(open(IN,"$fout.bam") && !open(IN2,"$fout.sort.bam"))
+    {
+        close IN;
+        system("./samtools sort -m 10000000 $fout.bam $fout.sort");
+        print"./samtools sort  -m 10000000 $fout.bam $fout.sort\n";
+    }
+}

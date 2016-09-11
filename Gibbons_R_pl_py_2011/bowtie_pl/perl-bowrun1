@@ -1,0 +1,49 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+open(MASTER,">RUNBow1");
+
+for(my $line=1;$line<=8; $line++)
+{
+    my $scriptname="perl-bow1-$line";
+    print MASTER "nohup ./$scriptname >$scriptname-x &\n";
+    open(PERL,">$scriptname");
+    print PERL "#!/usr/bin/perl\nuse strict;\nuse warnings;\n";
+
+    print PERL "my \$fname=\"s\";\n";
+    print PERL "my \$endf=\"\\_qseq.txt\";\n";
+
+    print PERL "for(my \$dset=1;\$dset<=68; \$dset++)\n";
+    print PERL "{\n";
+    
+    print PERL "    my \$nset=\"\$dset\$endf\";\n";
+   # print PERL "    if(\$dset<10)\n";
+   # print PERL "    {\$nset=\"0\$dset\$endf\"};\n";
+    print PERL "    my \$fout=\"\$fname\\_$line\\_00\$nset\";\n";
+    print PERL "    my \$fbow=\"\$fout.sam\";\n";
+    
+    print PERL "    my \$fin1=\"\$fout-1.fq\";\n";
+    print PERL "   my \$fin2=\"\$fout-2.fq\";\n";
+    print PERL "    system(\"tar -jxvf \$fin1.tar.bz2\");\n";
+    print PERL "    system(\"tar -jxvf \$fin2.tar.bz2\");\n";
+
+    print PERL "    if(open(IN1,\$fin1) && open(IN2,\$fin2))\n";
+    print PERL "    {\n";
+    print PERL "        close IN1;\n";
+    print PERL "        close IN2;\n";
+    print PERL "        system(\"nohup ./bowtie mom -S --chunkmbs 200 -1 \$fin1 -2 \$fin2 \$fbow >\$fout-sum\");\n";
+
+    print PERL "        system(\"rm \$fin1\");\n";
+    print PERL "        system(\"rm \$fin2\");\n";
+    print PERL "        system(\"tar -cf \$fbow.tar \$fbow\");\n";
+    print PERL "        system(\"rm \$fbow\");\n";
+    print PERL "        system(\"bzip2 -zf \$fbow.tar\");\n";
+    print PERL "    }\n";
+    print PERL "}\n";
+
+    close PERL;
+    system("chmod +wx $scriptname");
+}
+
+
+close MASTER

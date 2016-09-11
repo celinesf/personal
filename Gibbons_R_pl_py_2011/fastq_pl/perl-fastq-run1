@@ -1,0 +1,125 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+open(MASTER,">RUNfastpx");
+
+for(my $line=1;$line<=8; $line++)
+{
+    my $scriptname="perl-fastq-x-$line";
+    print MASTER "nohup ./$scriptname &\n";
+    open(PERL,">$scriptname");
+    print PERL "#!/usr/bin/perl\nuse strict;\nuse warnings;\n";
+
+    print PERL "my \$fname=\"s\";\n";
+    print PERL "my \$endf=\"\\_qseq.txt\";\n";
+    print PERL "open(MASTER,\">Sumx\\_$line\");\n";
+
+
+    print PERL "print MASTER \"File\\tTotal\\_read\\t#\\_reads1\\_ok\\tav\\_score1\\t#\\_reads2\\_ok\\tav\\_score2\\t#\\_pairs\\_ok\\t#av\\_score\\_pairs\t#\\_reads\\_output\t#av\\_score\\_output\\n\";\n";
+    print PERL "for(my \$dset=1;\$dset<=68; \$dset++)\n";
+    print PERL "{\n";
+    print PERL "    my \$fin1=\"\$fname\\_$line\\_1\\_00\";\n";
+    print PERL "    my \$fin2=\"\$fname\\_$line\\_3\\_00\";\n";
+    print PERL "    my \$nset=\"\$dset\$endf\";\n";
+  #  print PERL "    my \$fout=\"\$fname\\_$line\\_00\$nset-x\";\n";
+    print PERL "    if(\$dset<10)\n";
+    print PERL "    {\$nset=\"0\$dset\$endf\"};\n";
+    print PERL "    \$fin1=\"\$fin1\$nset\";\n";
+    print PERL "    \$fin2=\"\$fin2\$nset\";\n";
+   # print PERL "    print \"\$fin1\\t \$fin2\\n\";\n";
+    print PERL "    system(\"tar -jxvf \$fin1.tar.bz2\");\n";
+    print PERL "    system(\"tar -jxvf \$fin2.tar.bz2\");\n";
+    print PERL "    if(open(IN1,\$fin1) && open(IN2,\$fin2))\n";
+    print PERL "    {\n";
+ #   print PERL "        open(OUTS,\">\$fout-sc\");\n";
+  #  print PERL "        open(OUT1,\">\$fout-1.fq\");\n";
+   # print PERL "        open(OUT2,\">\$fout-2.fq\");\n";
+    print PERL "        my \$nline=0;\n";# line # in file
+    print PERL "        my \@mscore;\n";#mean score per file per sequence once empty pairs removed 
+    print PERL "        \$mscore[0][0]=\$mscore[0][1]= \$mscore[1][0]=\$mscore[1][1]=\$mscore[2][0]=\$mscore[2][1]=\$mscore[3][0]=\$mscore[3][1]=0;\n";#score/num in 1, 2, pairs
+    print PERL "      FILEIN: while(defined(my \$l1=<IN1>) && defined(my \$l2=<IN2>) )\n";
+    print PERL "      {\n";
+    print PERL "          chomp(\$l1);chomp(\$l2);\n";
+
+    print PERL "          my \@tp1=split(/\\t/,\$l1);\n";
+    print PERL "          my \@tp2=split(/\\t/,\$l2);\n";
+    print PERL "          my \@c1=split(//,\$tp1[9]);\n";
+    print PERL "          my \@c2=split(//,\$tp2[9]);\n";
+    print PERL "          my \$lc1=\@c1;  my \$lc2=\@c2;\n";
+    print PERL "          if(!(\$lc1==\$lc2 && \$lc1==101))\n";
+    print PERL "          {print \"PROBLEM at line \$nline \$lc1 \$lc2\\n\";}\n";
+    print PERL "          else\n";
+    print PERL "          {\n";
+    print PERL "              my \@sum;\n";
+    print PERL "              \$sum[0]=\$sum[1]=0;\n";
+    print PERL "              for(my \$i=0;\$i<\$lc1;\$i++)\n";
+    print PERL "              {\n";
+    print PERL "                  my \$sc1=ord(\$c1[\$i])-64;\n";
+    print PERL "                  my \$sc2=ord(\$c2[\$i])-64;\n";
+    print PERL "                  \$sum[0]=\$sum[0]+\$sc1; \$sum[1]=\$sum[1]+\$sc2;\n";
+    print PERL "              }\n";
+    print PERL "              \$sum[0]/=\$lc1;\n";
+    print PERL "              \$sum[1]/=\$lc2;\n";
+    print PERL "              \$sum[2]= (\$sum[0]+ \$sum[1])/2;\n";
+    print PERL "              if(!(\$sum[0]==2 && \$sum[1]==2)) \n";
+    print PERL "              {\n";
+    print PERL "                  if(\$sum[0]!=2)\n";
+    print PERL "                  {\$mscore[0][0]+=\$sum[0];\n";
+    print PERL "                   \$mscore[0][1]+=1;\n";
+    print PERL "                  }\n";
+    print PERL "                  if(\$sum[1]!=2)\n";
+    print PERL "                  {\$mscore[1][0]+=\$sum[1];\n";
+    print PERL "                   \$mscore[1][1]+=1;\n";
+    print PERL "                  }\n";
+    print PERL "                  if(\$sum[1]!=2 && \$sum[0]!=2)\n";
+    print PERL "                  {\$mscore[2][0]+=\$sum[2];\n";
+    print PERL "                   \$mscore[2][1]+=1;\n";
+    print PERL "                  }\n";
+    print PERL "                 \$mscore[3][0]+=\$sum[2];\n";
+    print PERL "                 \$mscore[3][1]+=1;\n";
+ #   print PERL "                  print OUT1 \"\\\@SQE\\_\$nline\\_\$sum[2]/1\\n\";\n";
+  #  print PERL "                  print OUT2 \"\\\@SQE\\_\$nline\\_\$sum[2]/2\\n\";\n";
+   # print PERL "                  print OUT1 \"\$tp1[8]\\n\";   print OUT2 \"\$tp2[8]\\n\";\n";
+    #print PERL "                  print OUT1 \"+\\n\$tp1[9]\\n\";  print OUT2 \"+\\n\$tp2[9]\\n\";\n";
+    print PERL "              }\n";
+  #  print PERL "              print OUTS \"\\\@SQE\\_\$nline\\t\$sum[0]\\t\$sum[1]\\t\$sum[2]\\n\";\n";
+    print PERL "              \$nline++;\n";
+    print PERL "          }\n";# end else
+    print PERL "      }\n";# end loop on file
+    print PERL "        close IN1;\n";
+    print PERL "        close IN2;\n";
+ #   print PERL "        close OUT1;\n";
+ #   print PERL "        close OUT2;\n";
+ #   print PERL "        close OUTS;\n";
+    
+    print PERL "        system(\"rm \$fin1\");\n";
+    print PERL "        system(\"rm \$fin2\");\n";
+  #  print PERL "        system(\"tar -cf \$fout-1.fq.tar \$fout-1.fq\");\n";
+  #  print PERL "        system(\"rm \$fout-1.fq\");\n";
+  #  print PERL "        system(\"bzip2 -zf \$fout-1.fq.tar\");\n";
+
+ #   print PERL "        system(\"tar -cf \$fout-2.fq.tar \$fout-2.fq\");\n";
+ #   print PERL "        system(\"rm \$fout-2.fq\");\n";
+ #   print PERL "        system(\"bzip2 -zf \$fout-2.fq.tar\");\n";
+
+ #   print PERL "        system(\"tar -cf \$fout-sc.tar \$fout-sc\");\n";
+ #   print PERL "        system(\"rm \$fout-sc\");\n";
+ #   print PERL "        system(\"bzip2 -zf \$fout-sc.tar\");\n";
+
+    print PERL "        if(\$mscore[0][1]>0){\$mscore[0][0]/=\$mscore[0][1];}\n";
+    print PERL "        if(\$mscore[1][1]>0){\$mscore[1][0]/=\$mscore[1][1];}\n";
+    print PERL "        if(\$mscore[2][1]>0){\$mscore[2][0]/=\$mscore[2][1];}\n";
+    print PERL "        if(\$mscore[3][1]>0){\$mscore[3][0]/=\$mscore[3][1];}\n";
+    print PERL "        print MASTER \"\$fname\\_$line\\_00\$nset\\t\$nline\\t\$mscore[0][1]\\t\$mscore[0][0]\\t\$mscore[1][1]\\t\$mscore[1][0]\\t\$mscore[2][1]\\t\$mscore[2][0]\\t\$mscore[3][1]\\t\$mscore[3][0]\\n\";\n";
+    print PERL "    }\n";
+    print PERL "}\n";
+    print PERL "close MASTER;\n";
+
+    close PERL;
+    system("chmod +wx $scriptname");
+
+}# line
+
+close MASTER
+

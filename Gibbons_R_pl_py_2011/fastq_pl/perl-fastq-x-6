@@ -1,0 +1,78 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+my $fname="s";
+my $endf="\_qseq.txt";
+open(MASTER,">Sumx\_6");
+print MASTER "File\tTotal\_read\t#\_reads1\_ok\tav\_score1\t#\_reads2\_ok\tav\_score2\t#\_pairs\_ok\t#av\_score\_pairs	#\_reads\_output	#av\_score\_output\n";
+for(my $dset=1;$dset<=68; $dset++)
+{
+    my $fin1="$fname\_6\_1\_00";
+    my $fin2="$fname\_6\_3\_00";
+    my $nset="$dset$endf";
+    if($dset<10)
+    {$nset="0$dset$endf"};
+    $fin1="$fin1$nset";
+    $fin2="$fin2$nset";
+    system("tar -jxvf $fin1.tar.bz2");
+    system("tar -jxvf $fin2.tar.bz2");
+    if(open(IN1,$fin1) && open(IN2,$fin2))
+    {
+        my $nline=0;
+        my @mscore;
+        $mscore[0][0]=$mscore[0][1]= $mscore[1][0]=$mscore[1][1]=$mscore[2][0]=$mscore[2][1]=$mscore[3][0]=$mscore[3][1]=0;
+      FILEIN: while(defined(my $l1=<IN1>) && defined(my $l2=<IN2>) )
+      {
+          chomp($l1);chomp($l2);
+          my @tp1=split(/\t/,$l1);
+          my @tp2=split(/\t/,$l2);
+          my @c1=split(//,$tp1[9]);
+          my @c2=split(//,$tp2[9]);
+          my $lc1=@c1;  my $lc2=@c2;
+          if(!($lc1==$lc2 && $lc1==101))
+          {print "PROBLEM at line $nline $lc1 $lc2\n";}
+          else
+          {
+              my @sum;
+              $sum[0]=$sum[1]=0;
+              for(my $i=0;$i<$lc1;$i++)
+              {
+                  my $sc1=ord($c1[$i])-64;
+                  my $sc2=ord($c2[$i])-64;
+                  $sum[0]=$sum[0]+$sc1; $sum[1]=$sum[1]+$sc2;
+              }
+              $sum[0]/=$lc1;
+              $sum[1]/=$lc2;
+              $sum[2]= ($sum[0]+ $sum[1])/2;
+              if(!($sum[0]==2 && $sum[1]==2)) 
+              {
+                  if($sum[0]!=2)
+                  {$mscore[0][0]+=$sum[0];
+                   $mscore[0][1]+=1;
+                  }
+                  if($sum[1]!=2)
+                  {$mscore[1][0]+=$sum[1];
+                   $mscore[1][1]+=1;
+                  }
+                  if($sum[1]!=2 && $sum[0]!=2)
+                  {$mscore[2][0]+=$sum[2];
+                   $mscore[2][1]+=1;
+                  }
+                 $mscore[3][0]+=$sum[2];
+                 $mscore[3][1]+=1;
+              }
+              $nline++;
+          }
+      }
+        close IN1;
+        close IN2;
+        system("rm $fin1");
+        system("rm $fin2");
+        if($mscore[0][1]>0){$mscore[0][0]/=$mscore[0][1];}
+        if($mscore[1][1]>0){$mscore[1][0]/=$mscore[1][1];}
+        if($mscore[2][1]>0){$mscore[2][0]/=$mscore[2][1];}
+        if($mscore[3][1]>0){$mscore[3][0]/=$mscore[3][1];}
+        print MASTER "$fname\_6\_00$nset\t$nline\t$mscore[0][1]\t$mscore[0][0]\t$mscore[1][1]\t$mscore[1][0]\t$mscore[2][1]\t$mscore[2][0]\t$mscore[3][1]\t$mscore[3][0]\n";
+    }
+}
+close MASTER;

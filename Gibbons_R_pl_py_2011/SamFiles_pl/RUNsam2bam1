@@ -1,0 +1,4 @@
+nohup ./perl-SAM2BAM1-9 >perl-SAM2BAM1-9-x &
+nohup ./perl-SAM2BAM1-10 >perl-SAM2BAM1-10-x &
+nohup ./perl-SAM2BAM1-11 >perl-SAM2BAM1-11-x &
+nohup ./perl-SAM2BAM1-12 >perl-SAM2BAM1-12-x &

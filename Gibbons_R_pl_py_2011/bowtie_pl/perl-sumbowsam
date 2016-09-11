@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+my $fname="perl-bow1-";
+my $fout="sum-Bowsam";
+open(OUT,">$fout");
+print OUT "fname\tprocessed\taligned\t\%\n";
+for(my $line=1;$line<=8; $line++)
+{
+    my $fin="$fname$line-x";
+    print "$fin\n";
+    if(open(IN,$fin))
+    {
+        while(<IN>)
+        {
+            my @st=$_;
+            chomp(@st);
+     
+            my @tp=split(/s\_$line\_00/,$st[0]);
+            if($tp[0] eq "")# new file name
+            {
+               my @tp1=split(/\_/,$tp[1]);
+               print OUT "lane-$line-$tp1[0]\t";
+               my  $st1=readline(IN);# second fq file
+
+               $st1=readline(IN);# processed
+               chomp($st1);
+               @tp1=split(/# reads processed: /,$st1);
+               print OUT "$tp1[1]\t";
+               
+               $st1=readline(IN);# alligned
+               chomp($st1);
+               @tp1=split(/# reads with at least one reported alignment: /,$st1);
+               @tp=split(/ \(/,$tp1[1]);               
+               print OUT "$tp[0]\t";# num align
+               
+               @tp1=split(/\%\)/,$tp[1]);
+               print OUT "$tp1[0]\n";# % align
+            }
+        }
+        close IN;
+    }
+}
+close OUT
+
