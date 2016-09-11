@@ -1,0 +1,1 @@
+pyhton scripts to normalize various data for input in DB

@@ -1,0 +1,4 @@
+### R package to estimate parameters of IMc models ### 
+R package of the c code EstL, including R documentation
+
+

@@ -1,0 +1,2 @@
+extension of MIMAR
+C and R codes to estimate the Isolation Migration model using more data summaries from possibly NGS data that MIMAR
