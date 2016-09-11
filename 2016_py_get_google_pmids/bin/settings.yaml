@@ -1,0 +1,18 @@
+client_config_backend: settings
+client_config:
+  client_id: 288231716863-jpjgo2e0g18q5m00vcthgpgi8dsekm5e.apps.googleusercontent.com
+  client_secret: OiJe3NpwqSEHHZSmzFRVWBR8
+  auth_uri: https://accounts.google.com/o/oauth2/auth
+  token_uri: https://accounts.google.com/o/oauth2/token
+  redirect_uri: urn:ietf:wg:oauth:2.0:oob
+
+save_credentials: True
+save_credentials_backend: file
+save_credentials_file: credentials.json
+
+get_refresh_token: False
+
+oauth_scope:
+  - https://www.googleapis.com/auth/drive
+  - https://www.googleapis.com/auth/drive.install
+  - https://spreadsheets.google.com/feeds

@@ -1,0 +1,20 @@
+get_google_pmids gets lists of pmids from QC and uat google sheets
+
+USAGE
+	get_google_pmids.py --uat_or_qc UAT_OR_QC --topic TOPIC [OPTIONS] 
+DESCRIPTION
+	Extracts pmids from the specified google QC or UAT rounds
+OPTIONS
+		-u UAT_OR_QC, --uat_or_qc UAT_OR_QC
+			UAT_OR_QC the type of QC to extract pmids for. UAT_OR_QC can be 'UAT' or 'QC' only. This option is required 
+		-t TOPIC, --topic TOPIC
+			TOPIC specifies the topic for which to extract pmids. This option is required
+OPTIONS required if UAT_OR_QC='UAT'
+		-d DIR_ID, --directory DIR_ID
+			DIR_ID specifies the folder id for the UAT round for which to extract pmids. This option is required if UAT_OR_QC='UAT'
+OPTIONS required if UAT_OR_QC='QC'
+		-v VERSION, --version VERSION
+			FVERSION specifies the version i.e., '001' in the file name for the QC round for which to extract pmids. This option is required if UAT_OR_QC='QC'
+OTHER OPTIONS
+		-h, --help
+			Output this help manual
