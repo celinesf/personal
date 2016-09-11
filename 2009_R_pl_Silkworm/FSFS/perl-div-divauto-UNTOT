@@ -1,0 +1,27 @@
+#!/usr/bin/perl
+# output number chr in order to obtain distributions usinf distavg4
+# needed to decide threshold for missing data
+use strict;
+use warnings;
+
+
+my $beg="achr";
+
+my $nl=29;
+my $n1=2;
+my $col=2;
+for(my $nf=$n1;$nf<=$nl;$nf++)
+{
+    my $filename="$beg$nf";
+    if( open(FILEIN, "$filename"))
+    {    
+        while (<FILEIN>)
+        {
+            my $st=$_;
+            chomp($st);
+            my @tp=split(/\t/,$st);
+            print "$tp[$col]\n";
+        }
+    }
+
+}

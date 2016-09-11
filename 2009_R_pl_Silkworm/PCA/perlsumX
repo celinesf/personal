@@ -1,0 +1,80 @@
+#!/usr/bin/perl
+## write the matrix X in prep for PCA
+### read from transpose of genotype
+use strict;
+use warnings;
+
+
+my @X;
+my $ind=40;
+my $nl=28;
+my $nch=0;
+my @SNP;
+my $totsnp=0;
+my $filename="sum-auto";
+open(FILESUM,">X-$filename");
+open(FILESNPIND,">SNPIND-$filename");
+for(my $ch=2;$ch<=$nl;$ch++)
+{
+    if(($ch!=30)&&($ch!=30))
+    {
+        my $suf=$ch;
+        if($ch==29){$suf="UN";}   
+        my $filename="chr$suf.FinalSNPs";
+        $SNP[$ch]=0;
+        if(    open(FILEIN, "SNPIND-$filename"))
+        {
+            while (<FILEIN>)
+            {
+                my $st=$_;
+                chomp($st);
+                my @snpch=split(/\t/,$st);
+                $SNP[$ch]=$snpch[0];
+            }
+            close(FILEIN);
+        }
+        else{print"could not open\tSNPIND-$filename \n";}
+        if(open(FILEIN, "X-$filename"))
+        {
+            print "X-$filename\t$SNP[$ch]\n";
+            
+            my $line=0;
+            while (<FILEIN>)
+            {
+                my $st=$_;
+                chomp($st);
+                my @Xi=split(/\t/,$st);
+                
+                for(my $j=0;$j<=$#Xi;$j++)# loop on indovidual genotype
+                {
+                    $X[$line][$j]+=$Xi[$j]*$SNP[$ch];
+                }
+                
+                $line++;
+            }
+            if($line != $ind)
+            {print "PROBLEM \# Ind: $ind\t$line in chromsosome $ch\n"}
+            close(FILEIN);
+        }
+        else{print"could not open\tX-$filename \n";}
+        $nch++;
+        $totsnp+=$SNP[$ch];
+    }    
+}
+
+print FILESNPIND "$totsnp\t$ind\n";
+print "$totsnp\n";
+for(my $i=0;$i<$ind;$i++)
+{
+    for(my $j=0;$j<$ind;$j++)
+    {
+        $X[$i][$j]/=$totsnp;
+        print FILESUM "$X[$i][$j]\t";
+    }
+    print FILESUM "\n";
+}
+
+close(FILESNPIND);
+close(FILESUM);
+
+

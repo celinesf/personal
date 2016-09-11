@@ -1,0 +1,4 @@
+perl code to generate input data for R frequency spectrum and folded frequency analyses
+
+perl code to generate input data for PCA analysis
+R code for PCA analysis an significant eigenvector correlation with various metrics

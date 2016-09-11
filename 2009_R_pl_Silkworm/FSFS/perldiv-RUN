@@ -1,0 +1,10 @@
+chmod +x perl*
+nohup ./perl-div-divautoTOT | ./distavg4 >divautoTOT &
+nohup ./perl-div-divautodom | ./distavg4 >divautodom &
+nohup ./perl-div-divautowild | ./distavg4 >divautowild &
+nohup ./perl-div-divauto-UNTOT | ./distavg4 >divauto-UNTOT &
+nohup ./perl-div-divauto-UNdom | ./distavg4 >divauto-UNdom &
+nohup ./perl-div-divauto-UNwild | ./distavg4 >divauto-UNwild &
+nohup ./perl-div-divUNTOT | ./distavg4 >divUNTOT &
+nohup ./perl-div-divUNdom | ./distavg4 >divUNdom &
+nohup ./perl-div-divUNwild | ./distavg4 >divUNwild &

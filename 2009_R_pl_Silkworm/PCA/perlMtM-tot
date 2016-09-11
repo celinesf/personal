@@ -1,0 +1,92 @@
+#!/usr/bin/perl
+## write the matrix X in prep for PCA
+### read from transpose of genotype
+use strict;
+use warnings;
+
+
+
+#my $beg="test";
+#my $end="";
+my $beg="chr";
+my $end=".FinalSNPs";
+
+my $nl=29;
+my $n1=1;
+for(my $ch=$n1;$ch<=$nl;$ch++)
+{
+    my $snp=0;
+    my @MtM;
+    my $ind=40;
+    my $suf=$ch;
+    if($ch==29){$suf="UN";}   
+    my $filename="$beg$suf$end";
+
+    open(FILEIN, "T-$filename");
+    print "T-$filename\n";
+    open(FILEAVG,"AVG-$filename");
+    open(FILESUM,">X-$filename");
+    my $line=0;
+    while (<FILEIN>)
+    {
+        my $avg=readline(FILEAVG);
+        my $st=$_;
+        chomp($avg);
+        chomp($st);
+        #if($snp%1000 ==0)
+       # {print "snp \# $snp\n";}
+        my @geno=split(/\t/,$st);
+        my $var =sqrt($avg*(1-$avg/2)/2); 
+        my @M; 
+        for(my $j=0;$j<=$#geno;$j++)# loop on individual genotype
+        {
+            if(($var>0)&&($geno[$j] ne "NA"))
+            {
+                $M[$j]=($geno[$j]-$avg)/$var;
+            }
+            else 
+            {$M[$j]=0;}
+            for(my $k=$j;$k<=$#geno;$k++)
+            {  
+                if($snp==0)
+                {$MtM[$k][$j]=$MtM[$j][$k]=0;}# init
+                if(($var>0)&&($geno[$k] ne "NA"))
+                {
+                    $M[$k]=($geno[$k]-$avg)/$var;
+                }
+                else 
+                {$M[$k]=0;}
+                if(($M[$k]ne "NA")&&($M[$j] ne "NA")&& ($MtM[$j][$k] ne "NA"))
+                {
+                    $MtM[$k][$j]=$MtM[$j][$k]+= $M[$j]*$M[$k];
+                }
+                else
+                {
+                    $MtM[$k][$j]=$MtM[$j][$k]= "NA";
+                    print "PROBLEM: Remaining Missing Data\tch $ch\tind $j\tSNP $snp\n";
+                }
+                
+            }
+        }
+        
+        $snp++;
+    }
+    close(FILEIN);
+    close(FILEAVG);
+
+    print "IND\t$ind\t\#SNP\t$snp\n";
+    for(my $i=0;$i<$ind;$i++)
+    {
+        for(my $j=0;$j<$ind;$j++)
+        {
+            if(($MtM[$i][$j] ne "NA"))
+            {$MtM[$i][$j]/=$snp;}
+            else
+            {print "PROBLEM: Remaining Missing Data\n";}
+            print FILESUM "$MtM[$i][$j]\t";
+        }
+        print FILESUM "\n";
+    }
+    close(FILESUM);
+}
+

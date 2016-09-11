@@ -1,0 +1,190 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+
+my $nch=80;
+my $bb="28";
+my $nl=28;
+my $n1=2;
+my $tt=36;
+my $t2=8;
+my $t1=24;
+my $e="u";
+my $beg="achr";
+
+
+
+my @nSNP;
+$nSNP[0]=$nSNP[1]=$nSNP[3]=$nSNP[2]=0;# num SNP used for FSFS in tot, dom and wild
+
+my @FSFS; # freq spectrum folded, n/2 possible column
+for(my $nc=0;$nc<=$nch/2;$nc++)
+{$FSFS[$nc][0]=$FSFS[$nc][1]=$FSFS[$nc][2]=0;}# [0] tot [1] dom [2] wild
+my @ch; #[nlabel][0] abel [1] SNP
+
+for(my $nf=$n1;$nf<=$nl;$nf++)
+{
+  
+    my $suf=$nf;
+    #$ch[$nf][0]="chr$suf";
+    my @ns;
+    $ns[0]= $ns[1]= $ns[3]=$ns[2]=0;
+
+    my $filename="$beg$suf";
+    #print "$filename\n";
+    if( open(FILEIN, "$filename"))
+    {    
+        while (<FILEIN>)
+        {
+            my $st=$_;
+            chomp($st);
+            my @tp=split(/\t/,$st);
+            my $sfs=0;
+            if($tp[2]>=$tt)
+            {
+                if($tp[5]>$tp[8])# maj min
+                { $sfs=$tp[8];}
+                else
+                { $sfs=$tp[5];}# mon maj
+                my $rec=SNPFreq(\@FSFS,$sfs,$tp[2],$tt,0 );
+                @FSFS=@$rec;
+ 
+                $nSNP[0]++;
+                $ns[0]++;
+            }
+            
+            if($tp[3]>=$t1)
+            {
+                $sfs=0;
+                if($tp[6]>$tp[9])
+                { $sfs=$tp[9];}
+                else
+                { $sfs=$tp[6];}
+                my $rec=SNPFreq(\@FSFS,$sfs,$tp[3],$t1,1 );
+                @FSFS=@$rec;
+                #$FSFS[$sfs][1]++; 
+                $nSNP[1]++; $ns[1]++;
+            }
+
+            if($tp[4]>=$t2)
+            {
+                $sfs=0;
+                if($tp[7]>$tp[10])
+                { $sfs=$tp[10];}
+                else
+                { $sfs=$tp[7];}
+                my $rec=SNPFreq(\@FSFS,$sfs,$tp[4],$t2,2 );
+                @FSFS=@$rec;
+                #$FSFS[$sfs][2]++; 
+                $nSNP[2]++; $ns[2]++;
+            }
+            $nSNP[3]++;
+            $ns[3]++;
+        }
+        for(my $i=0;$i<4;$i++)
+        {
+            $ch[$nf][$i]=$ns[$i];
+        }
+        close (FILEIN);
+    }
+    else
+    {print "PROBLEM, $filename not here\n";}
+}
+close(FILEIN);
+
+print "Info on number SNP per chr - not considering site with multiple hits\n";
+my @tSNP;#totSNP as takem from each ch
+$tSNP[0]=$tSNP[1]=$tSNP[3]=$tSNP[2]=0;#
+for(my $nc=1;$nc<=$nl;$nc++)
+{
+    print "ch$nc\t";
+    for(my $i=0;$i<4;$i++)
+    {
+        print "$ch[$nc][$i]\t";
+        $tSNP[$i]+=$ch[$nc][$i];
+    }
+    print "\n";
+}
+
+for(my $i=0;$i<4;$i++)
+{
+    print "Number SNPs\t$i\t$nSNP[$i]\t$tSNP[$i]\n";
+    if($tSNP[$i] != $nSNP[$i])
+    {print "$i\tPROBLEME Not equality $nSNP[$i]\t$tSNP[$i]\n";}
+}
+
+open(FILEOUT, ">$bb$e-FSFS$tt-total");
+##FSFS
+for(my $nc=0;$nc<=$tt;$nc++)
+{ print  FILEOUT "$nc\t$FSFS[$nc][0]\n";}
+close(FILEOUT);
+
+##FSFS
+open(FILEOUT, ">$bb$e-FSFS$t1-dom");
+for(my $nc=0;$nc<=$t1;$nc++)
+{ print  FILEOUT "$nc\t$FSFS[$nc][1]\n";}
+close(FILEOUT);
+
+##FSFS
+open(FILEOUT, ">$bb$e-FSFS$t2-wild");
+for(my $nc=0;$nc<=$t2;$nc++)
+{ print  FILEOUT "$nc\t$FSFS[$nc][2]\n";}
+close(FILEOUT);
+
+
+
+#(@freq,count allele,tot number ch, limit chr, numpop )
+
+#k is number of defective 
+# $snp is the observe number (count minor alelle)
+# $chr total number of chr for this snp (i.e. no missing data)
+# $chrN[$i]=n= total number of drawn=limit on num chromosome
+# $P is probability, to add up to frequency 
+                #$FSFS[$sfs][0]++;# total FSFS
+
+sub SNPFreq
+{
+    my($rec,$count,$nchr,$lchr, $np)=@_;
+    my @pfreq=@$rec;
+
+    if($count>0 and $count<$nchr)
+    {
+        if($lchr == $nchr)# right nunber of ch, get normal FSFS
+        {
+            $pfreq[$count][$np]++;
+        }
+        else
+        {
+            my$Ncn=choose($nchr,$lchr);
+            for(my$k=0;$k<=$count;$k++)## loop to get proba
+            {
+                my$p= choose($count,$k) * choose(($nchr-$count),($lchr-$k))/$Ncn;
+                $pfreq[$k][$np]+=$p;
+            }
+        }
+    }
+    else
+    { $pfreq[0][$np]++;
+      #print "Problem $count and tot $nchr\n";
+    }
+    return (\@pfreq);
+}
+
+##############################################
+ 
+sub choose{
+    my($m,$n)=@_;
+    my $r = 1;
+
+     if ($n > $m){ return 0;}
+     for (my$d=1; $d <= $n; $d++) 
+     {
+         $r *= $m--;
+         $r /= $d;
+     }
+    return $r;
+  }
+
+

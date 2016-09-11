@@ -1,0 +1,79 @@
+#!/usr/bin/perl
+## write the matrix X in prep for PCA
+### read from transpose of genotype
+use strict;
+use warnings;
+
+
+
+my $beg="chr";
+my $end=".FinalSNPs";
+
+open(FILERUN, ">perldiv-RUN");    
+print FILERUN "chmod +x perl*\n";
+my $nl=2;
+for(my $ch=0;$ch<=$nl;$ch++)
+{
+   
+    for(my $i=0;$i<=2;$i++)
+    {
+        
+        my $fname="perl-div";
+
+      
+
+        my $samp="TOT";
+        if($i==1)
+        { $samp="dom"; }
+        if($i==2)
+        {$samp="wild"; }
+
+        my $tt="divauto$samp";
+        if($ch==1)
+        {$tt="divauto-UN$samp";}
+        if($ch==2)
+        {$tt="divUN$samp";}
+
+        open(FILEOUT, ">$fname-$tt");    
+        
+        open(FILEIN, "$fname");    
+        while (<FILEIN>)
+        {
+            my $st=$_;
+            if($st eq "my \$nl=28;\n")
+            {
+                if($ch==1)
+                {$st= "my \$nl=29;\n";} #autosome + UN
+                if($ch==2)
+                {$st= "my \$nl=29;\n";} # UN
+            }
+            if($st eq "my \$n1=2;\n")
+            {
+                if($ch==2)
+                {$st= "my \$n1=29;\n";} # UN
+            }
+            if($st eq "my \$col=2;\n")
+            {
+                if($i==1)
+                {
+                    $st= "my \$col=3;\n";
+                    $samp="dom";
+                }
+                if($i==2)
+                {
+                    $st= "my \$col=4;\n";
+                    $samp="wild";
+                }
+            }
+            print FILEOUT $st;
+            
+            
+        }
+   
+        
+        print FILERUN "nohup ./$fname-$tt | ./distavg4 >$tt &\n";
+        close(FILEIN);
+        close(FILEOUT)
+    }
+}
+close(FILERUN);

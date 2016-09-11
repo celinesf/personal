@@ -1,0 +1,3 @@
+nohup ./bperl-FSFS-0  >uautob &
+nohup ./bperl-FSFS-1  >uUNautob &
+nohup ./bperl-FSFS-2  >uUNb &

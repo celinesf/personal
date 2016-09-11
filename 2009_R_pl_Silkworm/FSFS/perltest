@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+
+
+
+my $Ncn=choose(5,3);
+print"$Ncn\n";
+##############################################
+ 
+sub choose{
+    my($m,$n)=@_;
+    my $r = 1;
+
+     if ($n > $m){ return 0;}
+     for (my$d=1; $d <= $n; $d++) 
+     {
+         $r *= $m--;
+         $r /= $d;
+     }
+    return $r;
+  }
+
+

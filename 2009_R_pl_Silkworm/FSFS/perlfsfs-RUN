@@ -1,0 +1,6 @@
+nohup ./perl-FSFS-0  >uauto &
+nohup ./perl-FSFS-1  >fauto &
+nohup ./perl-FSFS-2  >uUNauto &
+nohup ./perl-FSFS-3  >fUNauto &
+nohup ./perl-FSFS-4  >uUN &
+nohup ./perl-FSFS-5  >fUN &

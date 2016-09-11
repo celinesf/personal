@@ -1,0 +1,89 @@
+#!/usr/bin/perl
+## write the matrix X in prep for PCA
+### read from transpose of genotype
+use strict;
+use warnings;
+
+
+
+open(FILERUN, ">perlfsfs-RUNc");    
+
+
+for(my $ch=0;$ch<=2;$ch++)
+{
+    
+    my $fname="perl-FSFS";
+
+    open(FILEOUT, ">c$fname-$ch");    
+    
+    open(FILEIN, "$fname");    
+    while (<FILEIN>)
+    {
+        my $st=$_;
+        if($st eq "my \$beg=\"achr\";\n")
+        {
+            if($ch==0)# auto unfolded
+            {
+
+############ thresholds 28
+                print FILEOUT "my \$nch=80;\n";
+                print FILEOUT "my \$bb=\"28\";\n";
+                print FILEOUT "my \$nl=28;\n";
+                print FILEOUT "my \$n1=2;\n";
+
+                print FILEOUT "my \$tt=78;\n";
+                print FILEOUT "my \$t2=22;\n";
+                
+
+               print FILEOUT "my \$t1=56;\n";
+               print FILEOUT "my \$e=\"u\";\n";
+            }
+           
+            if($ch==1)# UN+auto unfolded
+            {
+############ thresholds  UN+auto
+                print FILEOUT "my \$bb=\"29\";\n";
+                print FILEOUT "my \$nl=29;\n";
+                print FILEOUT "my \$n1=2;\n";
+                print FILEOUT "my \$nch=80;\n";
+                
+                print FILEOUT "my \$tt=78;\n";
+                print FILEOUT "my \$t2=22;\n";
+               
+                print FILEOUT "my \$t1=56;\n";
+                print FILEOUT "my \$e=\"u\";\n";
+            }
+         
+            if($ch==2)# auto unfolded
+            {
+############ UN thresholds
+                print FILEOUT "my \$bb=\"UN\";\n";
+                print FILEOUT "my \$nl=29;\n";
+                print FILEOUT "my \$n1=29;\n";
+                print FILEOUT "my \$nch=80;\n";
+
+                print FILEOUT "my \$tt=78;\n";
+                print FILEOUT "my \$t2=22;\n";
+             
+                
+                print FILEOUT "my \$t1=22;\n";
+                print FILEOUT "my \$e=\"u\";\n";
+            }
+          
+        }
+        print FILEOUT $st;
+        
+      
+    }
+    my $tt="uautoc";
+    if($ch==1)
+    {$tt="uUNautoc";}
+    if($ch==2)
+    {$tt="uUNc";}
+       
+    print FILERUN "nohup ./c$fname-$ch  >$tt &\n";
+    close(FILEIN);
+    close(FILEOUT)
+        
+}
+close(FILERUN);

@@ -1,0 +1,3 @@
+nohup ./cperl-FSFS-0  >uautoc &
+nohup ./cperl-FSFS-1  >uUNautoc &
+nohup ./cperl-FSFS-2  >uUNc &

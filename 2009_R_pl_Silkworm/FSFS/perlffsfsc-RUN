@@ -1,0 +1,3 @@
+nohup ./cperl-FFSFS-0  >fautoc &
+nohup ./cperl-FFSFS-1  >fUNautoc &
+nohup ./cperl-FFSFS-2  >fUNc &
