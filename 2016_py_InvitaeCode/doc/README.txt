@@ -1,3 +1,4 @@
 Translates a (0-based) transcript coordinate to a (0-based) genome coordinate.
-see documentation:
 https://rawgit.com/celinesf/personal/master/2016_py_InvitaeCode/doc/html/index.html
+see documentation [here](https://rawgit.com/celinesf/personal/master/2016_py_InvitaeCode/doc/html/index.html)
+see documentation <a href="https://rawgit.com/celinesf/personal/master/2016_py_InvitaeCode/doc/html/index.html" target="_blank"><b>here</b></a>
