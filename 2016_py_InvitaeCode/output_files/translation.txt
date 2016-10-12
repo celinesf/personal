@@ -1,0 +1,102 @@
+TR1	0	3	aligned
+TR1	4	7	aligned
+TR1	7	10	aligned, 7D: 11-17
+TR1	8	18	aligned
+TR1	13	23	aligned
+TR1	14	23	2I: 14-15
+TR1	15	23	2I: 14-15
+TR1	16	24	aligned
+TR1	17	25	aligned, 11D: 26-36
+TR1	18	37	aligned
+TR1	24	43	aligned
+TR1	25	NA	out of bound
+TR2	0	10	aligned
+TR2	10	20	aligned
+TR3	0	0	match
+TR3	13	13	match
+TR3	14	NA	out of bound
+TR4	3	3	mismatch
+TR5	8	8	mismatch
+TR6	9	9	mismatch
+TR7	13	13	mismatch
+r001+	0	6	aligned
+r001+	7	13	aligned
+r001+	8	13	2I: 8-9
+r001+	9	13	2I: 8-9
+r001+	10	14	aligned
+r001+	13	17	aligned, 1D: 18-18
+r001+	14	19	aligned
+r001+	15	20	aligned
+r001+	16	21	aligned
+r001+	17	NA	out of bound
+r002+	0	NA	3S: 0-2
+r002+	1	NA	3S: 0-2
+r002+	2	NA	3S: 0-2
+r002+	3	8	aligned
+r002+	8	13	aligned, 1P
+r002+	9	13	1I: 9-9
+r002+	10	14	aligned
+r002+	13	17	aligned
+r002+	14	NA	out of bound
+r003+	0	8	aligned
+r003+	5	13	aligned
+r003+	6	NA	out of bound
+r004+	0	15	aligned
+r004+	5	20	aligned, 14N: 21-34
+r004+	6	35	aligned
+r004+	10	39	aligned
+r004+	11	NA	out of bound
+r003-	0	28	aligned
+r003-	4	32	aligned
+r001-	0	36	aligned
+r001-	8	44	aligned
+r001-	9	NA	out of bound
+read1	0	2	aligned
+read1	5	7	aligned
+read1	6	7	2I: 6-7
+read1	7	7	2I: 6-7
+read1	8	8	aligned
+read1	15	15	aligned
+read2	0	4	aligned
+read2	3	7	aligned, 1P
+read2	4	7	1I: 4-4
+read2	13	16	aligned
+read2	14	NA	out of bound
+read3	0	3	aligned
+read3	4	7	aligned, 2P
+read3	5	8	aligned
+read3	9	12	aligned
+read3	10	NA	out of bound
+read4	0	NA	3S: 0-2
+read4	2	NA	3S: 0-2
+read4	3	13	aligned
+read4	10	20	aligned, 1D: 21-21
+read4	11	22	aligned
+read4	16	27	aligned
+read4	17	NA	4S: 17-20
+read4	20	NA	4S: 17-20
+read4	21	NA	out of bound
+read5	0	10	aligned
+read5	8	18	aligned, 32N: 19-50
+read5	9	51	aligned
+read5	16	58	aligned
+read5	17	NA	out of bound
+read6	0	13	aligned
+read6	7	20	aligned, 1D: 21-21
+read6	8	22	aligned
+read6	13	27	aligned
+read6	14	NA	4H, out of bound
+read6	17	NA	4H, out of bound
+read6	18	NA	out of bound
+read7	0	0	match
+read8	0	NA	NO DATA FOUND
+read9	0	NA	NO DATA FOUND
+read10	0	NA	NO DATA FOUND
+read11	0	NA	NO DATA FOUND
+read12	0	NA	NO DATA FOUND
+read13	0	NA	NO DATA FOUND
+read14	0	NA	NO DATA FOUND
+read15	0	NA	NO DATA FOUND
+read16	0	NA	NO DATA FOUND
+read17	0	NA	NO DATA FOUND
+read18	0	NA	NO DATA FOUND

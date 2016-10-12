@@ -1,0 +1,367 @@
+2016-10-12 02:05:03,132 - INFO - utility_functions.py:warn_me:61 - lib/config_functions.py:ConfigFunctions._configure_logs:49 - INFO - Configured the logging file with level 'DEBUG' here:/Users/becquetc/ING_CODING/InvitaeCode/lib/../output_files/logfile.log
+2016-10-12 02:05:03,132 - INFO - utility_functions.py:warn_me:61 - lib/config_functions.py:ConfigFunctions._check_options:83 - INFO - Checking options type: 'directory' display: 'input' variable: '/Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files'
+2016-10-12 02:05:03,132 - INFO - utility_functions.py:warn_me:61 - lib/config_functions.py:ConfigFunctions._check_options:83 - INFO - Checking options type: 'file' display: 'transcript' variable: '/Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt'
+2016-10-12 02:05:03,132 - INFO - utility_functions.py:warn_me:61 - lib/config_functions.py:ConfigFunctions._check_options:83 - INFO - Checking options type: 'file' display: 'query' variable: '/Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/queries.txt'
+2016-10-12 02:05:03,133 - INFO - utility_functions.py:warn_me:61 - lib/config_functions.py:ConfigFunctions.get_options:181 - INFO - DONE getting/checking options
+2016-10-12 02:05:03,133 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator.__init__:87 - INFO - Starting CoordinateTranslator
+2016-10-12 02:05:03,134 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._open_transcript_file:98 - INFO -  opening transcript file /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt
+2016-10-12 02:05:03,134 - DEBUG - utility_functions.py:open_file:220 - filename:'/Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt' read_write:'r' encoding:'utf8'
+2016-10-12 02:05:03,134 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'TR1'
+2016-10-12 02:05:03,135 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'TR1' from cigar: 8M7D6M2I2M11D7M
+{
+    "chr": "CHR1",
+    "cigar": "8M7D6M2I2M11D7M",
+    "name": "TR1",
+    "start_position": 3
+}
+2016-10-12 02:05:03,136 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'TR2'
+2016-10-12 02:05:03,136 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'TR2' from cigar: 20M
+{
+    "chr": "CHR2",
+    "cigar": "20M",
+    "name": "TR2",
+    "start_position": 10
+}
+2016-10-12 02:05:03,136 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'TR3'
+2016-10-12 02:05:03,137 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'TR3' from cigar: 14=
+{
+    "chr": "CHR3",
+    "cigar": "14=",
+    "name": "TR3",
+    "start_position": 0
+}
+2016-10-12 02:05:03,137 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'TR4'
+2016-10-12 02:05:03,137 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'TR4' from cigar: 3=1X10=
+{
+    "chr": "CHR3",
+    "cigar": "3=1X10=",
+    "name": "TR4",
+    "start_position": 0
+}
+2016-10-12 02:05:03,137 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'TR5'
+2016-10-12 02:05:03,137 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'TR5' from cigar: 3=1X4=2X4=
+{
+    "chr": "CHR3",
+    "cigar": "3=1X4=2X4=",
+    "name": "TR5",
+    "start_position": 0
+}
+2016-10-12 02:05:03,137 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'TR6'
+2016-10-12 02:05:03,138 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'TR6' from cigar: 8=2X4=
+{
+    "chr": "CHR3",
+    "cigar": "8=2X4=",
+    "name": "TR6",
+    "start_position": 0
+}
+2016-10-12 02:05:03,138 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'TR7'
+2016-10-12 02:05:03,138 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'TR7' from cigar: 1X12=1X
+{
+    "chr": "CHR3",
+    "cigar": "1X12=1X",
+    "name": "TR7",
+    "start_position": 0
+}
+2016-10-12 02:05:03,138 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'r001+'
+2016-10-12 02:05:03,138 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'r001+' from cigar: 8M2I4M1D3M
+{
+    "chr": "chr4",
+    "cigar": "8M2I4M1D3M",
+    "name": "r001+",
+    "start_position": 6
+}
+2016-10-12 02:05:03,138 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'r002+'
+2016-10-12 02:05:03,139 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'r002+' from cigar: 3S6M1P1I4M
+{
+    "chr": "chr4",
+    "cigar": "3S6M1P1I4M",
+    "name": "r002+",
+    "start_position": 8
+}
+2016-10-12 02:05:03,139 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'r003+'
+2016-10-12 02:05:03,139 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'r003+' from cigar: 5H6M
+{
+    "chr": "chr4",
+    "cigar": "5H6M",
+    "name": "r003+",
+    "start_position": 8
+}
+2016-10-12 02:05:03,139 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'r004+'
+2016-10-12 02:05:03,140 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'r004+' from cigar: 6M14N5M
+{
+    "chr": "chr4",
+    "cigar": "6M14N5M",
+    "name": "r004+",
+    "start_position": 15
+}
+2016-10-12 02:05:03,140 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'r003-'
+2016-10-12 02:05:03,140 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'r003-' from cigar: 6H5M
+{
+    "chr": "chr4",
+    "cigar": "6H5M",
+    "name": "r003-",
+    "start_position": 28
+}
+2016-10-12 02:05:03,140 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'r001-'
+2016-10-12 02:05:03,140 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'r001-' from cigar: 9M
+{
+    "chr": "chr4",
+    "cigar": "9M",
+    "name": "r001-",
+    "start_position": 36
+}
+2016-10-12 02:05:03,140 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read1'
+2016-10-12 02:05:03,140 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'read1' from cigar: 6M2I8M
+{
+    "chr": "chrY",
+    "cigar": "6M2I8M",
+    "name": "read1",
+    "start_position": 2
+}
+2016-10-12 02:05:03,141 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read2'
+2016-10-12 02:05:03,141 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'read2' from cigar: 4M1P1I9M
+{
+    "chr": "chrY",
+    "cigar": "4M1P1I9M",
+    "name": "read2",
+    "start_position": 4
+}
+2016-10-12 02:05:03,141 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read3'
+2016-10-12 02:05:03,141 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'read3' from cigar: 5M2P5M
+{
+    "chr": "chrY",
+    "cigar": "5M2P5M",
+    "name": "read3",
+    "start_position": 3
+}
+2016-10-12 02:05:03,141 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read4'
+2016-10-12 02:05:03,141 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'read4' from cigar: 3S8M1D6M4S
+{
+    "chr": "chrX",
+    "cigar": "3S8M1D6M4S",
+    "name": "read4",
+    "start_position": 13
+}
+2016-10-12 02:05:03,142 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read5'
+2016-10-12 02:05:03,142 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'read5' from cigar: 9M32N8M
+{
+    "chr": "chrX",
+    "cigar": "9M32N8M",
+    "name": "read5",
+    "start_position": 10
+}
+2016-10-12 02:05:03,142 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read6'
+2016-10-12 02:05:03,142 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'read6' from cigar: 3H8M1D6M4H
+{
+    "chr": "chrX",
+    "cigar": "3H8M1D6M4H",
+    "name": "read6",
+    "start_position": 13
+}
+2016-10-12 02:05:03,142 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read7'
+2016-10-12 02:05:03,143 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._get_transcript_info_from_cigar:162 - DEBUG - Extracts info for transcript 'read7' from cigar: 14=
+{
+    "chr": "chr22",
+    "cigar": "14=",
+    "name": "read7",
+    "start_position": 0
+}
+2016-10-12 02:05:03,143 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read8'
+2016-10-12 02:05:03,144 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:132 - WARNING -  I will ignore 'read8' because the chromosome information: 'chr23' was not of the form 'chr<num>' with 0 < num <=22:
+{
+    "chr": "chr23",
+    "cigar": "14=",
+    "name": "read8",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,144 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read9'
+2016-10-12 02:05:03,144 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:132 - WARNING -  I will ignore 'read9' because the chromosome information: 'chr-1' was not of the form 'chr<num>' with 0 < num <=22:
+{
+    "chr": "chr-1",
+    "cigar": "14=",
+    "name": "read9",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,145 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read10'
+2016-10-12 02:05:03,145 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:132 - WARNING -  I will ignore 'read10' because the chromosome information: 'chr0' was not of the form 'chr<num>' with 0 < num <=22:
+{
+    "chr": "chr0",
+    "cigar": "14=",
+    "name": "read10",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,145 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read11'
+2016-10-12 02:05:03,145 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:132 - WARNING -  I will ignore 'read11' because the chromosome information: 'chrc' was not of the form 'chr<num>' with 0 < num <=22:
+{
+    "chr": "chrc",
+    "cigar": "14=",
+    "name": "read11",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,146 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read12'
+2016-10-12 02:05:03,146 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:136 - WARNING -  I will ignore 'read12' because the start position: '-10' was not an integer >= 0:
+{
+    "chr": "chr22",
+    "cigar": "14=",
+    "name": "read12",
+    "start_position": "-10"
+}
+2016-10-12 02:05:03,146 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read13'
+2016-10-12 02:05:03,146 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:136 - WARNING -  I will ignore 'read13' because the start position: 'x' was not an integer >= 0:
+{
+    "chr": "chr22",
+    "cigar": "14=",
+    "name": "read13",
+    "start_position": "x"
+}
+2016-10-12 02:05:03,147 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read14'
+2016-10-12 02:05:03,147 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:152 - WARNING -  I will ignore 'read14' because cigar: '14T' doesn't follow cigar format
+{
+    "chr": "chr22",
+    "cigar": "14T",
+    "name": "read14",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,147 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read15'
+2016-10-12 02:05:03,147 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:152 - WARNING -  I will ignore 'read15' because cigar: '9M32n8M' doesn't follow cigar format
+{
+    "chr": "chr22",
+    "cigar": "9M32n8M",
+    "name": "read15",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,148 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read16'
+2016-10-12 02:05:03,148 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:152 - WARNING -  I will ignore 'read16' because cigar: 'M32N8M' doesn't follow cigar format
+{
+    "chr": "chr22",
+    "cigar": "M32N8M",
+    "name": "read16",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,148 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read17'
+2016-10-12 02:05:03,149 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:152 - WARNING -  I will ignore 'read17' because cigar: '9M32H8M' doesn't follow cigar format
+{
+    "chr": "chr22",
+    "cigar": "9M32H8M",
+    "name": "read17",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,149 - INFO - utility_functions.py:warn_me:69 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:127 - DEBUG - Data sanity check for transcript 'read18'
+2016-10-12 02:05:03,149 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._check_transcript_data:152 - WARNING -  I will ignore 'read18' because cigar: '9M32S8M' doesn't follow cigar format
+{
+    "chr": "chr22",
+    "cigar": "9M32S8M",
+    "name": "read18",
+    "start_position": "0"
+}
+2016-10-12 02:05:03,156 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:275 - INFO -  opening query file /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/queries.txt
+2016-10-12 02:05:03,156 - DEBUG - utility_functions.py:open_file:220 - filename:'/Users/becquetc/ING_CODING/InvitaeCode/lib/../output_files/translation.txt' read_write:'w' encoding:'utf8'
+2016-10-12 02:05:03,157 - INFO - utility_functions.py:warn_me:61 - lib/utility_functions.py:UtilityFunctions.run_command_line:149 - INFO - command: 'rm -f "/Users/becquetc/ING_CODING/InvitaeCode/lib/../output_files/translation.txt"' filename:'/Users/becquetc/ING_CODING/InvitaeCode/lib/../output_files/translation.txt_rm_open_file.txt'
+[
+    "rm",
+    "-f",
+    "/Users/becquetc/ING_CODING/InvitaeCode/lib/../output_files/translation.txt"
+]
+2016-10-12 02:05:03,163 - DEBUG - utility_functions.py:open_file:220 - filename:'/Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/queries.txt' read_write:'r' encoding:'utf8'
+2016-10-12 02:05:03,163 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 0
+2016-10-12 02:05:03,164 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 4
+2016-10-12 02:05:03,165 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 7
+2016-10-12 02:05:03,166 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 8
+2016-10-12 02:05:03,167 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 13
+2016-10-12 02:05:03,167 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 14
+2016-10-12 02:05:03,168 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 15
+2016-10-12 02:05:03,168 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 16
+2016-10-12 02:05:03,169 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 17
+2016-10-12 02:05:03,170 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 18
+2016-10-12 02:05:03,170 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 24
+2016-10-12 02:05:03,171 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR1' at position: 25
+2016-10-12 02:05:03,171 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR2' at position: 0
+2016-10-12 02:05:03,172 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR2' at position: 10
+2016-10-12 02:05:03,172 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR3' at position: 0
+2016-10-12 02:05:03,172 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR3' at position: 13
+2016-10-12 02:05:03,173 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR3' at position: 14
+2016-10-12 02:05:03,173 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR4' at position: 3
+2016-10-12 02:05:03,174 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR5' at position: 8
+2016-10-12 02:05:03,174 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR6' at position: 9
+2016-10-12 02:05:03,175 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'TR7' at position: 13
+2016-10-12 02:05:03,175 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 0
+2016-10-12 02:05:03,175 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 7
+2016-10-12 02:05:03,176 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 8
+2016-10-12 02:05:03,176 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 9
+2016-10-12 02:05:03,177 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 10
+2016-10-12 02:05:03,177 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 13
+2016-10-12 02:05:03,178 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 14
+2016-10-12 02:05:03,178 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 15
+2016-10-12 02:05:03,179 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 16
+2016-10-12 02:05:03,179 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001+' at position: 17
+2016-10-12 02:05:03,180 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 0
+2016-10-12 02:05:03,180 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 1
+2016-10-12 02:05:03,181 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 2
+2016-10-12 02:05:03,181 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 3
+2016-10-12 02:05:03,182 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 8
+2016-10-12 02:05:03,182 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 9
+2016-10-12 02:05:03,183 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 10
+2016-10-12 02:05:03,183 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 13
+2016-10-12 02:05:03,184 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r002+' at position: 14
+2016-10-12 02:05:03,184 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r003+' at position: 0
+2016-10-12 02:05:03,185 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r003+' at position: 5
+2016-10-12 02:05:03,185 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r003+' at position: 6
+2016-10-12 02:05:03,185 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r004+' at position: 0
+2016-10-12 02:05:03,186 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r004+' at position: 5
+2016-10-12 02:05:03,186 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r004+' at position: 6
+2016-10-12 02:05:03,187 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r004+' at position: 10
+2016-10-12 02:05:03,187 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r004+' at position: 11
+2016-10-12 02:05:03,187 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r003-' at position: 0
+2016-10-12 02:05:03,188 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r003-' at position: 4
+2016-10-12 02:05:03,188 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001-' at position: 0
+2016-10-12 02:05:03,188 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001-' at position: 8
+2016-10-12 02:05:03,189 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'r001-' at position: 9
+2016-10-12 02:05:03,189 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read1' at position: 0
+2016-10-12 02:05:03,189 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read1' at position: 5
+2016-10-12 02:05:03,190 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read1' at position: 6
+2016-10-12 02:05:03,190 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read1' at position: 7
+2016-10-12 02:05:03,191 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read1' at position: 8
+2016-10-12 02:05:03,191 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read1' at position: 15
+2016-10-12 02:05:03,191 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read2' at position: 0
+2016-10-12 02:05:03,192 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read2' at position: 3
+2016-10-12 02:05:03,192 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read2' at position: 4
+2016-10-12 02:05:03,193 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read2' at position: 13
+2016-10-12 02:05:03,193 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read2' at position: 14
+2016-10-12 02:05:03,194 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read3' at position: 0
+2016-10-12 02:05:03,194 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read3' at position: 4
+2016-10-12 02:05:03,195 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read3' at position: 5
+2016-10-12 02:05:03,195 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read3' at position: 9
+2016-10-12 02:05:03,196 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read3' at position: 10
+2016-10-12 02:05:03,196 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 0
+2016-10-12 02:05:03,197 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 2
+2016-10-12 02:05:03,197 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 3
+2016-10-12 02:05:03,198 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 10
+2016-10-12 02:05:03,198 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 11
+2016-10-12 02:05:03,199 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 16
+2016-10-12 02:05:03,200 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 17
+2016-10-12 02:05:03,200 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 20
+2016-10-12 02:05:03,200 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read4' at position: 21
+2016-10-12 02:05:03,201 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read5' at position: 0
+2016-10-12 02:05:03,201 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read5' at position: 8
+2016-10-12 02:05:03,202 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read5' at position: 9
+2016-10-12 02:05:03,203 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read5' at position: 16
+2016-10-12 02:05:03,204 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read5' at position: 17
+2016-10-12 02:05:03,204 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read6' at position: 0
+2016-10-12 02:05:03,205 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read6' at position: 7
+2016-10-12 02:05:03,205 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read6' at position: 8
+2016-10-12 02:05:03,206 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read6' at position: 13
+2016-10-12 02:05:03,206 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read6' at position: 14
+2016-10-12 02:05:03,207 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read6' at position: 17
+2016-10-12 02:05:03,210 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read6' at position: 18
+2016-10-12 02:05:03,211 - INFO - utility_functions.py:warn_me:61 - bin/coordinate_translator.py:CoordinateTranslator._get_genomic_coordinate:313 - INFO - Extracts genomic coordinate for for transcript 'read7' at position: 0
+2016-10-12 02:05:03,211 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read8' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read8	0
+2016-10-12 02:05:03,212 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read9' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read9	0
+2016-10-12 02:05:03,212 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read10' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read10	0
+2016-10-12 02:05:03,212 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read11' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read11	0
+2016-10-12 02:05:03,212 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read12' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read12	0
+2016-10-12 02:05:03,212 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read13' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read13	0
+2016-10-12 02:05:03,213 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read14' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read14	0
+2016-10-12 02:05:03,213 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read15' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read15	0
+2016-10-12 02:05:03,213 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read16' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read16	0
+2016-10-12 02:05:03,213 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read17' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read17	0
+2016-10-12 02:05:03,213 - WARNING - utility_functions.py:warn_me:63 - bin/coordinate_translator.py:CoordinateTranslator._answer_queries:289 - WARNING -  I could not find a transcript names: 'read18' in the file: /Users/becquetc/ING_CODING/InvitaeCode/lib/../input_files/transcripts.txt. no data wil be given for read18	0

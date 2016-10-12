@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CoordinateTranslator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$d8/da5/a00570.html",tooltip="Translates (0-based) transcript coordinates to (0-based) genome coordinates  USAGE: coordinate_transl..."];
+}

@@ -1,0 +1,60 @@
+[OPTIONS]
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x409 English (United States)
+Title=CoordinateTranslator
+
+[WINDOWS]
+main="CoordinateTranslator","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+d7/d46/a00002.html
+dd/dad/a00005.html
+d4/dee/a00008.html
+da/d45/a00011.html
+d7/d7a/a00016.html
+d4/d51/a00017.html
+d8/da5/a00570.html
+d2/dd7/a00567.html
+dd/d1b/a00015.html
+d0/d3e/a00566.html
+dc/dae/a00563.html
+d1/d2b/a00018.html
+d4/dbe/a00574.html
+df/d3a/a00571.html
+graph_legend.html
+dir_70a0e64f80e3681ed5c0684f6d8f0d3a.html
+dir_47a8d26eba4d429633c201128c9d2dbc.html
+dir_968de436408db786fb3f753c63400e6d.html
+dir_f396504afdc959660871b003fa10164d.html
+dir_d69db4aa0a7aed3a9f1449d8752d24ef.html
+dir_e0a93ced61ef62382f10a3cb5f23d74f.html
+index.html
+namespaces.html
+namespacemembers.html
+namespacemembers_func.html
+namespacemembers_vars.html
+annotated.html
+classes.html
+functions.html
+functions_func.html
+functions_vars.html
+files.html
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+bc_s.png
+doxygen.png
+closed.png
+open.png
+bdwn.png
+sync_on.png
+sync_off.png
+graph_legend.jpg

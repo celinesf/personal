@@ -20,3 +20,7 @@ AlgoGenePipeline.py <Disease_name> <lifetime_prevalence>:
 
 -------------- 2016_py_get_google_pmids
 gets lists of pmids from google sheets in specific google drive directories
+
+-------------- 2016_py_InvitaeCode
+Translates a (0-based) transcript coordinate to a (0-based) genome coordinate.
+
