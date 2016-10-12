@@ -4,20 +4,23 @@
 
 MIMAR package was shared to the population genetic community, well documented (see pdf files) and maintained until 2010.
 
--mimardir is the main C program that estimates the demographic parameters of an "isolation-migration" model from recombining loci.
+### mimardir 
+The main C program that estimates the demographic parameters of an "isolation-migration" model from recombining loci.
 
--mimargofdir: 
-			Perl scripts perlgofest and perlgof call the program MIMARgof to generate samples under an 
-            "isolation-migration" model with either point estimates of the parameters provided by MIMAR, 
-            or sets of parameters sampled from the posterior distribution estimated by MIMAR
-			+ R script "testGOF.R" to help the user test whether the estimated model fit the data.
+### mimargofdir: 
+Perl scripts perlgofest and perlgof call the program MIMARgof to generate samples under an 
+"isolation-migration" model with either point estimates of the parameters provided by MIMAR, 
+or sets of parameters sampled from the posterior distribution estimated by MIMAR.
 
--mimarsimdir: C code that simulates a data set under the "isolation- migration" model 
+R script "testGOF.R" to help the user test whether the estimated model fit the data.
+
+### mimarsimdir: 
+C code that simulates a data set under the "isolation- migration" model 
 
 
 ## 2012_py_R_java_BaseHealth/algogene-pipeline
 
-AlgoGenePipeline.py <Disease_name> <lifetime_prevalence>: 
+AlgoGenePipeline.py \<Disease_name\> \<lifetime_prevalence\>: 
 
    I)   variant aggregation : all the information is gathered for the genetic variation of interest
 
