@@ -1,6 +1,6 @@
-More software engineering codes are:
+##More software engineering codes are:
 
----------- 2008_C_R_MIMAR_PHD
+# 2008_C_R_MIMAR_PHD
 MIMAR package was shared to the population genetic community, well documented (see pdf files) and maintained until 2010.
 -mimardir is the main C program that estimates the demographic parameters of an "isolation-migration" model from recombining loci.
 -mimargofdir: 
@@ -9,7 +9,7 @@ MIMAR package was shared to the population genetic community, well documented (s
 -mimarsimdir: C code that simulates a data set under the "isolation- migration" model 
 
 
---------------2012_py_R_java_BaseHealth/algogene-pipeline
+# 2012_py_R_java_BaseHealth/algogene-pipeline
 AlgoGenePipeline.py <Disease_name> <lifetime_prevalence>: 
    I)   variant aggregation : all the information is gathered for the genetic variation of interest
    II)  Data aggregation    : all the variants are aggregated for the disease of interest
@@ -18,11 +18,10 @@ AlgoGenePipeline.py <Disease_name> <lifetime_prevalence>:
    V)   Ethnicity decision  : Genophen covers about 6 different ethinicities at the time of this writting. what is the default ethnicity for the disease of interest
 
 
--------------- 2016_py_get_google_pmids
+# 2016_py_get_google_pmids
 gets lists of pmids from google sheets in specific google drive directories
 
--------------- 2016_py_InvitaeCode
+# 2016_py_InvitaeCode
 Translates a (0-based) transcript coordinate to a (0-based) genome coordinate.
-https://rawgit.com/celinesf/personal/master/2016_py_InvitaeCode/doc/html/index.html
 see documentation [here](https://rawgit.com/celinesf/personal/master/2016_py_InvitaeCode/doc/html/index.html)
-see documentation <a href="https://rawgit.com/celinesf/personal/master/2016_py_InvitaeCode/doc/html/index.html" target="_blank"><b>here</b></a>
+
