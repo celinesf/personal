@@ -24,7 +24,7 @@ C code that simulates a data set under the "isolation- migration" model
 
 see documentation [here](2008_C_R_MIMAR_PHD/mimarsimdir/MIMARsimdoc.pdf)
 
-## 2012_py_R_java_BaseHealth/algogene-pipeline(2012_py_R_java_BaseHealth/algogene-pipeline)
+## [2012_py_R_java_BaseHealth/algogene-pipeline](2012_py_R_java_BaseHealth/algogene-pipeline)
 
 AlgoGenePipeline.py \<Disease_name\> \<lifetime_prevalence\>: 
 
@@ -39,11 +39,12 @@ AlgoGenePipeline.py \<Disease_name\> \<lifetime_prevalence\>:
    V)   Ethnicity decision  : Genophen covers about 6 different ethinicities at the time of this writting. what is the default ethnicity for the disease of interest
 
 
-## 2016_py_get_google_pmids(2016_py_get_google_pmids)
+## [2016_py_get_google_pmids](2016_py_get_google_pmids)
 
 gets lists of pmids from google sheets in specific google drive directories
 
-## 2016_py_InvitaeCode
+
+## [2016_py_InvitaeCode](2016_py_InvitaeCode)
 
 Translates a (0-based) transcript coordinate to a (0-based) genome coordinate.
 
@@ -56,5 +57,4 @@ see tests description [here](2016_py_InvitaeCode/doc/queries.xlsx)
 see input files [here](2016_py_InvitaeCode/input_files)
 
 see output files [here](2016_py_InvitaeCode/output_files)
-
 
