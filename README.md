@@ -24,7 +24,7 @@ C code that simulates a data set under the "isolation- migration" model
 
 see documentation [here](2008_C_R_MIMAR_PHD/mimarsimdir/MIMARsimdoc.pdf)
 
-## 2012_py_R_java_BaseHealth/algogene-pipeline
+## 2012_py_R_java_BaseHealth/algogene-pipeline(2012_py_R_java_BaseHealth/algogene-pipeline)
 
 AlgoGenePipeline.py \<Disease_name\> \<lifetime_prevalence\>: 
 
@@ -39,7 +39,7 @@ AlgoGenePipeline.py \<Disease_name\> \<lifetime_prevalence\>:
    V)   Ethnicity decision  : Genophen covers about 6 different ethinicities at the time of this writting. what is the default ethnicity for the disease of interest
 
 
-## 2016_py_get_google_pmids (2016_py_get_google_pmids)
+## 2016_py_get_google_pmids(2016_py_get_google_pmids)
 
 gets lists of pmids from google sheets in specific google drive directories
 
@@ -57,10 +57,4 @@ see input files [here](2016_py_InvitaeCode/input_files)
 
 see output files [here](2016_py_InvitaeCode/output_files)
 
-## 2021_py_Cpp_Personalis
 
-Python 3: Find index(es) of 3rd largest value in numbers_list.
-
-Python 2: Implement a naive variant caller.
-
-C++: Implement a linear (O(n)) sort algorithm for unsigned 16-bit integers
