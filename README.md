@@ -39,7 +39,7 @@ AlgoGenePipeline.py \<Disease_name\> \<lifetime_prevalence\>:
    V)   Ethnicity decision  : Genophen covers about 6 different ethinicities at the time of this writting. what is the default ethnicity for the disease of interest
 
 
-## 2016_py_get_google_pmids
+## 2016_py_get_google_pmids (2016_py_get_google_pmids)
 
 gets lists of pmids from google sheets in specific google drive directories
 
