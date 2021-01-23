@@ -56,3 +56,11 @@ see tests description [here](2016_py_InvitaeCode/doc/queries.xlsx)
 see input files [here](2016_py_InvitaeCode/input_files)
 
 see output files [here](2016_py_InvitaeCode/output_files)
+
+## 2021_py_Cpp_Personalis
+
+Python 3: Find index(es) of 3rd largest value in numbers_list.
+
+Python 2: Implement a naive variant caller.
+
+C++: Implement a linear (O(n)) sort algorithm for unsigned 16-bit integers
