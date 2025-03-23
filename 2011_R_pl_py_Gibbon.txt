@@ -1,1 +1,1 @@
-Perl, Python and R code to do dnovo alignment, variant calling, coverage analysis of 19 Gibbon  NGS data
+Perl, Python and R code to do de novo alignment, variant calling, coverage analysis of 19 Gibbon  NGS data
