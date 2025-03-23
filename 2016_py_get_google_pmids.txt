@@ -14,7 +14,7 @@ OPTIONS required if UAT_OR_QC='UAT'
 			DIR_ID specifies the folder id for the UAT round for which to extract pmids. This option is required if UAT_OR_QC='UAT'
 OPTIONS required if UAT_OR_QC='QC'
 		-v VERSION, --version VERSION
-			FVERSION specifies the version i.e., '001' in the file name for the QC round for which to extract pmids. This option is required if UAT_OR_QC='QC'
+			VERSION specifies the version i.e., '001' in the file name for the QC round for which to extract pmids. This option is required if UAT_OR_QC='QC'
 OTHER OPTIONS
 		-h, --help
 			Output this help manual
