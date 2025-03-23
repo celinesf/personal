@@ -58,4 +58,8 @@ see input files [here](2016_py_InvitaeCode/input_files)
 
 see output files [here](2016_py_InvitaeCode/output_files)
 
-## [2021_Bioinformatics Contest 2021_Stepik.org](2021_Bioinformatics Contest 2021_Stepik.org)
+## [2021_Bioinformatics Contest_Stepik.org](2021_Bioinformatics Contest_Stepik.org)
+[Bioinformatics Contest 2021](https://bioinf.me/contest) from Stepik.org
+
+## [2025_Rosalind](2025_Rosalind)
+Rosalind exercises in [Bioinformatics](https://rosalind.info/problems/list-view/) 
