@@ -1,71 +1,30 @@
-# Consensus and Profile
+# Mortal Fibonacci Rabbits
 
 ## Problem
-A **matrix** is a rectangular table of values divided into rows and columns. An $m×n$
- matrix has $m$ rows and $n$ columns. 
-Given a matrix $A$
-, we write $A_{i,j}$
- to indicate the value found at the intersection of row $i$ and column $j$.
+Recall the definition of the Fibonacci numbers from “Rabbits and Recurrence Relations”, which followed the recurrence relation $Fn=Fn−1+Fn−2$
+ and assumed that each pair of rabbits reaches maturity in one month and produces a single pair of offspring (one male, one female) each subsequent month.
 
-Say that we have a collection of DNA strings, all having the same length $n$
-. Their profile matrix is a $4×n$
- matrix $P$
- in which $P_{1,j}$
- represents the number of times that 'A' occurs in the 
-$j^{th}$ position of one of the strings, 
-$P_{2,j}$  represents the number of times that C occurs in the $j^{th}$ position, and so on (see below).
+Our aim is to somehow modify this recurrence relation to achieve a dynamic programming solution in the case that all rabbits die out after a fixed number of months. 
+See Figure 4 for a depiction of a rabbit tree in which rabbits live for three months (meaning that they reproduce only twice before dying).
 
-A consensus string $c$
- is a string of length $n$
- formed from our collection by taking the 
-most common symbol at each position; 
-the $j^{th}$ symbol of $c$
- therefore corresponds to the symbol having the maximum value in the $j^{th}$ column of the profile matrix. Of course, 
-there may be more than one most common symbol, leading to multiple possible consensus strings.
+![Figure 4](mortal_rabbit_tree.png)
+A figure illustrating the propagation of Fibonacci's rabbits if they die after three months.
+Figure 4 of 4
 
-DNA Strings<br>
-A T C C A G C T<br>
-G G G C A A C T<br>
-A T G G A T C T<br>
-A A G C A A C C<br>
-T T G G A A C T<br>
-A T G C C A T T<br>
-A T G G C A C T<br>
+**Given**: Positive integers $n≤100$ and $m≤20$.
 
-Profile<br>
-A   5 1 0 0 5 5 0 0<br>
-C   0 0 1 4 2 0 6 1<br>
-G   1 1 6 3 0 1 0 0<br>
-T   1 5 0 0 0 1 1 6<br>
-
-Consensus<br>
-A T G C A A C T
-
-**Given**: A collection of at most 10 DNA strings of equal length 
-(at most 1 kbp) in FASTA format.
-
-**Return**: A consensus string and profile matrix for the collection. 
-(If several possible consensus strings exist, then you may return any one of them.)
+**Return**: The total number of pairs of rabbits that will remain after the $n^{th}$ month if all rabbits live for $m$
+ months.
 
 ## Sample Dataset
-\>Rosalind_1<br>
-ATCCAGCT<br>
-\>Rosalind_2<br>
-GGGCAACT<br>
-\>Rosalind_3<br>
-ATGGATCT<br>
-\>Rosalind_4<br>
-AAGCAACC<br>
-\>Rosalind_5<br>
-TTGGAACT<br>
-\>Rosalind_6<br>
-ATGCCATT<br>
-\>Rosalind_7<br>
-ATGGCACT<br>
-
+6 3
 ## Sample Output
-ATGCAACT<br>
-A: 5 1 0 0 5 5 0 0<br>
-C: 0 0 1 4 2 0 6 1<br>
-G: 1 1 6 3 0 1 0 0<br>
-T: 1 5 0 0 0 1 1 6<br>
+4
+
+age = [0,0,0] # age at 0,2,3 months
+generation 1 [1,0,0]
+gen2 [0,1,0] # only 2 months old rabbit reproduce
+gen3 [1,0,1] # age[1]+age[2]=age[0] new rabbit pair
+gen4 [1,1,0]
+gen5 [1,1,1]
+gen6 [2,1,1] = 4 pairs

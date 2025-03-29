@@ -1,10 +1,9 @@
 import time
 import sys
 import numpy as np
-
+import matplotlib.pyplot as plt
+import networkx as nx
 from Bio import SeqIO
-
-### Rosalind Solution
 
 
 def read_fasta(filename):
@@ -23,43 +22,38 @@ def read_fasta(filename):
     return sequences
 
 ### My solution
-def CONS(file_name):
+def GRPH(file_name, k=3):
     data = read_fasta(file_name,)  # input file
-    # print(data)
+    print(data)
     fout_name = file_name.removesuffix('.txt') + "_output.txt"
     print(fout_name)
     fout = open(fout_name, 'w')
-    profile = ['A','C', 'G', 'T']
-    n=0
-    m=4 # A C G T
-    i = 0
-    for seq_id, seq in data.items():
-        # print(f"Sequence ID: {seq_id}")
-        # print(f"Sequence: {seq}\n")
-        if n==0:
-            n= len(seq)
-            pmat=np.zeros((m,n), dtype=int)
-        for index, nt in enumerate(list(seq)):
-            # print(f"Index: {index}, Value: {nt}")
-            pmat[ profile.index(nt),index] += 1
-    cons = ''
-    for i in np.argmax(pmat, axis=0):
-        cons += (profile[i])
-    print(cons)
-    fout.write(cons+'\n')
-    for index, nt in enumerate(list(profile)):
-        print(nt+': '+ str(" ".join(map(str, pmat[index])) ) )
-        fout.write(nt+': '+ str(" ".join(map(str, pmat[index])) )+ "\n")
+    G= nx.DiGraph()
+    for s_name, s in data.items():
+        # print("s "+s_name + " "+s)
+        for t_name, t in data.items():
+            if t_name != s_name and s[len(s)-k:len(s)] == t[0:k ]:
+                # print("t ", t_name + " " + t)
+                G.add_edge(s_name, t_name)
+            #list(G.all_neighbors( s_name))
+    print(G.edges())
+    for edge in G.edges():
+        print(edge[0] +" "+edge[1])
+        fout.write(edge[0] +" "+edge[1]+ "\n")
+    # nx.draw_networkx(G, arrows=True,with_labels = True)
+    # plt.show()
+
+
 
 start_time = time.time() # report time of function
 
 input_fname= 'Sample_Dataset.txt'
-# input_fname= 'rosalind_cons.txt'
+input_fname= 'rosalind_grph.txt'
 
 #sys.stdout = open(input_fname.strip('.txt')+".out", mode='w') # redirect stdout to file
 
-# CONS(input_fname) #0.018140316009521484 seconds
-CONS2(input_fname) #0.0004248619079589844
+
+GRPH(input_fname) #0.0004248619079589844
 
 end_time = time.time()
 execution_time = end_time - start_time
