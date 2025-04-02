@@ -1,0 +1,4 @@
+>Rosalind_1
+ACGTACGT
+>Rosalind_2
+AACCGTATA
